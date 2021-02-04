@@ -219,7 +219,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-02-04 22:53:41 / Modified: 22:54:24" itemprop="dateCreated datePublished" datetime="2021-02-04T22:53:41+08:00">2021-02-04</time>
+      <time title="Created: 2021-02-04 22:53:41 / Modified: 23:22:30" itemprop="dateCreated datePublished" datetime="2021-02-04T22:53:41+08:00">2021-02-04</time>
     </span>
 
   
@@ -232,7 +232,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>面向对象的程序设计</p>
+          <p>只有position为非static的元素才能使用偏移属性，否则设置无效。</p>
+<p>下面的总结：<br>    *<br>position为relative时，参照物是自身。</p>
+<p>1.偏移属性的值为长度值时，偏移量就是长度值。<br>2.偏移属性的值为百分比时，偏移量为：<br>top，bottom的偏移量 = 包含块的高度 * 百分比；<br>leftf，right的偏移量 = 包含块的宽度 * 百分比；<br>    *<br>position为绝对定位时，是从包含块（包含块的position必须为非static，会一直往外追溯，直到body）的padding边界开始计算偏移。</p>
+<p>1.偏移属性的值为长度值时，偏移量就是长度值。<br>2.偏移属性的值为百分比时，偏移量为：<br>top，bottom的偏移量 = 包含块的高度 * 百分比；(如果包含块追溯到了body，那么偏移量就是body的高度 * 百分比)<br>left，right的偏移量 = 包含块的宽度 * 百分比；(如果包含块追溯到了body，那么偏移量就是body的宽度 * 百分比)</p>
 
       
     </div>

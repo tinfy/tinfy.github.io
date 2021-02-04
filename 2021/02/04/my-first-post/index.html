@@ -23,15 +23,15 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"tinfy.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="面向对象的程序设计">
+<meta name="description" content="只有position为非static的元素才能使用偏移属性，否则设置无效。 下面的总结：    *position为relative时，参照物是自身。 1.偏移属性的值为长度值时，偏移量就是长度值。2.偏移属性的值为百分比时，偏移量为：top，bottom的偏移量 &#x3D; 包含块的高度 * 百分比；leftf，right的偏移量 &#x3D; 包含块的宽度 * 百分比；    *position为绝对定位时，是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="my first post">
 <meta property="og:url" content="https://tinfy.github.io/2021/02/04/my-first-post/index.html">
 <meta property="og:site_name" content="汤姆喵喵喵">
-<meta property="og:description" content="面向对象的程序设计">
+<meta property="og:description" content="只有position为非static的元素才能使用偏移属性，否则设置无效。 下面的总结：    *position为relative时，参照物是自身。 1.偏移属性的值为长度值时，偏移量就是长度值。2.偏移属性的值为百分比时，偏移量为：top，bottom的偏移量 &#x3D; 包含块的高度 * 百分比；leftf，right的偏移量 &#x3D; 包含块的宽度 * 百分比；    *position为绝对定位时，是">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-04T14:53:41.000Z">
-<meta property="article:modified_time" content="2021-02-04T14:54:24.605Z">
+<meta property="article:modified_time" content="2021-02-04T15:22:30.344Z">
 <meta property="article:author" content="tinfy Tong">
 <meta name="twitter:card" content="summary">
 
@@ -224,7 +224,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-02-04 22:53:41 / Modified: 22:54:24" itemprop="dateCreated datePublished" datetime="2021-02-04T22:53:41+08:00">2021-02-04</time>
+      <time title="Created: 2021-02-04 22:53:41 / Modified: 23:22:30" itemprop="dateCreated datePublished" datetime="2021-02-04T22:53:41+08:00">2021-02-04</time>
     </span>
 
   
@@ -237,7 +237,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>面向对象的程序设计</p>
+        <p>只有position为非static的元素才能使用偏移属性，否则设置无效。</p>
+<p>下面的总结：<br>    *<br>position为relative时，参照物是自身。</p>
+<p>1.偏移属性的值为长度值时，偏移量就是长度值。<br>2.偏移属性的值为百分比时，偏移量为：<br>top，bottom的偏移量 = 包含块的高度 * 百分比；<br>leftf，right的偏移量 = 包含块的宽度 * 百分比；<br>    *<br>position为绝对定位时，是从包含块（包含块的position必须为非static，会一直往外追溯，直到body）的padding边界开始计算偏移。</p>
+<p>1.偏移属性的值为长度值时，偏移量就是长度值。<br>2.偏移属性的值为百分比时，偏移量为：<br>top，bottom的偏移量 = 包含块的高度 * 百分比；(如果包含块追溯到了body，那么偏移量就是body的高度 * 百分比)<br>left，right的偏移量 = 包含块的宽度 * 百分比；(如果包含块追溯到了body，那么偏移量就是body的宽度 * 百分比)</p>
 
     </div>
 
