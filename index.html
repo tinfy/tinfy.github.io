@@ -277,7 +277,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-02-12 21:33:00 / 修改时间：22:49:28" itemprop="dateCreated datePublished" datetime="2021-02-12T21:33:00+08:00">2021-02-12</time>
+      <time title="创建时间：2021-02-12 21:33:00 / 修改时间：22:53:28" itemprop="dateCreated datePublished" datetime="2021-02-12T21:33:00+08:00">2021-02-12</time>
     </span>
 
   
@@ -307,59 +307,14 @@
           <p>基础的HTML和CSS代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;content&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;box&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    border: 1px #000 solid;</span><br><span class="line">&#125;</span><br><span class="line">.box &#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: orange;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="absolute-负margin"><a href="#absolute-负margin" class="headerlink" title="absolute + 负margin"></a>absolute + 负margin</h2><p>绝对定位元素是从父元素的padding边界开始计算偏移，偏移属性的值为百分比时，偏移量 = 父元素的宽度或高度 * 百分比。<br>子元素设置top，left设置为50%后，只会让子元素的左上角处于父元素的中心。可以通过设置子元素的外边距为负值（宽、高的一半）来实现子元素的居中。<br>这种方式兼容性很好，缺点是需要知道子元素的宽高。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.box &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 50%;</span><br><span class="line">    left: 50%;</span><br><span class="line">    margin-top: -50px;</span><br><span class="line">    margin-left: -50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="absolute-margin-auto"><a href="#absolute-margin-auto" class="headerlink" title="absolute + margin: auto"></a>absolute + margin: auto</h2><p>这种方式兼容性也很好，缺点是子元素的宽高必须固定。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.box &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="absolute-calc函数"><a href="#absolute-calc函数" class="headerlink" title="absolute + calc函数"></a>absolute + calc函数</h2><p>CSS3引入了calc()函数，用来动态计算长度值，需要注意的是：<strong>运算符前后都需要加上空格。</strong><br>这种方法的原理和第一种差不多。<br>这种方式兼容性依赖于calc函数的兼容性，缺点是需要知道子元素的宽高。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.box &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: calc(50% - 50px);</span><br><span class="line">    left: calc(50% - 50px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="absolute-transform"><a href="#absolute-transform" class="headerlink" title="absolute + transform"></a>absolute + transform</h2><p>这种方法用到了CSS3的transform变换。<br>这种方法的原理和第一种也差不多。<br>这种方式兼容性依赖于translate的兼容性。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.box &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 50%;</span><br><span class="line">    left: 50%;</span><br><span class="line">    transform: translate(-50%, -50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="display-table-cell"><a href="#display-table-cell" class="headerlink" title="display: table-cell"></a>display: table-cell</h2><p>table元素可以用来实现水平垂直居中。<br>这种方式兼容性较好。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">    display: table-cell;</span><br><span class="line">    text-align: center;</span><br><span class="line">    vertical-align: middle;</span><br><span class="line">&#125;</span><br><span class="line">.box &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h2><p>CSS3的flex布局，这应该是实现水平垂直居中最简单的方法。<br>移动端已经完全可以使用flex了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><table>
-<thead>
-<tr>
-<th align="center">方法</th>
-<th align="center">居中元素宽高是否需要固定</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">absolute + 负margin</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td align="center">absolute + margin: auto</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td align="center">absolute + calc函数</td>
-<td align="center">✓</td>
-</tr>
-<tr>
-<td align="center">absolute + transform</td>
-<td align="center">✖</td>
-</tr>
-<tr>
-<td align="center">display: table-cell</td>
-<td align="center">✖</td>
-</tr>
-<tr>
-<td align="center">flex</td>
-<td align="center">✖</td>
-</tr>
-</tbody></table>
-<p>比较各方法的优缺点，总结如下：</p>
-<ul>
-<li>PC端有兼容性要求，宽高固定，推荐 absolute + 负margin</li>
-<li>PC端有兼容性要求，宽高不固定，推荐 display: table-cell</li>
-<li>PC端无兼容性要求，推荐 flex</li>
-<li>移动端推荐 flex</li>
-</ul>
-<p>参考文章：<a target="_blank" rel="noopener" href="https://yanhaijing.com/css/2018/01/17/horizontal-vertical-center">https://yanhaijing.com/css/2018/01/17/horizontal-vertical-center</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/12/CSS%E5%AE%9E%E7%8E%B0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
