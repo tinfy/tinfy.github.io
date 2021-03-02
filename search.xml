@@ -124,6 +124,7 @@
 <figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	constructor(name) &#123;</span><br><span class="line">		alert(<span class="keyword">new</span><span class="type"></span>.target === Person);</span><br><span class="line">		<span class="built_in">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="type">Person</span>(<span class="string">&quot;Tom&quot;</span>);		<span class="comment">//true</span></span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>JavaScript</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -279,6 +280,22 @@
 ]]></content>
       <tags>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Class的继承</title>
+    <url>/2021/03/02/Class%E7%9A%84%E7%BB%A7%E6%89%BF/</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Class可以通过extends关键字实现继承。</p>
+<figure class="highlight scala"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">	constructor(x, y) &#123;</span><br><span class="line">		<span class="keyword">this</span>.x = x;</span><br><span class="line">		<span class="keyword">this</span>.y = y;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorPoint</span> <span class="keyword">extends</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">	constructor(x, y, color) &#123;</span><br><span class="line">		<span class="keyword">super</span>();</span><br><span class="line">		<span class="keyword">this</span>.color = color;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>子类必须在构造方法中调用super方法，否则新建实例时会报错。ES6的继承机制完全不同，实质是先将父类实例对象的属性和方法，加到this上面（所以必须先调用super方法），然后再用子类的构造函数修改this。<br>如果子类没有定义构造方法，会默认添加构造方法。</p>
+<figure class="highlight scala"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;&#125;</span><br><span class="line"><span class="comment">//等同于</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorPoint</span> <span class="keyword">extends</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">	constructor(...args) &#123;</span><br><span class="line">		<span class="keyword">super</span>(...args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在子类的构造函数中，只有调用super之后，才能使用this。这是因为子类实例的构建，基于父类实例，只有super方法才能调用父类实例。<br>从下面的代码可以看出，子类的实例对象同时是父类和子类两个类的实例。</p>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cp = <span class="keyword">new</span> ColorPoint(<span class="number">15</span>, <span class="number">25</span>, <span class="string">&quot;orange&quot;</span>);</span><br><span class="line">cp <span class="keyword">instanceof</span> ColorPoint;		<span class="comment">//true</span></span><br><span class="line">cp <span class="keyword">instanceof</span> Point;			<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<p>最后，子类会继承父类的静态方法。</p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
 </search>
