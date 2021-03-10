@@ -6,7 +6,7 @@
   <link href="https://tinfy.github.io/atom.xml" rel="self"/>
   
   <link href="https://tinfy.github.io/"/>
-  <updated>2021-03-06T06:52:21.637Z</updated>
+  <updated>2021-03-10T11:19:53.954Z</updated>
   <id>https://tinfy.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NexT主题的博客添加不蒜子统计</title>
+    <link href="https://tinfy.github.io/2021/03/10/NexT%E4%B8%BB%E9%A2%98%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1/"/>
+    <id>https://tinfy.github.io/2021/03/10/NexT%E4%B8%BB%E9%A2%98%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1/</id>
+    <published>2021-03-10T04:39:29.000Z</published>
+    <updated>2021-03-10T11:19:53.954Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;之前博客部署在GitHub Page上，由于在某些地方访问不了国外的网站，于是我决定把博客同时部署在国内的Coding Page和国外的GitHub Page上。但在Coding上部署的博客打开后，文章的阅读量不知道什么原因显示为空（使用LeanCloud统计的阅读量），于是查看NexT文档看有没有其他方法，找到了5.0.1以后的版本可以使用&lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi&quot;&gt;不蒜子统计&lt;/a&gt;阅读量。具体方法如下：&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>CSS绘制百度小熊</title>
