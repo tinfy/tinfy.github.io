@@ -6,7 +6,7 @@
   <link href="https://tinfy.github.io/atom.xml" rel="self"/>
   
   <link href="https://tinfy.github.io/"/>
-  <updated>2021-03-10T11:19:53.954Z</updated>
+  <updated>2021-03-13T08:57:34.701Z</updated>
   <id>https://tinfy.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue项目中报错的解决办法</title>
+    <link href="https://tinfy.github.io/2021/03/13/Vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>https://tinfy.github.io/2021/03/13/Vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</id>
+    <published>2021-03-13T08:51:54.000Z</published>
+    <updated>2021-03-13T08:57:34.701Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Vue项目中引入less，报错&lt;strong&gt;Syntax Error: TypeError: this.getOptions is not a function&lt;/strong&gt;解决办法：&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>NexT主题的博客添加不蒜子统计</title>
