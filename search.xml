@@ -385,6 +385,7 @@
     <url>/2021/03/15/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h3 id="在Windows上安装Git"><a href="#在Windows上安装Git" class="headerlink" title="在Windows上安装Git"></a>在Windows上安装Git</h3><p>前往<a href="https://git-scm.com/">Git官网</a>下载安装包直接安装即可，安装完在命令行终端输入<code>git --version</code>可以看到git的版本表示安装成功。</p>
 <figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">git</span> --version</span><br><span class="line"><span class="attribute">git</span> version <span class="number">2</span>.<span class="number">30</span>.<span class="number">0</span>.windows.<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p>在D盘创建一个名为learngit的文件夹作为版本库（repository），这个文件夹下的所有文件都可以被Git管理起来。<br>右击learngit文件夹，选择“Git Bash Here”，会弹出一个命令行窗口，在命令行中输入<code>git init</code>，把learngit文件夹变为Git可以管理的仓库。</p>
 <figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in D:<span class="regexp">/learngit/</span>.git/</span><br></pre></td></tr></table></figure>
 <p>执行完命令后，在learngit文件夹下会生成一个.git的隐藏文件夹。<br>在learngit文件夹中新建一个名为readme.txt的文件，内容如下：</p>
