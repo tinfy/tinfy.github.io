@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/magic_16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/magic_16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/magic_16x16.png">
+  <link rel="mask-icon" href="/images/magic.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300italic,400,400italic,700,700italic%7CSTXingkai:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"tinfy.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="在Windows上安装Git前往Git官网下载安装包直接安装即可，安装完在命令行终端输入git --version可以看到git的版本表示安装成功。 12git --versiongit version 2.30.0.windows.2 创建版本库在D盘创建一个名为learngit的文件夹作为版本库（repository），这个文件夹下的所有文件都可以被Git管理起来。右击learngit文件夹，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git学习记录">
+<meta property="og:url" content="https://tinfy.github.io/2021/03/15/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Tong jiebin&#39;s Blog">
+<meta property="og:description" content="在Windows上安装Git前往Git官网下载安装包直接安装即可，安装完在命令行终端输入git --version可以看到git的版本表示安装成功。 12git --versiongit version 2.30.0.windows.2 创建版本库在D盘创建一个名为learngit的文件夹作为版本库（repository），这个文件夹下的所有文件都可以被Git管理起来。右击learngit文件夹，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/919020037470528/0">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/919020074026336/0">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/919020100829536/0">
+<meta property="article:published_time" content="2021-03-15T11:21:39.000Z">
+<meta property="article:modified_time" content="2021-03-15T13:52:04.664Z">
+<meta property="article:author" content="Tong jiebin">
+<meta property="article:tag" content="Git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.liaoxuefeng.com/files/attachments/919020037470528/0">
+
+
+<link rel="canonical" href="https://tinfy.github.io/2021/03/15/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>Git学习记录 | Tong jiebin's Blog</title>
+  
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a7dd2fb8c510dd8c48409dc703fcb2fa";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<link rel="alternate" href="/atom.xml" title="Tong jiebin's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Tong jiebin's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">14</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8Windows%E4%B8%8A%E5%AE%89%E8%A3%85Git"><span class="nav-number">1.</span> <span class="nav-text">在Windows上安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E5%85%89%E7%A9%BF%E6%A2%AD%E6%9C%BA"><span class="nav-number">3.</span> <span class="nav-text">时光穿梭机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="nav-number">3.1.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%92%8C%E6%9A%82%E5%AD%98%E5%8C%BA"><span class="nav-number">3.2.</span> <span class="nav-text">工作区和暂存区</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Tong jiebin"
+      src="/images/head.jpeg">
+  <p class="site-author-name" itemprop="name">Tong jiebin</p>
+  <div class="site-description" itemprop="description">靡不有初，鲜克有终</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tinfy.github.io/2021/03/15/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpeg">
+      <meta itemprop="name" content="Tong jiebin">
+      <meta itemprop="description" content="靡不有初，鲜克有终">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tong jiebin's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Git学习记录
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-03-15 19:21:39 / 修改时间：21:52:04" itemprop="dateCreated datePublished" datetime="2021-03-15T19:21:39+08:00">2021-03-15</time>
+    </span>
+
+  
+    <!--span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;"-->
+    <span class="post-meta-item" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="在Windows上安装Git"><a href="#在Windows上安装Git" class="headerlink" title="在Windows上安装Git"></a>在Windows上安装Git</h3><p>前往<a target="_blank" rel="noopener" href="https://git-scm.com/">Git官网</a>下载安装包直接安装即可，安装完在命令行终端输入<code>git --version</code>可以看到git的版本表示安装成功。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> --version</span><br><span class="line"><span class="attribute">git</span> version <span class="number">2</span>.<span class="number">30</span>.<span class="number">0</span>.windows.<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p>在D盘创建一个名为learngit的文件夹作为版本库（repository），这个文件夹下的所有文件都可以被Git管理起来。<br>右击learngit文件夹，选择“Git Bash Here”，会弹出一个命令行窗口，在命令行中输入<code>git init</code>，把learngit文件夹变为Git可以管理的仓库。</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in D:<span class="regexp">/learngit/</span>.git/</span><br></pre></td></tr></table></figure>
+<p>执行完命令后，在learngit文件夹下会生成一个.git的隐藏文件夹。<br>在learngit文件夹中新建一个名为readme.txt的文件，内容如下：</p>
+<figure class="highlight mercury"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git <span class="keyword">is</span> a version control system.</span><br><span class="line">Git <span class="keyword">is</span> free software.</span><br></pre></td></tr></table></figure>
+<p>把一个文件放到Git仓库需要两步：</p>
+<ol>
+<li>在命令行中输入<code>git add readme.txt</code>，把文件添加到仓库。</li>
+<li>在命令行中输入<code>git commit -m &quot;write a readme file&quot;</code>，把文件提交到仓库。<code>-m &quot;xxx&quot;</code>是本次提交的说明。</li>
+</ol>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;write a readme file&quot;</span></span><br><span class="line">[<span class="keyword">master</span> <span class="title">(root-commit</span>) <span class="number">9129317</span>] <span class="keyword">write</span> a readme file</span><br><span class="line"> <span class="number">1</span> file changed, <span class="number">2</span> insertions(+)</span><br><span class="line"> create mode <span class="number">100644</span> readme.txt</span><br></pre></td></tr></table></figure>
+<h3 id="时光穿梭机"><a href="#时光穿梭机" class="headerlink" title="时光穿梭机"></a>时光穿梭机</h3><h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><p>把readme.txt文件修改为：</p>
+<figure class="highlight mercury"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git <span class="keyword">is</span> a distributed version control system.</span><br><span class="line">Git <span class="keyword">is</span> free software.</span><br></pre></td></tr></table></figure>
+<p>输入<code>git add readme.txt</code>和<code>git commit -m &quot;add distributed&quot;</code>命令把修改提交到仓库。<br>接着把文件修改为：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is <span class="keyword">a</span> distributed <span class="built_in">version</span> control <span class="keyword">system</span>.</span><br><span class="line">Git is free software distributed under <span class="keyword">the</span> GPL.</span><br></pre></td></tr></table></figure>
+<p>输入<code>git add readme.txt</code>和<code>git commit -m &quot;append GPL&quot;</code>命令把修改提交到仓库。<br>输入<code>git log</code>会显示从最近到最远的提交日志。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br><span class="line"><span class="keyword">commit</span> e12d14717b81c177921742e1e5966aa34b4d75b8 (HEAD <span class="operator">-</span><span class="operator">&gt;</span> master)</span><br><span class="line">Author: tinfy <span class="operator">&lt;</span><span class="number">42999170</span><span class="operator">+</span>tinfy<span class="variable">@users</span>.noreply.github.com<span class="operator">&gt;</span></span><br><span class="line"><span class="type">Date</span>:   Mon Mar <span class="number">15</span> <span class="number">20</span>:<span class="number">14</span>:<span class="number">28</span> <span class="number">2021</span> <span class="operator">+</span><span class="number">0800</span></span><br><span class="line"></span><br><span class="line">    append GPL</span><br><span class="line"></span><br><span class="line"><span class="keyword">commit</span> <span class="number">99</span>d1e27e5ffb34d1e9c45566d916a93d270a7dd3</span><br><span class="line">Author: tinfy <span class="operator">&lt;</span><span class="number">42999170</span><span class="operator">+</span>tinfy<span class="variable">@users</span>.noreply.github.com<span class="operator">&gt;</span></span><br><span class="line"><span class="type">Date</span>:   Mon Mar <span class="number">15</span> <span class="number">20</span>:<span class="number">12</span>:<span class="number">53</span> <span class="number">2021</span> <span class="operator">+</span><span class="number">0800</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">add</span> distributed</span><br><span class="line"></span><br><span class="line"><span class="keyword">commit</span> <span class="number">9129317</span>ac5714f479b9c53edee14337bb0ea69f9</span><br><span class="line">Author: tinfy <span class="operator">&lt;</span><span class="number">42999170</span><span class="operator">+</span>tinfy<span class="variable">@users</span>.noreply.github.com<span class="operator">&gt;</span></span><br><span class="line"><span class="type">Date</span>:   Mon Mar <span class="number">15</span> <span class="number">20</span>:<span class="number">05</span>:<span class="number">25</span> <span class="number">2021</span> <span class="operator">+</span><span class="number">0800</span></span><br><span class="line"></span><br><span class="line">    write a readme file</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>如果嫌输出信息太多，看得眼花缭乱的，可以加上<code>--pretty=oneline</code>参数：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> <span class="comment">--pretty=oneline</span></span><br><span class="line">e12d14717b81c177921742e1e5966aa34b4d75b8 (HEAD -&gt; master) append GPL</span><br><span class="line"><span class="number">99</span>d1e27e5ffb34d1e9c45566d916a93d270a7dd3 <span class="built_in">add</span> distributed</span><br><span class="line"><span class="number">9129317</span>ac5714f479b9c53edee14337bb0ea69f9 <span class="built_in">write</span> <span class="keyword">a</span> readme <span class="built_in">file</span></span><br></pre></td></tr></table></figure>
+<p>输出的一大串类似<code>e12d147...</code>的是<code>commit id</code>（版本号）。<br>如果要从当前版本<code>append GPL</code>回到上一个版本<code>add distributed</code>，可以使用<code>$ git reset --hard HEAD^</code>命令：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">reset</span> <span class="comment">--hard HEAD^</span></span><br><span class="line">HEAD <span class="keyword">is</span> now at <span class="number">99</span>d1e27 <span class="keyword">add</span> distributed</span><br></pre></td></tr></table></figure>
+<p>回到上上个版本就是<code>$ git reset --hard HEAD^^</code>命令，往上100个版本写100个^比较容易数不过来，所以写成<code>HEAD~100</code>。<br>打开readme.txt可以看到里面的内容回到了<code>add distributed</code>版本。<br>输入<code>git log</code>命令，最新的<code>append GPL</code>版本不见了。</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> <span class="comment">--pretty=oneline</span></span><br><span class="line"><span class="number">99</span>d1e27e5ffb34d1e9c45566d916a93d270a7dd3 (HEAD -&gt; master) <span class="built_in">add</span> distributed</span><br><span class="line"><span class="number">9129317</span>ac5714f479b9c53edee14337bb0ea69f9 <span class="built_in">write</span> <span class="keyword">a</span> readme <span class="built_in">file</span></span><br></pre></td></tr></table></figure>
+<p>如果要回到<code>append GPL</code>版本，只要命令行没有关掉，就可以往上找到<code>append GPL</code>的<code>commit id</code>是<code>e12d147...</code>，输入<code>$ git reset --hard e12d147</code>命令可以回到<code>append GPL</code>版本。版本号没必要写全，前几位就可以了，Git会自动去找。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">reset</span> --hard e12d147</span><br><span class="line">HEAD <span class="built_in">is</span> now <span class="built_in">at</span> e12d147 <span class="built_in">append</span> GPL</span><br></pre></td></tr></table></figure>
+<p>打开readme.txt，果然又回到了<code>append GPL</code>版本。<br>但是如果命令行已经关掉了，再想恢复到<code>append GPL</code>，就必须找到<code>append GPL</code>的<code>commit id</code>。Git提供了一个命令<code>git reflog</code>用来记录你的每一次命令：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br><span class="line"><span class="number">99</span>d1e27 HEAD@&#123;<span class="number">1</span>&#125;: rese<span class="variable">t:</span> moving <span class="keyword">to</span> HEAD^</span><br><span class="line">e12d147 (HEAD -&gt; master) HEAD@&#123;<span class="number">2</span>&#125;: commi<span class="variable">t:</span> <span class="keyword">append</span> GPL</span><br><span class="line"><span class="number">99</span>d1e27 HEAD@&#123;<span class="number">3</span>&#125;: commi<span class="variable">t:</span> <span class="built_in">add</span> distributed</span><br><span class="line"><span class="number">9129317</span> HEAD@&#123;<span class="number">4</span>&#125;: commit (initial): <span class="keyword">write</span> <span class="keyword">a</span> readme <span class="keyword">file</span></span><br></pre></td></tr></table></figure>
+<p>现在知道了<code>append GPL</code>的<code>commit id</code>是e12d147，又可以回到<code>append GPL</code>版本了。</p>
+<h4 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h4><p>工作区（Working Directory）：就是在电脑里能看到的目录，learngit文件夹就是一个工作区。<br>版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。<br>Git的版本库里存了很多东西，其中最重要的就是称为stage的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。<br><img src="https://www.liaoxuefeng.com/files/attachments/919020037470528/0"><br>前面把readme.txt文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步是用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，<code>git commit</code>就是往master分支上提交更改。<br>实践出真知。先对readme.txt做个修改，然后在工作区新建一个LICENSE.txt文件，随便添加一些内容。<br>使用<code>git status</code>查看一下状态：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commi<span class="variable">t:</span></span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> <span class="keyword">to</span> <span class="keyword">update</span> what will <span class="keyword">be</span> committed)</span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> <span class="keyword">to</span> discard <span class="keyword">changes</span> in working directory)</span><br><span class="line">        modified:   readme.txt</span><br><span class="line"></span><br><span class="line">Untracked <span class="keyword">file</span><span class="variable">s:</span></span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> <span class="keyword">to</span> include in what will <span class="keyword">be</span> committed)</span><br><span class="line">        LICENSE.txt</span><br><span class="line"></span><br><span class="line"><span class="keyword">no</span> <span class="keyword">changes</span> added <span class="keyword">to</span> commit (use <span class="string">&quot;git add&quot;</span> <span class="built_in">and</span>/<span class="built_in">or</span> <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>Git非常清楚地告诉我们，readme.txt被修改了，而LICENSE.txt还从来没有被添加过，所以它的状态是Untracked。<br>现在，使用两次命令<code>git add</code>，把readme.txt和LICENSE.txt都添加后，用<code>git status</code>再查看一下：</p>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line"><span class="keyword">On</span> branch master</span><br><span class="line">Changes <span class="keyword">to</span> be committed:</span><br><span class="line">  (<span class="keyword">use</span> <span class="string">&quot;git restore --staged &lt;file&gt;...&quot;</span> <span class="keyword">to</span> unstage)</span><br><span class="line">        <span class="keyword">new</span> <span class="keyword">file</span>:   LICENSE.txt</span><br><span class="line">        modified:   readme.txt</span><br></pre></td></tr></table></figure>
+<p>现在，暂存区的状态就变成这样了：<br><img src="https://www.liaoxuefeng.com/files/attachments/919020074026336/0"><br>所以，git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;understand how stage works&quot;</span></span><br><span class="line">[<span class="keyword">master</span> <span class="title">4dc3ba4</span>] understand how stage works</span><br><span class="line"> <span class="number">2</span> files changed, <span class="number">3</span> insertions(+), <span class="number">1</span> deletion(-)</span><br><span class="line"> create mode <span class="number">100644</span> LICENSE.txt</span><br></pre></td></tr></table></figure>
+<p>一旦提交后，如果你又没有对工作区做任何修改，那么工作区就是“干净”的：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line"><span class="keyword">On</span> branch master</span><br><span class="line"><span class="keyword">nothing</span> <span class="keyword">to</span> <span class="keyword">commit</span>, working tree clean</span><br></pre></td></tr></table></figure>
+<p>现在版本库变成了这样，暂存区就没有任何内容了：<br><img src="https://www.liaoxuefeng.com/files/attachments/919020100829536/0"></p>
+
+    </div>
+
+    
+    
+    
+	
+	<!-- 2021/02/19 add 文章结束标志 -->
+    <div>
+      
+        <!-- 2021/02/19 add 文章结束标志 -->
+      
+    </div>
+
+    <footer class="post-footer">
+          <div class="post-tags">
+			
+              <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+          </div>
+
+        
+
+		  
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/03/14/Promise%E5%AF%B9%E8%B1%A1/" rel="next" title="Promise对象">
+                  Promise对象 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+	  
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tong jiebin</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">38k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">35 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        总访客量：<span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+<script>
+NexT.utils.loadComments('.utterances-container', () => {
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', "tinfy/commit-utterances");
+  script.setAttribute('issue-term', "title");
+  script.setAttribute('theme', "github-light");
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  document.querySelector('.utterances-container').appendChild(script);
+});
+</script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+  
+  <!-- 鼠标点击爆炸效果 2021/02/19 add -->
+  
+     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+     <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+  <!-- 2021/02/20 add 多功能的看板娘 这个看板娘需要用到head里面的jquery和font-awesome -->
+  <!--<script src="/live2d-widget/autoload.js"></script>-->
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":0.85,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false,"scale":0.5},"dialog":{"enable":false,"hitokoto":false},"log":false});</script></body>
+</html>
