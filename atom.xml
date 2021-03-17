@@ -6,7 +6,7 @@
   <link href="https://tinfy.github.io/atom.xml" rel="self"/>
   
   <link href="https://tinfy.github.io/"/>
-  <updated>2021-03-15T14:10:30.763Z</updated>
+  <updated>2021-03-17T14:31:41.027Z</updated>
   <id>https://tinfy.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tinfy.github.io/2021/03/15/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     <id>https://tinfy.github.io/2021/03/15/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
     <published>2021-03-15T11:21:39.000Z</published>
-    <updated>2021-03-15T14:10:30.763Z</updated>
+    <updated>2021-03-17T14:31:41.027Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;在Windows上安装Git&quot;&gt;&lt;a href=&quot;#在Windows上安装Git&quot; class=&quot;headerlink&quot; title=&quot;在Windows上安装Git&quot;&gt;&lt;/a&gt;在Windows上安装Git&lt;/h3&gt;&lt;p&gt;前往&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git官网&lt;/a&gt;下载安装包直接安装即可，安装完在命令行终端输入&lt;code&gt;git --version&lt;/code&gt;可以看到git的版本表示安装成功。&lt;/p&gt;
