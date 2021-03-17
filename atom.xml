@@ -39,7 +39,7 @@
     <link href="https://tinfy.github.io/2021/03/14/Promise%E5%AF%B9%E8%B1%A1/"/>
     <id>https://tinfy.github.io/2021/03/14/Promise%E5%AF%B9%E8%B1%A1/</id>
     <published>2021-03-14T09:41:48.000Z</published>
-    <updated>2021-03-14T15:19:41.373Z</updated>
+    <updated>2021-03-17T15:16:13.389Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;Promise的含义&quot;&gt;&lt;a href=&quot;#Promise的含义&quot; class=&quot;headerlink&quot; title=&quot;Promise的含义&quot;&gt;&lt;/a&gt;Promise的含义&lt;/h3&gt;&lt;p&gt;所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。&lt;br&gt;Promise对象有以下两个特点：&lt;/p&gt;</summary>
