@@ -516,7 +516,7 @@
 <td align="center">把文件夹初始化为Git仓库</td>
 </tr>
 <tr>
-<td align="center">git add <filename></td>
+<td align="center">git add [filename]</td>
 <td align="center">添加到暂存区</td>
 </tr>
 <tr>
@@ -536,7 +536,7 @@
 <td align="center">回到上一个版本</td>
 </tr>
 <tr>
-<td align="center">git reset –hard <commit id></td>
+<td align="center">git reset –hard [commit id]</td>
 <td align="center">回到commit id对应的版本</td>
 </tr>
 <tr>
@@ -548,23 +548,23 @@
 <td align="center">查看状态</td>
 </tr>
 <tr>
-<td align="center">git diff HEAD – <filename></td>
+<td align="center">git diff HEAD – [filename]</td>
 <td align="center">查看工作区和版本库之间的区别</td>
 </tr>
 <tr>
-<td align="center">git checkout – <filename></td>
+<td align="center">git checkout – [filename]</td>
 <td align="center">丢弃工作区的修改</td>
 </tr>
 <tr>
-<td align="center">git reset HEAD <filename></td>
+<td align="center">git reset HEAD [filename]</td>
 <td align="center">撤销暂存区的修改</td>
 </tr>
 <tr>
-<td align="center">git rm <filename>;git commit -m “…”</td>
+<td align="center">git rm [filename];git commit -m “…”</td>
 <td align="center">删掉了工作区的文件，再执行左边两条命令删掉版本库中的文件</td>
 </tr>
 <tr>
-<td align="center">git checkout – <filename></td>
+<td align="center">git checkout – [filename]</td>
 <td align="center">恢复工作区误删的文件</td>
 </tr>
 <tr>
@@ -640,7 +640,7 @@
 <td align="center">恢复现场的同时把stash内容删掉</td>
 </tr>
 <tr>
-<td align="center">git cherry-pick <commit id></td>
+<td align="center">git cherry-pick [commit id]</td>
 <td align="center">在当前分支上复制commit id对应的提交</td>
 </tr>
 <tr>
