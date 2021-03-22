@@ -6,7 +6,7 @@
   <link href="https://tinfy.github.io/atom.xml" rel="self"/>
   
   <link href="https://tinfy.github.io/"/>
-  <updated>2021-03-21T08:14:15.388Z</updated>
+  <updated>2021-03-22T12:31:16.659Z</updated>
   <id>https://tinfy.github.io/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://tinfy.github.io/2021/03/21/async%E5%87%BD%E6%95%B0/"/>
     <id>https://tinfy.github.io/2021/03/21/async%E5%87%BD%E6%95%B0/</id>
     <published>2021-03-21T06:08:47.000Z</published>
-    <updated>2021-03-21T08:14:15.388Z</updated>
+    <updated>2021-03-22T12:31:16.659Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;基本用法&quot;&gt;&lt;a href=&quot;#基本用法&quot; class=&quot;headerlink&quot; title=&quot;基本用法&quot;&gt;&lt;/a&gt;基本用法&lt;/h3&gt;&lt;p&gt;async函数返回一个 Promise</summary>
-        
-      
+    <summary type="html">&lt;h3 id=&quot;基本用法&quot;&gt;&lt;a href=&quot;#基本用法&quot; class=&quot;headerlink&quot; title=&quot;基本用法&quot;&gt;&lt;/a&gt;基本用法&lt;/h3&gt;&lt;p&gt;async函数返回一个 Promise 对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。&lt;/p&gt;</summary>
     
     
     
