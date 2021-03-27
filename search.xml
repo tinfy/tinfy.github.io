@@ -836,4 +836,13 @@
     <url>/posts/f789.html</url>
     <content><![CDATA[]]></content>
   </entry>
+  <entry>
+    <title>test03</title>
+    <url>/posts/3748.html</url>
+    <content><![CDATA[<p>我是summary</p>
+<a id="more"></a>]]></content>
+      <tags>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
 </search>
