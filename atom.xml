@@ -6,7 +6,7 @@
   <link href="https://tinfy.github.io/atom.xml" rel="self"/>
   
   <link href="https://tinfy.github.io/"/>
-  <updated>2021-03-27T12:47:48.198Z</updated>
+  <updated>2021-03-27T11:08:49.306Z</updated>
   <id>https://tinfy.github.io/</id>
   
   <author>
@@ -15,49 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test03</title>
-    <link href="https://tinfy.github.io/posts/3748.html"/>
-    <id>https://tinfy.github.io/posts/3748.html</id>
-    <published>2021-03-27T12:44:44.000Z</published>
-    <updated>2021-03-27T12:47:48.198Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;我是summary&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="ES6" scheme="https://tinfy.github.io/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test02</title>
-    <link href="https://tinfy.github.io/posts/f789.html"/>
-    <id>https://tinfy.github.io/posts/f789.html</id>
-    <published>2021-03-27T12:39:46.000Z</published>
-    <updated>2021-03-27T12:39:56.836Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test notify</title>
-    <link href="https://tinfy.github.io/posts/5107.html"/>
-    <id>https://tinfy.github.io/posts/5107.html</id>
-    <published>2021-03-27T12:33:20.000Z</published>
-    <updated>2021-03-27T12:34:23.674Z</updated>
-    
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Markdown语法</title>
