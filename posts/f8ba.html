@@ -99,7 +99,7 @@
   </style>
 </noscript>
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 <link rel="alternate" href="/atom.xml" title="Tong jiebin's Blog" type="application/atom+xml">
@@ -326,7 +326,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3k</span>
+      <span>3.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -347,11 +347,51 @@
         <p>之前博客部署在GitHub Page上，由于在某些地方访问不了国外的网站，于是我决定把博客同时部署在国内的Coding Page和国外的GitHub Page上。但在Coding上部署的博客打开后，文章的阅读量不知道什么原因显示为空（使用LeanCloud统计的阅读量），于是查看NexT文档看有没有其他方法，找到了5.0.1以后的版本可以使用<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi">不蒜子统计</a>阅读量。具体方法如下：</p>
 <a id="more"></a>
 <p>打开<strong>主题配置文件</strong>下的_config.yml，搜索busuanzi，找到如下代码，修改为下面的配置：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>	<span class="comment"># 全局开关</span></span><br><span class="line">  <span class="attr">total_visitors:</span> <span class="literal">true</span>	<span class="comment"># 总访客量</span></span><br><span class="line">  <span class="attr">total_visitors_icon:</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="attr">total_views:</span> <span class="literal">true</span>	<span class="comment"># 总访问量</span></span><br><span class="line">  <span class="attr">total_views_icon:</span> <span class="string">fa</span> <span class="string">fa-eye</span></span><br><span class="line">  <span class="attr">post_views:</span> <span class="literal">true</span>	<span class="comment"># 文章阅读量</span></span><br><span class="line">  <span class="attr">post_views_icon:</span> <span class="string">far</span> <span class="string">fa-eye</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">busuanzi_count:
+  enable: true	# 全局开关
+  total_visitors: true	# 总访客量
+  total_visitors_icon: fa fa-user
+  total_views: true	# 总访问量
+  total_views_icon: fa fa-eye
+  post_views: true	# 文章阅读量
+  post_views_icon: far fa-eye<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>打开themes/next/layout/_partials/post目录下的post-meta.njk，找到如下代码，删掉第二行的<code>id=&quot;busuanzi_container_page_pv&quot; style=&quot;display: none;&quot;</code>。使用不蒜子统计阅读量有个缺点，就是在首页不能显示阅读量，只有把文章点进去才能看到。我试着把第一行的<code>not is_index and</code>删掉，在首页能够显示“阅读次数：”这几个字，但后面的数量为空。</p>
-<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">&#123;%- if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.post_views %&#125;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item&quot;</span> <span class="attr">title</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; <span class="name">__</span>(<span class="name">&#x27;post.views&#x27;</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">&quot;</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_page_pv&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: none;&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-icon&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; <span class="name">theme.busuanzi_count.post_views_icon</span> &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-text&quot;</span>&gt;</span></span><span class="template-variable">&#123;&#123; <span class="name">__</span>(<span class="name">&#x27;post.views&#x27;</span>) + __(<span class="name">&#x27;symbol.colon&#x27;</span>) &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_page_pv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">&#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&#123;%- if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.post_views %&#125;
+  &lt;span class&#x3D;&quot;post-meta-item&quot; title&#x3D;&quot;&#123;&#123; __(&#39;post.views&#39;) &#125;&#125;&quot; id&#x3D;&quot;busuanzi_container_page_pv&quot; style&#x3D;&quot;display: none;&quot;&gt;
+    &lt;span class&#x3D;&quot;post-meta-item-icon&quot;&gt;
+      &lt;i class&#x3D;&quot;&#123;&#123; theme.busuanzi_count.post_views_icon &#125;&#125;&quot;&gt;&lt;&#x2F;i&gt;
+    &lt;&#x2F;span&gt;
+    &lt;span class&#x3D;&quot;post-meta-item-text&quot;&gt;&#123;&#123; __(&#39;post.views&#39;) + __(&#39;symbol.colon&#39;) &#125;&#125;&lt;&#x2F;span&gt;
+    &lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;span&gt;
+&#123;%- endif %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>顺便记录一下添加总访客量和总访问量的方法，打开themes/next/layout/_partials目录下的footer.njk，找到如下代码，删掉第5行的<code>id=&quot;busuanzi_container_site_uv&quot; style=&quot;display: none;&quot;</code>和第16行的<code>id=&quot;busuanzi_container_site_pv&quot; style=&quot;display: none;&quot;</code>，现在重新生成一下博客就可以看到文章阅读量、总访客量、总访问量了。</p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;%- <span class="name"><span class="name">if</span></span> theme.busuanzi_count.enable %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;busuanzi-count&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">  </span><span class="template-tag">&#123;%- <span class="name"><span class="name">if</span></span> theme.busuanzi_count.total_visitors %&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item&quot;</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_uv&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: none;&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-icon&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; theme.busuanzi_count.total_visitors_icon &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;site-uv&quot;</span> <span class="attr">title</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; __(&#x27;footer.total_visitors&#x27;) &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_uv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">  </span><span class="template-tag">&#123;%- <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="xml">  </span><span class="template-tag">&#123;%- <span class="name"><span class="name">if</span></span> theme.busuanzi_count.total_views %&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item&quot;</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_pv&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: none;&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-item-icon&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;site-pv&quot;</span> <span class="attr">title</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; __(&#x27;footer.total_views&#x27;) &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_pv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">  </span><span class="template-tag">&#123;%- <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;%- <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&#123;%- if theme.busuanzi_count.enable %&#125;
+&lt;div class&#x3D;&quot;busuanzi-count&quot;&gt;
+&lt;script async src&#x3D;&quot;https:&#x2F;&#x2F;dn-lbstatics.qbox.me&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;
+  &#123;%- if theme.busuanzi_count.total_visitors %&#125;
+    &lt;span class&#x3D;&quot;post-meta-item&quot; id&#x3D;&quot;busuanzi_container_site_uv&quot; style&#x3D;&quot;display: none;&quot;&gt;
+      &lt;span class&#x3D;&quot;post-meta-item-icon&quot;&gt;
+        &lt;i class&#x3D;&quot;&#123;&#123; theme.busuanzi_count.total_visitors_icon &#125;&#125;&quot;&gt;&lt;&#x2F;i&gt;
+      &lt;&#x2F;span&gt;
+      &lt;span class&#x3D;&quot;site-uv&quot; title&#x3D;&quot;&#123;&#123; __(&#39;footer.total_visitors&#39;) &#125;&#125;&quot;&gt;
+        &lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;
+      &lt;&#x2F;span&gt;
+    &lt;&#x2F;span&gt;
+  &#123;%- endif %&#125;
+
+  &#123;%- if theme.busuanzi_count.total_views %&#125;
+    &lt;span class&#x3D;&quot;post-meta-item&quot; id&#x3D;&quot;busuanzi_container_site_pv&quot; style&#x3D;&quot;display: none;&quot;&gt;
+      &lt;span class&#x3D;&quot;post-meta-item-icon&quot;&gt;
+        &lt;i class&#x3D;&quot;&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;&quot;&gt;&lt;&#x2F;i&gt;
+      &lt;&#x2F;span&gt;
+      &lt;span class&#x3D;&quot;site-pv&quot; title&#x3D;&quot;&#123;&#123; __(&#39;footer.total_views&#39;) &#125;&#125;&quot;&gt;
+        &lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;
+      &lt;&#x2F;span&gt;
+    &lt;&#x2F;span&gt;
+  &#123;%- endif %&#125;
+&lt;&#x2F;div&gt;
+&#123;%- endif %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
     </div>
 
     
@@ -440,14 +480,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">57k</span>
+    <span title="站点总字数">53k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">52 分钟</span>
+    <span title="站点阅读时长">48 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -508,16 +548,17 @@ NexT.utils.loadComments('.utterances-container', () => {
   
   <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
   
-  
+
   <!-- 鼠标点击爆炸效果 2021/02/19 add -->
   
-     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
      <script type="text/javascript" src="/js/src/fireworks.js"></script>
   
   <!-- 2021/02/20 add 多功能的看板娘 这个看板娘需要用到head里面的jquery和font-awesome -->
   <!--<script src="/live2d-widget/autoload.js"></script>-->
-  
+
+  <!-- 2021/03/27 add 订阅文章通知功能 -->
   <!-- start webpushr code -->
   <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('setup',{'key':'BKJaicj1PliLxvS9yYjFQa6NcMUtzQm2EmulpN8SnZ87WqvNSUZJ1TsU57PcDJQLS7zJXV_xDHGoKTjQA9nOs04' });</script>
   <!-- end webpushr code -->

@@ -107,7 +107,7 @@
   </style>
 </noscript>
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 <link rel="alternate" href="/atom.xml" title="Tong jiebin's Blog" type="application/atom+xml">
@@ -326,14 +326,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>15k</span>
+      <span>14k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>14 分钟</span>
+      <span>13 分钟</span>
     </span>
 </div>
 
@@ -346,120 +346,340 @@
     <div class="post-body" itemprop="articleBody">
         <h3 id="在Windows上安装Git"><a href="#在Windows上安装Git" class="headerlink" title="在Windows上安装Git"></a>在Windows上安装Git</h3><p>前往<a target="_blank" rel="noopener" href="https://git-scm.com/">Git官网</a>下载安装包直接安装即可，安装完在命令行终端输入<code>git --version</code>可以看到git的版本表示安装成功。</p>
 <a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br><span class="line">git version 2.30.0.windows.2</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> --version
+<span class="token function">git</span> version <span class="token number">2.30</span>.0.windows.2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p>在D盘创建一个名为learngit的文件夹作为版本库（repository），这个文件夹下的所有文件都可以被Git管理起来。<br>右击learngit文件夹，选择“Git Bash Here”，会弹出一个命令行窗口，在命令行中输入<code>git init</code>，把learngit文件夹变为Git可以管理的仓库。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> D:/learngit/.git/</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> init
+Initialized empty Git repository <span class="token keyword">in</span> D:/learngit/.git/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>执行完命令后，在learngit文件夹下会生成一个.git的隐藏文件夹。<br>在learngit文件夹中新建一个名为readme.txt的文件，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Git is a version control system.
+Git is <span class="token function">free</span> software.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>把一个文件放到Git仓库需要两步：</p>
 <ol>
 <li>在命令行中输入<code>git add readme.txt</code>，把文件添加到仓库。</li>
 <li>在命令行中输入<code>git commit -m &quot;write a readme file&quot;</code>，把文件提交到仓库。<code>-m &quot;xxx&quot;</code>是本次提交的说明。</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;write a readme file&quot;</span></span><br><span class="line">[master (root-commit) 9129317] write a readme file</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"> create mode 100644 readme.txt</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> commit -m <span class="token string">"write a readme file"</span>
+<span class="token punctuation">[</span>master <span class="token punctuation">(</span>root-commit<span class="token punctuation">)</span> <span class="token number">9129317</span><span class="token punctuation">]</span> <span class="token function">write</span> a readme <span class="token function">file</span>
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">2</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+ create mode <span class="token number">100644</span> readme.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="时光穿梭机"><a href="#时光穿梭机" class="headerlink" title="时光穿梭机"></a>时光穿梭机</h3><h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><p>把readme.txt文件修改为：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Git is a distributed version control system.
+Git is <span class="token function">free</span> software.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>输入<code>git add readme.txt</code>和<code>git commit -m &quot;add distributed&quot;</code>命令把修改提交到仓库。<br>接着把文件修改为：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software distributed under the GPL.</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Git is a distributed version control system.
+Git is <span class="token function">free</span> software distributed under the GPL.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>输入<code>git add readme.txt</code>和<code>git commit -m &quot;append GPL&quot;</code>命令把修改提交到仓库。<br>输入<code>git log</code>会显示从最近到最远的提交日志。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit e12d14717b81c177921742e1e5966aa34b4d75b8 (HEAD -&gt; master)</span><br><span class="line">Author: tinfy &lt;42999170+tinfy@users.noreply.github.com&gt;</span><br><span class="line">Date:   Mon Mar 15 20:14:28 2021 +0800</span><br><span class="line"></span><br><span class="line">    append GPL</span><br><span class="line"></span><br><span class="line">commit 99d1e27e5ffb34d1e9c45566d916a93d270a7dd3</span><br><span class="line">Author: tinfy &lt;42999170+tinfy@users.noreply.github.com&gt;</span><br><span class="line">Date:   Mon Mar 15 20:12:53 2021 +0800</span><br><span class="line"></span><br><span class="line">    add distributed</span><br><span class="line"></span><br><span class="line">commit 9129317ac5714f479b9c53edee14337bb0ea69f9</span><br><span class="line">Author: tinfy &lt;42999170+tinfy@users.noreply.github.com&gt;</span><br><span class="line">Date:   Mon Mar 15 20:05:25 2021 +0800</span><br><span class="line"></span><br><span class="line">    write a readme file</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> log
+commit e12d14717b81c177921742e1e5966aa34b4d75b8 <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span>
+Author: tinfy <span class="token operator">&lt;</span><span class="token number">42999170</span>+tinfy@users.noreply.github.com<span class="token operator">></span>
+Date:   Mon Mar <span class="token number">15</span> <span class="token number">20</span>:14:28 <span class="token number">2021</span> +0800
+
+    append GPL
+
+commit 99d1e27e5ffb34d1e9c45566d916a93d270a7dd3
+Author: tinfy <span class="token operator">&lt;</span><span class="token number">42999170</span>+tinfy@users.noreply.github.com<span class="token operator">></span>
+Date:   Mon Mar <span class="token number">15</span> <span class="token number">20</span>:12:53 <span class="token number">2021</span> +0800
+
+    <span class="token function">add</span> distributed
+
+commit 9129317ac5714f479b9c53edee14337bb0ea69f9
+Author: tinfy <span class="token operator">&lt;</span><span class="token number">42999170</span>+tinfy@users.noreply.github.com<span class="token operator">></span>
+Date:   Mon Mar <span class="token number">15</span> <span class="token number">20</span>:05:25 <span class="token number">2021</span> +0800
+
+    <span class="token function">write</span> a readme <span class="token function">file</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>如果嫌输出信息太多，看得眼花缭乱的，可以加上<code>--pretty=oneline</code>参数：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --pretty=oneline</span><br><span class="line">e12d14717b81c177921742e1e5966aa34b4d75b8 (HEAD -&gt; master) append GPL</span><br><span class="line">99d1e27e5ffb34d1e9c45566d916a93d270a7dd3 add distributed</span><br><span class="line">9129317ac5714f479b9c53edee14337bb0ea69f9 write a readme file</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> log --pretty<span class="token operator">=</span>oneline
+e12d14717b81c177921742e1e5966aa34b4d75b8 <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span> append GPL
+99d1e27e5ffb34d1e9c45566d916a93d270a7dd3 <span class="token function">add</span> distributed
+9129317ac5714f479b9c53edee14337bb0ea69f9 <span class="token function">write</span> a readme <span class="token function">file</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>输出的一大串类似<code>e12d147...</code>的是<code>commit id</code>（版本号）。<br>如果要从当前版本<code>append GPL</code>回到上一个版本<code>add distributed</code>，可以使用<code>$ git reset --hard HEAD^</code>命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br><span class="line">HEAD is now at 99d1e27 add distributed</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> reset --hard HEAD^
+HEAD is now at 99d1e27 <span class="token function">add</span> distributed<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>回到上上个版本就是<code>$ git reset --hard HEAD^^</code>命令，往上100个版本写100个^比较容易数不过来，所以写成<code>HEAD~100</code>。<br>打开readme.txt可以看到里面的内容回到了<code>add distributed</code>版本。<br>输入<code>git log</code>命令，最新的<code>append GPL</code>版本不见了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --pretty=oneline</span><br><span class="line">99d1e27e5ffb34d1e9c45566d916a93d270a7dd3 (HEAD -&gt; master) add distributed</span><br><span class="line">9129317ac5714f479b9c53edee14337bb0ea69f9 write a readme file</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> log --pretty<span class="token operator">=</span>oneline
+99d1e27e5ffb34d1e9c45566d916a93d270a7dd3 <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span> <span class="token function">add</span> distributed
+9129317ac5714f479b9c53edee14337bb0ea69f9 <span class="token function">write</span> a readme <span class="token function">file</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>如果要回到<code>append GPL</code>版本，只要命令行没有关掉，就可以往上找到<code>append GPL</code>的<code>commit id</code>是<code>e12d147...</code>，输入<code>$ git reset --hard e12d147</code>命令可以回到<code>append GPL</code>版本。版本号没必要写全，前几位就可以了，Git会自动去找。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard e12d147</span><br><span class="line">HEAD is now at e12d147 append GPL</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> reset --hard e12d147
+HEAD is now at e12d147 append GPL<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>打开readme.txt，果然又回到了<code>append GPL</code>版本。<br>但是如果命令行已经关掉了，再想恢复到<code>append GPL</code>，就必须找到<code>append GPL</code>的<code>commit id</code>。Git提供了一个命令<code>git reflog</code>用来记录你的每一次命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br><span class="line">99d1e27 HEAD@&#123;1&#125;: reset: moving to HEAD^</span><br><span class="line">e12d147 (HEAD -&gt; master) HEAD@&#123;2&#125;: commit: append GPL</span><br><span class="line">99d1e27 HEAD@&#123;3&#125;: commit: add distributed</span><br><span class="line">9129317 HEAD@&#123;4&#125;: commit (initial): write a readme file</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> reflog
+99d1e27 HEAD@<span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">&#125;</span>: reset: moving to HEAD^
+e12d147 <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span> HEAD@<span class="token punctuation">&#123;</span><span class="token number">2</span><span class="token punctuation">&#125;</span>: commit: append GPL
+99d1e27 HEAD@<span class="token punctuation">&#123;</span><span class="token number">3</span><span class="token punctuation">&#125;</span>: commit: <span class="token function">add</span> distributed
+<span class="token number">9129317</span> HEAD@<span class="token punctuation">&#123;</span><span class="token number">4</span><span class="token punctuation">&#125;</span>: commit <span class="token punctuation">(</span>initial<span class="token punctuation">)</span>: <span class="token function">write</span> a readme <span class="token function">file</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>现在知道了<code>append GPL</code>的<code>commit id</code>是e12d147，又可以回到<code>append GPL</code>版本了。</p>
 <h4 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h4><p>工作区（Working Directory）：就是在电脑里能看到的目录，learngit文件夹就是一个工作区。<br>版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。<br>Git的版本库里存了很多东西，其中最重要的就是称为stage的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/git_workandrepo.jpg"><br>前面把readme.txt文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步是用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，<code>git commit</code>就是往master分支上提交更改。<br>实践出真知。先对readme.txt做个修改，然后在工作区新建一个LICENSE.txt文件，随便添加一些内容。<br>使用<code>git status</code>查看一下状态：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line">        modified:   readme.txt</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="keyword">in</span> what will be committed)</span><br><span class="line">        LICENSE.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">&quot;git add&quot;</span> and/or <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status
+On branch master
+Changes not staged <span class="token keyword">for</span> commit:
+  <span class="token punctuation">(</span>use <span class="token string">"git add &lt;file>..."</span> to update what will be committed<span class="token punctuation">)</span>
+  <span class="token punctuation">(</span>use <span class="token string">"git restore &lt;file>..."</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>
+        modified:   readme.txt
+
+Untracked files:
+  <span class="token punctuation">(</span>use <span class="token string">"git add &lt;file>..."</span> to include <span class="token keyword">in</span> what will be committed<span class="token punctuation">)</span>
+        LICENSE.txt
+
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">"git add"</span> and/or <span class="token string">"git commit -a"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Git非常清楚地告诉我们，readme.txt被修改了，而LICENSE.txt还从来没有被添加过，所以它的状态是Untracked。<br>现在，使用两次命令<code>git add</code>，把readme.txt和LICENSE.txt都添加后，用<code>git status</code>再查看一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git restore --staged &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line">        new file:   LICENSE.txt</span><br><span class="line">        modified:   readme.txt</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status
+On branch master
+Changes to be committed:
+  <span class="token punctuation">(</span>use <span class="token string">"git restore --staged &lt;file>..."</span> to unstage<span class="token punctuation">)</span>
+        new file:   LICENSE.txt
+        modified:   readme.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>现在，暂存区的状态就变成这样了：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/git_workandrepo02.jpg"><br>所以，git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;understand how stage works&quot;</span></span><br><span class="line">[master 4dc3ba4] understand how stage works</span><br><span class="line"> 2 files changed, 3 insertions(+), 1 deletion(-)</span><br><span class="line"> create mode 100644 LICENSE.txt</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> commit -m <span class="token string">"understand how stage works"</span>
+<span class="token punctuation">[</span>master 4dc3ba4<span class="token punctuation">]</span> understand how stage works
+ <span class="token number">2</span> files changed, <span class="token number">3</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">1</span> deletion<span class="token punctuation">(</span>-<span class="token punctuation">)</span>
+ create mode <span class="token number">100644</span> LICENSE.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>一旦提交后，如果你又没有对工作区做任何修改，那么工作区就是“干净”的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status
+On branch master
+nothing to commit, working tree clean<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>现在版本库变成了这样，暂存区就没有任何内容了：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/git_workandrepo03.jpg"></p>
 <h4 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h4><p>Git跟踪并管理的是修改，而非文件。比如新增了一行、删除了一行、更改了某些字符、删了一些又加了一些，都是一个修改，甚至创建一个新文件，也算一个修改。<br>下面做一个实验，在readme.txt中添加一行：<code>Git tracks changes.</code>。然后使用<code>git add readme.txt</code>和<code>git status</code>命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git restore --staged &lt;file&gt;...&quot;</span> to unstage)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">add</span> readme.txt
+$ <span class="token function">git</span> status
+On branch master
+Changes to be committed:
+  <span class="token punctuation">(</span>use <span class="token string">"git restore --staged &lt;file>..."</span> to unstage<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后，把上面添加的一行修改为<code>Git tracks changes of files.</code>，再用<code>git commmit</code>命令提交：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">&quot;git tracks changes&quot;</span></span><br><span class="line">[master 2cced03] git tracks changes</span><br><span class="line"> 1 file changed, 2 insertions(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> commit -m <span class="token string">"git tracks changes"</span>
+<span class="token punctuation">[</span>master 2cced03<span class="token punctuation">]</span> <span class="token function">git</span> tracks changes
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">2</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">1</span> deletion<span class="token punctuation">(</span>-<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><code>git status</code>命令查看状态：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line">        modified:   readme.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">&quot;git add&quot;</span> and/or <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status
+On branch master
+Changes not staged <span class="token keyword">for</span> commit:
+  <span class="token punctuation">(</span>use <span class="token string">"git add &lt;file>..."</span> to update what will be committed<span class="token punctuation">)</span>
+  <span class="token punctuation">(</span>use <span class="token string">"git restore &lt;file>..."</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>
+        modified:   readme.txt
+
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">"git add"</span> and/or <span class="token string">"git commit -a"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>怎么第二次的修改没有被提交？这是因为git管理的是修改，第一次修改后，使用<code>git add</code>命令把修改放入了暂存区，第二次修改后，没有放进暂存区。而<code>git commit</code>只会提交暂存区的修改，所以第二次的修改没有被提交。<br>提交后，使用<code>git diff HEAD -- readme.txt</code>命令查看工作区和版本库之间的区别：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ git diff HEAD -- readme.txt</span><br><span class="line">diff --git a/readme.txt b/readme.txt</span><br><span class="line">index db28b2c..9a8b341 100644</span><br><span class="line">--- a/readme.txt</span><br><span class="line">+++ b/readme.txt</span><br><span class="line">@@ -1,4 +1,4 @@</span><br><span class="line"> Git is a distributed version control system.</span><br><span class="line"> Git is free software distributed under the GPL.</span><br><span class="line"> Git has a mutable index called stage.</span><br><span class="line">-Git tracks changes.</span><br><span class="line">\ No newline at end of file</span><br><span class="line">+Git tracks changes of files.</span><br><span class="line">\ No newline at end of file</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">diff</span> HEAD -- readme.txt
+<span class="token function">diff</span> --git a/readme.txt b/readme.txt
+index db28b2c<span class="token punctuation">..</span>9a8b341 <span class="token number">100644</span>
+--- a/readme.txt
++++ b/readme.txt
+@@ -1,4 +1,4 @@
+ Git is a distributed version control system.
+ Git is <span class="token function">free</span> software distributed under the GPL.
+ Git has a mutable index called stage.
+-Git tracks changes.
+<span class="token punctuation">\</span> No newline at end of <span class="token function">file</span>
++Git tracks changes of files.
+<span class="token punctuation">\</span> No newline at end of <span class="token function">file</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可以发现第二次修改确实没有被提交。如果要继续提交第二次修改，可以使用<code>git add</code>再<code>git commmit</code>。</p>
 <h4 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h4><p>在readme.txt中添加了一行<code>My stupid boss still prefers SVN.</code>。猛然发现可能会有问题，可以使用<code>git checkout -- readme.txt</code>命令丢弃工作区的修改。<br>如果你写了一些胡话，还<code>git add</code>添加到了暂存区，使用<code>git status</code>查看一下状态：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git restore --staged &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line">        modified:   readme.txt</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status
+On branch master
+Changes to be committed:
+  <span class="token punctuation">(</span>use <span class="token string">"git restore --staged &lt;file>..."</span> to unstage<span class="token punctuation">)</span>
+        modified:   readme.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可以使用<code>git reset HEAD readme.txt</code>把暂存区的修改撤销掉<strong>（unstage）</strong>，<code>git status</code>查看一下状态：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line">        modified:   readme.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">&quot;git add&quot;</span> and/or <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status
+On branch master
+Changes not staged <span class="token keyword">for</span> commit:
+  <span class="token punctuation">(</span>use <span class="token string">"git add &lt;file>..."</span> to update what will be committed<span class="token punctuation">)</span>
+  <span class="token punctuation">(</span>use <span class="token string">"git restore &lt;file>..."</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>
+        modified:   readme.txt
+
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">"git add"</span> and/or <span class="token string">"git commit -a"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>现在暂存区是干净的，工作区有修改。再使用上面学的<code>git checkout -- readme.txt</code>命令丢弃工作区的修改。<br><code>git status</code>查看状态：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status
+On branch master
+nothing to commit, working tree clean<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>现在暂存区是干净的，工作区也回到了修改前的版本。<br>如果你不但写错了东西，还从暂存区提交到了版本库。还是可以使用“版本回退”目录下学到的<code>git reset --hard HEAD^</code>命令回到修改前的版本。</p>
 <h4 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h4><p>在git中，删除也是一个修改操作。<br>在learngit文件夹中新建一个test.txt文件，<code>git add</code>和<code>git commit</code>提交到版本库。<br>但是你在learngit文件夹中把test.txt文件给删掉了，使用<code>git status</code>查看哪些文件被删了：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add/rm &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line">        deleted:    test.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">&quot;git add&quot;</span> and/or <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status
+On branch master
+Changes not staged <span class="token keyword">for</span> commit:
+  <span class="token punctuation">(</span>use <span class="token string">"git add/rm &lt;file>..."</span> to update what will be committed<span class="token punctuation">)</span>
+  <span class="token punctuation">(</span>use <span class="token string">"git restore &lt;file>..."</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>
+        deleted:    test.txt
+
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">"git add"</span> and/or <span class="token string">"git commit -a"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这时有两种情况：<br>1.你确实是要删掉这个文件，使用<code>git rm test.txt</code>和<code>git commit -m &quot;remove test.txt&quot;</code>命令把版本库中的test.txt文件给删掉。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git rm test.txt</span><br><span class="line">rm <span class="string">&#x27;test.txt&#x27;</span></span><br><span class="line"></span><br><span class="line">$ git commit -m <span class="string">&quot;remove test.txt&quot;</span></span><br><span class="line">[master ba7145c] remove test.txt</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> delete mode 100644 test.txt</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">rm</span> test.txt
+<span class="token function">rm</span> <span class="token string">'test.txt'</span>
+
+$ <span class="token function">git</span> commit -m <span class="token string">"remove test.txt"</span>
+<span class="token punctuation">[</span>master ba7145c<span class="token punctuation">]</span> remove test.txt
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">0</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">0</span> deletions<span class="token punctuation">(</span>-<span class="token punctuation">)</span>
+ delete mode <span class="token number">100644</span> test.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>2.删错了，但是版本库中还有，可以使用<code>git checkout -- test.txt</code>把误删的文件恢复到最新版本。<strong>如果从没被添加到版本库就被删除，是无法恢复的。</strong></p>
 <h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><h4 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/p812438109/article/details/110421304">Git 远程仓库(Github)配置、创建、连接、删除</a><br>在GitHub中创建一个仓库命名为learngit，可以把一个本地仓库和GitHub仓库关联，再把本地仓库的内容推送到GitHub仓库。<br>在本地仓库下运行命令<code>git remote add origin https://github.com/tinfy/learngit.git</code>。添加后，远程库的名字就是<code>origin</code>。然后使用<code>git push -u origin master</code>把本地仓库的内容推送到GitHub仓库。<br>由于远程库是空的，第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。<br><code>git remote rm origin</code>可以删掉远程连接。</p>
 <h4 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h4><p>使用<code>git clone https://github.com/tinfy/learngit.git</code>命令可以把GitHub仓库克隆到本地。</p>
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><h4 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h4><p>创建一个dev分支，然后切换到dev分支：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b dev</span><br><span class="line">Switched to a new branch <span class="string">&#x27;dev&#x27;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> checkout -b dev
+Switched to a new branch <span class="token string">'dev'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p><code>-b</code>表示创建并切换，相当于这两条命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> branch dev
+<span class="token function">git</span> checkout dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p><code>git branch</code>查看当前分支(当前分支前面会有一个*号)：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* dev</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> branch
+* dev
+  master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>在当前分支（dev）上在readme.txt文件后添加一行<code>Creating a new branch is quick.</code>，<code>git add</code>和<code>git commit</code>提交。<br><code>git branch master</code>切换到master分支。打开readme.txt发现刚才添加的内容不见了，这是因为是在dev分支上提交的，而master分支的提交点没有变。<br><code>git merge dev</code>把dev分支的工作成果合并到master分支上：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git merge dev</span><br><span class="line">Updating 9aca910..11e4e21</span><br><span class="line">Fast-forward</span><br><span class="line"> readme.txt | 3 ++-</span><br><span class="line"> 1 file changed, 2 insertions(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> merge dev
+Updating 9aca910<span class="token punctuation">..</span>11e4e21
+Fast-forward
+ readme.txt <span class="token operator">|</span> <span class="token number">3</span> ++-
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">2</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">1</span> deletion<span class="token punctuation">(</span>-<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>git merge</code>命令用于合并指定分支到当前分支。<br>现在可以使用<code>git branch -d dev</code>删除dev分支了：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d dev</span><br><span class="line">Deleted branch dev (was 11e4e21).</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> branch -d dev
+Deleted branch dev <span class="token punctuation">(</span>was 11e4e21<span class="token punctuation">)</span>.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>创建并切换到新的dev分支，还可以使用<code>git switch -c dev</code>命令。<br>切换到master分支，还可以使用<code>git switch master</code>命令。</p>
 <h4 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h4><p>使用<code>git switch -c feature1</code>创建并切换到新分支<code>feature1</code>上，修改readme.txt最后一行为<code>Creating a new branch is quick and simple.</code>，在feature分支上<code>git add</code>和<code>git commit</code>提交到版本库。<br><code>git switch master</code>切换到master分支，在master分支上修改readme.txt最后一行为<code>Creating a new branch is quick &amp; simple.</code>，同样把修改提交到版本库，现在分支变成了这样：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/git_branch01.png"><br>尝试<code>git merge feature1</code>把feature1分支合并到master分支上，显示有冲突：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git merge feature1</span><br><span class="line">Auto-merging readme.txt</span><br><span class="line">CONFLICT (content): Merge conflict <span class="keyword">in</span> readme.txt</span><br><span class="line">Automatic merge failed; fix conflicts and <span class="keyword">then</span> commit the result.</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> merge feature1
+Auto-merging readme.txt
+CONFLICT <span class="token punctuation">(</span>content<span class="token punctuation">)</span>: Merge conflict <span class="token keyword">in</span> readme.txt
+Automatic merge failed<span class="token punctuation">;</span> fix conflicts and <span class="token keyword">then</span> commit the result.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>打开readme.txt，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software distributed under the GPL.</span><br><span class="line">Git has a mutable index called stage.</span><br><span class="line">Git tracks changes.</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; <span class="string">HEAD</span></span><br><span class="line"><span class="string">Creating a new branch is quick &amp; simple.</span></span><br><span class="line"><span class="string">=======</span></span><br><span class="line"><span class="string">Creating a new branch is quick and simple.</span></span><br><span class="line"><span class="string">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature1</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Git is a distributed version control system.
+Git is <span class="token function">free</span> software distributed under the GPL.
+Git has a mutable index called stage.
+Git tracks changes.
+<span class="token operator">&lt;&lt;&lt;</span><span class="token operator">&lt;&lt;&lt;</span><span class="token operator">&lt;</span> HEAD
+Creating a new branch is quick <span class="token operator">&amp;</span> simple.
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+Creating a new branch is quick and simple.
+<span class="token operator">>></span><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">></span> feature1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>把后面的五行修改为：<code>Creating a new branch is quick and simple.</code>，再<code>git add</code>和<code>git commit</code>提交到版本库。<br>现在分支变为了这样：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/git_branch02.png"><br><code>git log --graph</code>可以查看分支合并图。最后，使用<code>git branch -d feature1</code>删除feature1分支。</p>
 <h4 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h4><p>通常，合并分支时，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息，合并后的分支是这样的：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/git_branch03.png"><br>如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。<br><code>git switch -c dev</code>创建并切换到dev分支，修改readme.txt并提交到版本库，<code>git switch master</code>切换到master分支。<br>使用带<code>--no-ff</code>参数的<code>git merge</code>命令把dev分支合并到master分支。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git merge --no-ff -m <span class="string">&quot;merge with no-ff&quot;</span> dev</span><br><span class="line">Merge made by the <span class="string">&#x27;recursive&#x27;</span> strategy.</span><br><span class="line"> readme.txt | 3 ++-</span><br><span class="line"> 1 file changed, 2 insertions(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> merge --no-ff -m <span class="token string">"merge with no-ff"</span> dev
+Merge made by the <span class="token string">'recursive'</span> strategy.
+ readme.txt <span class="token operator">|</span> <span class="token number">3</span> ++-
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">2</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">1</span> deletion<span class="token punctuation">(</span>-<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>合并后，<code>git log</code>查看分支历史：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --graph --pretty=oneline --abbrev-commit</span><br><span class="line">*   3dbaaa3 (HEAD -&gt; master) merge with no-ff</span><br><span class="line">|\</span><br><span class="line">| * 7658400 (dev) add merge</span><br><span class="line">|/</span><br><span class="line">*   0752fac conflict fixed</span><br><span class="line">|\</span><br><span class="line">| * 04ebb72 (feature1) add simple</span><br><span class="line">* | 340328f add &amp;simple</span><br><span class="line">|/</span><br><span class="line">* 11e4e21 branch <span class="built_in">test</span></span><br><span class="line">* 9aca910 add test.txt</span><br><span class="line">* ba7145c remove test.txt</span><br><span class="line">* 03ab752 add test.txt</span><br><span class="line">* 2cced03 git tracks changes</span><br><span class="line">* 4dc3ba4 understand how stage works</span><br><span class="line">* e12d147 append GPL</span><br><span class="line">* 99d1e27 add distributed</span><br><span class="line">* 9129317 write a readme file</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> log --graph --pretty<span class="token operator">=</span>oneline --abbrev-commit
+*   3dbaaa3 <span class="token punctuation">(</span>HEAD -<span class="token operator">></span> master<span class="token punctuation">)</span> merge with no-ff
+<span class="token operator">|</span><span class="token punctuation">\</span>
+<span class="token operator">|</span> * <span class="token number">7658400</span> <span class="token punctuation">(</span>dev<span class="token punctuation">)</span> <span class="token function">add</span> merge
+<span class="token operator">|</span>/
+*   0752fac conflict fixed
+<span class="token operator">|</span><span class="token punctuation">\</span>
+<span class="token operator">|</span> * 04ebb72 <span class="token punctuation">(</span>feature1<span class="token punctuation">)</span> <span class="token function">add</span> simple
+* <span class="token operator">|</span> 340328f <span class="token function">add</span> <span class="token operator">&amp;</span>simple
+<span class="token operator">|</span>/
+* 11e4e21 branch <span class="token builtin class-name">test</span>
+* 9aca910 <span class="token function">add</span> test.txt
+* ba7145c remove test.txt
+* 03ab752 <span class="token function">add</span> test.txt
+* 2cced03 <span class="token function">git</span> tracks changes
+* 4dc3ba4 understand how stage works
+* e12d147 append GPL
+* 99d1e27 <span class="token function">add</span> distributed
+* <span class="token number">9129317</span> <span class="token function">write</span> a readme <span class="token function">file</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>不使用Fast forward模式，merge后就像这样：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/git_branch04.png"></p>
 <h4 id="Bug分支"><a href="#Bug分支" class="headerlink" title="Bug分支"></a>Bug分支</h4><p>如果临时需要修复一个bug，但现在dev分支上的工作还没提交，还需要一段时间才能全部完成，可以使用<code>git stash</code>“储藏”工作区，等以后恢复工作区后继续工作，<code>git status</code>可以看到工作区是干净的。<br>从master分支创建一个临时分支issue-101,修复bug后提交到版本库，切回到master分支，完成合并，最后删除issue-101分支。<br>现在接着会dev分支干活，<code>git stash list</code>可以查看保存的工作现场：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git stash list</span><br><span class="line">stash@&#123;0&#125;: WIP on dev: 7658400 add merge</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> stash list
+stash@<span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">&#125;</span>: WIP on dev: <span class="token number">7658400</span> <span class="token function">add</span> merge<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>恢复现场有两种办法：</p>
 <ol>
 <li>用<code>git stash apply</code>恢复，但是恢复后，stash内容并不删除，你需要用<code>git stash drop</code>来删除；</li>
 <li>用<code>git stash pop</code>，恢复的同时把stash内容也删了</li>
 </ol>
 <p><code>git stash apply</code>恢复到指定的stash：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git stash apply stash@&#123;0&#125;</span><br><span class="line">On branch dev</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line">        modified:   readme.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">&quot;git add&quot;</span> and/or <span class="string">&quot;git commit -a&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> stash apply stash@<span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">&#125;</span>
+On branch dev
+Changes not staged <span class="token keyword">for</span> commit:
+  <span class="token punctuation">(</span>use <span class="token string">"git add &lt;file>..."</span> to update what will be committed<span class="token punctuation">)</span>
+  <span class="token punctuation">(</span>use <span class="token string">"git restore &lt;file>..."</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>
+        modified:   readme.txt
+
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">"git add"</span> and/or <span class="token string">"git commit -a"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>master分支上的bug修复后，dev分支上还存在相同的bug，怎么办？可以找到在issue101分支上提交的commit id，在dev分支上使用<code>git cherry-pick &lt;commit id&gt;</code>命令复制在issue101分支上的提交到当前分支。</p>
 <h4 id="Feature分支"><a href="#Feature分支" class="headerlink" title="Feature分支"></a>Feature分支</h4><p>如果要开发一个新功能，最好新建一个feature分支。<br>如果要丢弃一个没有被合并过的分支，可以通过<code>git branch -D &lt;name&gt;</code>强行删除。</p>
 <h4 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h4><p>当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。<br><code>git remote</code>查看远程库信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">origin</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> remote
+origin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p><code>git remote -v</code>查看详细的远程库信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  https://github.com/tinfy/learngit.git (fetch)</span><br><span class="line">origin  https://github.com/tinfy/learngit.git (push)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> remote -v
+origin  https://github.com/tinfy/learngit.git <span class="token punctuation">(</span>fetch<span class="token punctuation">)</span>
+origin  https://github.com/tinfy/learngit.git <span class="token punctuation">(</span>push<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h5 id="推送分支"><a href="#推送分支" class="headerlink" title="推送分支"></a>推送分支</h5><p>把指定的本地分支推送到远程库对应的远程分支上：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br><span class="line">Everything up-to-date</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> push origin master
+Everything up-to-date<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h5 id="抓取分支"><a href="#抓取分支" class="headerlink" title="抓取分支"></a>抓取分支</h5><p>把远程库克隆到本地另一个目录下模拟多人合作：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git@github.com:tinfy/learngit.git</span><br><span class="line">Cloning into <span class="string">&#x27;learngit&#x27;</span>...</span><br><span class="line">remote: Enumerating objects: 35, <span class="keyword">done</span>.</span><br><span class="line">remote: Counting objects: 100% (35/35), <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (19/19), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 35 (delta 11), reused 35 (delta 11), pack-reused 0</span><br><span class="line">Receiving objects: 100% (35/35), <span class="keyword">done</span>.</span><br><span class="line">Resolving deltas: 100% (11/11), <span class="keyword">done</span>.</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> clone git@github.com:tinfy/learngit.git
+Cloning into <span class="token string">'learngit'</span><span class="token punctuation">..</span>.
+remote: Enumerating objects: <span class="token number">35</span>, done.
+remote: Counting objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">35</span>/35<span class="token punctuation">)</span>, done.
+remote: Compressing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">19</span>/19<span class="token punctuation">)</span>, done.
+remote: Total <span class="token number">35</span> <span class="token punctuation">(</span>delta <span class="token number">11</span><span class="token punctuation">)</span>, reused <span class="token number">35</span> <span class="token punctuation">(</span>delta <span class="token number">11</span><span class="token punctuation">)</span>, pack-reused <span class="token number">0</span>
+Receiving objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">35</span>/35<span class="token punctuation">)</span>, done.
+Resolving deltas: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">11</span>/11<span class="token punctuation">)</span>, done.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>默认情况下，只能看到本地的master分支。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> branch
+* master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>现在，我的小伙伴要在dev分支上开发，就必须创建远程origin的dev分支到本地，于是他用这个命令创建本地dev分支：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b dev origin/dev</span><br><span class="line">Switched to a new branch <span class="string">&#x27;dev&#x27;</span></span><br><span class="line">Branch <span class="string">&#x27;dev&#x27;</span> <span class="built_in">set</span> up to track remote branch <span class="string">&#x27;dev&#x27;</span> from <span class="string">&#x27;origin&#x27;</span>.</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> checkout -b dev origin/dev
+Switched to a new branch <span class="token string">'dev'</span>
+Branch <span class="token string">'dev'</span> <span class="token builtin class-name">set</span> up to track remote branch <span class="token string">'dev'</span> from <span class="token string">'origin'</span><span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>他在dev分支上新建了一个env.txt，并把dev分支push到了远程：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ git add env.txt</span><br><span class="line"></span><br><span class="line">$ git commit -m <span class="string">&quot;add env&quot;</span></span><br><span class="line">[dev bb829be] add env</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 env.txt</span><br><span class="line"></span><br><span class="line">$ git push origin dev</span><br><span class="line">Enumerating objects: 3, <span class="keyword">done</span>.</span><br><span class="line">Counting objects: 100% (3/3), <span class="keyword">done</span>.</span><br><span class="line">Delta compression using up to 4 threads</span><br><span class="line">Compressing objects: 100% (2/2), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (2/2), 310 bytes | 310.00 KiB/s, <span class="keyword">done</span>.</span><br><span class="line">Total 2 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">To github.com:tinfy/learngit.git</span><br><span class="line">   7658400..bb829be  dev -&gt; dev</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">add</span> env.txt
+
+$ <span class="token function">git</span> commit -m <span class="token string">"add env"</span>
+<span class="token punctuation">[</span>dev bb829be<span class="token punctuation">]</span> <span class="token function">add</span> <span class="token function">env</span>
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">0</span> insertions<span class="token punctuation">(</span>+<span class="token punctuation">)</span>, <span class="token number">0</span> deletions<span class="token punctuation">(</span>-<span class="token punctuation">)</span>
+ create mode <span class="token number">100644</span> env.txt
+
+$ <span class="token function">git</span> push origin dev
+Enumerating objects: <span class="token number">3</span>, done.
+Counting objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">3</span>/3<span class="token punctuation">)</span>, done.
+Delta compression using up to <span class="token number">4</span> threads
+Compressing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">2</span>/2<span class="token punctuation">)</span>, done.
+Writing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">2</span>/2<span class="token punctuation">)</span>, <span class="token number">310</span> bytes <span class="token operator">|</span> <span class="token number">310.00</span> KiB/s, done.
+Total <span class="token number">2</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>, reused <span class="token number">0</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>, pack-reused <span class="token number">0</span>
+To github.com:tinfy/learngit.git
+   <span class="token number">7658400</span><span class="token punctuation">..</span>bb829be  dev -<span class="token operator">></span> dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>我的小伙伴已经向origin/dev分支推送了他的提交，而碰巧我也对同样的文件作了修改，并试图推送：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ git add env.txt</span><br><span class="line"></span><br><span class="line">$ git commit -m <span class="string">&quot;add new env&quot;</span></span><br><span class="line">[dev 70a4189] add new env</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 env.txt</span><br><span class="line"></span><br><span class="line">$ git push origin dev</span><br><span class="line">To github.com:tinfy/learngit.git</span><br><span class="line"> ! [rejected]        dev -&gt; dev (fetch first)</span><br><span class="line">error: failed to push some refs to <span class="string">&#x27;github.com:tinfy/learngit.git&#x27;</span></span><br><span class="line">hint: Updates were rejected because the remote contains work that you <span class="keyword">do</span></span><br><span class="line">hint: not have locally. This is usually caused by another repository pushing</span><br><span class="line">hint: to the same ref. You may want to first integrate the remote changes</span><br><span class="line">hint: (e.g., <span class="string">&#x27;git pull ...&#x27;</span>) before pushing again.</span><br><span class="line">hint: See the <span class="string">&#x27;Note about fast-forwards&#x27;</span> <span class="keyword">in</span> <span class="string">&#x27;git push --help&#x27;</span> <span class="keyword">for</span> details.</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">add</span> env.txt
+
+$ <span class="token function">git</span> commit -m <span class="token string">"add new env"</span>
+<span class="token punctuation">[</span>dev 70a4189<span class="token punctuation">]</span> <span class="token function">add</span> new <span class="token function">env</span>
+ <span class="token number">1</span> <span class="token function">file</span> changed, <span class="token number">1</span> insertion<span class="token punctuation">(</span>+<span class="token punctuation">)</span>
+ create mode <span class="token number">100644</span> env.txt
+
+$ <span class="token function">git</span> push origin dev
+To github.com:tinfy/learngit.git
+ <span class="token operator">!</span> <span class="token punctuation">[</span>rejected<span class="token punctuation">]</span>        dev -<span class="token operator">></span> dev <span class="token punctuation">(</span>fetch first<span class="token punctuation">)</span>
+error: failed to push some refs to <span class="token string">'github.com:tinfy/learngit.git'</span>
+hint: Updates were rejected because the remote contains work that you <span class="token keyword">do</span>
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: <span class="token punctuation">(</span>e.g., <span class="token string">'git pull ...'</span><span class="token punctuation">)</span> before pushing again.
+hint: See the <span class="token string">'Note about fast-forwards'</span> <span class="token keyword">in</span> <span class="token string">'git push --help'</span> <span class="token keyword">for</span> details.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>推送失败，因为我的小伙伴的最新提交和我试图推送的提交有冲突。解决办法：先用<code>git pull</code>把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br><span class="line">remote: Enumerating objects: 3, <span class="keyword">done</span>.</span><br><span class="line">remote: Counting objects: 100% (3/3), <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (2/2), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 2 (delta 0), reused 2 (delta 0), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (2/2), 290 bytes | 2.00 KiB/s, <span class="keyword">done</span>.</span><br><span class="line">From github.com:tinfy/learngit</span><br><span class="line">   7658400..bb829be  dev        -&gt; origin/dev</span><br><span class="line"> * [new branch]      master     -&gt; origin/master</span><br><span class="line">There is no tracking information <span class="keyword">for</span> the current branch.</span><br><span class="line">Please specify <span class="built_in">which</span> branch you want to merge with.</span><br><span class="line">See git-pull(1) <span class="keyword">for</span> details.</span><br><span class="line"></span><br><span class="line">    git pull &lt;remote&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">If you wish to <span class="built_in">set</span> tracking information <span class="keyword">for</span> this branch you can <span class="keyword">do</span> so with:</span><br><span class="line"></span><br><span class="line">    git branch --set-upstream-to=origin/&lt;branch&gt; dev</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> pull
+remote: Enumerating objects: <span class="token number">3</span>, done.
+remote: Counting objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">3</span>/3<span class="token punctuation">)</span>, done.
+remote: Compressing objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">2</span>/2<span class="token punctuation">)</span>, done.
+remote: Total <span class="token number">2</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>, reused <span class="token number">2</span> <span class="token punctuation">(</span>delta <span class="token number">0</span><span class="token punctuation">)</span>, pack-reused <span class="token number">0</span>
+Unpacking objects: <span class="token number">100</span>% <span class="token punctuation">(</span><span class="token number">2</span>/2<span class="token punctuation">)</span>, <span class="token number">290</span> bytes <span class="token operator">|</span> <span class="token number">2.00</span> KiB/s, done.
+From github.com:tinfy/learngit
+   <span class="token number">7658400</span><span class="token punctuation">..</span>bb829be  dev        -<span class="token operator">></span> origin/dev
+ * <span class="token punctuation">[</span>new branch<span class="token punctuation">]</span>      master     -<span class="token operator">></span> origin/master
+There is no tracking information <span class="token keyword">for</span> the current branch.
+Please specify <span class="token function">which</span> branch you want to merge with.
+See git-pull<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> details.
+
+    <span class="token function">git</span> pull <span class="token operator">&lt;</span>remote<span class="token operator">></span> <span class="token operator">&lt;</span>branch<span class="token operator">></span>
+
+If you wish to <span class="token builtin class-name">set</span> tracking information <span class="token keyword">for</span> this branch you can <span class="token keyword">do</span> so with:
+
+    <span class="token function">git</span> branch --set-upstream-to<span class="token operator">=</span>origin/<span class="token operator">&lt;</span>branch<span class="token operator">></span> dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>git pull</code>也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch --set-upstream-to=origin/dev dev</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> branch --set-upstream-to<span class="token operator">=</span>origin/dev dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong>如果<code>git pull</code>提示<code>no tracking information</code>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;</code>。</strong><br>再执行<code>git pull</code>，这回<code>git pull</code>成功，但是合并有冲突，需要手动解决.解决后，提交，再push：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;fix env conflict&quot;</span></span><br><span class="line">git push origin dev</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit -m <span class="token string">"fix env conflict"</span>
+<span class="token function">git</span> push origin dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="Git命令总结"><a href="#Git命令总结" class="headerlink" title="Git命令总结"></a>Git命令总结</h3><table>
 <thead>
 <tr>
@@ -705,14 +925,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">57k</span>
+    <span title="站点总字数">53k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">52 分钟</span>
+    <span title="站点阅读时长">48 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -773,16 +993,17 @@ NexT.utils.loadComments('.utterances-container', () => {
   
   <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
   
-  
+
   <!-- 鼠标点击爆炸效果 2021/02/19 add -->
   
-     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
      <script type="text/javascript" src="/js/src/fireworks.js"></script>
   
   <!-- 2021/02/20 add 多功能的看板娘 这个看板娘需要用到head里面的jquery和font-awesome -->
   <!--<script src="/live2d-widget/autoload.js"></script>-->
-  
+
+  <!-- 2021/03/27 add 订阅文章通知功能 -->
   <!-- start webpushr code -->
   <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('setup',{'key':'BKJaicj1PliLxvS9yYjFQa6NcMUtzQm2EmulpN8SnZ87WqvNSUZJ1TsU57PcDJQLS7zJXV_xDHGoKTjQA9nOs04' });</script>
   <!-- end webpushr code -->

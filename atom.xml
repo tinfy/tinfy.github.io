@@ -6,7 +6,7 @@
   <link href="https://tinfy.github.io/atom.xml" rel="self"/>
   
   <link href="https://tinfy.github.io/"/>
-  <updated>2021-03-27T11:08:49.306Z</updated>
+  <updated>2021-03-29T12:50:33.173Z</updated>
   <id>https://tinfy.github.io/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="https://tinfy.github.io/posts/5878.html"/>
     <id>https://tinfy.github.io/posts/5878.html</id>
     <published>2021-03-26T11:56:54.000Z</published>
-    <updated>2021-03-27T11:08:49.306Z</updated>
+    <updated>2021-03-29T12:50:33.173Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;strong&gt;标题&lt;/strong&gt;：使用&lt;code&gt;#&lt;/code&gt;可表示 1-6 级标题，一级标题对应一个&lt;code&gt;#&lt;/code&gt;，二级标题对应两个&lt;code&gt;#&lt;/code&gt;，以此类推。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h4 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h4&gt;&lt;p&gt;使用&lt;code&gt;#&lt;/code&gt;可表示 1-6 级标题，一级标题对应一个&lt;code&gt;#&lt;/code&gt;，二级标题对应两个&lt;code&gt;#&lt;/code&gt;，以此类推。&lt;/p&gt;</summary>
     
     
     
@@ -78,7 +78,7 @@
     <link href="https://tinfy.github.io/posts/7146.html"/>
     <id>https://tinfy.github.io/posts/7146.html</id>
     <published>2021-03-14T09:41:48.000Z</published>
-    <updated>2021-03-27T11:08:49.321Z</updated>
+    <updated>2021-03-29T12:33:58.891Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;Promise的含义&quot;&gt;&lt;a href=&quot;#Promise的含义&quot; class=&quot;headerlink&quot; title=&quot;Promise的含义&quot;&gt;&lt;/a&gt;Promise的含义&lt;/h3&gt;&lt;p&gt;所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。&lt;/p&gt;</summary>
@@ -118,7 +118,7 @@
     <link href="https://tinfy.github.io/posts/1195.html"/>
     <id>https://tinfy.github.io/posts/1195.html</id>
     <published>2021-03-13T08:51:54.000Z</published>
-    <updated>2021-03-27T11:08:49.323Z</updated>
+    <updated>2021-03-29T12:34:37.521Z</updated>
     
     
     <summary type="html">&lt;p&gt;Vue项目中引入less，报错&lt;strong&gt;Syntax Error: TypeError: this.getOptions is not a function&lt;/strong&gt;解决办法：&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/gdutRex/article/details/113547371&quot;&gt;https://blog.csdn.net/gdutRex/article/details/113547371&lt;/a&gt;&lt;/p&gt;</summary>
@@ -156,7 +156,7 @@
     <link href="https://tinfy.github.io/posts/fc2.html"/>
     <id>https://tinfy.github.io/posts/fc2.html</id>
     <published>2021-03-05T13:42:40.000Z</published>
-    <updated>2021-03-27T11:08:49.288Z</updated>
+    <updated>2021-03-29T12:30:01.895Z</updated>
     
     
     <summary type="html">&lt;p&gt;效果图如下：&lt;br&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/baiduBear.jpg&quot;&gt;&lt;/p&gt;</summary>
@@ -175,7 +175,7 @@
     <link href="https://tinfy.github.io/posts/8d4d.html"/>
     <id>https://tinfy.github.io/posts/8d4d.html</id>
     <published>2021-03-02T15:49:17.000Z</published>
-    <updated>2021-03-27T11:08:49.298Z</updated>
+    <updated>2021-03-29T12:55:57.981Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;Class可以通过extends关键字实现继承。&lt;/p&gt;</summary>
@@ -196,7 +196,7 @@
     <link href="https://tinfy.github.io/posts/5ca0.html"/>
     <id>https://tinfy.github.io/posts/5ca0.html</id>
     <published>2021-02-27T12:05:14.000Z</published>
-    <updated>2021-03-27T11:08:49.291Z</updated>
+    <updated>2021-03-29T12:46:45.978Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;h4 id=&quot;类的由来&quot;&gt;&lt;a href=&quot;#类的由来&quot; class=&quot;headerlink&quot; title=&quot;类的由来&quot;&gt;&lt;/a&gt;类的由来&lt;/h4&gt;&lt;p&gt;在JS中，生成实例对象的传统方法是通过构造函数的方式，如下：&lt;/p&gt;</summary>
@@ -217,7 +217,7 @@
     <link href="https://tinfy.github.io/posts/e654.html"/>
     <id>https://tinfy.github.io/posts/e654.html</id>
     <published>2021-02-23T06:58:18.000Z</published>
-    <updated>2021-03-27T11:08:49.351Z</updated>
+    <updated>2021-03-29T12:32:16.647Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;原型链&quot;&gt;&lt;a href=&quot;#原型链&quot; class=&quot;headerlink&quot; title=&quot;原型链&quot;&gt;&lt;/a&gt;原型链&lt;/h3&gt;&lt;p&gt;实现的原理：每个构造函数都有一个原型对象，原型对象中都包含着一个指向构造函数的指针，而实例对象中都有一个指向原型对象的指针。如果让子类的原型对象等于父类的实例对象，那么父类的实例对象的属性和方法，现在也存在于子类的原型对象中了，子类的实例对象就可以访问到父类的属性和方法了。通过给子类的原型对象添加一个方法，就可以实现在继承的基础上又添加一个新方法。&lt;/p&gt;</summary>
@@ -236,7 +236,7 @@
     <link href="https://tinfy.github.io/posts/cf7f.html"/>
     <id>https://tinfy.github.io/posts/cf7f.html</id>
     <published>2021-02-20T14:48:42.000Z</published>
-    <updated>2021-03-27T11:08:49.344Z</updated>
+    <updated>2021-03-29T12:33:18.269Z</updated>
     
     
     <summary type="html">&lt;p&gt;在《JS高级程序设计第3版》上写着，使用new操作符调用构造函数会经历以下4个步骤：&lt;/p&gt;</summary>
@@ -255,7 +255,7 @@
     <link href="https://tinfy.github.io/posts/b234.html"/>
     <id>https://tinfy.github.io/posts/b234.html</id>
     <published>2021-02-20T13:25:37.000Z</published>
-    <updated>2021-03-27T11:08:49.304Z</updated>
+    <updated>2021-03-29T12:32:54.428Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot; title=&quot;工厂模式&quot;&gt;&lt;/a&gt;工厂模式&lt;/h3&gt;&lt;p&gt;用函数来封装以特定接口创建对象的细节，解决了创建大量相似对象的问题。&lt;/p&gt;</summary>
@@ -274,7 +274,7 @@
     <link href="https://tinfy.github.io/posts/93cb.html"/>
     <id>https://tinfy.github.io/posts/93cb.html</id>
     <published>2021-02-18T08:16:13.000Z</published>
-    <updated>2021-03-27T11:08:49.308Z</updated>
+    <updated>2021-03-29T12:31:41.024Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;数据属性&quot;&gt;&lt;a href=&quot;#数据属性&quot; class=&quot;headerlink&quot; title=&quot;数据属性&quot;&gt;&lt;/a&gt;数据属性&lt;/h3&gt;&lt;p&gt;数据属性有4个特性（描述属性的各种特征）：&lt;/p&gt;</summary>
@@ -293,11 +293,13 @@
     <link href="https://tinfy.github.io/posts/21ff.html"/>
     <id>https://tinfy.github.io/posts/21ff.html</id>
     <published>2021-02-12T13:33:00.000Z</published>
-    <updated>2021-03-27T11:08:49.285Z</updated>
+    <updated>2021-03-29T12:30:56.599Z</updated>
     
     
     <summary type="html">&lt;p&gt;基础的HTML和CSS代码如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight applescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;content&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;lt;&lt;span class=&quot;keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;box&amp;quot;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span class=&quot;keyword&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/&lt;span class=&quot;keyword&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+&lt;pre class=&quot;line-numbers language-html&quot; data-language=&quot;html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
     
     
     
@@ -313,7 +315,7 @@
     <link href="https://tinfy.github.io/posts/f96b.html"/>
     <id>https://tinfy.github.io/posts/f96b.html</id>
     <published>2021-02-06T13:48:52.000Z</published>
-    <updated>2021-03-27T11:08:49.334Z</updated>
+    <updated>2021-03-29T12:36:11.765Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;现象描述&quot;&gt;&lt;a href=&quot;#现象描述&quot; class=&quot;headerlink&quot; title=&quot;现象描述&quot;&gt;&lt;/a&gt;现象描述&lt;/h3&gt;&lt;p&gt;两个inline-block元素间有空格或有换行的情况下，会产生间距。&lt;/p&gt;</summary>
