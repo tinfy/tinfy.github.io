@@ -1,1 +1,1 @@
-{"title":"Markdown语法","id":"posts/5878.html","date_published":"03/26/2021","summary":"标题使用#可表示 1-6 级标题，一级标题对应一个#，二级标题对应两个#，以此类推。","url":"https://tinfy.github.io/posts/5878.html","tags":["Markdown"],"categories":["博客搭建"]}
+{"title":"textContent和innerText的区别","id":"posts/1675.html","date_published":"03/31/2021","summary":"Node接口的textContent属性表示一个节点以及它的子节点的文本内容。","url":"https://tinfy.github.io/posts/1675.html","tags":["JavaScript"],"categories":["Web前端"]}

@@ -6,7 +6,7 @@
   <link href="https://tinfy.github.io/atom.xml" rel="self"/>
   
   <link href="https://tinfy.github.io/"/>
-  <updated>2021-03-29T12:50:33.173Z</updated>
+  <updated>2021-03-31T12:51:06.744Z</updated>
   <id>https://tinfy.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>textContent和innerText的区别</title>
+    <link href="https://tinfy.github.io/posts/1675.html"/>
+    <id>https://tinfy.github.io/posts/1675.html</id>
+    <published>2021-03-31T12:05:33.000Z</published>
+    <updated>2021-03-31T12:51:06.744Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;code&gt;Node&lt;/code&gt;接口的&lt;code&gt;textContent&lt;/code&gt;属性表示一个节点以及它的子节点的文本内容。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown语法</title>

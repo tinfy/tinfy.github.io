@@ -2270,4 +2270,45 @@ instance2<span class="token punctuation">.</span><span class="token function">sa
         <tag>Vue</tag>
       </tags>
   </entry>
+  <entry>
+    <title>textContent和innerText的区别</title>
+    <url>/posts/1675.html</url>
+    <content><![CDATA[<p><code>Node</code>接口的<code>textContent</code>属性表示一个节点以及它的子节点的文本内容。</p>
+<a id="more"></a>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>下面是一个HTML片段：</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>divA<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>some<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> text!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>通过<code>textContent</code>获取元素的文本内容：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> text <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'divA'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//This is some text!</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>或者设置元素的文本内容：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'divA'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">'This text is different!'</span><span class="token punctuation">;</span>
+<span class="token comment">// 现在#divA的HTML变为：</span>
+<span class="token comment">// &lt;div id="divA">This text is different!&lt;/div></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><code>textContent</code>属性的值有以下几种情况：</p>
+<ul>
+<li>如果节点是<code>document</code>或<code>DOCTYPE</code>，则<code>textContent</code>返回null。<blockquote>
+<p>要获取整个文档的文本和<code>CDATA</code>数据，可以使用 <code>document.documentElement.textContent</code>。</p>
+</blockquote>
+</li>
+<li>如果该节点是<code>CDATA section</code>、注释、处理指令（processing instruction）或文本节点（text node），则 <code>textContent</code>返回该节点内部的文本内容，即 <code>Node.nodeValue</code>。</li>
+<li>对于其他节点类型，<code>textContent</code>将所有子节点的 <code>textContent</code> 合并后返回 ，不包括注释和处理指令。（如果节点没有子节点，则返回一个空字符串。）<br>在一个节点上设置<code>textContent</code>属性将删除该节点的所有子节点，并替换为一个具有给定值的文本节点。</li>
+</ul>
+<h4 id="和innerText的区别"><a href="#和innerText的区别" class="headerlink" title="和innerText的区别"></a>和innerText的区别</h4><p><code>Node.textContent</code>和<code>HTMLElement.innerText</code>虽然名字看起来很相似，但有重要的不同之处：</p>
+<ol>
+<li><code>textContent</code>获取所有元素的内容，包括<code>&lt;script&gt;</code>和<code>&lt;style&gt;</code>元素，而<code>innerText</code>只展示给人看的元素。也就是说<code>textContent</code>会获取到<code>&lt;script&gt;</code>标签里的<code>js</code>代码和<code>&lt;style&gt;</code>标签里的<code>css</code>代码。</li>
+<li><code>textContent</code>返回节点中的每个元素。相反， <code>innerText</code>受 CSS 样式的影响，不会返回隐藏元素的文本。<ul>
+<li>此外，由于<code>innerText</code>受CSS`样式的影响，它会触发回流（reflow）去确保是最新的计算样式。（回流在计算上可能会很昂贵，因此应尽可能避免。）</li>
+</ul>
+</li>
+<li>与<code>textContent</code>不同，在<code>IE11</code>及以下版本中修改<code>innerText</code>不仅会移除当前元素的子节点，而且还会永久性地破坏所有后代文本节点。在之后不可能再次将节点再次插入到任何其他元素或同一元素中。</li>
+</ol>
+<h4 id="和innerHTML的区别"><a href="#和innerHTML的区别" class="headerlink" title="和innerHTML的区别"></a>和innerHTML的区别</h4><p>正如其名称，<code>Element.innerHTML</code>返回HTML。通常，为了在元素中检索或写入文本，人们使用<code>innerHTML</code>，但是<code>textContent</code>通常具有更好的性能，因为文本不会被解析为HTML。<br>而且，使用<code>textContent</code>可以防止<code>XSS</code>攻击。</p>
+]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
 </search>
