@@ -2337,7 +2337,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <title>Vue Devtools安装教程</title>
     <url>/posts/63c.html</url>
     <content><![CDATA[<ol>
-<li>前往<a href="https://github.com/vuejs/vue-devtools#vue-devtools">vue-devtools</a>下载压缩包，解压，打开命令窗口。</li>
+<li>前往<a href="https://github.com/vuejs/vue-devtools#vue-devtools">vue-devtools</a>下载压缩包，解压，打开命令窗口。<a id="more"></a></li>
 <li>进入解压后的文件夹安装依赖包，输入如下命令：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li>编译项目文件，输入如下命令：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> run build<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
@@ -2351,13 +2351,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
 23 error This is probably not a problem with npm. There is likely additional logging output above.
 24 verbose exit [ 1, true ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 这是因为安装的是最新的分支，是测试的分支，重新下载v5.1.1分支，成功解决。</li>
-<li>进入<code>vue-devtool\shells\chrome</code>目录，打开<code>manifest.json</code>文件，如下图：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/install-Vue-devtools01.png"><br>修改persistent属性修改为true：<pre class="line-numbers language-none"><code class="language-none">&quot;background&quot;: &#123;
+<li>进入<code>vue-devtool\shells\chrome</code>目录，打开<code>manifest.json</code>文件，如下图：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/install-Vue-devtools01.png"><br>修改<code>persistent</code>属性修改为<code>true</code>：<pre class="line-numbers language-none"><code class="language-none">&quot;background&quot;: &#123;
   &quot;scripts&quot;: [
     &quot;build&#x2F;background.js&quot;
   ],
   &quot;persistent&quot;: true
 &#125;,<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>打开谷歌浏览器，按照如下操作，打开扩展程序<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/install-Vue-devtools02.png"></li>
+<li>打开谷歌浏览器，按照如下操作，打开扩展程序。<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/install-Vue-devtools02.png"></li>
 <li>加载已解压的扩展程序，选择<code>vue-devtools\shells\chrome</code>，点击确认，看到如下图标，即安装成功。<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/install-Vue-devtools03.png"></li>
 </ol>
 ]]></content>
