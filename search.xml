@@ -2319,12 +2319,47 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> cache <span class="token string">"D:\Develop<span class="token entity" title="\n">\n</span>odejs<span class="token entity" title="\n">\n</span>ode_cache"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 <li>进入电脑的环境变量属性，把用户变量里默认的路径改为：<code>D:\nodejs\node_global</code><br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/installNodejs01.png"></li>
 <li>新增一个系统变量，设置如图所示：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/installNodejs02.png"></li>
-<li>测试：在命令窗口中，输入如下命令，尝试安装express模块：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ol>
+<li>测试：在命令窗口中，输入如下命令，尝试安装express模块：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
 <p><strong>出现的问题：</strong>在执行<code>npm install express -g</code>命令时出现错误，通过下面的命令设置了镜像服务器，成功解决了该问题：</p>
+</blockquote>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry http://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
 <hr>
 <p>参考文档：<a href="https://www.cnblogs.com/liuqiyun/p/8133904.html">https://www.cnblogs.com/liuqiyun/p/8133904.html</a></p>
+]]></content>
+      <categories>
+        <category>安装教程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Vue Devtools安装教程</title>
+    <url>/posts/63c.html</url>
+    <content><![CDATA[<ol>
+<li>前往<a href="https://github.com/vuejs/vue-devtools#vue-devtools">vue-devtools</a>下载压缩包，解压，打开命令窗口。</li>
+<li>进入解压后的文件夹安装依赖包，输入如下命令：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>编译项目文件，输入如下命令：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> run build<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p><strong>出现的问题：</strong>在编译项目文件时，有报错：</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">20 error code ELIFECYCLE
+21 error errno 1
+22 error vue-devtools@5.3.3 build: &#96;cd packages&#x2F;shell-chrome &amp;&amp; cross-env NODE_ENV&#x3D;production webpack --progress --hide-modules&#96;
+22 error Exit status 1
+23 error Failed at the vue-devtools@5.3.3 build script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 1, true ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+这是因为安装的是最新的分支，是测试的分支，重新下载v5.1.1分支，成功解决。</li>
+<li>进入<code>vue-devtool\shells\chrome</code>目录，打开<code>manifest.json</code>文件，如下图：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/install-Vue-devtools01.png"><br>修改persistent属性修改为true：<pre class="line-numbers language-none"><code class="language-none">&quot;background&quot;: &#123;
+  &quot;scripts&quot;: [
+    &quot;build&#x2F;background.js&quot;
+  ],
+  &quot;persistent&quot;: true
+&#125;,<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>打开谷歌浏览器，按照如下操作，打开扩展程序<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/install-Vue-devtools02.png"></li>
+<li>加载已解压的扩展程序，选择<code>vue-devtools\shells\chrome</code>，点击确认，看到如下图标，即安装成功。<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/install-Vue-devtools03.png"></li>
+</ol>
 ]]></content>
       <categories>
         <category>安装教程</category>

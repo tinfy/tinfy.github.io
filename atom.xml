@@ -6,7 +6,7 @@
   <link href="https://tinfy.github.io/atom.xml" rel="self"/>
   
   <link href="https://tinfy.github.io/"/>
-  <updated>2021-04-01T15:14:35.801Z</updated>
+  <updated>2021-04-01T15:39:13.669Z</updated>
   <id>https://tinfy.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue Devtools安装教程</title>
+    <link href="https://tinfy.github.io/posts/63c.html"/>
+    <id>https://tinfy.github.io/posts/63c.html</id>
+    <published>2021-04-01T15:19:58.000Z</published>
+    <updated>2021-04-01T15:39:13.669Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;前往&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="安装教程" scheme="https://tinfy.github.io/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Node.js安装教程</title>
     <link href="https://tinfy.github.io/posts/6749.html"/>
     <id>https://tinfy.github.io/posts/6749.html</id>
     <published>2021-04-01T14:51:08.000Z</published>
-    <updated>2021-04-01T15:14:35.801Z</updated>
+    <updated>2021-04-01T15:40:11.400Z</updated>
     
     
     <summary type="html">&lt;ol&gt;
