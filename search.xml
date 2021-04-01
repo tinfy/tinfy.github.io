@@ -1899,7 +1899,7 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 </tr>
 <tr>
 <td align="center">git commit -m “…”</td>
-<td align="center">把暂存区的修改提交到版本库</td>
+<td align="center">把暂存区的修改提交到版本库(引号里面添加对此次提交的说明)</td>
 </tr>
 <tr>
 <td align="center">git log</td>
@@ -1951,7 +1951,7 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 </tr>
 <tr>
 <td align="center">git push -u origin master</td>
-<td align="center">把本地仓库的内容推送到远程仓库</td>
+<td align="center">把本地的master分支推送到远程库的master分支上(只有第一次推送才需要加上<code>-u</code>)</td>
 </tr>
 <tr>
 <td align="center">git clone …</td>
@@ -2032,10 +2032,6 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 <tr>
 <td align="center">git remote -v</td>
 <td align="center">查看详细的远程库信息</td>
-</tr>
-<tr>
-<td align="center">git push origin master</td>
-<td align="center">把本地的master分支推送到远程库的master分支上</td>
 </tr>
 </tbody></table>
 ]]></content>
@@ -2303,6 +2299,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>与<code>textContent</code>不同，在<code>IE11</code>及以下版本中修改<code>innerText</code>不仅会移除当前元素的子节点，而且还会永久性地破坏所有后代文本节点。在之后不可能再次将节点再次插入到任何其他元素或同一元素中。</li>
 </ol>
 <h4 id="和innerHTML的区别"><a href="#和innerHTML的区别" class="headerlink" title="和innerHTML的区别"></a>和innerHTML的区别</h4><p>正如其名称，<code>Element.innerHTML</code>返回HTML。通常，为了在元素中检索或写入文本，人们使用<code>innerHTML</code>，但是<code>textContent</code>通常具有更好的性能，因为文本不会被解析为HTML。<br>而且，使用<code>textContent</code>可以防止<code>XSS</code>攻击。</p>
+<hr>
+<p>参考资料：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent">https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent</a></p>
 ]]></content>
       <categories>
         <category>Web前端</category>
@@ -2310,5 +2308,26 @@ console<span class="token punctuation">.</span><span class="token function">log<
       <tags>
         <tag>JavaScript</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Node.js安装教程</title>
+    <url>/posts/6749.html</url>
+    <content><![CDATA[<ol>
+<li>前往<a href="https://nodejs.org/en/">Node.js官网</a>下载<code>.msi</code>文件，一路点击next即可顺利安装。<a id="more"></a>
+安装完成后，会自动添加环境变量。<code>windows + R</code>再输入<code>cmd</code>进入命令行，输入<code>node -v</code>，可以打印出node.js的版本，说明安装成功。<br>node.js是自带<code>npm</code>的，输入<code>npm -v</code>可以查看npm的版本。</li>
+<li>在nodejs目录下，新建两个文件夹：<code>node_cache</code>,<code>node_global</code>，创建完后，在命令窗口中输入如下命令：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token builtin class-name">set</span> prefix <span class="token string">"D:\Develop<span class="token entity" title="\n">\n</span>odejs<span class="token entity" title="\n">\n</span>ode_global"</span>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> cache <span class="token string">"D:\Develop<span class="token entity" title="\n">\n</span>odejs<span class="token entity" title="\n">\n</span>ode_cache"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>进入电脑的环境变量属性，把用户变量里默认的路径改为：<code>D:\nodejs\node_global</code><br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/installNodejs01.png"></li>
+<li>新增一个系统变量，设置如图所示：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/installNodejs02.png"></li>
+<li>测试：在命令窗口中，输入如下命令，尝试安装express模块：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<p><strong>出现的问题：</strong>在执行<code>npm install express -g</code>命令时出现错误，通过下面的命令设置了镜像服务器，成功解决了该问题：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry http://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<hr>
+<p>参考文档：<a href="https://www.cnblogs.com/liuqiyun/p/8133904.html">https://www.cnblogs.com/liuqiyun/p/8133904.html</a></p>
+]]></content>
+      <categories>
+        <category>安装教程</category>
+      </categories>
   </entry>
 </search>
