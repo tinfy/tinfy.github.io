@@ -2423,7 +2423,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>可以通过改变<code>css</code>，调整侧边栏和主内容的左右顺序。</li>
 <li>可以保证主内容区域优先渲染。</li>
 </ol>
-<p>缺点：侧边栏是绝对定位，脱离文档流，当<code>.aside</code>的高度比<code>.content</code>的高度高时，无法撑开父元素<code>.content</code>的高度，会遮盖到底部。</p>
+<p>缺点：侧边栏是绝对定位，脱离文档流，当<code>.aside</code>的高度比<code>.content</code>的高度高时，无法撑开父元素<code>.main</code>的高度，侧边栏会遮盖到底部。</p>
 <h3 id="float-margin"><a href="#float-margin" class="headerlink" title="float + margin"></a>float + margin</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>header<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>顶部<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -2441,7 +2441,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>优点：同样可以通过改变<code>css</code>，调整侧边栏和主内容的左右顺序。<br>缺点：</p>
 <ol>
-<li>侧边栏设置为浮动布局，脱离文档流，同样有无法撑开父元素<code>.content</code>的高度的问题。</li>
+<li>侧边栏设置为浮动布局，脱离文档流，同样有无法撑开父元素<code>.main</code>的高度的问题。</li>
 <li>侧边栏必须在主内容前面，无法实现主内容区域优先渲染。</li>
 </ol>
 <h3 id="float-负margin"><a href="#float-负margin" class="headerlink" title="float + 负margin"></a>float + 负margin</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.main</span> <span class="token punctuation">&#123;</span>
@@ -2463,7 +2463,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <ol>
 <li>可以通过改变<code>css</code>，调整侧边栏和主内容的左右顺序。</li>
 <li>可以保证主内容区域优先渲染。</li>
-<li>没有无法撑开父元素<code>.content</code>的高度的问题。</li>
+<li>没有无法撑开父元素<code>.main</code>的高度的问题。</li>
 </ol>
 <h3 id="float-calc函数"><a href="#float-calc函数" class="headerlink" title="float + calc函数"></a>float + calc函数</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.main</span> <span class="token punctuation">&#123;</span>
 	<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
