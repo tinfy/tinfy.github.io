@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tong jiebin&#39;s Blog</title>
-  <icon>https://tinfy.github.io/icon.png</icon>
+  <icon>https://tongjiebin.cn/icon.png</icon>
   
-  <link href="https://tinfy.github.io/atom.xml" rel="self"/>
+  <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
-  <link href="https://tinfy.github.io/"/>
+  <link href="https://tongjiebin.cn/"/>
   <updated>2021-04-03T01:09:57.734Z</updated>
-  <id>https://tinfy.github.io/</id>
+  <id>https://tongjiebin.cn/</id>
   
   <author>
     <name>Tong jiebin</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>实现两栏布局的几种方式</title>
-    <link href="https://tinfy.github.io/posts/f7ce.html"/>
-    <id>https://tinfy.github.io/posts/f7ce.html</id>
+    <link href="https://tongjiebin.cn/posts/f7ce.html"/>
+    <id>https://tongjiebin.cn/posts/f7ce.html</id>
     <published>2021-04-02T13:15:06.000Z</published>
     <updated>2021-04-03T01:09:57.734Z</updated>
     
@@ -28,17 +28,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="CSS" scheme="https://tinfy.github.io/tags/CSS/"/>
+    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>Vue Devtools安装教程</title>
-    <link href="https://tinfy.github.io/posts/63c.html"/>
-    <id>https://tinfy.github.io/posts/63c.html</id>
+    <link href="https://tongjiebin.cn/posts/63c.html"/>
+    <id>https://tongjiebin.cn/posts/63c.html</id>
     <published>2021-04-01T15:19:58.000Z</published>
     <updated>2021-04-01T15:43:57.194Z</updated>
     
@@ -48,15 +48,15 @@
     
     
     
-    <category term="安装教程" scheme="https://tinfy.github.io/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <category term="安装教程" scheme="https://tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
     
   </entry>
   
   <entry>
     <title>Node.js安装教程</title>
-    <link href="https://tinfy.github.io/posts/6749.html"/>
-    <id>https://tinfy.github.io/posts/6749.html</id>
+    <link href="https://tongjiebin.cn/posts/6749.html"/>
+    <id>https://tongjiebin.cn/posts/6749.html</id>
     <published>2021-04-01T14:51:08.000Z</published>
     <updated>2021-04-01T15:40:11.400Z</updated>
     
@@ -66,15 +66,15 @@
     
     
     
-    <category term="安装教程" scheme="https://tinfy.github.io/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <category term="安装教程" scheme="https://tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
     
   </entry>
   
   <entry>
     <title>textContent和innerText的区别</title>
-    <link href="https://tinfy.github.io/posts/1675.html"/>
-    <id>https://tinfy.github.io/posts/1675.html</id>
+    <link href="https://tongjiebin.cn/posts/1675.html"/>
+    <id>https://tongjiebin.cn/posts/1675.html</id>
     <published>2021-03-31T12:05:33.000Z</published>
     <updated>2021-04-01T15:13:11.741Z</updated>
     
@@ -83,17 +83,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Markdown语法</title>
-    <link href="https://tinfy.github.io/posts/5878.html"/>
-    <id>https://tinfy.github.io/posts/5878.html</id>
+    <link href="https://tongjiebin.cn/posts/5878.html"/>
+    <id>https://tongjiebin.cn/posts/5878.html</id>
     <published>2021-03-26T11:56:54.000Z</published>
     <updated>2021-03-29T12:50:33.173Z</updated>
     
@@ -102,17 +102,17 @@
     
     
     
-    <category term="博客搭建" scheme="https://tinfy.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="Markdown" scheme="https://tinfy.github.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://tongjiebin.cn/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>async函数</title>
-    <link href="https://tinfy.github.io/posts/bdda.html"/>
-    <id>https://tinfy.github.io/posts/bdda.html</id>
+    <link href="https://tongjiebin.cn/posts/bdda.html"/>
+    <id>https://tongjiebin.cn/posts/bdda.html</id>
     <published>2021-03-21T06:08:47.000Z</published>
     <updated>2021-03-27T11:08:49.326Z</updated>
     
@@ -121,19 +121,19 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
-    <category term="ES6" scheme="https://tinfy.github.io/tags/ES6/"/>
+    <category term="ES6" scheme="https://tongjiebin.cn/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>Git学习记录</title>
-    <link href="https://tinfy.github.io/posts/c666.html"/>
-    <id>https://tinfy.github.io/posts/c666.html</id>
+    <link href="https://tongjiebin.cn/posts/c666.html"/>
+    <id>https://tongjiebin.cn/posts/c666.html</id>
     <published>2021-03-15T11:21:39.000Z</published>
     <updated>2021-04-01T14:43:03.740Z</updated>
     
@@ -143,14 +143,14 @@
     
     
     
-    <category term="Git" scheme="https://tinfy.github.io/tags/Git/"/>
+    <category term="Git" scheme="https://tongjiebin.cn/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Promise对象</title>
-    <link href="https://tinfy.github.io/posts/7146.html"/>
-    <id>https://tinfy.github.io/posts/7146.html</id>
+    <link href="https://tongjiebin.cn/posts/7146.html"/>
+    <id>https://tongjiebin.cn/posts/7146.html</id>
     <published>2021-03-14T09:41:48.000Z</published>
     <updated>2021-03-29T12:33:58.891Z</updated>
     
@@ -159,19 +159,19 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
-    <category term="ES6" scheme="https://tinfy.github.io/tags/ES6/"/>
+    <category term="ES6" scheme="https://tongjiebin.cn/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>Vue项目中使用icon图标</title>
-    <link href="https://tinfy.github.io/posts/a846.html"/>
-    <id>https://tinfy.github.io/posts/a846.html</id>
+    <link href="https://tongjiebin.cn/posts/a846.html"/>
+    <id>https://tongjiebin.cn/posts/a846.html</id>
     <published>2021-03-13T09:03:44.000Z</published>
     <updated>2021-03-27T11:08:49.354Z</updated>
     
@@ -180,17 +180,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="Vue" scheme="https://tinfy.github.io/tags/Vue/"/>
+    <category term="Vue" scheme="https://tongjiebin.cn/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>Vue项目中报错的解决办法</title>
-    <link href="https://tinfy.github.io/posts/1195.html"/>
-    <id>https://tinfy.github.io/posts/1195.html</id>
+    <link href="https://tongjiebin.cn/posts/1195.html"/>
+    <id>https://tongjiebin.cn/posts/1195.html</id>
     <published>2021-03-13T08:51:54.000Z</published>
     <updated>2021-03-29T12:34:37.521Z</updated>
     
@@ -199,17 +199,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="Vue" scheme="https://tinfy.github.io/tags/Vue/"/>
+    <category term="Vue" scheme="https://tongjiebin.cn/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>NexT主题的博客添加不蒜子统计</title>
-    <link href="https://tinfy.github.io/posts/f8ba.html"/>
-    <id>https://tinfy.github.io/posts/f8ba.html</id>
+    <link href="https://tongjiebin.cn/posts/f8ba.html"/>
+    <id>https://tongjiebin.cn/posts/f8ba.html</id>
     <published>2021-03-10T04:39:29.000Z</published>
     <updated>2021-03-27T11:08:49.318Z</updated>
     
@@ -218,17 +218,17 @@
     
     
     
-    <category term="博客搭建" scheme="https://tinfy.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="不蒜子" scheme="https://tinfy.github.io/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/"/>
+    <category term="不蒜子" scheme="https://tongjiebin.cn/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/"/>
     
   </entry>
   
   <entry>
     <title>CSS绘制百度小熊</title>
-    <link href="https://tinfy.github.io/posts/fc2.html"/>
-    <id>https://tinfy.github.io/posts/fc2.html</id>
+    <link href="https://tongjiebin.cn/posts/fc2.html"/>
+    <id>https://tongjiebin.cn/posts/fc2.html</id>
     <published>2021-03-05T13:42:40.000Z</published>
     <updated>2021-03-29T12:30:01.895Z</updated>
     
@@ -237,17 +237,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="CSS" scheme="https://tinfy.github.io/tags/CSS/"/>
+    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>Class的继承</title>
-    <link href="https://tinfy.github.io/posts/8d4d.html"/>
-    <id>https://tinfy.github.io/posts/8d4d.html</id>
+    <link href="https://tongjiebin.cn/posts/8d4d.html"/>
+    <id>https://tongjiebin.cn/posts/8d4d.html</id>
     <published>2021-03-02T15:49:17.000Z</published>
     <updated>2021-03-29T12:55:57.981Z</updated>
     
@@ -256,19 +256,19 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
-    <category term="ES6" scheme="https://tinfy.github.io/tags/ES6/"/>
+    <category term="ES6" scheme="https://tongjiebin.cn/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>Class的基本语法</title>
-    <link href="https://tinfy.github.io/posts/5ca0.html"/>
-    <id>https://tinfy.github.io/posts/5ca0.html</id>
+    <link href="https://tongjiebin.cn/posts/5ca0.html"/>
+    <id>https://tongjiebin.cn/posts/5ca0.html</id>
     <published>2021-02-27T12:05:14.000Z</published>
     <updated>2021-03-29T12:46:45.978Z</updated>
     
@@ -277,19 +277,19 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
-    <category term="ES6" scheme="https://tinfy.github.io/tags/ES6/"/>
+    <category term="ES6" scheme="https://tongjiebin.cn/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript中6种继承方式</title>
-    <link href="https://tinfy.github.io/posts/e654.html"/>
-    <id>https://tinfy.github.io/posts/e654.html</id>
+    <link href="https://tongjiebin.cn/posts/e654.html"/>
+    <id>https://tongjiebin.cn/posts/e654.html</id>
     <published>2021-02-23T06:58:18.000Z</published>
     <updated>2021-03-29T12:32:16.647Z</updated>
     
@@ -298,17 +298,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>new操作符的工作原理</title>
-    <link href="https://tinfy.github.io/posts/cf7f.html"/>
-    <id>https://tinfy.github.io/posts/cf7f.html</id>
+    <link href="https://tongjiebin.cn/posts/cf7f.html"/>
+    <id>https://tongjiebin.cn/posts/cf7f.html</id>
     <published>2021-02-20T14:48:42.000Z</published>
     <updated>2021-03-29T12:33:18.269Z</updated>
     
@@ -317,17 +317,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript中创建对象的7种模式</title>
-    <link href="https://tinfy.github.io/posts/b234.html"/>
-    <id>https://tinfy.github.io/posts/b234.html</id>
+    <link href="https://tongjiebin.cn/posts/b234.html"/>
+    <id>https://tongjiebin.cn/posts/b234.html</id>
     <published>2021-02-20T13:25:37.000Z</published>
     <updated>2021-04-03T01:17:53.054Z</updated>
     
@@ -336,17 +336,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript数据属性和访问器属性</title>
-    <link href="https://tinfy.github.io/posts/93cb.html"/>
-    <id>https://tinfy.github.io/posts/93cb.html</id>
+    <link href="https://tongjiebin.cn/posts/93cb.html"/>
+    <id>https://tongjiebin.cn/posts/93cb.html</id>
     <published>2021-02-18T08:16:13.000Z</published>
     <updated>2021-03-29T12:31:41.024Z</updated>
     
@@ -355,17 +355,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tinfy.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>CSS实现水平垂直居中的方法</title>
-    <link href="https://tinfy.github.io/posts/21ff.html"/>
-    <id>https://tinfy.github.io/posts/21ff.html</id>
+    <link href="https://tongjiebin.cn/posts/21ff.html"/>
+    <id>https://tongjiebin.cn/posts/21ff.html</id>
     <published>2021-02-12T13:33:00.000Z</published>
     <updated>2021-03-29T12:30:56.599Z</updated>
     
@@ -377,17 +377,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="CSS" scheme="https://tinfy.github.io/tags/CSS/"/>
+    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>去除inline-block元素间距的方法</title>
-    <link href="https://tinfy.github.io/posts/f96b.html"/>
-    <id>https://tinfy.github.io/posts/f96b.html</id>
+    <link href="https://tongjiebin.cn/posts/f96b.html"/>
+    <id>https://tongjiebin.cn/posts/f96b.html</id>
     <published>2021-02-06T13:48:52.000Z</published>
     <updated>2021-03-29T12:36:11.765Z</updated>
     
@@ -396,10 +396,10 @@
     
     
     
-    <category term="Web前端" scheme="https://tinfy.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="CSS" scheme="https://tinfy.github.io/tags/CSS/"/>
+    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
     
   </entry>
   
