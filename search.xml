@@ -1131,19 +1131,51 @@ for(let i &#x3D; 0; i &lt; 10; i ++) &#123;
 - [x] HTML
 - [x] CSS
 - [ ] JavaScript<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
       <tags>
         <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
-    <title>NexT主题的博客添加不蒜子统计</title>
-    <url>/posts/f8ba.html</url>
-    <content><![CDATA[<p>之前博客部署在GitHub Page上，由于在某些地方访问不了国外的网站，于是我决定把博客同时部署在国内的Coding Page和国外的GitHub Page上。但在Coding上部署的博客打开后，文章的阅读量不知道什么原因显示为空（使用LeanCloud统计的阅读量），于是查看NexT文档看有没有其他方法，找到了5.0.1以后的版本可以使用<a href="http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi">不蒜子统计</a>阅读量。具体方法如下：</p>
+    <title>NexT主题优化</title>
+    <url>/posts/eed2.html</url>
+    <content><![CDATA[<h4 id="添加动态线条背景"><a href="#添加动态线条背景" class="headerlink" title="添加动态线条背景"></a>添加动态线条背景</h4><p>1.在<strong>博客根目录</strong>下的<code>source\_data</code>文件夹（如果没有，则创建一个<code>_data</code>文件夹）中创建一个新的文件命名为<code>footer.njk</code>。</p>
 <a id="more"></a>
-<p>打开<strong>主题配置文件</strong>下的_config.yml，搜索busuanzi，找到如下代码，修改为下面的配置：</p>
+<p>2.在<code>footer.njk</code>文件中添加如下内容：</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0,0,255<span class="token punctuation">"</span></span> <span class="token attr-name">opacity</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token attr-name">zIndex</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1<span class="token punctuation">"</span></span> <span class="token attr-name">count</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>99<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>你还可以自定义这些属性：</p>
+<ol>
+<li>color：线条的颜色</li>
+<li>opacity：线条的透明度</li>
+<li>zIndex：层叠顺序，数字小的显示在下面，使用默认值就行</li>
+<li>count：点的数量</li>
+</ol>
+</blockquote>
+<p>3.在<strong>主题配置文件</strong>中取消<code>footer</code>前面的注释。</p>
+<pre class="line-numbers language-none"><code class="language-none">custom_file_path:
+  footer: source&#x2F;_data&#x2F;footer.njk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="添加文章结束标记"><a href="#添加文章结束标记" class="headerlink" title="添加文章结束标记"></a>添加文章结束标记</h4><p>1.在<strong>博客根目录</strong>下的<code>source\_data</code>文件夹中创建一个新的文件命名为<code>post-body-end.njk</code>。<br>2.在<code>post-body-end.njk</code>文件中添加如下内容：</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+	&#123;% if not is_index %&#125;
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">text-align</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span><span class="token property">color</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span>14px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>-------------本文结束<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-paw<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>感谢您的阅读-------------<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+	&#123;% endif %&#125;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3.在<strong>主题配置文件</strong>中取消<code>postBodyEnd</code>前面的注释。</p>
+<pre class="line-numbers language-none"><code class="language-none">custom_file_path:
+  postBodyEnd: source&#x2F;_data&#x2F;post-body-end.njk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NexT主题添加不蒜子统计</title>
+    <url>/posts/f8ba.html</url>
+    <content><![CDATA[<p>之前博客部署在GitHub Page上，但在国内访问GitHub经常出现速度慢，甚至访问不了等问题。<br>于是我决定在Coding Page和GitHub Page上进行双线部署，在Coding Page上部署成功后，打开博客发现文章的阅读量显示为空（使用LeanCloud统计的阅读量）。<br>查看NexT文档后发现了另一种方法，在5.0.1以后的版本可以使用<a href="http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi">不蒜子统计</a>阅读量。具体方法如下：</p>
+<a id="more"></a>
+<p>打开<strong>主题配置文件</strong>下的<code>_config.yml</code>，找到<code>busuanzi_count</code>，修改为下面的配置：</p>
 <pre class="line-numbers language-none"><code class="language-none">busuanzi_count:
   enable: true	# 全局开关
   total_visitors: true	# 总访客量
@@ -1152,7 +1184,7 @@ for(let i &#x3D; 0; i &lt; 10; i ++) &#123;
   total_views_icon: fa fa-eye
   post_views: true	# 文章阅读量
   post_views_icon: far fa-eye<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>打开themes/next/layout/_partials/post目录下的post-meta.njk，找到如下代码，删掉第二行的<code>id=&quot;busuanzi_container_page_pv&quot; style=&quot;display: none;&quot;</code>。使用不蒜子统计阅读量有个缺点，就是在首页不能显示阅读量，只有把文章点进去才能看到。我试着把第一行的<code>not is_index and</code>删掉，在首页能够显示“阅读次数：”这几个字，但后面的数量为空。</p>
+<p>打开<code>themes/next/layout/_partials/post</code>目录下的<code>post-meta.njk</code>，找到如下代码，删掉第二行的<code>id=&quot;busuanzi_container_page_pv&quot; style=&quot;display: none;&quot;</code>。使用不蒜子统计阅读量有个缺点，就是在首页不能显示阅读量，只有把文章点进去才能看到。我试着把第一行的<code>not is_index and</code>删掉，在首页能够显示“阅读次数：”这几个字，但后面的数量为空。</p>
 <pre class="line-numbers language-none"><code class="language-none">&#123;%- if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.post_views %&#125;
   &lt;span class&#x3D;&quot;post-meta-item&quot; title&#x3D;&quot;&#123;&#123; __(&#39;post.views&#39;) &#125;&#125;&quot; id&#x3D;&quot;busuanzi_container_page_pv&quot; style&#x3D;&quot;display: none;&quot;&gt;
     &lt;span class&#x3D;&quot;post-meta-item-icon&quot;&gt;
@@ -1193,7 +1225,7 @@ for(let i &#x3D; 0; i &lt; 10; i ++) &#123;
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>不蒜子</tag>
+        <tag>NexT</tag>
       </tags>
   </entry>
   <entry>

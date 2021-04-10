@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-04-03T01:09:57.734Z</updated>
+  <updated>2021-04-10T09:11:22.263Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NexT主题优化</title>
+    <link href="https://tongjiebin.cn/posts/eed2.html"/>
+    <id>https://tongjiebin.cn/posts/eed2.html</id>
+    <published>2021-04-10T03:09:31.000Z</published>
+    <updated>2021-04-10T09:11:22.263Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;添加动态线条背景&quot;&gt;&lt;a href=&quot;#添加动态线条背景&quot; class=&quot;headerlink&quot; title=&quot;添加动态线条背景&quot;&gt;&lt;/a&gt;添加动态线条背景&lt;/h4&gt;&lt;p&gt;1.在&lt;strong&gt;博客根目录&lt;/strong&gt;下的&lt;code&gt;source\_data&lt;/code&gt;文件夹（如果没有，则创建一个&lt;code&gt;_data&lt;/code&gt;文件夹）中创建一个新的文件命名为&lt;code&gt;footer.njk&lt;/code&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="博客搭建" scheme="https://tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="NexT" scheme="https://tongjiebin.cn/tags/NexT/"/>
+    
+  </entry>
   
   <entry>
     <title>实现两栏布局的几种方式</title>
@@ -95,14 +114,12 @@
     <link href="https://tongjiebin.cn/posts/5878.html"/>
     <id>https://tongjiebin.cn/posts/5878.html</id>
     <published>2021-03-26T11:56:54.000Z</published>
-    <updated>2021-03-29T12:50:33.173Z</updated>
+    <updated>2021-04-10T03:49:49.086Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h4&gt;&lt;p&gt;使用&lt;code&gt;#&lt;/code&gt;可表示 1-6 级标题，一级标题对应一个&lt;code&gt;#&lt;/code&gt;，二级标题对应两个&lt;code&gt;#&lt;/code&gt;，以此类推。&lt;/p&gt;</summary>
     
     
-    
-    <category term="博客搭建" scheme="https://tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
     <category term="Markdown" scheme="https://tongjiebin.cn/tags/Markdown/"/>
@@ -207,21 +224,21 @@
   </entry>
   
   <entry>
-    <title>NexT主题的博客添加不蒜子统计</title>
+    <title>NexT主题添加不蒜子统计</title>
     <link href="https://tongjiebin.cn/posts/f8ba.html"/>
     <id>https://tongjiebin.cn/posts/f8ba.html</id>
     <published>2021-03-10T04:39:29.000Z</published>
-    <updated>2021-03-27T11:08:49.318Z</updated>
+    <updated>2021-04-10T03:10:54.014Z</updated>
     
     
-    <summary type="html">&lt;p&gt;之前博客部署在GitHub Page上，由于在某些地方访问不了国外的网站，于是我决定把博客同时部署在国内的Coding Page和国外的GitHub Page上。但在Coding上部署的博客打开后，文章的阅读量不知道什么原因显示为空（使用LeanCloud统计的阅读量），于是查看NexT文档看有没有其他方法，找到了5.0.1以后的版本可以使用&lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi&quot;&gt;不蒜子统计&lt;/a&gt;阅读量。具体方法如下：&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;之前博客部署在GitHub Page上，但在国内访问GitHub经常出现速度慢，甚至访问不了等问题。&lt;br&gt;于是我决定在Coding Page和GitHub Page上进行双线部署，在Coding Page上部署成功后，打开博客发现文章的阅读量显示为空（使用LeanCloud统计的阅读量）。&lt;br&gt;查看NexT文档后发现了另一种方法，在5.0.1以后的版本可以使用&lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi&quot;&gt;不蒜子统计&lt;/a&gt;阅读量。具体方法如下：&lt;/p&gt;</summary>
     
     
     
     <category term="博客搭建" scheme="https://tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="不蒜子" scheme="https://tongjiebin.cn/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/"/>
+    <category term="NexT" scheme="https://tongjiebin.cn/tags/NexT/"/>
     
   </entry>
   
@@ -374,25 +391,6 @@
 &lt;pre class=&quot;line-numbers language-html&quot; data-language=&quot;html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>去除inline-block元素间距的方法</title>
-    <link href="https://tongjiebin.cn/posts/f96b.html"/>
-    <id>https://tongjiebin.cn/posts/f96b.html</id>
-    <published>2021-02-06T13:48:52.000Z</published>
-    <updated>2021-03-29T12:36:11.765Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;现象描述&quot;&gt;&lt;a href=&quot;#现象描述&quot; class=&quot;headerlink&quot; title=&quot;现象描述&quot;&gt;&lt;/a&gt;现象描述&lt;/h3&gt;&lt;p&gt;两个inline-block元素间有空格或有换行的情况下，会产生间距。&lt;/p&gt;</summary>
     
     
     
