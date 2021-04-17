@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-04-17T12:46:51.022Z</updated>
+  <updated>2021-04-17T13:16:12.724Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -21,10 +21,12 @@
     <link href="https://tongjiebin.cn/posts/4687.html"/>
     <id>https://tongjiebin.cn/posts/4687.html</id>
     <published>2021-04-17T12:41:41.000Z</published>
-    <updated>2021-04-17T12:46:51.022Z</updated>
+    <updated>2021-04-17T13:16:12.724Z</updated>
     
     
-    <summary type="html">&lt;p&gt;打开命令行，在命令行中输入：&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;打开命令行，在命令行中输入：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.name &lt;span class=&quot;token string&quot;&gt;&quot;你的名字&quot;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.email &lt;span class=&quot;token string&quot;&gt;&quot;你的邮箱&quot;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
     
     
     
@@ -38,7 +40,7 @@
     <link href="https://tongjiebin.cn/posts/eed2.html"/>
     <id>https://tongjiebin.cn/posts/eed2.html</id>
     <published>2021-04-10T03:09:31.000Z</published>
-    <updated>2021-04-10T09:11:24.000Z</updated>
+    <updated>2021-04-17T13:29:13.038Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;添加动态线条背景&quot;&gt;&lt;a href=&quot;#添加动态线条背景&quot; class=&quot;headerlink&quot; title=&quot;添加动态线条背景&quot;&gt;&lt;/a&gt;添加动态线条背景&lt;/h4&gt;&lt;p&gt;1.在&lt;strong&gt;博客根目录&lt;/strong&gt;下的&lt;code&gt;source\_data&lt;/code&gt;文件夹（如果没有，则创建一个&lt;code&gt;_data&lt;/code&gt;文件夹）中创建一个新的文件命名为&lt;code&gt;footer.njk&lt;/code&gt;。&lt;/p&gt;</summary>

@@ -810,9 +810,9 @@ b<span class="token punctuation">.</span><span class="token function">myMethod</
     <title>GitHub配置SSH</title>
     <url>/posts/4687.html</url>
     <content><![CDATA[<p>打开命令行，在命令行中输入：</p>
-<a id="more"></a>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"你的名字"</span>
 <span class="token function">git</span> config --global user.email <span class="token string">"你的邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<a id="more"></a>
 <p>然后输入生成ssh key的命令：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"你的邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>之后一路回车，可以看到如下内容：</p>
@@ -843,11 +843,7 @@ The key's randomart image is:
 +----<span class="token punctuation">[</span>SHA256<span class="token punctuation">]</span>-----+
 
 C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span>admin<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>如果看到了上面的内容，就表示<code>ssh key</code>生成成功了，存储在<code>C:\Users\admin\.ssh\id_rsa.pub</code>目录下。</p>
-<p>登录<code>GitHub</code>，点击右上角的头像=&gt;点击<code>Settings</code>=&gt;点击<code>SSH and GPG keys</code>=&gt;点击<code>New SSH key</code>，出现如下界面：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/image-20210417182026445.png" alt="image-20210417182026445"></p>
-<p>在<code>Title</code>中随意输入一个标题，在<code>Key</code>中复制粘贴<code>id_rsa.pub</code>文件里的所有内容，点击<code>Add SSH key</code>会提示你输入<code>GitHub</code>的密码，输入密码后点击提交就大功告成了。</p>
-<p>现在就可以愉快地使用<code>git clone</code> 克隆<code>GitHub</code>上面的代码啦。</p>
+<p>如果看到了上面的内容，就表示<code>ssh key</code>生成成功了，存储在<code>C:\Users\admin\.ssh\id_rsa.pub</code>目录下。<br>登录<code>GitHub</code>，点击右上角的头像=&gt;点击<code>Settings</code>=&gt;点击<code>SSH and GPG keys</code>=&gt;点击<code>New SSH key</code>，出现如下界面：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/image-20210417182026445.png" alt="image-20210417182026445"><br>在<code>Title</code>中随意输入一个标题，在<code>Key</code>中复制粘贴<code>id_rsa.pub</code>文件里的所有内容，点击<code>Add SSH key</code>会提示你输入<code>GitHub</code>的密码，输入密码后点击提交就大功告成了。<br>现在就可以愉快地使用<code>git clone</code> 克隆<code>GitHub</code>上面的代码啦。</p>
 ]]></content>
       <categories>
         <category>安装教程</category>
@@ -1233,7 +1229,19 @@ for(let i &#x3D; 0; i &lt; 10; i ++) &#123;
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>3.在<strong>主题配置文件</strong>中取消<code>postBodyEnd</code>前面的注释。</p>
 <pre class="line-numbers language-none"><code class="language-none">custom_file_path:
-  postBodyEnd: source&#x2F;_data&#x2F;post-body-end.njk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+  postBodyEnd: source&#x2F;_data&#x2F;post-body-end.njk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="Github-jsDelivr-PicGo-打造稳定快速、高效免费图床"><a href="#Github-jsDelivr-PicGo-打造稳定快速、高效免费图床" class="headerlink" title="Github+jsDelivr+PicGo 打造稳定快速、高效免费图床"></a>Github+jsDelivr+PicGo 打造稳定快速、高效免费图床</h4><p>参考链接：<a href="https://www.itrhx.com/2019/08/01/A27-image-hosting">https://www.itrhx.com/2019/08/01/A27-image-hosting</a><br>在Typora中还内置了PicGo，点击“文件”=&gt;”偏好设置”，选择“图像”，可以看到如下界面：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/image-20210417210350517.png" alt="image-20210417210350517"><br>插入图片时…选择“上传图片”，勾上“插入时自动转义图片URL”，上传服务选择“PicGo（app）”，PicGo路径选择<code>PicGo.exe</code>所在的路径。<br>设置完成后可以点击“验证图片上传选项”，测试图片能否上传成功。<br>现在用Typora就可以很轻松地编写Markdown文件了。</p>
+<h4 id="添加订阅文章通知功能"><a href="#添加订阅文章通知功能" class="headerlink" title="添加订阅文章通知功能"></a>添加订阅文章通知功能</h4><p>参考链接：<a href="https://cloud.tencent.com/developer/article/1622392">https://cloud.tencent.com/developer/article/1622392</a></p>
+<h4 id="添加utterances评论系统"><a href="#添加utterances评论系统" class="headerlink" title="添加utterances评论系统"></a>添加utterances评论系统</h4><p>参考链接：<a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a></p>
+<h4 id="防止每次hexo-clean后CNAME文件被删除"><a href="#防止每次hexo-clean后CNAME文件被删除" class="headerlink" title="防止每次hexo clean后CNAME文件被删除"></a>防止每次hexo clean后CNAME文件被删除</h4><p>在命令行中输入如下命令，安装<code>hexo-generator-cname</code>模块：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-cname --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在<strong>站点配置文件</strong>中修改<code>Plugins</code>为<code>hexo-generator-cname</code>：</p>
+<pre class="line-numbers language-none"><code class="language-none">Plugins:
+- hexo-generator-cname<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>修改<code>url</code>为你的自定义域名：</p>
+<pre class="line-numbers language-none"><code class="language-none">url: https:&#x2F;&#x2F;tongjiebin.cn<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样CNAME文件就不会被删除了。</p>
+]]></content>
       <categories>
         <category>博客搭建</category>
       </categories>
