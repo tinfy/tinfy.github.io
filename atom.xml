@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-04-10T09:11:22.263Z</updated>
+  <updated>2021-04-17T12:46:51.022Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GitHub配置SSH</title>
+    <link href="https://tongjiebin.cn/posts/4687.html"/>
+    <id>https://tongjiebin.cn/posts/4687.html</id>
+    <published>2021-04-17T12:41:41.000Z</published>
+    <updated>2021-04-17T12:46:51.022Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;打开命令行，在命令行中输入：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安装教程" scheme="https://tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>NexT主题优化</title>
     <link href="https://tongjiebin.cn/posts/eed2.html"/>
     <id>https://tongjiebin.cn/posts/eed2.html</id>
     <published>2021-04-10T03:09:31.000Z</published>
-    <updated>2021-04-10T09:11:22.263Z</updated>
+    <updated>2021-04-10T09:11:24.000Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;添加动态线条背景&quot;&gt;&lt;a href=&quot;#添加动态线条背景&quot; class=&quot;headerlink&quot; title=&quot;添加动态线条背景&quot;&gt;&lt;/a&gt;添加动态线条背景&lt;/h4&gt;&lt;p&gt;1.在&lt;strong&gt;博客根目录&lt;/strong&gt;下的&lt;code&gt;source\_data&lt;/code&gt;文件夹（如果没有，则创建一个&lt;code&gt;_data&lt;/code&gt;文件夹）中创建一个新的文件命名为&lt;code&gt;footer.njk&lt;/code&gt;。&lt;/p&gt;</summary>
@@ -40,7 +57,7 @@
     <link href="https://tongjiebin.cn/posts/f7ce.html"/>
     <id>https://tongjiebin.cn/posts/f7ce.html</id>
     <published>2021-04-02T13:15:06.000Z</published>
-    <updated>2021-04-03T01:09:57.734Z</updated>
+    <updated>2021-04-03T01:09:58.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;两栏布局的特点：一栏固定宽度，一栏自适应宽度。&lt;/p&gt;</summary>
@@ -59,7 +76,7 @@
     <link href="https://tongjiebin.cn/posts/63c.html"/>
     <id>https://tongjiebin.cn/posts/63c.html</id>
     <published>2021-04-01T15:19:58.000Z</published>
-    <updated>2021-04-01T15:43:57.194Z</updated>
+    <updated>2021-04-01T15:43:58.000Z</updated>
     
     
     <summary type="html">&lt;ol&gt;
@@ -77,7 +94,7 @@
     <link href="https://tongjiebin.cn/posts/6749.html"/>
     <id>https://tongjiebin.cn/posts/6749.html</id>
     <published>2021-04-01T14:51:08.000Z</published>
-    <updated>2021-04-01T15:40:11.400Z</updated>
+    <updated>2021-04-17T03:02:08.057Z</updated>
     
     
     <summary type="html">&lt;ol&gt;
@@ -95,7 +112,7 @@
     <link href="https://tongjiebin.cn/posts/1675.html"/>
     <id>https://tongjiebin.cn/posts/1675.html</id>
     <published>2021-03-31T12:05:33.000Z</published>
-    <updated>2021-04-01T15:13:11.741Z</updated>
+    <updated>2021-04-01T15:13:12.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;code&gt;Node&lt;/code&gt;接口的&lt;code&gt;textContent&lt;/code&gt;属性表示一个节点以及它的子节点的文本内容。&lt;/p&gt;</summary>
@@ -114,7 +131,7 @@
     <link href="https://tongjiebin.cn/posts/5878.html"/>
     <id>https://tongjiebin.cn/posts/5878.html</id>
     <published>2021-03-26T11:56:54.000Z</published>
-    <updated>2021-04-10T03:49:49.086Z</updated>
+    <updated>2021-04-10T03:49:50.000Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h4&gt;&lt;p&gt;使用&lt;code&gt;#&lt;/code&gt;可表示 1-6 级标题，一级标题对应一个&lt;code&gt;#&lt;/code&gt;，二级标题对应两个&lt;code&gt;#&lt;/code&gt;，以此类推。&lt;/p&gt;</summary>
@@ -131,7 +148,7 @@
     <link href="https://tongjiebin.cn/posts/bdda.html"/>
     <id>https://tongjiebin.cn/posts/bdda.html</id>
     <published>2021-03-21T06:08:47.000Z</published>
-    <updated>2021-03-27T11:08:49.326Z</updated>
+    <updated>2021-03-27T11:08:50.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;基本用法&quot;&gt;&lt;a href=&quot;#基本用法&quot; class=&quot;headerlink&quot; title=&quot;基本用法&quot;&gt;&lt;/a&gt;基本用法&lt;/h3&gt;&lt;p&gt;async函数返回一个 Promise 对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。&lt;/p&gt;</summary>
@@ -152,7 +169,7 @@
     <link href="https://tongjiebin.cn/posts/c666.html"/>
     <id>https://tongjiebin.cn/posts/c666.html</id>
     <published>2021-03-15T11:21:39.000Z</published>
-    <updated>2021-04-01T14:43:03.740Z</updated>
+    <updated>2021-04-01T14:43:04.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;在Windows上安装Git&quot;&gt;&lt;a href=&quot;#在Windows上安装Git&quot; class=&quot;headerlink&quot; title=&quot;在Windows上安装Git&quot;&gt;&lt;/a&gt;在Windows上安装Git&lt;/h3&gt;&lt;p&gt;前往&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git官网&lt;/a&gt;下载安装包直接安装即可，安装完在命令行终端输入&lt;code&gt;git --version&lt;/code&gt;可以看到git的版本表示安装成功。&lt;/p&gt;</summary>
@@ -169,7 +186,7 @@
     <link href="https://tongjiebin.cn/posts/7146.html"/>
     <id>https://tongjiebin.cn/posts/7146.html</id>
     <published>2021-03-14T09:41:48.000Z</published>
-    <updated>2021-03-29T12:33:58.891Z</updated>
+    <updated>2021-03-29T12:34:00.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;Promise的含义&quot;&gt;&lt;a href=&quot;#Promise的含义&quot; class=&quot;headerlink&quot; title=&quot;Promise的含义&quot;&gt;&lt;/a&gt;Promise的含义&lt;/h3&gt;&lt;p&gt;所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。&lt;/p&gt;</summary>
@@ -190,7 +207,7 @@
     <link href="https://tongjiebin.cn/posts/a846.html"/>
     <id>https://tongjiebin.cn/posts/a846.html</id>
     <published>2021-03-13T09:03:44.000Z</published>
-    <updated>2021-03-27T11:08:49.354Z</updated>
+    <updated>2021-03-27T11:08:50.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;1.登录&lt;a href=&quot;https://www.iconfont.cn/&quot;&gt;阿里图标库&lt;/a&gt;&lt;br&gt;2.搜索需要使用的图标，鼠标放到图标上，点击“购物车”图标添加入库。&lt;/p&gt;</summary>
@@ -209,7 +226,7 @@
     <link href="https://tongjiebin.cn/posts/1195.html"/>
     <id>https://tongjiebin.cn/posts/1195.html</id>
     <published>2021-03-13T08:51:54.000Z</published>
-    <updated>2021-03-29T12:34:37.521Z</updated>
+    <updated>2021-03-29T12:34:38.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;Vue项目中引入less，报错&lt;strong&gt;Syntax Error: TypeError: this.getOptions is not a function&lt;/strong&gt;解决办法：&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/gdutRex/article/details/113547371&quot;&gt;https://blog.csdn.net/gdutRex/article/details/113547371&lt;/a&gt;&lt;/p&gt;</summary>
@@ -228,7 +245,7 @@
     <link href="https://tongjiebin.cn/posts/f8ba.html"/>
     <id>https://tongjiebin.cn/posts/f8ba.html</id>
     <published>2021-03-10T04:39:29.000Z</published>
-    <updated>2021-04-10T03:10:54.014Z</updated>
+    <updated>2021-04-10T03:10:56.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;之前博客部署在GitHub Page上，但在国内访问GitHub经常出现速度慢，甚至访问不了等问题。&lt;br&gt;于是我决定在Coding Page和GitHub Page上进行双线部署，在Coding Page上部署成功后，打开博客发现文章的阅读量显示为空（使用LeanCloud统计的阅读量）。&lt;br&gt;查看NexT文档后发现了另一种方法，在5.0.1以后的版本可以使用&lt;a href=&quot;http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi&quot;&gt;不蒜子统计&lt;/a&gt;阅读量。具体方法如下：&lt;/p&gt;</summary>
@@ -247,7 +264,7 @@
     <link href="https://tongjiebin.cn/posts/fc2.html"/>
     <id>https://tongjiebin.cn/posts/fc2.html</id>
     <published>2021-03-05T13:42:40.000Z</published>
-    <updated>2021-03-29T12:30:01.895Z</updated>
+    <updated>2021-03-29T12:30:02.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;效果图如下：&lt;br&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/baiduBear.jpg&quot;&gt;&lt;/p&gt;</summary>
@@ -266,7 +283,7 @@
     <link href="https://tongjiebin.cn/posts/8d4d.html"/>
     <id>https://tongjiebin.cn/posts/8d4d.html</id>
     <published>2021-03-02T15:49:17.000Z</published>
-    <updated>2021-03-29T12:55:57.981Z</updated>
+    <updated>2021-03-29T12:55:58.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;Class可以通过extends关键字实现继承。&lt;/p&gt;</summary>
@@ -287,7 +304,7 @@
     <link href="https://tongjiebin.cn/posts/5ca0.html"/>
     <id>https://tongjiebin.cn/posts/5ca0.html</id>
     <published>2021-02-27T12:05:14.000Z</published>
-    <updated>2021-03-29T12:46:45.978Z</updated>
+    <updated>2021-03-29T12:46:46.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;h4 id=&quot;类的由来&quot;&gt;&lt;a href=&quot;#类的由来&quot; class=&quot;headerlink&quot; title=&quot;类的由来&quot;&gt;&lt;/a&gt;类的由来&lt;/h4&gt;&lt;p&gt;在JS中，生成实例对象的传统方法是通过构造函数的方式，如下：&lt;/p&gt;</summary>
@@ -308,7 +325,7 @@
     <link href="https://tongjiebin.cn/posts/e654.html"/>
     <id>https://tongjiebin.cn/posts/e654.html</id>
     <published>2021-02-23T06:58:18.000Z</published>
-    <updated>2021-03-29T12:32:16.647Z</updated>
+    <updated>2021-03-29T12:32:18.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;原型链&quot;&gt;&lt;a href=&quot;#原型链&quot; class=&quot;headerlink&quot; title=&quot;原型链&quot;&gt;&lt;/a&gt;原型链&lt;/h3&gt;&lt;p&gt;实现的原理：每个构造函数都有一个原型对象，原型对象中都包含着一个指向构造函数的指针，而实例对象中都有一个指向原型对象的指针。如果让子类的原型对象等于父类的实例对象，那么父类的实例对象的属性和方法，现在也存在于子类的原型对象中了，子类的实例对象就可以访问到父类的属性和方法了。通过给子类的原型对象添加一个方法，就可以实现在继承的基础上又添加一个新方法。&lt;/p&gt;</summary>
@@ -327,7 +344,7 @@
     <link href="https://tongjiebin.cn/posts/cf7f.html"/>
     <id>https://tongjiebin.cn/posts/cf7f.html</id>
     <published>2021-02-20T14:48:42.000Z</published>
-    <updated>2021-03-29T12:33:18.269Z</updated>
+    <updated>2021-03-29T12:33:20.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;在《JS高级程序设计第3版》上写着，使用new操作符调用构造函数会经历以下4个步骤：&lt;/p&gt;</summary>
@@ -346,7 +363,7 @@
     <link href="https://tongjiebin.cn/posts/b234.html"/>
     <id>https://tongjiebin.cn/posts/b234.html</id>
     <published>2021-02-20T13:25:37.000Z</published>
-    <updated>2021-04-03T01:17:53.054Z</updated>
+    <updated>2021-04-03T01:17:54.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot; title=&quot;工厂模式&quot;&gt;&lt;/a&gt;工厂模式&lt;/h3&gt;&lt;p&gt;用函数来封装以特定接口创建对象的细节，解决了创建大量相似对象的问题。&lt;/p&gt;</summary>
@@ -365,7 +382,7 @@
     <link href="https://tongjiebin.cn/posts/93cb.html"/>
     <id>https://tongjiebin.cn/posts/93cb.html</id>
     <published>2021-02-18T08:16:13.000Z</published>
-    <updated>2021-03-29T12:31:41.024Z</updated>
+    <updated>2021-03-29T12:31:42.000Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;数据属性&quot;&gt;&lt;a href=&quot;#数据属性&quot; class=&quot;headerlink&quot; title=&quot;数据属性&quot;&gt;&lt;/a&gt;数据属性&lt;/h3&gt;&lt;p&gt;数据属性有4个特性（描述属性的各种特征）：&lt;/p&gt;</summary>
@@ -376,28 +393,6 @@
     
     
     <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS实现水平垂直居中的方法</title>
-    <link href="https://tongjiebin.cn/posts/21ff.html"/>
-    <id>https://tongjiebin.cn/posts/21ff.html</id>
-    <published>2021-02-12T13:33:00.000Z</published>
-    <updated>2021-03-29T12:30:56.599Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;基础的HTML和CSS代码如下：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-html&quot; data-language=&quot;html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;content&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;box&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
     
   </entry>
   
