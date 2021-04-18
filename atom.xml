@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-04-17T13:16:12.724Z</updated>
+  <updated>2021-04-18T09:17:29.461Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue过滤器</title>
+    <link href="https://tongjiebin.cn/posts/67d9.html"/>
+    <id>https://tongjiebin.cn/posts/67d9.html</id>
+    <published>2021-04-18T09:13:26.000Z</published>
+    <updated>2021-04-18T09:17:29.461Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Vue.js 允许你自定义过滤器，可用于一些常见的文本格式化。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue" scheme="https://tongjiebin.cn/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub配置SSH</title>
@@ -369,25 +388,6 @@
     
     
     <summary type="html">&lt;h3 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot; title=&quot;工厂模式&quot;&gt;&lt;/a&gt;工厂模式&lt;/h3&gt;&lt;p&gt;用函数来封装以特定接口创建对象的细节，解决了创建大量相似对象的问题。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript数据属性和访问器属性</title>
-    <link href="https://tongjiebin.cn/posts/93cb.html"/>
-    <id>https://tongjiebin.cn/posts/93cb.html</id>
-    <published>2021-02-18T08:16:13.000Z</published>
-    <updated>2021-03-29T12:31:42.000Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;数据属性&quot;&gt;&lt;a href=&quot;#数据属性&quot; class=&quot;headerlink&quot; title=&quot;数据属性&quot;&gt;&lt;/a&gt;数据属性&lt;/h3&gt;&lt;p&gt;数据属性有4个特性（描述属性的各种特征）：&lt;/p&gt;</summary>
     
     
     
