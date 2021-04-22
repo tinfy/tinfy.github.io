@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-04-18T09:17:29.461Z</updated>
+  <updated>2021-04-22T12:11:52.061Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>background-image为渐变色，transition无效</title>
+    <link href="https://tongjiebin.cn/posts/1a89.html"/>
+    <id>https://tongjiebin.cn/posts/1a89.html</id>
+    <published>2021-04-22T12:05:57.000Z</published>
+    <updated>2021-04-22T12:11:52.061Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;问题：在下面的代码中，实现渐变色背景的切换时，使用&lt;code&gt;transition&lt;/code&gt;属性没有效果：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue过滤器</title>
@@ -370,25 +389,6 @@
     
     
     <summary type="html">&lt;p&gt;在《JS高级程序设计第3版》上写着，使用new操作符调用构造函数会经历以下4个步骤：&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript中创建对象的7种模式</title>
-    <link href="https://tongjiebin.cn/posts/b234.html"/>
-    <id>https://tongjiebin.cn/posts/b234.html</id>
-    <published>2021-02-20T13:25:37.000Z</published>
-    <updated>2021-04-03T01:17:54.000Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot; title=&quot;工厂模式&quot;&gt;&lt;/a&gt;工厂模式&lt;/h3&gt;&lt;p&gt;用函数来封装以特定接口创建对象的细节，解决了创建大量相似对象的问题。&lt;/p&gt;</summary>
     
     
     
