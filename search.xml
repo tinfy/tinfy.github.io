@@ -1497,9 +1497,13 @@ promise
   <entry>
     <title>Vue项目中报错的解决办法</title>
     <url>/posts/1195.html</url>
-    <content><![CDATA[<p>Vue项目中引入less，报错<strong>Syntax Error: TypeError: this.getOptions is not a function</strong>解决办法：<br><a href="https://blog.csdn.net/gdutRex/article/details/113547371">https://blog.csdn.net/gdutRex/article/details/113547371</a></p>
-<a id="more"></a>
-<p>Vue项目中引入element-ui，报错<strong>element-ui.common.js’ imported multiple times</strong>解决办法：<br><a href="https://blog.csdn.net/cyy15729981514/article/details/114028329">https://blog.csdn.net/cyy15729981514/article/details/114028329</a></p>
+    <content><![CDATA[<ol>
+<li>Vue项目中引入less，报错<strong>Syntax Error: TypeError: this.getOptions is not a function</strong>解决办法：<br><a href="https://blog.csdn.net/gdutRex/article/details/113547371">https://blog.csdn.net/gdutRex/article/details/113547371</a><a id="more"></a></li>
+<li>Vue项目中引入element-ui，报错<strong>element-ui.common.js’ imported multiple times</strong>解决办法：<br><a href="https://blog.csdn.net/cyy15729981514/article/details/114028329">https://blog.csdn.net/cyy15729981514/article/details/114028329</a></li>
+<li>Element UI组件库 Cascader 级联选择器高度过高的问题:<br>在全局样式表中设置 <code>.el-cascader-panel</code> 的高度:<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.el-cascader-panel</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+</ol>
 ]]></content>
       <categories>
         <category>Web前端</category>

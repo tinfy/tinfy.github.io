@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tong jiebin&#39;s Blog</title>
   <icon>https://tongjiebin.cn/icon.png</icon>
-  
+  <subtitle>有志者，事竟成</subtitle>
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
@@ -247,10 +247,11 @@
     <link href="https://tongjiebin.cn/posts/1195.html"/>
     <id>https://tongjiebin.cn/posts/1195.html</id>
     <published>2021-03-13T08:51:54.000Z</published>
-    <updated>2021-03-29T12:34:38.000Z</updated>
+    <updated>2021-04-19T15:23:43.458Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Vue项目中引入less，报错&lt;strong&gt;Syntax Error: TypeError: this.getOptions is not a function&lt;/strong&gt;解决办法：&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/gdutRex/article/details/113547371&quot;&gt;https://blog.csdn.net/gdutRex/article/details/113547371&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;Vue项目中引入less，报错&lt;strong&gt;Syntax Error: TypeError: this.getOptions is not a function&lt;/strong&gt;解决办法：&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/gdutRex/article/details/113547371&quot;&gt;https://blog.csdn.net/gdutRex/article/details/113547371&lt;/a&gt;</summary>
     
     
     
