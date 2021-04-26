@@ -1205,9 +1205,10 @@ for(let i &#x3D; 0; i &lt; 10; i ++) &#123;
   <entry>
     <title>NexT主题优化</title>
     <url>/posts/eed2.html</url>
-    <content><![CDATA[<h4 id="添加动态线条背景"><a href="#添加动态线条背景" class="headerlink" title="添加动态线条背景"></a>添加动态线条背景</h4><p>1.在<strong>博客根目录</strong>下的<code>source\_data</code>文件夹（如果没有，则创建一个<code>_data</code>文件夹）中创建一个新的文件命名为<code>footer.njk</code>。</p>
-<a id="more"></a>
-<p>2.在<code>footer.njk</code>文件中添加如下内容：</p>
+    <content><![CDATA[<h4 id="添加动态线条背景"><a href="#添加动态线条背景" class="headerlink" title="添加动态线条背景"></a>添加动态线条背景</h4><ol>
+<li><p>在<strong>博客根目录</strong>下的 <code>source\_data</code> 文件夹（如果没有，则创建一个 <code>_data</code> 文件夹）中创建一个新的文件命名为 <code>footer.njk</code> 。</p>
+<a id="more"></a></li>
+<li><p>在 <code>footer.njk</code> 文件中添加如下内容：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0,0,255<span class="token punctuation">"</span></span> <span class="token attr-name">opacity</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token attr-name">zIndex</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1<span class="token punctuation">"</span></span> <span class="token attr-name">count</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>99<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
 <p>你还可以自定义这些属性：</p>
@@ -1218,29 +1219,34 @@ for(let i &#x3D; 0; i &lt; 10; i ++) &#123;
 <li>count：点的数量</li>
 </ol>
 </blockquote>
-<p>3.在<strong>主题配置文件</strong>中取消<code>footer</code>前面的注释。</p>
+</li>
+<li><p>在<strong>主题配置文件</strong> <code>_config.yml</code> 中取消 <code>footer</code> 前面的注释。</p>
 <pre class="line-numbers language-none"><code class="language-none">custom_file_path:
   footer: source&#x2F;_data&#x2F;footer.njk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="添加文章结束标记"><a href="#添加文章结束标记" class="headerlink" title="添加文章结束标记"></a>添加文章结束标记</h4><p>1.在<strong>博客根目录</strong>下的<code>source\_data</code>文件夹中创建一个新的文件命名为<code>post-body-end.njk</code>。<br>2.在<code>post-body-end.njk</code>文件中添加如下内容：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+
+</li>
+</ol>
+<h4 id="添加文章结束标记"><a href="#添加文章结束标记" class="headerlink" title="添加文章结束标记"></a>添加文章结束标记</h4><ol>
+<li>在<strong>博客根目录</strong>下的 <code>source\_data</code> 文件夹中创建一个新的文件命名为 <code>post-body-end.njk</code> 。</li>
+<li>在 <code>post-body-end.njk</code> 文件中添加如下内容：<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
 	&#123;% if not is_index %&#125;
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">text-align</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span><span class="token property">color</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span>14px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>-------------本文结束<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-paw<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>感谢您的阅读-------------<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 	&#123;% endif %&#125;
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>3.在<strong>主题配置文件</strong>中取消<code>postBodyEnd</code>前面的注释。</p>
-<pre class="line-numbers language-none"><code class="language-none">custom_file_path:
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>在<strong>主题配置文件</strong> <code>_config.yml</code> 中取消 <code>postBodyEnd</code> 前面的注释。<pre class="line-numbers language-none"><code class="language-none">custom_file_path:
   postBodyEnd: source&#x2F;_data&#x2F;post-body-end.njk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="Github-jsDelivr-PicGo-打造稳定快速、高效免费图床"><a href="#Github-jsDelivr-PicGo-打造稳定快速、高效免费图床" class="headerlink" title="Github+jsDelivr+PicGo 打造稳定快速、高效免费图床"></a>Github+jsDelivr+PicGo 打造稳定快速、高效免费图床</h4><p>参考链接：<a href="https://www.itrhx.com/2019/08/01/A27-image-hosting">https://www.itrhx.com/2019/08/01/A27-image-hosting</a><br>在Typora中还内置了PicGo，点击“文件”=&gt;”偏好设置”，选择“图像”，可以看到如下界面：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/image-20210417210350517.png" alt="image-20210417210350517"><br>插入图片时…选择“上传图片”，勾上“插入时自动转义图片URL”，上传服务选择“PicGo（app）”，PicGo路径选择<code>PicGo.exe</code>所在的路径。<br>设置完成后可以点击“验证图片上传选项”，测试图片能否上传成功。<br>现在用Typora就可以很轻松地编写Markdown文件了。</p>
+
+</li>
+</ol>
+<h4 id="Github-jsDelivr-PicGo-打造稳定快速、高效免费图床"><a href="#Github-jsDelivr-PicGo-打造稳定快速、高效免费图床" class="headerlink" title="Github+jsDelivr+PicGo 打造稳定快速、高效免费图床"></a>Github+jsDelivr+PicGo 打造稳定快速、高效免费图床</h4><p>参考链接：<a href="https://www.itrhx.com/2019/08/01/A27-image-hosting">https://www.itrhx.com/2019/08/01/A27-image-hosting</a><br>在Typora中还内置了PicGo，点击“文件”=&gt;”偏好设置”，选择“图像”，可以看到如下界面：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/image-20210417210350517.png" alt="image-20210417210350517"><br>“插入图片时…”右边的下拉框中选择“上传图片”，勾上“插入时自动转义图片URL”，上传服务选择“PicGo（app）”，PicGo路径选择 <code>PicGo.exe</code> 所在的路径。<br>设置完成后可以点击“验证图片上传选项”，测试图片能否上传成功。<br>现在用Typora就可以很轻松地编写Markdown文件了。</p>
 <h4 id="添加订阅文章通知功能"><a href="#添加订阅文章通知功能" class="headerlink" title="添加订阅文章通知功能"></a>添加订阅文章通知功能</h4><p>参考链接：<a href="https://cloud.tencent.com/developer/article/1622392">https://cloud.tencent.com/developer/article/1622392</a></p>
 <h4 id="添加utterances评论系统"><a href="#添加utterances评论系统" class="headerlink" title="添加utterances评论系统"></a>添加utterances评论系统</h4><p>参考链接：<a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a></p>
-<h4 id="防止每次hexo-clean后CNAME文件被删除"><a href="#防止每次hexo-clean后CNAME文件被删除" class="headerlink" title="防止每次hexo clean后CNAME文件被删除"></a>防止每次hexo clean后CNAME文件被删除</h4><p>在命令行中输入如下命令，安装<code>hexo-generator-cname</code>模块：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-cname --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在<strong>站点配置文件</strong>中修改<code>Plugins</code>为<code>hexo-generator-cname</code>：</p>
-<pre class="line-numbers language-none"><code class="language-none">Plugins:
-- hexo-generator-cname<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>修改<code>url</code>为你的自定义域名：</p>
-<pre class="line-numbers language-none"><code class="language-none">url: https:&#x2F;&#x2F;tongjiebin.cn<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这样CNAME文件就不会被删除了。</p>
+<h4 id="防止每次-hexo-clean-后-CNAME-文件被删除"><a href="#防止每次-hexo-clean-后-CNAME-文件被删除" class="headerlink" title="防止每次 hexo clean 后 CNAME 文件被删除"></a>防止每次 hexo clean 后 CNAME 文件被删除</h4><ol>
+<li>安装 <code>hexo-generator-cname</code> 模块：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-cname --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>在<strong>站点配置文件</strong> <code>_config.yml</code> 中修改 <code>Plugins</code> 为 <code>hexo-generator-cname</code> ：<pre class="line-numbers language-none"><code class="language-none">Plugins:
+- hexo-generator-cname<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>在<strong>站点配置文件</strong> <code>_config.yml</code> 中修改 <code>url</code> 为你的自定义域名：<pre class="line-numbers language-none"><code class="language-none">url: https:&#x2F;&#x2F;tongjiebin.cn<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
 ]]></content>
       <categories>
         <category>博客搭建</category>

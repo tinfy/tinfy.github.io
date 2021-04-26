@@ -78,10 +78,11 @@
     <link href="https://tongjiebin.cn/posts/eed2.html"/>
     <id>https://tongjiebin.cn/posts/eed2.html</id>
     <published>2021-04-10T03:09:31.000Z</published>
-    <updated>2021-04-17T13:29:13.038Z</updated>
+    <updated>2021-04-26T12:56:29.246Z</updated>
     
     
-    <summary type="html">&lt;h4 id=&quot;添加动态线条背景&quot;&gt;&lt;a href=&quot;#添加动态线条背景&quot; class=&quot;headerlink&quot; title=&quot;添加动态线条背景&quot;&gt;&lt;/a&gt;添加动态线条背景&lt;/h4&gt;&lt;p&gt;1.在&lt;strong&gt;博客根目录&lt;/strong&gt;下的&lt;code&gt;source\_data&lt;/code&gt;文件夹（如果没有，则创建一个&lt;code&gt;_data&lt;/code&gt;文件夹）中创建一个新的文件命名为&lt;code&gt;footer.njk&lt;/code&gt;。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h4 id=&quot;添加动态线条背景&quot;&gt;&lt;a href=&quot;#添加动态线条背景&quot; class=&quot;headerlink&quot; title=&quot;添加动态线条背景&quot;&gt;&lt;/a&gt;添加动态线条背景&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在&lt;strong&gt;博客根目录&lt;/strong&gt;下的 &lt;code&gt;source\_data&lt;/code&gt; 文件夹（如果没有，则创建一个 &lt;code&gt;_data&lt;/code&gt; 文件夹）中创建一个新的文件命名为 &lt;code&gt;footer.njk&lt;/code&gt; 。&lt;/p&gt;</summary>
     
     
     
