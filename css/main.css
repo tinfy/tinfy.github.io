@@ -1300,11 +1300,12 @@ pre code {
 }
 .site-title {
   font-family: STXingkai, Roboto Slab, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-weight: normal;
   margin: 0;
 }
 .site-subtitle {
+  font-family: STXingkai, Roboto Slab, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   color: #ddd;
   font-size: 0.8125em;
   margin: 10px 0;
@@ -1510,6 +1511,12 @@ pre code {
 }
 .links-of-author a {
   font-size: 0.8125em;
+}
+.links-of-author .fa,
+.links-of-author .fab,
+.links-of-author .far,
+.links-of-author .fas {
+  margin-right: 2px;
 }
 .sidebar .sidebar-button:not(:first-child) {
   margin-top: 15px;
@@ -2956,6 +2963,7 @@ mark.search-keyword {
 }
 .links-of-author-item {
   margin: 5px 0 0;
+  width: 50%;
 }
 .links-of-author-item a {
   box-sizing: border-box;
