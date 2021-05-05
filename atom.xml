@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-04-22T12:11:52.061Z</updated>
+  <updated>2021-05-05T07:42:34.981Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>由于找不到 mfc110.dll， 无法继续执行代码</title>
+    <link href="https://tongjiebin.cn/posts/5acc.html"/>
+    <id>https://tongjiebin.cn/posts/5acc.html</id>
+    <published>2021-05-05T07:30:40.000Z</published>
+    <updated>2021-05-05T07:42:34.981Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;安装完 Xshell 后，启动 Xshell 报系统错误：由于找不到 mfc110.dll，无法继续执行代码。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>background-image为渐变色，transition无效</title>
@@ -371,25 +386,6 @@
     
     
     <summary type="html">&lt;h3 id=&quot;原型链&quot;&gt;&lt;a href=&quot;#原型链&quot; class=&quot;headerlink&quot; title=&quot;原型链&quot;&gt;&lt;/a&gt;原型链&lt;/h3&gt;&lt;p&gt;实现的原理：每个构造函数都有一个原型对象，原型对象中都包含着一个指向构造函数的指针，而实例对象中都有一个指向原型对象的指针。如果让子类的原型对象等于父类的实例对象，那么父类的实例对象的属性和方法，现在也存在于子类的原型对象中了，子类的实例对象就可以访问到父类的属性和方法了。通过给子类的原型对象添加一个方法，就可以实现在继承的基础上又添加一个新方法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>new操作符的工作原理</title>
-    <link href="https://tongjiebin.cn/posts/cf7f.html"/>
-    <id>https://tongjiebin.cn/posts/cf7f.html</id>
-    <published>2021-02-20T14:48:42.000Z</published>
-    <updated>2021-03-29T12:33:20.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在《JS高级程序设计第3版》上写着，使用new操作符调用构造函数会经历以下4个步骤：&lt;/p&gt;</summary>
     
     
     
