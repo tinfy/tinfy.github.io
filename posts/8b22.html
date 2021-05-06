@@ -23,21 +23,24 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"tongjiebin.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Node接口的textContent属性表示一个节点以及它的子节点的文本内容。">
+<meta name="description" content="最近换了个新电脑，新电脑如果想要使用 SSH 协议克隆和提交代码的话，需要重新配置 SSH 密钥，但用新的 SSH 密钥提交的代码在贡献图上面没有显示。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="textContent和innerText的区别">
-<meta property="og:url" content="https://tongjiebin.cn/posts/1675.html">
+<meta property="og:title" content="GitHub commit 后 contributions图没有变化">
+<meta property="og:url" content="https://tongjiebin.cn/posts/8b22.html">
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
-<meta property="og:description" content="Node接口的textContent属性表示一个节点以及它的子节点的文本内容。">
+<meta property="og:description" content="最近换了个新电脑，新电脑如果想要使用 SSH 协议克隆和提交代码的话，需要重新配置 SSH 密钥，但用新的 SSH 密钥提交的代码在贡献图上面没有显示。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-31T12:05:33.000Z">
-<meta property="article:modified_time" content="2021-04-01T15:13:12.000Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210506200058.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210506201528.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210506201236.png">
+<meta property="article:published_time" content="2021-05-06T11:44:26.000Z">
+<meta property="article:modified_time" content="2021-05-06T12:15:31.827Z">
 <meta property="article:author" content="Tong jiebin">
-<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210506200058.png">
 
 
-<link rel="canonical" href="https://tongjiebin.cn/posts/1675.html">
+<link rel="canonical" href="https://tongjiebin.cn/posts/8b22.html">
 
 
 <script class="page-configurations">
@@ -49,7 +52,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>textContent和innerText的区别 | Tong jiebin's Blog</title>
+<title>GitHub commit 后 contributions图没有变化 | Tong jiebin's Blog</title>
   
 
   <script>
@@ -184,7 +187,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -197,7 +200,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%92%8CinnerText%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">和innerText的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%92%8CinnerHTML%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">和innerHTML的区别</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -279,7 +281,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tongjiebin.cn/posts/1675.html">
+    <link itemprop="mainEntityOfPage" href="https://tongjiebin.cn/posts/8b22.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -292,7 +294,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          textContent和innerText的区别
+          GitHub commit 后 contributions图没有变化
         </h1>
 
         <div class="post-meta-container">
@@ -302,24 +304,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-31 20:05:33" itemprop="dateCreated datePublished" datetime="2021-03-31T20:05:33+08:00">2021-03-31</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-01 23:13:12" itemprop="dateModified" datetime="2021-04-01T23:13:12+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Web%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">Web前端</span></a>
-        </span>
+      <time title="创建时间：2021-05-06 19:44:26 / 修改时间：20:15:31" itemprop="dateCreated datePublished" datetime="2021-05-06T19:44:26+08:00">2021-05-06</time>
     </span>
 
   
@@ -336,7 +323,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
+      <span>697</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -354,38 +341,42 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><code>Node</code>接口的<code>textContent</code>属性表示一个节点以及它的子节点的文本内容。</p>
+        <p>最近换了个新电脑，新电脑如果想要使用 SSH 协议克隆和提交代码的话，需要重新配置 SSH 密钥，但用新的 SSH 密钥提交的代码在贡献图上面没有显示。</p>
 <a id="more"></a>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>下面是一个HTML片段：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>divA<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>some<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> text!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>通过<code>textContent</code>获取元素的文本内容：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> text <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'divA'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent<span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//This is some text!</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>或者设置元素的文本内容：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'divA'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">'This text is different!'</span><span class="token punctuation">;</span>
-<span class="token comment">// 现在#divA的HTML变为：</span>
-<span class="token comment">// &lt;div id="divA">This text is different!&lt;/div></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><code>textContent</code>属性的值有以下几种情况：</p>
+
+<p>查找 GitHub 的文档找到了原因：</p>
+<p><a target="_blank" rel="noopener" href="https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile">https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/why-are-my-contributions-not-showing-up-on-my-profile</a></p>
+<p>如果满足以下<strong>所有</strong>条件，则提交将显示在您的贡献图上：</p>
 <ul>
-<li>如果节点是<code>document</code>或<code>DOCTYPE</code>，则<code>textContent</code>返回null。<blockquote>
-<p>要获取整个文档的文本和<code>CDATA</code>数据，可以使用 <code>document.documentElement.textContent</code>。</p>
-</blockquote>
-</li>
-<li>如果该节点是<code>CDATA section</code>、注释、处理指令（processing instruction）或文本节点（text node），则 <code>textContent</code>返回该节点内部的文本内容，即 <code>Node.nodeValue</code>。</li>
-<li>对于其他节点类型，<code>textContent</code>将所有子节点的 <code>textContent</code> 合并后返回 ，不包括注释和处理指令。（如果节点没有子节点，则返回一个空字符串。）<br>在一个节点上设置<code>textContent</code>属性将删除该节点的所有子节点，并替换为一个具有给定值的文本节点。</li>
+<li>用于提交的电子邮件地址与您的GitHub帐户相关联。</li>
+<li>提交是在独立的存储库中进行的，而不是在fork中进行的。</li>
+<li>提交了：<ul>
+<li>在存储库的默认分支中</li>
+<li>在<code>gh-pages</code>分支中（对于具有项目站点的存储库）</li>
 </ul>
-<h4 id="和innerText的区别"><a href="#和innerText的区别" class="headerlink" title="和innerText的区别"></a>和innerText的区别</h4><p><code>Node.textContent</code>和<code>HTMLElement.innerText</code>虽然名字看起来很相似，但有重要的不同之处：</p>
+</li>
+</ul>
+<p>此外，<strong>以下至少一项</strong>必须为真：</p>
+<ul>
+<li>您是存储库上的协作者，或者是拥有存储库的组织的成员。</li>
+<li>您已经fork了存储库。</li>
+<li>您已经在存储库中打开了Pull requests或Issues。</li>
+<li>您已为存储库加注Star。</li>
+</ul>
+<p>原来我在执行 <code>git config --global user.email &quot;邮箱&quot;</code> 命令设置邮箱时，设置的是网易的邮箱，而我当初注册 GitHub 账号时使用的是 QQ 邮箱。</p>
+<p>解决方法：</p>
 <ol>
-<li><code>textContent</code>获取所有元素的内容，包括<code>&lt;script&gt;</code>和<code>&lt;style&gt;</code>元素，而<code>innerText</code>只展示给人看的元素。也就是说<code>textContent</code>会获取到<code>&lt;script&gt;</code>标签里的<code>js</code>代码和<code>&lt;style&gt;</code>标签里的<code>css</code>代码。</li>
-<li><code>textContent</code>返回节点中的每个元素。相反， <code>innerText</code>受 CSS 样式的影响，不会返回隐藏元素的文本。<ul>
-<li>此外，由于<code>innerText</code>受CSS`样式的影响，它会触发回流（reflow）去确保是最新的计算样式。（回流在计算上可能会很昂贵，因此应尽可能避免。）</li>
-</ul>
-</li>
-<li>与<code>textContent</code>不同，在<code>IE11</code>及以下版本中修改<code>innerText</code>不仅会移除当前元素的子节点，而且还会永久性地破坏所有后代文本节点。在之后不可能再次将节点再次插入到任何其他元素或同一元素中。</li>
+<li>点击右上角的头像，点击 Settings。</li>
 </ol>
-<h4 id="和innerHTML的区别"><a href="#和innerHTML的区别" class="headerlink" title="和innerHTML的区别"></a>和innerHTML的区别</h4><p>正如其名称，<code>Element.innerHTML</code>返回HTML。通常，为了在元素中检索或写入文本，人们使用<code>innerHTML</code>，但是<code>textContent</code>通常具有更好的性能，因为文本不会被解析为HTML。<br>而且，使用<code>textContent</code>可以防止<code>XSS</code>攻击。</p>
-<hr>
-<p>参考资料：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent">https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210506200058.png" alt="image-20210506200057287"></p>
+<ol start="2">
+<li>进入到 Emails 设置，在 Add email address 里面填写执行 <code>git config --global user.email &quot;邮箱&quot;</code> 命令时输入的邮箱，点击 Add。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210506201528.png" alt="image-20210506200313444"></p>
+<ol start="3">
+<li>然后会给你发邮件验证，验证通过后还可以设置 Primary email address ，把你刚才添加的邮箱设为 Primary。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210506201236.png" alt="image-20210506201235112"></p>
 
     </div>
 
@@ -403,7 +394,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://tongjiebin.cn/posts/1675.html" title="textContent和innerText的区别">https://tongjiebin.cn/posts/1675.html</a>
+      <a href="https://tongjiebin.cn/posts/8b22.html" title="GitHub commit 后 contributions图没有变化">https://tongjiebin.cn/posts/8b22.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -411,21 +402,15 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </ul>
 </div>
 
-          <div class="post-tags">
-              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/6749.html" rel="prev" title="Node.js安装教程">
-                  <i class="fa fa-chevron-left"></i> Node.js安装教程
-                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/5878.html" rel="next" title="Markdown语法">
-                  Markdown语法 <i class="fa fa-chevron-right"></i>
+                <a href="/posts/a476.html" rel="next" title="记录将 Vue 项目部署到云服务器的所有步骤">
+                  记录将 Vue 项目部署到云服务器的所有步骤 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

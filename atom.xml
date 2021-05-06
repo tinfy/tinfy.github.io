@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-05-05T07:42:34.981Z</updated>
+  <updated>2021-05-06T12:15:31.827Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub commit 后 contributions图没有变化</title>
+    <link href="https://tongjiebin.cn/posts/8b22.html"/>
+    <id>https://tongjiebin.cn/posts/8b22.html</id>
+    <published>2021-05-06T11:44:26.000Z</published>
+    <updated>2021-05-06T12:15:31.827Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近换了个新电脑，新电脑如果想要使用 SSH 协议克隆和提交代码的话，需要重新配置 SSH 密钥，但用新的 SSH 密钥提交的代码在贡献图上面没有显示。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>记录将 Vue 项目部署到云服务器的所有步骤</title>
+    <link href="https://tongjiebin.cn/posts/a476.html"/>
+    <id>https://tongjiebin.cn/posts/a476.html</id>
+    <published>2021-05-05T09:38:16.000Z</published>
+    <updated>2021-05-06T12:17:11.982Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;购买云服务器&quot;&gt;&lt;a href=&quot;#购买云服务器&quot; class=&quot;headerlink&quot; title=&quot;购买云服务器&quot;&gt;&lt;/a&gt;购买云服务器&lt;/h3&gt;&lt;p&gt;我选择的是 Vultr 云服务器，官网为：&lt;a href=&quot;https://www.vultr.com/&quot;&gt;https://www.vultr.com&lt;/a&gt; ，Vultr 还支持支付宝支付，最低充值金额 10 美元。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安装教程" scheme="https://tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>由于找不到 mfc110.dll， 无法继续执行代码</title>
@@ -93,7 +125,7 @@
     <link href="https://tongjiebin.cn/posts/eed2.html"/>
     <id>https://tongjiebin.cn/posts/eed2.html</id>
     <published>2021-04-10T03:09:31.000Z</published>
-    <updated>2021-04-27T13:09:27.362Z</updated>
+    <updated>2021-05-05T08:27:06.779Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;添加动态线条背景&quot;&gt;&lt;a href=&quot;#添加动态线条背景&quot; class=&quot;headerlink&quot; title=&quot;添加动态线条背景&quot;&gt;&lt;/a&gt;添加动态线条背景&lt;/h4&gt;&lt;ol&gt;
@@ -353,46 +385,6 @@
     <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
     <category term="ES6" scheme="https://tongjiebin.cn/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Class的基本语法</title>
-    <link href="https://tongjiebin.cn/posts/5ca0.html"/>
-    <id>https://tongjiebin.cn/posts/5ca0.html</id>
-    <published>2021-02-27T12:05:14.000Z</published>
-    <updated>2021-03-29T12:46:46.000Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;h4 id=&quot;类的由来&quot;&gt;&lt;a href=&quot;#类的由来&quot; class=&quot;headerlink&quot; title=&quot;类的由来&quot;&gt;&lt;/a&gt;类的由来&lt;/h4&gt;&lt;p&gt;在JS中，生成实例对象的传统方法是通过构造函数的方式，如下：&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
-    
-    <category term="ES6" scheme="https://tongjiebin.cn/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript中6种继承方式</title>
-    <link href="https://tongjiebin.cn/posts/e654.html"/>
-    <id>https://tongjiebin.cn/posts/e654.html</id>
-    <published>2021-02-23T06:58:18.000Z</published>
-    <updated>2021-03-29T12:32:18.000Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;原型链&quot;&gt;&lt;a href=&quot;#原型链&quot; class=&quot;headerlink&quot; title=&quot;原型链&quot;&gt;&lt;/a&gt;原型链&lt;/h3&gt;&lt;p&gt;实现的原理：每个构造函数都有一个原型对象，原型对象中都包含着一个指向构造函数的指针，而实例对象中都有一个指向原型对象的指针。如果让子类的原型对象等于父类的实例对象，那么父类的实例对象的属性和方法，现在也存在于子类的原型对象中了，子类的实例对象就可以访问到父类的属性和方法了。通过给子类的原型对象添加一个方法，就可以实现在继承的基础上又添加一个新方法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
