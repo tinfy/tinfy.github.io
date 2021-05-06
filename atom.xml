@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-05-06T12:15:31.827Z</updated>
+  <updated>2021-05-06T13:20:56.230Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tongjiebin.cn/posts/8b22.html"/>
     <id>https://tongjiebin.cn/posts/8b22.html</id>
     <published>2021-05-06T11:44:26.000Z</published>
-    <updated>2021-05-06T12:15:31.827Z</updated>
+    <updated>2021-05-06T13:20:56.230Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近换了个新电脑，新电脑如果想要使用 SSH 协议克隆和提交代码的话，需要重新配置 SSH 密钥，但用新的 SSH 密钥提交的代码在贡献图上面没有显示。&lt;/p&gt;</summary>
