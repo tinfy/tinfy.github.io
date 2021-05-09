@@ -2103,9 +2103,9 @@ Query OK, 1 row affected (0.01 sec)<span aria-hidden="true" class="line-numbers-
 <pre class="line-numbers language-none"><code class="language-none">mysql&gt; use mydb;
 Database changed<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ol start="4">
-<li><p>使用 WinSCP 把 .sql 文件传输到云服务器中的 \home\database 目录下。</p>
+<li><p>使用 WinSCP 把 .sql 文件传输到云服务器中的 /home/database 目录下。</p>
 </li>
-<li><p>输入 <code>source \home\database\mydb.sql</code> 把mydb.sql 导入到 mysql 数据库中。</p>
+<li><p>输入 <code>source /home/database/mydb.sql</code> 把mydb.sql 导入到 mysql 数据库中。</p>
 </li>
 <li><p>输入 <code>create user admin identified by &#39;123456&#39;;</code> 添加一个新用户 admin ，密码为 123456。</p>
 </li>
@@ -2144,6 +2144,8 @@ v10.24.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 </ol>
 <blockquote>
 <p>pm2 可以用来管理 需要在服务器上一直存活的进程。</p>
+<p>pm2 常用命令：</p>
+<p>在服务器中安装 pm2： npm i pm2 -g<br>启动项目： pm2 start 脚本 –name 自定义名称<br>查看运行项目： pm2 ls<br>重启项目： pm2 restart 自定义名称<br>停止项目： pm2 stop 自定义名称<br>删除项目： pm2 delete 自定义名称</p>
 </blockquote>
 <ol start="4">
 <li>进入到 api 目录下，运行命令： <code>pm2 start .\app.js --name api</code>，其中 api 是你为这个进程起的名字。</li>
@@ -2167,6 +2169,21 @@ v10.24.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210506193404.png" alt="image-20210506193402336"></p>
 <ol start="4">
 <li>现在你就可以通过你设置的二级域名来访问 Vue 项目了。</li>
+</ol>
+<h3 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h3><p>现在访问 vueshop.tongjiebin.cn 这个域名可以打开 Vue 项目，但是不能点击登录有报错。</p>
+<p>F12 进行调试，发现 login 这个接口请求的 URL 是 127.0.0.1。</p>
+<p>这个地址是本地环回地址，访问 127.0.0.1 其实就是访问的本机的接口，在电脑的hosts文件中都会有这样的设置：</p>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">#	127.0.0.1       localhost
+#	::1             localhost<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>修改请求的 URL 为服务器的 IP 地址后，登录成功,但是又有了新的问题:</p>
+<p>部分文字为乱码,这部分的文字都是都是通过这个 api 接口获取的数据库中的数据。</p>
+<p>解决方法：</p>
+<ol>
+<li>修改 mydb.sql 文件里面所有创建表的语句，把字符集设置为 utf8mb4：</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210509132350.png" alt="image-20210509132350354"></p>
+<ol start="2">
+<li>修改 MySQL 字符集：<a href="https://tongjiebin.cn/posts/1a4b.html">https://tongjiebin.cn/posts/1a4b.html</a></li>
 </ol>
 ]]></content>
       <categories>
@@ -2894,6 +2911,88 @@ instance2<span class="token punctuation">.</span><span class="token function">sa
       </categories>
       <tags>
         <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL8.x 修改字符集为 utf8mb4</title>
+    <url>/posts/1a4b.html</url>
+    <content><![CDATA[<ol>
+<li>查看 mysql 服务是否启动：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">service</span> mysql status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<a id="more"></a>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210509112126.png" alt="image-20210509112114735"></p>
+<p>启动 mysql 服务：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">service</span> mysql start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>重启 mysql 服务：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">service</span> mysql restart<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>关闭 mysql 服务：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">service</span> mysql stop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="2">
+<li>使用 root 用户登录 mysql：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="3">
+<li>查看当前字符集：</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">SHOW VARIABLES WHERE Variable_name LIKE &#39;character_set_%&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210509123658.png" alt="image-20210509123655409"></p>
+<p>mysql 8.x 默认的字符集为 utf8mb3，<strong>注意：utf8mb3 和 utf8 是同一个字符集。</strong></p>
+<blockquote>
+<p>这里我弄了好久，在配置文件里面写的 <code>default-character-set=utf8</code>， 然后重启 mysql 服务，重启服务器，结果查询到的字符集一直都是 utf8mb3 ，后来查看 mysql 的官方文档<a href="https://dev.mysql.com/doc/refman/8.0/en/charset-unicode.html">https://dev.mysql.com/doc/refman/8.0/en/charset-unicode.html</a> 才知道原来 utf8mb3 和 utf8 是同一个字符集。</p>
+<p>MySQL支持以下Unicode字符集：</p>
+<ul>
+<li><code>utf8mb4</code>：Unicode字符集的UTF-8编码，每个字符使用1-4个字节。</li>
+<li><code>utf8mb3</code>：Unicode字符集的UTF-8编码，每个字符使用1-3个字节。</li>
+<li><code>utf8</code>： <code>utf8mb3</code>的别名。</li>
+<li><code>ucs2</code>：Unicode字符集的UCS-2编码，每个字符使用两个字节。</li>
+<li><code>utf16</code>：Unicode字符集的UTF-16编码，每个字符使用两个或四个字节。像， <code>ucs2</code>但扩展了辅助字符。</li>
+<li><code>utf16le</code>：Unicode字符集的UTF-16LE编码。就像<code>utf16</code>小端而不是大端。</li>
+<li><code>utf32</code>：Unicode字符集的UTF-32编码，每个字符使用四个字节。</li>
+</ul>
+</blockquote>
+<p>输入 <code>exit;</code> 退出 mysql。</p>
+<ol start="4">
+<li><code>cd ../etc/mysql</code> 进入到 etc/mysql 目录下，<code>ls</code> 查看该目录下的所有文件：</li>
+</ol>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">root@vultr:~# cd ..&#x2F;etc&#x2F;mysql
+root@vultr:&#x2F;etc&#x2F;mysql# ls
+conf.d	my.cnf	my.cnf.fallback  mysql.cnf  mysql.conf.d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol start="5">
+<li><code>vi my.cnf</code> 打开 mysql 配置文件 my.cnf ：</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210509122120.png" alt="image-20210509122116830"></p>
+<p>最后两行表示该文件包含了 /etc/mysql/conf.d 和 /etc/mysql/mysql.conf.d 这两个路径下的配置文件，输入 <code>:q</code> 退出 my.cnf 文件。</p>
+<ol start="6">
+<li><code>cd conf.d</code> 进入到 conf.d 目录下，<code>ls</code> 查看该目录下的所有文件，可以看到里面有 mysql.cnf 配置文件：</li>
+</ol>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">root@vultr:&#x2F;etc&#x2F;mysql# cd conf.d
+root@vultr:&#x2F;etc&#x2F;mysql&#x2F;conf.d# ls
+mysql.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol start="7">
+<li><code>vi mysql.cnf</code> 打开配置文件 mysql.cnf ，按下 i 进入编辑模式，在 [mysql]下面加上 <code>default-character-set=utf8mb4</code>，按下 Esc 退出编辑，输入 :wq 保存退出。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210509130753.png" alt="image-20210509130751437"></p>
+<ol start="8">
+<li><code>cd ../mysql.conf.d</code> 进入到 mysql.conf.d 目录下，<code>ls</code> 查看该目录下的所有文件，可以看到里面有 mysqld.cnf 配置文件：</li>
+</ol>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">root@vultr:&#x2F;etc&#x2F;mysql&#x2F;conf.d# cd ..&#x2F;mysql.conf.d
+root@vultr:&#x2F;etc&#x2F;mysql&#x2F;mysql.conf.d# ls
+mysqld.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol start="9">
+<li><code>vi mysqld.cnf</code> 打开配置文件 mysqld.cnf ，按下 i 进入编辑模式，在 log-error下面加上 <code>character-set-server=utf8mb4</code>，按下 Esc 退出编辑，输入 :wq 保存退出。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210509130403.png" alt="image-20210509130359975"></p>
+<ol start="10">
+<li>登录 mysql，查看字符集：</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210509131032.png" alt="image-20210509131029346"></p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
       </tags>
   </entry>
 </search>

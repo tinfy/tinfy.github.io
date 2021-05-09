@@ -1,1 +1,1 @@
-{"title":"GitHub commit 后 contributions图没有变化","id":"posts/8b22.html","date_published":"05/06/2021","summary":"最近换了个新电脑，新电脑如果想要使用 SSH 协议克隆和提交代码的话，需要重新配置 SSH 密钥，但用新的 SSH 密钥提交的代码在贡献图上面没有显示。","url":"https://tongjiebin.cn/posts/8b22.html","tags":[],"categories":[]}
+{"title":"MySQL8.x 修改字符集为 utf8mb4","id":"posts/1a4b.html","date_published":"05/09/2021","summary":"\n查看 mysql 服务是否启动：\n\nservice mysql status","url":"https://tongjiebin.cn/posts/1a4b.html","tags":["MySQL"],"categories":["数据库"]}
