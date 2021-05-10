@@ -846,6 +846,9 @@ b<span class="token punctuation">.</span><span class="token function">myMethod</
 </ol>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210506201236.png" alt="image-20210506201235112"></p>
 ]]></content>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
   </entry>
   <entry>
     <title>GitHub配置SSH</title>
@@ -889,6 +892,9 @@ C:<span class="token punctuation">\</span>Users<span class="token punctuation">\
       <categories>
         <category>安装教程</category>
       </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
   </entry>
   <entry>
     <title>JavaScript中创建对象的7种模式</title>
@@ -2189,6 +2195,10 @@ v10.24.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
       <categories>
         <category>安装教程</category>
       </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>MySQL</tag>
+      </tags>
   </entry>
   <entry>
     <title>Git学习记录</title>
@@ -2993,6 +3003,127 @@ mysqld.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS 深拷贝与浅拷贝</title>
+    <url>/posts/b888.html</url>
+    <content><![CDATA[<p>要理解 JS 的深浅拷贝，先熟悉一下 JS 的数据类型：</p>
+<p>6种基本数据类型：Undefined、Null、Boolean、Number、String、Symbol（ES6引入）</p>
+<p>复杂数据类型（引用类型）：Object、Array、Date、RegExp、Function等</p>
+<a id="more"></a>
+
+<blockquote>
+<p>Undefined：只有一个值，即 undefined。变量被声明了但未赋值时，这个变量的值就是 undefined。函数没有返回值，默认返回 undefined。typeof undefined 返回值为 “undefined”。</p>
+<p>Null：只有一个值，即 null。表示一个空对象指针。typeof null 返回值为 “object”。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">undefined</span> <span class="token operator">==</span> <span class="token keyword">null</span>	<span class="token comment">// true</span>
+<span class="token keyword">undefined</span> <span class="token operator">===</span> <span class="token keyword">null</span>	<span class="token comment">// false，全等只在两个值不需要类型转换就相等的情况下才返回 true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>Symbol()可以生成一个唯一的值，该数据类型仅有的目的是用来作为对象属性的标识符。</p>
+</blockquote>
+<p>基本数据类型是按值访问的，存储在栈内存中，基本数据类型的值是不可变的。</p>
+<p>引用类型在栈内存中存储了一个指向堆内存的地址，在堆内存中存储着实际的数据。</p>
+<h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p>深拷贝和浅拷贝只针对 Object 和 Array 这类复杂数据类型。简单来说，浅复制只复制一层对象的属性，而深复制则递归复制了所有层级。</p>
+<h4 id="赋值（-）与浅拷贝的区别"><a href="#赋值（-）与浅拷贝的区别" class="headerlink" title="赋值（=）与浅拷贝的区别"></a>赋值（=）与浅拷贝的区别</h4><p>下面的例子实现了赋值操作：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+	a<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+	arr<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj1 <span class="token operator">=</span> obj<span class="token punctuation">;</span>
+obj1<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210510225153.png" alt="image-20210510225142719"></p>
+<p><strong>赋值操作是直接复制对象的引用</strong>，obj 和 obj1 指向的还是同一个对象，所以当修改 obj1 时，obj 也会跟着改变。</p>
+<p>下面的例子实现了浅拷贝：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+	a<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+	arr<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> scObj <span class="token operator">=</span> <span class="token function">shallowCopy</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+scObj<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+scObj<span class="token punctuation">.</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">shallowCopy</span> <span class="token punctuation">(</span><span class="token parameter">src</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">let</span> newObj <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> prop <span class="token keyword">in</span> src<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>src<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>prop<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			newObj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> src<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">return</span> newObj<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>scObj<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210510230109.png" alt="image-20210510230105996"></p>
+<p><strong>浅拷贝只会将对象的各个属性进行依次复制，并不会进行递归复制</strong>。和赋值操作不同，上面例子中 obj 和 scObj 指向的已经不是同一个对象了。由于 obj.arr 数组是一个引用类型，引用类型存储的是一个地址，所以 scObj 拷贝的是 obj 对象 a 的值和 obj.arr 数组的地址，obj.arr 和 scObj.arr 指向的还是同一个数组。所以当修改 scObj.a 时，obj.a 的值不会改变，而修改 scObj.arr[0] 时，obj.arr[0] 会跟着改变。</p>
+<h4 id="其他实现浅拷贝的方法"><a href="#其他实现浅拷贝的方法" class="headerlink" title="其他实现浅拷贝的方法"></a>其他实现浅拷贝的方法</h4><ol>
+<li>数组的 slice()、concat() 方法</li>
+</ol>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> arr1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> arr2 <span class="token operator">=</span> arr1<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> arr3 <span class="token operator">=</span> arr1<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr3<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210510235509.png" alt="image-20210510235506976"></p>
+<ol start="2">
+<li>Object.assign() 方法</li>
+</ol>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+	name<span class="token operator">:</span> <span class="token string">'Tom'</span><span class="token punctuation">,</span>
+	friend<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+		name<span class="token operator">:</span> <span class="token string">'Jerry'</span><span class="token punctuation">,</span>
+		age<span class="token operator">:</span> <span class="token number">18</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> obj1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210511000004.png" alt="image-20210511000001727"></p>
+<ol start="3">
+<li>对象和数组的扩展运算符（…）</li>
+</ol>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+	name<span class="token operator">:</span> <span class="token string">'Tom'</span><span class="token punctuation">,</span>
+	friend<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+		name<span class="token operator">:</span> <span class="token string">'Jerry'</span><span class="token punctuation">,</span>
+		age<span class="token operator">:</span> <span class="token number">18</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token operator">...</span>obj1<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210511000231.png" alt="image-20210511000001727"></p>
+<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p>深拷贝不仅将原对象的各个属性逐个复制出去，而且将原对象各个属性所包含的对象也依次采用深拷贝的方法<strong>递归复制</strong>到新对象上。</p>
+<h4 id="实现深拷贝的方法"><a href="#实现深拷贝的方法" class="headerlink" title="实现深拷贝的方法"></a>实现深拷贝的方法</h4><ol>
+<li>通过 JSON 的 parse() 和 stringify() 方法</li>
+</ol>
+<p>缺点：不会复制 undefined、symbol、函数。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+	name<span class="token operator">:</span> <span class="token string">'Tom'</span><span class="token punctuation">,</span>
+	age<span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>
+	color<span class="token operator">:</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+	friend<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+		name<span class="token operator">:</span> <span class="token string">'Jerry'</span><span class="token punctuation">,</span>
+		age<span class="token operator">:</span> <span class="token number">18</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'miao miao miao'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+obj2<span class="token punctuation">.</span>friend<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">19</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210511001335.png" alt="image-20210511001332302"></p>
+<ol start="2">
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
 </search>
