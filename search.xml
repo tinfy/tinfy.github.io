@@ -3116,7 +3116,35 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210511001335.png" alt="image-20210511001332302"></p>
 <ol start="2">
-<li></li>
+<li>使用递归实现<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+	a<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+	arr<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span>
+		name<span class="token operator">:</span> <span class="token string">'Tom'</span><span class="token punctuation">,</span>
+		age<span class="token operator">:</span> <span class="token number">16</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+		name<span class="token operator">:</span> <span class="token string">'Jerry'</span><span class="token punctuation">,</span>
+		age<span class="token operator">:</span> <span class="token number">15</span>
+	<span class="token punctuation">&#125;</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token function">deepCopy</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+obj2<span class="token punctuation">.</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Cat'</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">deepCopy</span><span class="token punctuation">(</span><span class="token parameter">src</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">let</span> newObj <span class="token operator">=</span> src<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Array <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>			<span class="token comment">// 判断是Array还是Object</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> prop <span class="token keyword">in</span> src<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>										<span class="token comment">// 遍历对象上所有实例属性和原型属性</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>src<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>prop<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>							<span class="token comment">// 只拷贝实例属性</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>src<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> Array <span class="token operator">||</span> src<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> Object<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>		<span class="token comment">// 如果属性的值为Array或Object，则对属性的值递归调用deepCopy()函数</span>
+				newObj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">deepCopy</span><span class="token punctuation">(</span>src<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+				newObj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> src<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">return</span> newObj<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210511202827.png" alt="image-20210511202827136"></li>
 </ol>
 ]]></content>
       <categories>

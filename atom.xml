@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-05-10T16:16:37.354Z</updated>
+  <updated>2021-05-11T12:28:50.707Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tongjiebin.cn/posts/b888.html"/>
     <id>https://tongjiebin.cn/posts/b888.html</id>
     <published>2021-05-10T14:10:03.000Z</published>
-    <updated>2021-05-10T16:16:37.354Z</updated>
+    <updated>2021-05-11T12:28:50.707Z</updated>
     
     
     <summary type="html">&lt;p&gt;要理解 JS 的深浅拷贝，先熟悉一下 JS 的数据类型：&lt;/p&gt;
