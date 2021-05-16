@@ -305,7 +305,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-16 23:31:24" itemprop="dateModified" datetime="2021-05-16T23:31:24+08:00">2021-05-16</time>
+        <time title="修改时间：2021-05-16 23:32:28" itemprop="dateModified" datetime="2021-05-16T23:32:28+08:00">2021-05-16</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -342,52 +342,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <h3 id="元素分类"><a href="#元素分类" class="headerlink" title="元素分类"></a>元素分类</h3><p>在 HTML 中元素可以分为三种：块级元素、行内元素、行内块级元素。</p>
-<h4 id="块级元素的特点"><a href="#块级元素的特点" class="headerlink" title="块级元素的特点"></a>块级元素的特点</h4><ol>
-<li>独自占一行</li>
-<li>高度、宽度、边距、行高都可以设置</li>
-<li>如果宽度不设置的话，默认为父元素的宽度100%</li>
-</ol>
-<p>常见的块级元素：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h标签</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="行内元素的特点"><a href="#行内元素的特点" class="headerlink" title="行内元素的特点"></a>行内元素的特点</h4><ol>
-<li>相邻的行内元素在一行显示，直到一行排不下了，才会换行</li>
-<li>高度、宽度、上下margin和上padding、行高都不能设置</li>
-<li>元素的宽度就是包含的文字或图片的宽度，不可改变</li>
-</ol>
-<p>常见的行内元素：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="行内块级元素的特点"><a href="#行内块级元素的特点" class="headerlink" title="行内块级元素的特点"></a>行内块级元素的特点</h4><ol>
-<li>和行内元素和行内块级元素在一行显示</li>
-<li>高度、宽度、边距、行高都可以设置</li>
-</ol>
-<p>常见的行内块级元素：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="元素类型的转换"><a href="#元素类型的转换" class="headerlink" title="元素类型的转换"></a>元素类型的转换</h4><ol>
-<li>转换为块级元素：<code>display: block;</code></li>
-<li>转换为行内元素：<code>display: inline;</code></li>
-<li>转换为行内块级元素：<code>display: inline-block;</code></li>
-</ol>
-<h3 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h3><p>元素定义为 float，脱离文档流，不占据位置。后面跟块级元素时，块级元素会占据其位置，所以会产生遮盖块级元素的效果；如果后面跟行内元素，会环绕着float元素。</p>
-<h4 id="float-元素的性质"><a href="#float-元素的性质" class="headerlink" title="float 元素的性质"></a>float 元素的性质</h4><h5 id="脱离标准文档流"><a href="#脱离标准文档流" class="headerlink" title="脱离标准文档流"></a>脱离标准文档流</h5><p>div1 设置为 float 后，脱离文档流，不占据位置，所以 div2 变为了文档流中的第一个盒子。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210515174055.png" alt="image-20210515174051300"></p>
-<h5 id="不再区分块级和行内元素"><a href="#不再区分块级和行内元素" class="headerlink" title="不再区分块级和行内元素"></a>不再区分块级和行内元素</h5><p>在标准文档流中，span 作为行内元素设置宽高等属性是不生效的。但在设置为 float 后，不再区分块级和行内元素了，也能够设置高度、宽度、边距等属性了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210515174745.png" alt="image-20210515174745675"></p>
-<h5 id="浮动元素互相依靠"><a href="#浮动元素互相依靠" class="headerlink" title="浮动元素互相依靠"></a>浮动元素互相依靠</h5><p>下面例子中，三个 div 都设置了 <code>float: left;</code> 当浏览器控件足够时，3号盒子依靠着2号盒子；当空间变小时，3号盒子依靠着1号盒子。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210516222205.gif"></p>
-<p>另外需要注意的是，当3号盒子向左靠贴墙的时候，并不会往1号盒子里面挤。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210516222828.gif"></p>
-<h5 id="浮动元素有”字围“效果"><a href="#浮动元素有”字围“效果" class="headerlink" title="浮动元素有”字围“效果"></a>浮动元素有”字围“效果</h5><p>在下图中，img 会浮在 p 的上方，但是 p 中的文字却没有被挡住，而是像水一样围绕着 img。</p>
-<p><strong>总结：标准流中的文字不会被浮动元素给遮挡。</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210516223935.png" alt="image-20210516223930636"></p>
-<h5 id="收缩"><a href="#收缩" class="headerlink" title="收缩"></a>收缩</h5><p>浮动元素如果不设置宽度，会自动收缩为文字的宽度（这一点和行内元素相似）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210516225008.png" alt="image-20210516224959873"></p>
-<h3 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h3><h4 id="添加额外的标签"><a href="#添加额外的标签" class="headerlink" title="添加额外的标签"></a>添加额外的标签</h4><p>在浮动元素后面添加额外的标签，比如 <code>&lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;</code> ，但缺点是会添加许多无意义的标签，不建议使用。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210516225633.png" alt="image-20210516225633092"></p>
-<h4 id="利用-br-标签和其-clear-属性"><a href="#利用-br-标签和其-clear-属性" class="headerlink" title="利用 br 标签和其 clear 属性"></a>利用 br 标签和其 clear 属性</h4><p>这种方法不常见，利用 br 标签和其 html 属性 clear 也能实现清除浮动的效果，clear 属性可以取的值有：left，right，all。但缺点同样是会添加许多无意义的标签，不建议使用。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210516231053.png" alt="image-20210516231047448"></p>
-<h4 id="clear-both"><a href="#clear-both" class="headerlink" title="clear: both;"></a>clear: both;</h4><p><code>clear: both;</code> 的意思就是：不允许当前元素左侧和右侧有浮动元素。缺点是 margin 属性失效了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210516233118.png" alt="image-20210516233118499"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/f9a9.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

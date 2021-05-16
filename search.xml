@@ -3158,6 +3158,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <title>CSS浮动以及清除浮动的方法</title>
     <url>/posts/f9a9.html</url>
     <content><![CDATA[<h3 id="元素分类"><a href="#元素分类" class="headerlink" title="元素分类"></a>元素分类</h3><p>在 HTML 中元素可以分为三种：块级元素、行内元素、行内块级元素。</p>
+<a id="more"></a>
+
 <h4 id="块级元素的特点"><a href="#块级元素的特点" class="headerlink" title="块级元素的特点"></a>块级元素的特点</h4><ol>
 <li>独自占一行</li>
 <li>高度、宽度、边距、行高都可以设置</li>
