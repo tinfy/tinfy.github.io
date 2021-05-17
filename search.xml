@@ -3205,6 +3205,16 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210516231053.png" alt="image-20210516231047448"></p>
 <h4 id="clear-both"><a href="#clear-both" class="headerlink" title="clear: both;"></a>clear: both;</h4><p><code>clear: both;</code> 的意思就是：不允许当前元素左侧和右侧有浮动元素。缺点是 margin 属性失效了。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210516233118.png" alt="image-20210516233118499"></p>
+<h4 id="给浮动元素的父元素设置高度"><a href="#给浮动元素的父元素设置高度" class="headerlink" title="给浮动元素的父元素设置高度"></a>给浮动元素的父元素设置高度</h4><p>父元素没有设置高度会出现下面的情况：</p>
+<p>浮动元素是脱离文档流，不会占据任何位置，所以不能撑开父元素的高度，下面的元素就会挤上来。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210517210620.png" alt="image-20210517210616728"></p>
+<p>给浮动元素的父元素设置高度（父元素的高度至少需要大于子元素的高度）后，就可以”关住“浮动，不会对后面的元素产生影响。</p>
+<p>不建议使用这种方法，因为不能适应页面的快速变化。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210517205812.png" alt="image-20210517205808748"></p>
+<h4 id="使用-after伪元素（推荐）"><a href="#使用-after伪元素（推荐）" class="headerlink" title="使用::after伪元素（推荐）"></a>使用::after伪元素（推荐）</h4><p>使用 ::after 伪元素相当于在 content 后面添加了一个空的元素，设置空元素的 clear 属性来清除浮动。推荐使用这种方式来清除浮动，既不会添加额外的标签，也不会导致后面元素的 margin 属性失效。<strong>用来清除浮动的元素通常添加类名为 clearfix。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210517211859.png" alt="image-20210517211856163"></p>
+<h4 id="overflow-hidden（推荐）"><a href="#overflow-hidden（推荐）" class="headerlink" title="overflow: hidden（推荐）"></a>overflow: hidden（推荐）</h4><p>设置 overflow: hidden 可以触发元素的 BFC 特性，BFC 的细节下一篇博客再写。这种方式也不会导致后面的元素 margin 属性失效，推荐使用。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210517220358.png" alt="image-20210517220357995"></p>
 ]]></content>
       <categories>
         <category>CSS</category>
