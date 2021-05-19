@@ -23,21 +23,29 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"tongjiebin.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="之前博客部署在GitHub Page上，但在国内访问GitHub经常出现速度慢，甚至访问不了等问题。于是我决定在Coding Page和GitHub Page上进行双线部署，在Coding Page上部署成功后，打开博客发现文章的阅读量显示为空（使用LeanCloud统计的阅读量）。查看NexT文档后发现了另一种方法，在5.0.1以后的版本可以使用不蒜子统计阅读量。具体方法如下：">
+<meta name="description" content="BFC 的概念BFC（Block Formatting Context，块级格式化上下文）：是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NexT主题添加不蒜子统计">
-<meta property="og:url" content="https://tongjiebin.cn/posts/f8ba.html">
+<meta property="og:title" content="理解BFC以及BFC常见的应用">
+<meta property="og:url" content="https://tongjiebin.cn/posts/9ac0.html">
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
-<meta property="og:description" content="之前博客部署在GitHub Page上，但在国内访问GitHub经常出现速度慢，甚至访问不了等问题。于是我决定在Coding Page和GitHub Page上进行双线部署，在Coding Page上部署成功后，打开博客发现文章的阅读量显示为空（使用LeanCloud统计的阅读量）。查看NexT文档后发现了另一种方法，在5.0.1以后的版本可以使用不蒜子统计阅读量。具体方法如下：">
+<meta property="og:description" content="BFC 的概念BFC（Block Formatting Context，块级格式化上下文）：是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-10T04:39:29.000Z">
-<meta property="article:modified_time" content="2021-04-10T03:10:56.000Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519203535.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519203844.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519210822.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519210951.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519213509.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519214025.png">
+<meta property="article:published_time" content="2021-05-19T11:51:17.000Z">
+<meta property="article:modified_time" content="2021-05-19T13:46:39.390Z">
 <meta property="article:author" content="Tong jiebin">
-<meta property="article:tag" content="NexT">
+<meta property="article:tag" content="BFC">
+<meta property="article:tag" content="浮动">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519203535.png">
 
 
-<link rel="canonical" href="https://tongjiebin.cn/posts/f8ba.html">
+<link rel="canonical" href="https://tongjiebin.cn/posts/9ac0.html">
 
 
 <script class="page-configurations">
@@ -49,7 +57,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>NexT主题添加不蒜子统计 | Tong jiebin's Blog</title>
+<title>理解BFC以及BFC常见的应用 | Tong jiebin's Blog</title>
   
 
   <script>
@@ -184,7 +192,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -197,6 +205,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC-%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">BFC 的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-BFC"><span class="nav-number">2.</span> <span class="nav-text">创建 BFC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC-%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">BFC 的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="nav-number">3.1.</span> <span class="nav-text">清除浮动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%81%BF%E5%85%8D-margin-%E6%8A%98%E5%8F%A0"><span class="nav-number">3.2.</span> <span class="nav-text">避免 margin 折叠</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B2%E6%AD%A2%E5%85%83%E7%B4%A0%E8%A2%AB%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E8%A6%86%E7%9B%96"><span class="nav-number">3.3.</span> <span class="nav-text">防止元素被浮动元素覆盖</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -278,7 +287,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tongjiebin.cn/posts/f8ba.html">
+    <link itemprop="mainEntityOfPage" href="https://tongjiebin.cn/posts/9ac0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -291,7 +300,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          NexT主题添加不蒜子统计
+          理解BFC以及BFC常见的应用
         </h1>
 
         <div class="post-meta-container">
@@ -301,23 +310,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-10 12:39:29" itemprop="dateCreated datePublished" datetime="2021-03-10T12:39:29+08:00">2021-03-10</time>
+      <time title="创建时间：2021-05-19 19:51:17 / 修改时间：21:46:39" itemprop="dateCreated datePublished" datetime="2021-05-19T19:51:17+08:00">2021-05-19</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-10 11:10:56" itemprop="dateModified" datetime="2021-04-10T11:10:56+08:00">2021-04-10</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+          <a href="/categories/Web%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">Web前端</span></a>
         </span>
     </span>
 
@@ -335,14 +338,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.1k</span>
+      <span>788</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -353,54 +356,31 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>之前博客部署在GitHub Page上，但在国内访问GitHub经常出现速度慢，甚至访问不了等问题。<br>于是我决定在Coding Page和GitHub Page上进行双线部署，在Coding Page上部署成功后，打开博客发现文章的阅读量显示为空（使用LeanCloud统计的阅读量）。<br>查看NexT文档后发现了另一种方法，在5.0.1以后的版本可以使用<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi">不蒜子统计</a>阅读量。具体方法如下：</p>
+        <h3 id="BFC-的概念"><a href="#BFC-的概念" class="headerlink" title="BFC 的概念"></a>BFC 的概念</h3><p>BFC（Block Formatting Context，块级格式化上下文）：是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。</p>
 <a id="more"></a>
-<p>打开<strong>主题配置文件</strong>下的<code>_config.yml</code>，找到<code>busuanzi_count</code>，修改为下面的配置：</p>
-<pre class="line-numbers language-none"><code class="language-none">busuanzi_count:
-  enable: true	# 全局开关
-  total_visitors: true	# 总访客量
-  total_visitors_icon: fa fa-user
-  total_views: true	# 总访问量
-  total_views_icon: fa fa-eye
-  post_views: true	# 文章阅读量
-  post_views_icon: far fa-eye<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>打开<code>themes/next/layout/_partials/post</code>目录下的<code>post-meta.njk</code>，找到如下代码，删掉第二行的<code>id=&quot;busuanzi_container_page_pv&quot; style=&quot;display: none;&quot;</code>。使用不蒜子统计阅读量有个缺点，就是在首页不能显示阅读量，只有把文章点进去才能看到。我试着把第一行的<code>not is_index and</code>删掉，在首页能够显示“阅读次数：”这几个字，但后面的数量为空。</p>
-<pre class="line-numbers language-none"><code class="language-none">&#123;%- if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.post_views %&#125;
-  &lt;span class&#x3D;&quot;post-meta-item&quot; title&#x3D;&quot;&#123;&#123; __(&#39;post.views&#39;) &#125;&#125;&quot; id&#x3D;&quot;busuanzi_container_page_pv&quot; style&#x3D;&quot;display: none;&quot;&gt;
-    &lt;span class&#x3D;&quot;post-meta-item-icon&quot;&gt;
-      &lt;i class&#x3D;&quot;&#123;&#123; theme.busuanzi_count.post_views_icon &#125;&#125;&quot;&gt;&lt;&#x2F;i&gt;
-    &lt;&#x2F;span&gt;
-    &lt;span class&#x3D;&quot;post-meta-item-text&quot;&gt;&#123;&#123; __(&#39;post.views&#39;) + __(&#39;symbol.colon&#39;) &#125;&#125;&lt;&#x2F;span&gt;
-    &lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;
-  &lt;&#x2F;span&gt;
-&#123;%- endif %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>顺便记录一下添加总访客量和总访问量的方法，打开themes/next/layout/_partials目录下的footer.njk，找到如下代码，删掉第5行的<code>id=&quot;busuanzi_container_site_uv&quot; style=&quot;display: none;&quot;</code>和第16行的<code>id=&quot;busuanzi_container_site_pv&quot; style=&quot;display: none;&quot;</code>，现在重新生成一下博客就可以看到文章阅读量、总访客量、总访问量了。</p>
-<pre class="line-numbers language-none"><code class="language-none">&#123;%- if theme.busuanzi_count.enable %&#125;
-&lt;div class&#x3D;&quot;busuanzi-count&quot;&gt;
-&lt;script async src&#x3D;&quot;https:&#x2F;&#x2F;dn-lbstatics.qbox.me&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;
-  &#123;%- if theme.busuanzi_count.total_visitors %&#125;
-    &lt;span class&#x3D;&quot;post-meta-item&quot; id&#x3D;&quot;busuanzi_container_site_uv&quot; style&#x3D;&quot;display: none;&quot;&gt;
-      &lt;span class&#x3D;&quot;post-meta-item-icon&quot;&gt;
-        &lt;i class&#x3D;&quot;&#123;&#123; theme.busuanzi_count.total_visitors_icon &#125;&#125;&quot;&gt;&lt;&#x2F;i&gt;
-      &lt;&#x2F;span&gt;
-      &lt;span class&#x3D;&quot;site-uv&quot; title&#x3D;&quot;&#123;&#123; __(&#39;footer.total_visitors&#39;) &#125;&#125;&quot;&gt;
-        &lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;
-      &lt;&#x2F;span&gt;
-    &lt;&#x2F;span&gt;
-  &#123;%- endif %&#125;
 
-  &#123;%- if theme.busuanzi_count.total_views %&#125;
-    &lt;span class&#x3D;&quot;post-meta-item&quot; id&#x3D;&quot;busuanzi_container_site_pv&quot; style&#x3D;&quot;display: none;&quot;&gt;
-      &lt;span class&#x3D;&quot;post-meta-item-icon&quot;&gt;
-        &lt;i class&#x3D;&quot;&#123;&#123; theme.busuanzi_count.total_views_icon &#125;&#125;&quot;&gt;&lt;&#x2F;i&gt;
-      &lt;&#x2F;span&gt;
-      &lt;span class&#x3D;&quot;site-pv&quot; title&#x3D;&quot;&#123;&#123; __(&#39;footer.total_views&#39;) &#125;&#125;&quot;&gt;
-        &lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;
-      &lt;&#x2F;span&gt;
-    &lt;&#x2F;span&gt;
-  &#123;%- endif %&#125;
-&lt;&#x2F;div&gt;
-&#123;%- endif %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>具有 BFC 特性的元素可以看作一个独立的盒子，无论盒子内部的元素布局如何变化，都不会影响到外面的元素。</strong></p>
+<h3 id="创建-BFC"><a href="#创建-BFC" class="headerlink" title="创建 BFC"></a>创建 BFC</h3><p>满足下面任一条件即可创建 BFC：</p>
+<ol>
+<li>body 根元素</li>
+<li>浮动元素：（float 属性不为 none）</li>
+<li>绝对定位元素：（position 属性为 absolute 或 fixed）</li>
+<li>overflow 属性不为 visibility：（hidden,scroll,auto）</li>
+<li>display 属性为 inline-block,table,table-cell,table-caption,flex等</li>
+</ol>
+<h3 id="BFC-的应用"><a href="#BFC-的应用" class="headerlink" title="BFC 的应用"></a>BFC 的应用</h3><h4 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h4><p>在下面的例子中，由于浮动元素脱离标准文档流，浮动元素不能撑开父元素的高度，所以父元素的高度为上下边框的高度2px。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519203535.png" alt="image-20210519203535304"></p>
+<p>给父元素添加 <code>overflow: hidden;</code> 后，创建了一个 BFC，父元素会包裹着浮动元素。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519203844.png" alt="image-20210519203844154"></p>
+<h4 id="避免-margin-折叠"><a href="#避免-margin-折叠" class="headerlink" title="避免 margin 折叠"></a>避免 margin 折叠</h4><p>默认情况下，垂直方向上的 margin 会发生折叠，折叠后的值为两者的较大值。下面的例子中，粉色盒子的 margin-bottom 为20px，橙色盒子的 margin-top 为30px，发生折叠后两个盒子之间的margin 为较大值30px。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519210822.png" alt="image-20210519210822131"></p>
+<p>可以把橙色盒子放到一个新的盒子（div2-outer）里面，给新的盒子添加 <code>overflow: hidden;</code> ，创建一个 BFC，现在两个盒子之间的 margin 值为20px + 30px = 50px，这样就避免了 margin 折叠现象。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519210951.png" alt="image-20210519210951523"></p>
+<h4 id="防止元素被浮动元素覆盖"><a href="#防止元素被浮动元素覆盖" class="headerlink" title="防止元素被浮动元素覆盖"></a>防止元素被浮动元素覆盖</h4><p>在下面的例子中，粉色盒子为浮动布局，覆盖在橙色盒子上面，橙色盒子里面的文字会环绕着粉色盒子。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519213509.png" alt="image-20210519213509003"></p>
+<p>如果橙色盒子不想被覆盖，可以给橙色盒子添加 <code>overflow: hidden;</code> ，创建一个 BFC，变为下面的样式：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519214025.png" alt="image-20210519214025363"></p>
+
     </div>
 
     
@@ -417,7 +397,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://tongjiebin.cn/posts/f8ba.html" title="NexT主题添加不蒜子统计">https://tongjiebin.cn/posts/f8ba.html</a>
+      <a href="https://tongjiebin.cn/posts/9ac0.html" title="理解BFC以及BFC常见的应用">https://tongjiebin.cn/posts/9ac0.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -426,20 +406,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
+              <a href="/tags/BFC/" rel="tag"><i class="fa fa-tag"></i> BFC</a>
+              <a href="/tags/%E6%B5%AE%E5%8A%A8/" rel="tag"><i class="fa fa-tag"></i> 浮动</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/1195.html" rel="prev" title="Vue项目中报错的解决办法">
-                  <i class="fa fa-chevron-left"></i> Vue项目中报错的解决办法
-                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/fc2.html" rel="next" title="CSS绘制百度小熊">
-                  CSS绘制百度小熊 <i class="fa fa-chevron-right"></i>
+                <a href="/posts/f9a9.html" rel="next" title="CSS浮动以及清除浮动的方法">
+                  CSS浮动以及清除浮动的方法 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

@@ -1,1 +1,1 @@
-{"title":"CSS浮动以及清除浮动的方法","id":"posts/f9a9.html","date_published":"05/15/2021","summary":"元素分类在 HTML 中元素可以分为三种：块级元素、行内元素、行内块级元素。","url":"https://tongjiebin.cn/posts/f9a9.html","tags":[],"categories":["CSS"]}
+{"title":"理解BFC以及BFC常见的应用","id":"posts/9ac0.html","date_published":"05/19/2021","summary":"BFC 的概念BFC（Block Formatting Context，块级格式化上下文）：是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。","url":"https://tongjiebin.cn/posts/9ac0.html","tags":["BFC","浮动"],"categories":["Web前端"]}

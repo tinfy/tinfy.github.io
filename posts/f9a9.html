@@ -44,8 +44,9 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210517211859.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210517220358.png">
 <meta property="article:published_time" content="2021-05-15T08:00:46.000Z">
-<meta property="article:modified_time" content="2021-05-17T14:04:13.609Z">
+<meta property="article:modified_time" content="2021-05-19T13:48:07.282Z">
 <meta property="article:author" content="Tong jiebin">
+<meta property="article:tag" content="浮动">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210515174055.png">
 
@@ -151,9 +152,9 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">9</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">30</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">11</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">31</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -226,20 +227,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -323,7 +324,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-17 22:04:13" itemprop="dateModified" datetime="2021-05-17T22:04:13+08:00">2021-05-17</time>
+        <time title="修改时间：2021-05-19 21:48:07" itemprop="dateModified" datetime="2021-05-19T21:48:07+08:00">2021-05-19</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -331,7 +332,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+          <a href="/categories/Web%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">Web前端</span></a>
         </span>
     </span>
 
@@ -379,7 +380,7 @@
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h标签</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="行内元素的特点"><a href="#行内元素的特点" class="headerlink" title="行内元素的特点"></a>行内元素的特点</h4><ol>
 <li>相邻的行内元素在一行显示，直到一行排不下了，才会换行</li>
-<li>高度、宽度、上下margin和上padding、行高都不能设置</li>
+<li>高度、宽度、上下边距、行高都不能设置（padding-top,padding-bottom会显示出效果，但不会把高度撑开，对周围元素没有影响）</li>
 <li>元素的宽度就是包含的文字或图片的宽度，不可改变</li>
 </ol>
 <p>常见的行内元素：</p>
@@ -450,11 +451,17 @@
 </ul>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/%E6%B5%AE%E5%8A%A8/" rel="tag"><i class="fa fa-tag"></i> 浮动</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/posts/9ac0.html" rel="prev" title="理解BFC以及BFC常见的应用">
+                  <i class="fa fa-chevron-left"></i> 理解BFC以及BFC常见的应用
+                </a>
             </div>
             <div class="post-nav-item">
                 <a href="/posts/b888.html" rel="next" title="JS 深拷贝与浅拷贝">
@@ -516,14 +523,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">73k</span>
+    <span title="站点总字数">74k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:06</span>
+    <span title="站点阅读时长">1:07</span>
   </span>
 </div>
 <div class="busuanzi-count">

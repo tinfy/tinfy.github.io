@@ -3169,7 +3169,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h标签</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">></span></span>,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="行内元素的特点"><a href="#行内元素的特点" class="headerlink" title="行内元素的特点"></a>行内元素的特点</h4><ol>
 <li>相邻的行内元素在一行显示，直到一行排不下了，才会换行</li>
-<li>高度、宽度、上下margin和上padding、行高都不能设置</li>
+<li>高度、宽度、上下边距、行高都不能设置（padding-top,padding-bottom会显示出效果，但不会把高度撑开，对周围元素没有影响）</li>
 <li>元素的宽度就是包含的文字或图片的宽度，不可改变</li>
 </ol>
 <p>常见的行内元素：</p>
@@ -3217,7 +3217,46 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210517220358.png" alt="image-20210517220357995"></p>
 ]]></content>
       <categories>
-        <category>CSS</category>
+        <category>Web前端</category>
       </categories>
+      <tags>
+        <tag>浮动</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>理解BFC以及BFC常见的应用</title>
+    <url>/posts/9ac0.html</url>
+    <content><![CDATA[<h3 id="BFC-的概念"><a href="#BFC-的概念" class="headerlink" title="BFC 的概念"></a>BFC 的概念</h3><p>BFC（Block Formatting Context，块级格式化上下文）：是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。</p>
+<a id="more"></a>
+
+<p><strong>具有 BFC 特性的元素可以看作一个独立的盒子，无论盒子内部的元素布局如何变化，都不会影响到外面的元素。</strong></p>
+<h3 id="创建-BFC"><a href="#创建-BFC" class="headerlink" title="创建 BFC"></a>创建 BFC</h3><p>满足下面任一条件即可创建 BFC：</p>
+<ol>
+<li>body 根元素</li>
+<li>浮动元素：（float 属性不为 none）</li>
+<li>绝对定位元素：（position 属性为 absolute 或 fixed）</li>
+<li>overflow 属性不为 visibility：（hidden,scroll,auto）</li>
+<li>display 属性为 inline-block,table,table-cell,table-caption,flex等</li>
+</ol>
+<h3 id="BFC-的应用"><a href="#BFC-的应用" class="headerlink" title="BFC 的应用"></a>BFC 的应用</h3><h4 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h4><p>在下面的例子中，由于浮动元素脱离标准文档流，浮动元素不能撑开父元素的高度，所以父元素的高度为上下边框的高度2px。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519203535.png" alt="image-20210519203535304"></p>
+<p>给父元素添加 <code>overflow: hidden;</code> 后，创建了一个 BFC，父元素会包裹着浮动元素。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519203844.png" alt="image-20210519203844154"></p>
+<h4 id="避免-margin-折叠"><a href="#避免-margin-折叠" class="headerlink" title="避免 margin 折叠"></a>避免 margin 折叠</h4><p>默认情况下，垂直方向上的 margin 会发生折叠，折叠后的值为两者的较大值。下面的例子中，粉色盒子的 margin-bottom 为20px，橙色盒子的 margin-top 为30px，发生折叠后两个盒子之间的margin 为较大值30px。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519210822.png" alt="image-20210519210822131"></p>
+<p>可以把橙色盒子放到一个新的盒子（div2-outer）里面，给新的盒子添加 <code>overflow: hidden;</code> ，创建一个 BFC，现在两个盒子之间的 margin 值为20px + 30px = 50px，这样就避免了 margin 折叠现象。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519210951.png" alt="image-20210519210951523"></p>
+<h4 id="防止元素被浮动元素覆盖"><a href="#防止元素被浮动元素覆盖" class="headerlink" title="防止元素被浮动元素覆盖"></a>防止元素被浮动元素覆盖</h4><p>在下面的例子中，粉色盒子为浮动布局，覆盖在橙色盒子上面，橙色盒子里面的文字会环绕着粉色盒子。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519213509.png" alt="image-20210519213509003"></p>
+<p>如果橙色盒子不想被覆盖，可以给橙色盒子添加 <code>overflow: hidden;</code> ，创建一个 BFC，变为下面的样式：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210519214025.png" alt="image-20210519214025363"></p>
+]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+      <tags>
+        <tag>BFC</tag>
+        <tag>浮动</tag>
+      </tags>
   </entry>
 </search>
