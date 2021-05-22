@@ -1,1 +1,1 @@
-{"title":"理解BFC以及BFC常见的应用","id":"posts/9ac0.html","date_published":"05/19/2021","summary":"BFC 的概念BFC（Block Formatting Context，块级格式化上下文）：是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。","url":"https://tongjiebin.cn/posts/9ac0.html","tags":["BFC","浮动"],"categories":["Web前端"]}
+{"title":"回流与重绘","id":"posts/2226.html","date_published":"05/22/2021","summary":"在讨论“回流和重绘”之前，我们需要先了解一下浏览器的渲染流程：","url":"https://tongjiebin.cn/posts/2226.html","tags":["CSS","JavaScript"],"categories":["Web前端"]}
