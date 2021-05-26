@@ -23,21 +23,23 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"tongjiebin.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="标题使用#可表示 1-6 级标题，一级标题对应一个#，二级标题对应两个#，以此类推。">
+<meta name="description" content="Hexo博客的默认排序方法是按照时间顺序排的，如果有一篇文章经常需要用到，可以添加“置顶”功能，把它放在博客的最上面，这样就能快速地查看这篇文章的内容了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown语法">
-<meta property="og:url" content="https://tongjiebin.cn/posts/5878.html">
+<meta property="og:title" content="Hexo博客Next主题添加文章置顶功能">
+<meta property="og:url" content="https://tongjiebin.cn/posts/999d.html">
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
-<meta property="og:description" content="标题使用#可表示 1-6 级标题，一级标题对应一个#，二级标题对应两个#，以此类推。">
+<meta property="og:description" content="Hexo博客的默认排序方法是按照时间顺序排的，如果有一篇文章经常需要用到，可以添加“置顶”功能，把它放在博客的最上面，这样就能快速地查看这篇文章的内容了。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-26T11:56:54.000Z">
-<meta property="article:modified_time" content="2021-04-10T03:49:50.000Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210526214218.png">
+<meta property="article:published_time" content="2021-05-26T13:16:49.000Z">
+<meta property="article:modified_time" content="2021-05-26T13:48:25.290Z">
 <meta property="article:author" content="Tong jiebin">
-<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="Next">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210526214218.png">
 
 
-<link rel="canonical" href="https://tongjiebin.cn/posts/5878.html">
+<link rel="canonical" href="https://tongjiebin.cn/posts/999d.html">
 
 
 <script class="page-configurations">
@@ -49,7 +51,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Markdown语法 | Tong jiebin's Blog</title>
+<title>Hexo博客Next主题添加文章置顶功能 | Tong jiebin's Blog</title>
   
 
   <script>
@@ -197,7 +199,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD"><span class="nav-number">2.</span> <span class="nav-text">段落</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E4%BD%93"><span class="nav-number">3.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E9%9A%94%E7%BA%BF"><span class="nav-number">4.</span> <span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="nav-number">5.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="nav-number">6.</span> <span class="nav-text">下划线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">7.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">8.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97"><span class="nav-number">9.</span> <span class="nav-text">列表嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8"><span class="nav-number">10.</span> <span class="nav-text">区块引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8%E5%B5%8C%E5%A5%97"><span class="nav-number">11.</span> <span class="nav-text">区块引用嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8"><span class="nav-number">12.</span> <span class="nav-text">区块引用中使用列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8"><span class="nav-number">13.</span> <span class="nav-text">列表中使用区块引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5"><span class="nav-number">14.</span> <span class="nav-text">代码片段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">15.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-number">16.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5"><span class="nav-number">17.</span> <span class="nav-text">自动链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%89%87"><span class="nav-number">18.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC"><span class="nav-number">19.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95"><span class="nav-number">20.</span> <span class="nav-text">任务清单</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6"><span class="nav-number">1.</span> <span class="nav-text">文章置顶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6%E6%A0%87%E8%AE%B0"><span class="nav-number">2.</span> <span class="nav-text">添加置顶标记</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -279,7 +281,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://tongjiebin.cn/posts/5878.html">
+    <link itemprop="mainEntityOfPage" href="https://tongjiebin.cn/posts/999d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -292,7 +294,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Markdown语法
+          Hexo博客Next主题添加文章置顶功能
         </h1>
 
         <div class="post-meta-container">
@@ -303,16 +305,19 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-26 19:56:54" itemprop="dateCreated datePublished" datetime="2021-03-26T19:56:54+08:00">2021-03-26</time>
+      <time title="创建时间：2021-05-26 21:16:49 / 修改时间：21:48:25" itemprop="dateCreated datePublished" datetime="2021-05-26T21:16:49+08:00">2021-05-26</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-10 11:49:50" itemprop="dateModified" datetime="2021-04-10T11:49:50+08:00">2021-04-10</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
       </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+        </span>
+    </span>
 
   
     <!--span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;"-->
@@ -328,7 +333,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>618</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -346,93 +351,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><p>使用<code>#</code>可表示 1-6 级标题，一级标题对应一个<code>#</code>，二级标题对应两个<code>#</code>，以此类推。</p>
+        <p>Hexo博客的默认排序方法是按照时间顺序排的，如果有一篇文章经常需要用到，可以添加“置顶”功能，把它放在博客的最上面，这样就能快速地查看这篇文章的内容了。</p>
 <a id="more"></a>
-<pre class="line-numbers language-none"><code class="language-none"># 标题1
-## 标题2
-### 标题3
-#### 标题4
-##### 标题5
-###### 标题6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h4><p>段落后面使用<code>一个空行</code>来表示重新开始一个段落。</p>
-<pre class="line-numbers language-none"><code class="language-none">段落一
+<h4 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h4><ol>
+<li>卸载hexo自带的排序模块，安装新的排序模块<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> uninstall hexo-generator-index --save
+<span class="token function">npm</span> <span class="token function">install</span> hexo-generator-index-pin-top --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>在需要置顶的文章的 <code>Front-matter</code> 中加上<code>top: true</code><pre class="line-numbers language-none"><code class="language-none">title: 快捷键汇总
+abbrlink: 66c9
+date: 2021-05-25 21:21:50
+tags:
+ - 快捷键
+top: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-段落二<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><p>单个<code>*</code>或<code>_</code>表示斜体，两个<code>*</code>或<code>_</code>表示加粗，三个<code>*</code>或<code>_</code>表示斜体加粗。</p>
-<pre class="line-numbers language-none"><code class="language-none">*斜体*
-**加粗**
-***斜体加粗***<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h4 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h4><p>三个以上的<code>-</code>或<code>*</code>。</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token hr punctuation">---</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h4><p>在文字两端添加<code>~~</code>或使用HTML的<code>&lt;del&gt;</code>标签。</p>
-<pre class="line-numbers language-none"><code class="language-none">~~删除线~~
-&lt;del&gt;删除线&lt;&#x2F;del&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h4><p>使用HTML的<code>&lt;u&gt;</code>标签。</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;u&gt;下划线&lt;&#x2F;u&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>使用<code>*</code>或<code>+</code>或<code>-</code>表示无序列表。</p>
-<pre class="line-numbers language-none"><code class="language-none">* 苹果
-* 香蕉
-* 橘子<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>使用<code>数字</code>加上<code>.</code>表示有序列表。</p>
-<pre class="line-numbers language-none"><code class="language-none">1. 苹果
-2. 香蕉
-3. 橘子<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h4 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h4><p>在子列表前加上<code>四个空格</code>。</p>
-<pre class="line-numbers language-none"><code class="language-none">1. 水果
-    * 苹果
-    * 香蕉
-    * 橘子
-2. 蔬菜<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h4><p>在段落开头使用<code>&gt;</code>。</p>
-<pre class="line-numbers language-none"><code class="language-none">&gt; 子曰：学而时习之，不亦说乎<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="区块引用嵌套"><a href="#区块引用嵌套" class="headerlink" title="区块引用嵌套"></a>区块引用嵌套</h4><p>一个<code>&gt;</code>是第一层引用，两个<code>&gt;</code>是第二层引用，以此类推。</p>
-<pre class="line-numbers language-none"><code class="language-none">&gt; 第一层引用
-&gt; &gt; 第二层引用
-&gt; &gt; &gt; 第三次引用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h4 id="区块引用中使用列表"><a href="#区块引用中使用列表" class="headerlink" title="区块引用中使用列表"></a>区块引用中使用列表</h4><p>在<code>&gt;</code>后面加上无序列表或有序列表的符号即可。</p>
-<pre class="line-numbers language-none"><code class="language-none">&gt; 区块中使用列表
-&gt; 1. 第一项
-&gt; 2. 第二项
-&gt; + 第一项
-&gt; + 第二项
-&gt; + 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="列表中使用区块引用"><a href="#列表中使用区块引用" class="headerlink" title="列表中使用区块引用"></a>列表中使用区块引用</h4><p>和<strong>列表嵌套</strong>相似，在<code>&gt;</code>前加上<code>四个空格</code>。</p>
-<pre class="line-numbers language-none"><code class="language-none">1. 第一项
-    &gt; 区块引用
-    &gt; 区块引用
-2. 第二项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h4><p>用<code>`</code>把代码包裹。</p>
-<pre class="line-numbers language-none"><code class="language-none">&#96;new&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>用<code>```</code>把代码包裹，在<code>```</code>后还可以指定一种语言对代码高亮显示。</p>
-<pre class="line-numbers language-none"><code class="language-none">&#96;&#96;&#96;
-for(let i &#x3D; 0; i &lt; 10; i ++) &#123;
-  console.log(i);
-&#125;
-&#96;&#96;&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p><code>[]</code>里面填链接的名称，<code>()</code>里面填链接的URL。</p>
-<pre class="line-numbers language-none"><code class="language-none">[链接名称](链接地址)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h4><p>直接写URL就会自动生成链接。</p>
-<pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;www.tongjiebin.cn<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p><code>[]</code>里面填图片的alt属性，<code>()</code>里面填图片的src属性或图片的base64编码。</p>
-<pre class="line-numbers language-none"><code class="language-none">![alt属性值](图片地址)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><p>使用<code>|</code>来分隔不同的单元格，使用一个或以上的<code>-</code>来分隔表头和其他行。</p>
-<ol>
-<li><code>---:</code>设置内容和标题栏居右对齐。</li>
-<li><code>:---</code>设置内容和标题栏居左对齐。</li>
-<li><code>:---:</code>设置内容和标题栏居中对齐。</li>
+</li>
 </ol>
-<pre class="line-numbers language-none"><code class="language-none">|表头|表头|
-|:---:|:---:|
-|单元格|单元格|
-|单元格|单元格|<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="任务清单"><a href="#任务清单" class="headerlink" title="任务清单"></a>任务清单</h4><p>和有序/无序列表相似，在后面添加<code>[ ]</code>或<code>[x]</code>，<code>[ ]</code>表示未完成，<code>[x]</code>表示已完成。<br><strong>注意</strong>：<code>[x]</code>前后要加上一个空格，表示未完成的中括号里面也有一个空格。</p>
-<pre class="line-numbers language-none"><code class="language-none">1. [x] HTML
-2. [x] CSS
-3. [ ] JavaScript
+<p>现在文章置顶的功能已经实现了，但还需要添加一个置顶的标记，这样别人才能知道你的这篇文章是置顶的，不然时间顺序是错乱的，就会很奇怪。</p>
+<h4 id="添加置顶标记"><a href="#添加置顶标记" class="headerlink" title="添加置顶标记"></a>添加置顶标记</h4><p>打开 <code>themes/next/layout/_partials/post</code> 目录下的 post-meta.njk 文件，在 <code>&lt;div class=&quot;post-meta&quot;&gt;</code>后面加上：</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">&#123;% if post.top %&#125;
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">display</span><span class="token punctuation">:</span>inline-block<span class="token punctuation">;</span><span class="token property">border-radius</span><span class="token punctuation">:</span>5px<span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span>0px 8px<span class="token punctuation">;</span><span class="token property">background-color</span><span class="token punctuation">:</span>#f04f50<span class="token punctuation">;</span><span class="token property">color</span><span class="token punctuation">:</span>#fff<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>置顶<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+&#123;% endif %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>效果展示：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210526214218.png" alt="image-20210526214211630"></p>
 
-- [x] HTML
-- [x] CSS
-- [ ] JavaScript<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
     </div>
 
     
@@ -449,7 +388,7 @@ for(let i &#x3D; 0; i &lt; 10; i ++) &#123;
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://tongjiebin.cn/posts/5878.html" title="Markdown语法">https://tongjiebin.cn/posts/5878.html</a>
+      <a href="https://tongjiebin.cn/posts/999d.html" title="Hexo博客Next主题添加文章置顶功能">https://tongjiebin.cn/posts/999d.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -458,20 +397,17 @@ for(let i &#x3D; 0; i &lt; 10; i ++) &#123;
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Markdown/" rel="tag"><i class="fa fa-tag"></i> Markdown</a>
+              <a href="/tags/Next/" rel="tag"><i class="fa fa-tag"></i> Next</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/1675.html" rel="prev" title="textContent和innerText的区别">
-                  <i class="fa fa-chevron-left"></i> textContent和innerText的区别
-                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/bdda.html" rel="next" title="async函数">
-                  async函数 <i class="fa fa-chevron-right"></i>
+                <a href="/posts/66c9.html" rel="next" title="快捷键汇总">
+                  快捷键汇总 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

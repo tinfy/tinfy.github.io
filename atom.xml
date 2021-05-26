@@ -6,7 +6,7 @@
   <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://tongjiebin.cn/"/>
-  <updated>2021-05-22T10:00:31.120Z</updated>
+  <updated>2021-05-26T13:48:25.290Z</updated>
   <id>https://tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客Next主题添加文章置顶功能</title>
+    <link href="https://tongjiebin.cn/posts/999d.html"/>
+    <id>https://tongjiebin.cn/posts/999d.html</id>
+    <published>2021-05-26T13:16:49.000Z</published>
+    <updated>2021-05-26T13:48:25.290Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Hexo博客的默认排序方法是按照时间顺序排的，如果有一篇文章经常需要用到，可以添加“置顶”功能，把它放在博客的最上面，这样就能快速地查看这篇文章的内容了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="博客搭建" scheme="https://tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="Next" scheme="https://tongjiebin.cn/tags/Next/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快捷键汇总</title>
+    <link href="https://tongjiebin.cn/posts/66c9.html"/>
+    <id>https://tongjiebin.cn/posts/66c9.html</id>
+    <published>2021-05-25T13:21:50.000Z</published>
+    <updated>2021-05-26T14:51:49.608Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在日常的工作和学习中，记住一些常用的快捷键不仅能提高效率，关键是能够提升我们的big，下面列出的是一些我常用的的快捷键。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="快捷键" scheme="https://tongjiebin.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>回流与重绘</title>
@@ -237,7 +273,7 @@
     <link href="https://tongjiebin.cn/posts/eed2.html"/>
     <id>https://tongjiebin.cn/posts/eed2.html</id>
     <published>2021-04-10T03:09:31.000Z</published>
-    <updated>2021-05-05T08:27:06.779Z</updated>
+    <updated>2021-05-26T13:13:54.086Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;添加动态线条背景&quot;&gt;&lt;a href=&quot;#添加动态线条背景&quot; class=&quot;headerlink&quot; title=&quot;添加动态线条背景&quot;&gt;&lt;/a&gt;添加动态线条背景&lt;/h4&gt;&lt;ol&gt;
@@ -352,44 +388,6 @@
     
     
     <summary type="html">&lt;h3 id=&quot;基本用法&quot;&gt;&lt;a href=&quot;#基本用法&quot; class=&quot;headerlink&quot; title=&quot;基本用法&quot;&gt;&lt;/a&gt;基本用法&lt;/h3&gt;&lt;p&gt;async函数返回一个 Promise 对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
-    
-    <category term="ES6" scheme="https://tongjiebin.cn/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git学习记录</title>
-    <link href="https://tongjiebin.cn/posts/c666.html"/>
-    <id>https://tongjiebin.cn/posts/c666.html</id>
-    <published>2021-03-15T11:21:39.000Z</published>
-    <updated>2021-04-01T14:43:04.000Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;在Windows上安装Git&quot;&gt;&lt;a href=&quot;#在Windows上安装Git&quot; class=&quot;headerlink&quot; title=&quot;在Windows上安装Git&quot;&gt;&lt;/a&gt;在Windows上安装Git&lt;/h3&gt;&lt;p&gt;前往&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git官网&lt;/a&gt;下载安装包直接安装即可，安装完在命令行终端输入&lt;code&gt;git --version&lt;/code&gt;可以看到git的版本表示安装成功。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Git" scheme="https://tongjiebin.cn/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Promise对象</title>
-    <link href="https://tongjiebin.cn/posts/7146.html"/>
-    <id>https://tongjiebin.cn/posts/7146.html</id>
-    <published>2021-03-14T09:41:48.000Z</published>
-    <updated>2021-03-29T12:34:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;Promise的含义&quot;&gt;&lt;a href=&quot;#Promise的含义&quot; class=&quot;headerlink&quot; title=&quot;Promise的含义&quot;&gt;&lt;/a&gt;Promise的含义&lt;/h3&gt;&lt;p&gt;所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。&lt;/p&gt;</summary>
     
     
     
