@@ -6,7 +6,7 @@
     <content><![CDATA[<p>在日常的工作和学习中，记住一些常用的快捷键不仅能提高效率，关键是能够提升我们的big，下面列出的是一些我常用的的快捷键。</p>
 <a id="more"></a>
 
-<h4 id="Windows常用快捷键"><a href="#Windows常用快捷键" class="headerlink" title="Windows常用快捷键"></a>Windows常用快捷键</h4><table>
+<h4 id="Windows快捷键"><a href="#Windows快捷键" class="headerlink" title="Windows快捷键"></a>Windows快捷键</h4><table>
 <thead>
 <tr>
 <th align="center">快捷键</th>
@@ -15,102 +15,102 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">Ctrl+H</td>
+<td align="center"><strong>Ctrl + H</strong></td>
 <td align="center">查找/替换</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><strong>Ctrl+N</strong></td>
+<td align="center"><strong>Ctrl + N</strong></td>
 <td align="center">打开一个相同的资源管理器界面</td>
 <td align="center">浏览器中使用：打开一个新的窗口</td>
 </tr>
 <tr>
-<td align="center"><strong>Ctrl+E</strong></td>
+<td align="center">Ctrl + E</td>
 <td align="center">选中搜索框</td>
 <td align="center">资源管理器/浏览器中使用</td>
 </tr>
 <tr>
-<td align="center">Ctrl+鼠标滚轮</td>
+<td align="center"><strong>Ctrl + 鼠标滚轮</strong></td>
 <td align="center">放大/缩小字体</td>
 <td align="center">文件/浏览器中使用</td>
 </tr>
 <tr>
-<td align="center">Ctrl+0</td>
+<td align="center"><strong>Ctrl + 0</strong></td>
 <td align="center">恢复到默认字体大小</td>
-<td align="center">和上一个快捷键一起使用，在浏览器中使用</td>
+<td align="center">和上一个快捷键一起使用，只能在浏览器中使用</td>
 </tr>
 <tr>
-<td align="center">Ctrl+鼠标拖动</td>
+<td align="center">Ctrl + 鼠标拖动</td>
 <td align="center">快速创建一个文件/文件夹副本</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Ctrl+Shift+T</td>
+<td align="center"><strong>Ctrl + Shift + T</strong></td>
 <td align="center">恢复误关的网页</td>
 <td align="center">在浏览器中使用</td>
 </tr>
 <tr>
-<td align="center"><strong>Ctrl+Shift+N</strong></td>
+<td align="center"><strong>Ctrl + Shift + N</strong></td>
 <td align="center">快速新建文件夹</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><strong>Ctrl+Shift+Win+B</strong></td>
+<td align="center"><strong>Ctrl + Shift + Win + B</strong></td>
 <td align="center">重启屏幕</td>
 <td align="center">出现黑屏或蓝屏时使用(Win10)</td>
 </tr>
 <tr>
-<td align="center">Win+S</td>
+<td align="center"><strong>Win + S</strong></td>
 <td align="center">打开搜索</td>
 <td align="center">Win10</td>
 </tr>
 <tr>
-<td align="center">Win+I</td>
+<td align="center"><strong>Win + I</strong></td>
 <td align="center">打开设置</td>
 <td align="center">Win10</td>
 </tr>
 <tr>
-<td align="center">Win+L</td>
+<td align="center"><strong>Win + L</strong></td>
 <td align="center">锁定屏幕</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Win+D</td>
+<td align="center"><strong>Win + D</strong></td>
 <td align="center">快速显示桌面</td>
 <td align="center">再按一次可以恢复到之前的界面</td>
 </tr>
 <tr>
-<td align="center">Win+E</td>
+<td align="center"><strong>Win + E</strong></td>
 <td align="center">打开资源管理器</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><strong>Win+V</strong></td>
+<td align="center">Win + V</td>
 <td align="center">多重剪贴板</td>
 <td align="center">Win10</td>
 </tr>
 <tr>
-<td align="center">Win+←或→</td>
+<td align="center"><strong>Win + ←或→</strong></td>
 <td align="center">左右分屏</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">Win+↓或↑</td>
+<td align="center">Win + ↑或↓</td>
 <td align="center">左右分屏后上下分屏</td>
 <td align="center">Win10</td>
 </tr>
 <tr>
-<td align="center"><strong>Win+Shift+S</strong></td>
+<td align="center"><strong>Win + Shift + S</strong></td>
 <td align="center">截图</td>
 <td align="center">Win10</td>
 </tr>
 <tr>
-<td align="center">Alt+Tab</td>
+<td align="center">Alt + Tab</td>
 <td align="center">切换屏幕/标签</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">F2</td>
+<td align="center"><strong>F2</strong></td>
 <td align="center">快速重命名</td>
 <td align="center"></td>
 </tr>
@@ -125,7 +125,7 @@
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center"><strong>F11</strong></td>
+<td align="center">F11</td>
 <td align="center">打开浏览器的全屏界面</td>
 <td align="center">在浏览器中使用</td>
 </tr>
@@ -140,12 +140,82 @@
 <tr>
 <th align="center">快捷键</th>
 <th align="center">功能</th>
-<th align="center">备注</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">Ctrl + Shift + P</td>
+<td align="center"><strong>Ctrl + Shift + P</strong></td>
 <td align="center">显示命令面板</td>
+</tr>
+<tr>
+<td align="center"><strong>Ctrl + B</strong></td>
+<td align="center">显示/隐藏侧边栏</td>
+</tr>
+<tr>
+<td align="center">Ctrl + N</td>
+<td align="center">新建文件</td>
+</tr>
+<tr>
+<td align="center"><strong>Ctrl + J</strong></td>
+<td align="center">显示/隐藏控制台</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Tab</td>
+<td align="center">在已经打开的多个文件之间进行切换</td>
+</tr>
+<tr>
+<td align="center">Win + ←或→</td>
+<td align="center">在单词之间移动光标</td>
+</tr>
+<tr>
+<td align="center">Fn + ←或→</td>
+<td align="center">将光标定位到当前行的最左侧或最右侧</td>
+</tr>
+<tr>
+<td align="center"><strong>Alt + ↑或↓</strong></td>
+<td align="center">将代码向上或向下移动</td>
+</tr>
+<tr>
+<td align="center"><strong>Alt + Shift + ↑或↓</strong></td>
+<td align="center">将代码向上或向下复制</td>
+</tr>
+<tr>
+<td align="center"><strong>Ctrl + Shift + K</strong></td>
+<td align="center">删除整行</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Backspace</td>
+<td align="center">删除光标之前的一个单词</td>
+</tr>
+<tr>
+<td align="center">Ctrl + delete</td>
+<td align="center">删除光标之后的一个单词</td>
+</tr>
+<tr>
+<td align="center"><strong>Ctrl + /</strong></td>
+<td align="center">添加单行注释</td>
+</tr>
+<tr>
+<td align="center"><strong>Alt + Shift + F</strong></td>
+<td align="center">代码格式化</td>
+</tr>
+<tr>
+<td align="center">F2</td>
+<td align="center">以重构的方式进行重命名</td>
+</tr>
+<tr>
+<td align="center"><strong>Ctrl + F</strong></td>
+<td align="center">搜索</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
 <td align="center"></td>
 </tr>
 </tbody></table>
