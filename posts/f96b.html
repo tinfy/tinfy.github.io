@@ -21,12 +21,12 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.tongjiebin.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"tongjiebin.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="现象描述两个inline-block元素间有空格或有换行的情况下，会产生间距。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="去除inline-block元素间距的方法">
-<meta property="og:url" content="https://www.tongjiebin.cn/posts/f96b.html">
+<meta property="og:url" content="https://tongjiebin.cn/posts/f96b.html">
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
 <meta property="og:description" content="现象描述两个inline-block元素间有空格或有换行的情况下，会产生间距。">
 <meta property="og:locale" content="zh_CN">
@@ -40,7 +40,7 @@
 <meta name="twitter:image" content="data:image/jpg;base64,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">
 
 
-<link rel="canonical" href="https://www.tongjiebin.cn/posts/f96b.html">
+<link rel="canonical" href="https://tongjiebin.cn/posts/f96b.html">
 
 
 <script class="page-configurations">
@@ -239,7 +239,7 @@
         <a href="https://github.com/tinfy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;tinfy" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://tongjiebin.cn/atom.xml" title="RSS → https:&#x2F;&#x2F;tongjiebin.cn&#x2F;atom.xml" rel="noopener" target="_blank"><i class="fa fa-rss fa-fw"></i>RSS</a>
+        <a href="https://tongjiebin.cn/atom.xml" title="RSS → https:&#x2F;&#x2F;tongjiebin.cn&#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
       </span>
   </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
@@ -282,7 +282,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/f96b.html">
+    <link itemprop="mainEntityOfPage" href="https://tongjiebin.cn/posts/f96b.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -422,7 +422,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.tongjiebin.cn/posts/f96b.html" title="去除inline-block元素间距的方法">https://www.tongjiebin.cn/posts/f96b.html</a>
+      <a href="https://tongjiebin.cn/posts/f96b.html" title="去除inline-block元素间距的方法">https://tongjiebin.cn/posts/f96b.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
