@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tong jiebin&#39;s Blog</title>
-  <icon>https://tongjiebin.cn/icon.png</icon>
+  <icon>https://www.tongjiebin.cn/icon.png</icon>
   <subtitle>有志者，事竟成</subtitle>
-  <link href="https://tongjiebin.cn/atom.xml" rel="self"/>
+  <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
-  <link href="https://tongjiebin.cn/"/>
+  <link href="https://www.tongjiebin.cn/"/>
   <updated>2021-05-26T13:48:25.290Z</updated>
-  <id>https://tongjiebin.cn/</id>
+  <id>https://www.tongjiebin.cn/</id>
   
   <author>
     <name>Tong jiebin</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo博客Next主题添加文章置顶功能</title>
-    <link href="https://tongjiebin.cn/posts/999d.html"/>
-    <id>https://tongjiebin.cn/posts/999d.html</id>
+    <link href="https://www.tongjiebin.cn/posts/999d.html"/>
+    <id>https://www.tongjiebin.cn/posts/999d.html</id>
     <published>2021-05-26T13:16:49.000Z</published>
     <updated>2021-05-26T13:48:25.290Z</updated>
     
@@ -28,17 +28,17 @@
     
     
     
-    <category term="博客搭建" scheme="https://tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="Next" scheme="https://tongjiebin.cn/tags/Next/"/>
+    <category term="Next" scheme="https://www.tongjiebin.cn/tags/Next/"/>
     
   </entry>
   
   <entry>
     <title>快捷键汇总</title>
-    <link href="https://tongjiebin.cn/posts/66c9.html"/>
-    <id>https://tongjiebin.cn/posts/66c9.html</id>
+    <link href="https://www.tongjiebin.cn/posts/66c9.html"/>
+    <id>https://www.tongjiebin.cn/posts/66c9.html</id>
     <published>2021-05-25T13:21:50.000Z</published>
     <updated>2021-05-27T12:44:24.885Z</updated>
     
@@ -48,14 +48,14 @@
     
     
     
-    <category term="快捷键" scheme="https://tongjiebin.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <category term="快捷键" scheme="https://www.tongjiebin.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
   <entry>
     <title>回流与重绘</title>
-    <link href="https://tongjiebin.cn/posts/2226.html"/>
-    <id>https://tongjiebin.cn/posts/2226.html</id>
+    <link href="https://www.tongjiebin.cn/posts/2226.html"/>
+    <id>https://www.tongjiebin.cn/posts/2226.html</id>
     <published>2021-05-22T06:45:25.000Z</published>
     <updated>2021-05-22T10:00:31.120Z</updated>
     
@@ -64,19 +64,19 @@
     
     
     
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
+    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
     
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>理解BFC以及BFC常见的应用</title>
-    <link href="https://tongjiebin.cn/posts/9ac0.html"/>
-    <id>https://tongjiebin.cn/posts/9ac0.html</id>
+    <link href="https://www.tongjiebin.cn/posts/9ac0.html"/>
+    <id>https://www.tongjiebin.cn/posts/9ac0.html</id>
     <published>2021-05-19T11:51:17.000Z</published>
     <updated>2021-05-19T13:46:39.390Z</updated>
     
@@ -85,19 +85,19 @@
     
     
     
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="浮动" scheme="https://tongjiebin.cn/tags/%E6%B5%AE%E5%8A%A8/"/>
+    <category term="浮动" scheme="https://www.tongjiebin.cn/tags/%E6%B5%AE%E5%8A%A8/"/>
     
-    <category term="BFC" scheme="https://tongjiebin.cn/tags/BFC/"/>
+    <category term="BFC" scheme="https://www.tongjiebin.cn/tags/BFC/"/>
     
   </entry>
   
   <entry>
     <title>CSS浮动以及清除浮动的方法</title>
-    <link href="https://tongjiebin.cn/posts/f9a9.html"/>
-    <id>https://tongjiebin.cn/posts/f9a9.html</id>
+    <link href="https://www.tongjiebin.cn/posts/f9a9.html"/>
+    <id>https://www.tongjiebin.cn/posts/f9a9.html</id>
     <published>2021-05-15T08:00:46.000Z</published>
     <updated>2021-05-19T13:48:07.282Z</updated>
     
@@ -106,17 +106,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="浮动" scheme="https://tongjiebin.cn/tags/%E6%B5%AE%E5%8A%A8/"/>
+    <category term="浮动" scheme="https://www.tongjiebin.cn/tags/%E6%B5%AE%E5%8A%A8/"/>
     
   </entry>
   
   <entry>
     <title>JS 深拷贝与浅拷贝</title>
-    <link href="https://tongjiebin.cn/posts/b888.html"/>
-    <id>https://tongjiebin.cn/posts/b888.html</id>
+    <link href="https://www.tongjiebin.cn/posts/b888.html"/>
+    <id>https://www.tongjiebin.cn/posts/b888.html</id>
     <published>2021-05-10T14:10:03.000Z</published>
     <updated>2021-05-22T06:30:10.251Z</updated>
     
@@ -127,17 +127,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>MySQL8.x 修改字符集为 utf8mb4</title>
-    <link href="https://tongjiebin.cn/posts/1a4b.html"/>
-    <id>https://tongjiebin.cn/posts/1a4b.html</id>
+    <link href="https://www.tongjiebin.cn/posts/1a4b.html"/>
+    <id>https://www.tongjiebin.cn/posts/1a4b.html</id>
     <published>2021-05-09T05:11:30.000Z</published>
     <updated>2021-05-09T05:18:19.784Z</updated>
     
@@ -149,17 +149,17 @@
     
     
     
-    <category term="数据库" scheme="https://tongjiebin.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://www.tongjiebin.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-    <category term="MySQL" scheme="https://tongjiebin.cn/tags/MySQL/"/>
+    <category term="MySQL" scheme="https://www.tongjiebin.cn/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>GitHub commit 后 contributions图没有变化</title>
-    <link href="https://tongjiebin.cn/posts/8b22.html"/>
-    <id>https://tongjiebin.cn/posts/8b22.html</id>
+    <link href="https://www.tongjiebin.cn/posts/8b22.html"/>
+    <id>https://www.tongjiebin.cn/posts/8b22.html</id>
     <published>2021-05-06T11:44:26.000Z</published>
     <updated>2021-05-09T05:37:21.005Z</updated>
     
@@ -169,14 +169,14 @@
     
     
     
-    <category term="GitHub" scheme="https://tongjiebin.cn/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://www.tongjiebin.cn/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>记录将 Vue 项目部署到云服务器的所有步骤</title>
-    <link href="https://tongjiebin.cn/posts/a476.html"/>
-    <id>https://tongjiebin.cn/posts/a476.html</id>
+    <link href="https://www.tongjiebin.cn/posts/a476.html"/>
+    <id>https://www.tongjiebin.cn/posts/a476.html</id>
     <published>2021-05-05T09:38:16.000Z</published>
     <updated>2021-05-09T05:38:55.745Z</updated>
     
@@ -185,19 +185,19 @@
     
     
     
-    <category term="安装教程" scheme="https://tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="MySQL" scheme="https://tongjiebin.cn/tags/MySQL/"/>
+    <category term="MySQL" scheme="https://www.tongjiebin.cn/tags/MySQL/"/>
     
-    <category term="Vue" scheme="https://tongjiebin.cn/tags/Vue/"/>
+    <category term="Vue" scheme="https://www.tongjiebin.cn/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>由于找不到 mfc110.dll， 无法继续执行代码</title>
-    <link href="https://tongjiebin.cn/posts/5acc.html"/>
-    <id>https://tongjiebin.cn/posts/5acc.html</id>
+    <link href="https://www.tongjiebin.cn/posts/5acc.html"/>
+    <id>https://www.tongjiebin.cn/posts/5acc.html</id>
     <published>2021-05-05T07:30:40.000Z</published>
     <updated>2021-05-05T07:42:34.981Z</updated>
     
@@ -211,8 +211,8 @@
   
   <entry>
     <title>background-image为渐变色，transition无效</title>
-    <link href="https://tongjiebin.cn/posts/1a89.html"/>
-    <id>https://tongjiebin.cn/posts/1a89.html</id>
+    <link href="https://www.tongjiebin.cn/posts/1a89.html"/>
+    <id>https://www.tongjiebin.cn/posts/1a89.html</id>
     <published>2021-04-22T12:05:57.000Z</published>
     <updated>2021-04-22T12:11:52.061Z</updated>
     
@@ -221,17 +221,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
+    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>Vue过滤器</title>
-    <link href="https://tongjiebin.cn/posts/67d9.html"/>
-    <id>https://tongjiebin.cn/posts/67d9.html</id>
+    <link href="https://www.tongjiebin.cn/posts/67d9.html"/>
+    <id>https://www.tongjiebin.cn/posts/67d9.html</id>
     <published>2021-04-18T09:13:26.000Z</published>
     <updated>2021-04-18T09:17:29.461Z</updated>
     
@@ -240,17 +240,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="Vue" scheme="https://tongjiebin.cn/tags/Vue/"/>
+    <category term="Vue" scheme="https://www.tongjiebin.cn/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>GitHub配置SSH</title>
-    <link href="https://tongjiebin.cn/posts/4687.html"/>
-    <id>https://tongjiebin.cn/posts/4687.html</id>
+    <link href="https://www.tongjiebin.cn/posts/4687.html"/>
+    <id>https://www.tongjiebin.cn/posts/4687.html</id>
     <published>2021-04-17T12:41:41.000Z</published>
     <updated>2021-05-09T05:37:10.384Z</updated>
     
@@ -261,17 +261,17 @@
     
     
     
-    <category term="安装教程" scheme="https://tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="GitHub" scheme="https://tongjiebin.cn/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://www.tongjiebin.cn/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>NexT主题优化</title>
-    <link href="https://tongjiebin.cn/posts/eed2.html"/>
-    <id>https://tongjiebin.cn/posts/eed2.html</id>
+    <link href="https://www.tongjiebin.cn/posts/eed2.html"/>
+    <id>https://www.tongjiebin.cn/posts/eed2.html</id>
     <published>2021-04-10T03:09:31.000Z</published>
     <updated>2021-05-26T13:13:54.086Z</updated>
     
@@ -281,17 +281,17 @@
     
     
     
-    <category term="博客搭建" scheme="https://tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="NexT" scheme="https://tongjiebin.cn/tags/NexT/"/>
+    <category term="NexT" scheme="https://www.tongjiebin.cn/tags/NexT/"/>
     
   </entry>
   
   <entry>
     <title>实现两栏布局的几种方式</title>
-    <link href="https://tongjiebin.cn/posts/f7ce.html"/>
-    <id>https://tongjiebin.cn/posts/f7ce.html</id>
+    <link href="https://www.tongjiebin.cn/posts/f7ce.html"/>
+    <id>https://www.tongjiebin.cn/posts/f7ce.html</id>
     <published>2021-04-02T13:15:06.000Z</published>
     <updated>2021-04-03T01:09:58.000Z</updated>
     
@@ -300,17 +300,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="CSS" scheme="https://tongjiebin.cn/tags/CSS/"/>
+    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>Vue Devtools安装教程</title>
-    <link href="https://tongjiebin.cn/posts/63c.html"/>
-    <id>https://tongjiebin.cn/posts/63c.html</id>
+    <link href="https://www.tongjiebin.cn/posts/63c.html"/>
+    <id>https://www.tongjiebin.cn/posts/63c.html</id>
     <published>2021-04-01T15:19:58.000Z</published>
     <updated>2021-04-01T15:43:58.000Z</updated>
     
@@ -320,15 +320,15 @@
     
     
     
-    <category term="安装教程" scheme="https://tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
     
   </entry>
   
   <entry>
     <title>Node.js安装教程</title>
-    <link href="https://tongjiebin.cn/posts/6749.html"/>
-    <id>https://tongjiebin.cn/posts/6749.html</id>
+    <link href="https://www.tongjiebin.cn/posts/6749.html"/>
+    <id>https://www.tongjiebin.cn/posts/6749.html</id>
     <published>2021-04-01T14:51:08.000Z</published>
     <updated>2021-04-17T03:02:08.057Z</updated>
     
@@ -338,15 +338,15 @@
     
     
     
-    <category term="安装教程" scheme="https://tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
     
   </entry>
   
   <entry>
     <title>textContent和innerText的区别</title>
-    <link href="https://tongjiebin.cn/posts/1675.html"/>
-    <id>https://tongjiebin.cn/posts/1675.html</id>
+    <link href="https://www.tongjiebin.cn/posts/1675.html"/>
+    <id>https://www.tongjiebin.cn/posts/1675.html</id>
     <published>2021-03-31T12:05:33.000Z</published>
     <updated>2021-04-01T15:13:12.000Z</updated>
     
@@ -355,17 +355,17 @@
     
     
     
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Markdown语法</title>
-    <link href="https://tongjiebin.cn/posts/5878.html"/>
-    <id>https://tongjiebin.cn/posts/5878.html</id>
+    <link href="https://www.tongjiebin.cn/posts/5878.html"/>
+    <id>https://www.tongjiebin.cn/posts/5878.html</id>
     <published>2021-03-26T11:56:54.000Z</published>
     <updated>2021-04-10T03:49:50.000Z</updated>
     
@@ -375,14 +375,14 @@
     
     
     
-    <category term="Markdown" scheme="https://tongjiebin.cn/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://www.tongjiebin.cn/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>async函数</title>
-    <link href="https://tongjiebin.cn/posts/bdda.html"/>
-    <id>https://tongjiebin.cn/posts/bdda.html</id>
+    <link href="https://www.tongjiebin.cn/posts/bdda.html"/>
+    <id>https://www.tongjiebin.cn/posts/bdda.html</id>
     <published>2021-03-21T06:08:47.000Z</published>
     <updated>2021-03-27T11:08:50.000Z</updated>
     
@@ -391,12 +391,12 @@
     
     
     
-    <category term="Web前端" scheme="https://tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="JavaScript" scheme="https://tongjiebin.cn/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
     
-    <category term="ES6" scheme="https://tongjiebin.cn/tags/ES6/"/>
+    <category term="ES6" scheme="https://www.tongjiebin.cn/tags/ES6/"/>
     
   </entry>
   
