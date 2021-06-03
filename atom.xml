@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-05-26T13:48:25.290Z</updated>
+  <updated>2021-06-03T16:43:21.960Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>实现三栏布局的三种方式：圣杯布局、双飞翼布局、flex布局</title>
+    <link href="https://www.tongjiebin.cn/posts/7df.html"/>
+    <id>https://www.tongjiebin.cn/posts/7df.html</id>
+    <published>2021-06-03T13:34:21.000Z</published>
+    <updated>2021-06-03T16:43:21.960Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;三栏布局的特点：两侧宽度固定、中间宽度自适应。同时，最好能够满足这两个条件：1.中间部分优先渲染 2.允许任意一列成为最高列&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客Next主题添加文章置顶功能</title>
@@ -273,7 +292,7 @@
     <link href="https://www.tongjiebin.cn/posts/eed2.html"/>
     <id>https://www.tongjiebin.cn/posts/eed2.html</id>
     <published>2021-04-10T03:09:31.000Z</published>
-    <updated>2021-05-26T13:13:54.086Z</updated>
+    <updated>2021-05-30T02:29:39.710Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;添加动态线条背景&quot;&gt;&lt;a href=&quot;#添加动态线条背景&quot; class=&quot;headerlink&quot; title=&quot;添加动态线条背景&quot;&gt;&lt;/a&gt;添加动态线条背景&lt;/h4&gt;&lt;ol&gt;
@@ -376,27 +395,6 @@
     
     
     <category term="Markdown" scheme="https://www.tongjiebin.cn/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>async函数</title>
-    <link href="https://www.tongjiebin.cn/posts/bdda.html"/>
-    <id>https://www.tongjiebin.cn/posts/bdda.html</id>
-    <published>2021-03-21T06:08:47.000Z</published>
-    <updated>2021-03-27T11:08:50.000Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;基本用法&quot;&gt;&lt;a href=&quot;#基本用法&quot; class=&quot;headerlink&quot; title=&quot;基本用法&quot;&gt;&lt;/a&gt;基本用法&lt;/h3&gt;&lt;p&gt;async函数返回一个 Promise 对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-    <category term="ES6" scheme="https://www.tongjiebin.cn/tags/ES6/"/>
     
   </entry>
   
