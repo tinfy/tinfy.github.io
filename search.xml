@@ -225,7 +225,8 @@
 
 <p>三栏布局最终要达到的效果如下:</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210603225011.png" alt="image-20210603224839745"></p>
-<h4 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h4><p>圣杯布局所有的代码如下：</p>
+<h4 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h4><p>圣杯布局来源：<a href="https://alistapart.com/article/holygrail">https://alistapart.com/article/holygrail</a></p>
+<p>圣杯布局所有的代码如下：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
