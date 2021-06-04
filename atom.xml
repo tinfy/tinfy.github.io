@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-06-03T16:43:21.960Z</updated>
+  <updated>2021-06-04T14:50:46.792Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="https://www.tongjiebin.cn/posts/7df.html"/>
     <id>https://www.tongjiebin.cn/posts/7df.html</id>
     <published>2021-06-03T13:34:21.000Z</published>
-    <updated>2021-06-03T16:43:21.960Z</updated>
+    <updated>2021-06-04T14:50:46.792Z</updated>
     
     
-    <summary type="html">&lt;p&gt;三栏布局的特点：两侧宽度固定、中间宽度自适应。同时，最好能够满足这两个条件：1.中间部分优先渲染 2.允许任意一列成为最高列&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;三栏布局的特点：两侧宽度固定、中间宽度自适应。同时，还要能够满足这两个条件：1.中间部分优先渲染 2.允许任意一列成为最高列&lt;/p&gt;</summary>
     
     
     
