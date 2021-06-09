@@ -253,7 +253,7 @@
 <ol start="2">
 <li>安装脚本，输入1，回车。</li>
 </ol>
-<p><img src="C:/Users/admin/AppData/Roaming/Typora/typora-user-images/image-20210514224811058.png" alt="image-20210514224811058"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210609225958.png" alt="image-20210514224811058"></p>
 <ol start="3">
 <li>选择传输协议，默认为 TCP，直接回车。</li>
 </ol>
@@ -261,11 +261,11 @@
 <ol start="4">
 <li>端口号，使用自动生成的端口号就行，直接回车。</li>
 </ol>
-<p><img src="C:/Users/admin/AppData/Roaming/Typora/typora-user-images/image-20210514225314206.png" alt="image-20210514225314206"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210609230017.png" alt="image-20210514225314206"></p>
 <ol start="5">
 <li>是否开启广告拦截，默认为 N，直接回车。</li>
 </ol>
-<p><img src="C:/Users/admin/AppData/Roaming/Typora/typora-user-images/image-20210514225537483.png" alt="image-20210514225537483"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210609230023.png" alt="image-20210514225537483"></p>
 <ol start="6">
 <li>是否配置 Shadowsocks，默认为 N，直接回车。</li>
 </ol>
@@ -277,7 +277,7 @@
 <ol start="8">
 <li>出现如下界面，说明 V2Ray 配置成功。</li>
 </ol>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210514230632.png" alt="image-20210514230627989"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210609230501.png" alt="image-20210609230501666"></p>
 <ol start="9">
 <li>以后查看或修改 V2Ray 的配置，可以输入 <code>v2ray</code> 进行查看或修改。</li>
 </ol>
@@ -294,7 +294,7 @@
 <p>打开 v2rayN.exe，选择”服务器“ =&gt; “添加VMess服务器”。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210514234601.png" alt="image-20210514234556538"></p>
 <p>填写“VMess服务器”信息：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210609222045.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210609230647.png" alt="image-20210609230647311"></p>
 <p>最后，把系统代理改为“自动配置系统代理”就OK了。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210609222417.png" alt="image-20210609222416984"></p>
 <h4 id="手机端安装"><a href="#手机端安装" class="headerlink" title="手机端安装"></a>手机端安装</h4><p>如果在手机上也有科学上网的需求，可以安装v2rayNG。</p>
