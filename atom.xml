@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-06-04T14:54:05.871Z</updated>
+  <updated>2021-06-09T14:53:57.389Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>科学上网工具的搭建</title>
+    <link href="https://www.tongjiebin.cn/posts/d55f.html"/>
+    <id>https://www.tongjiebin.cn/posts/d55f.html</id>
+    <published>2021-06-09T14:31:56.000Z</published>
+    <updated>2021-06-09T14:53:57.389Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;购买-VPS-服务器&quot;&gt;&lt;a href=&quot;#购买-VPS-服务器&quot; class=&quot;headerlink&quot; title=&quot;购买 VPS 服务器&quot;&gt;&lt;/a&gt;购买 VPS 服务器&lt;/h4&gt;&lt;p&gt;vps 服务器推荐购买 Vultr，主要有以下几个优势：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;支持支付宝，对于国内的用户来说很友好&lt;/li&gt;
+&lt;li&gt;按小时收费，如果暂时不想用了，销毁服务器实例会停止收费&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="科学上网" scheme="https://www.tongjiebin.cn/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+  </entry>
   
   <entry>
     <title>实现三栏布局的三种方式：圣杯布局、双飞翼布局、flex布局</title>
@@ -378,23 +401,6 @@
     
     
     <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown语法</title>
-    <link href="https://www.tongjiebin.cn/posts/5878.html"/>
-    <id>https://www.tongjiebin.cn/posts/5878.html</id>
-    <published>2021-03-26T11:56:54.000Z</published>
-    <updated>2021-04-10T03:49:50.000Z</updated>
-    
-    
-    <summary type="html">&lt;h4 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h4&gt;&lt;p&gt;使用&lt;code&gt;#&lt;/code&gt;可表示 1-6 级标题，一级标题对应一个&lt;code&gt;#&lt;/code&gt;，二级标题对应两个&lt;code&gt;#&lt;/code&gt;，以此类推。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Markdown" scheme="https://www.tongjiebin.cn/tags/Markdown/"/>
     
   </entry>
   
