@@ -1,1 +1,1 @@
-{"title":"科学上网工具的搭建","id":"posts/d55f.html","date_published":"06/09/2021","summary":"购买 VPS 服务器vps 服务器推荐购买 Vultr，主要有以下几个优势：\n\n支持支付宝，对于国内的用户来说很友好\n按小时收费，如果暂时不想用了，销毁服务器实例会停止收费\n","url":"https://www.tongjiebin.cn/posts/d55f.html","tags":["科学上网","V2Ray"],"categories":["安装教程"]}
+{"title":"理解JavaScript中的闭包","id":"posts/5e54.html","date_published":"06/16/2021","summary":"闭包的引入我们知道，变量根据作用域的不同分为两种：全局变量和局部变量。\n\n函数内部可以访问全局变量和局部变量。\n函数外部只能访问全局变量，不能访问局部变量。\n当函数执行完毕，本作用域内的局部变量会销毁。\n","url":"https://www.tongjiebin.cn/posts/5e54.html","tags":["JavaScript"],"categories":["Web前端"]}

@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-06-09T15:07:11.567Z</updated>
+  <updated>2021-06-16T14:41:55.123Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,117 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解JavaScript中的闭包</title>
+    <link href="https://www.tongjiebin.cn/posts/5e54.html"/>
+    <id>https://www.tongjiebin.cn/posts/5e54.html</id>
+    <published>2021-06-16T14:39:27.000Z</published>
+    <updated>2021-06-16T14:41:55.123Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;闭包的引入&quot;&gt;&lt;a href=&quot;#闭包的引入&quot; class=&quot;headerlink&quot; title=&quot;闭包的引入&quot;&gt;&lt;/a&gt;闭包的引入&lt;/h2&gt;&lt;p&gt;我们知道，变量根据作用域的不同分为两种：全局变量和局部变量。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;函数内部可以访问全局变量和局部变量。&lt;/li&gt;
+&lt;li&gt;函数外部只能访问全局变量，不能访问局部变量。&lt;/li&gt;
+&lt;li&gt;当函数执行完毕，本作用域内的局部变量会销毁。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript中call、apply和bind方法</title>
+    <link href="https://www.tongjiebin.cn/posts/fea3.html"/>
+    <id>https://www.tongjiebin.cn/posts/fea3.html</id>
+    <published>2021-06-16T14:37:10.000Z</published>
+    <updated>2021-06-16T14:41:23.536Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;JS 专门为我们提供了一些方法来改变函数内部的 this 指向。常见的方法有 call()、apply()、bind() 方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript中this指向</title>
+    <link href="https://www.tongjiebin.cn/posts/84b1.html"/>
+    <id>https://www.tongjiebin.cn/posts/84b1.html</id>
+    <published>2021-06-16T14:31:15.000Z</published>
+    <updated>2021-06-16T14:35:02.781Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;执行期上下文&quot;&gt;&lt;a href=&quot;#执行期上下文&quot; class=&quot;headerlink&quot; title=&quot;执行期上下文&quot;&gt;&lt;/a&gt;执行期上下文&lt;/h2&gt;&lt;p&gt;当&lt;strong&gt;函数执行&lt;/strong&gt;时（准确来说，是在函数发生预编译的前一刻），会创建一个执行期上下文的内部对象。一个执行期上下文定义了一个函数执行时的环境。&lt;/p&gt;
+&lt;p&gt;每调用一次函数，就会创建一个新的上下文对象，他们之间是相互独立且独一无二的。当函数执行完毕，它所产生的执行期上下文会被销毁。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript预编译</title>
+    <link href="https://www.tongjiebin.cn/posts/68e8.html"/>
+    <id>https://www.tongjiebin.cn/posts/68e8.html</id>
+    <published>2021-06-16T14:28:01.000Z</published>
+    <updated>2021-06-16T14:35:02.786Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;我们在上一篇文章《作用域》中简单讲过“变量提升”，今天来讲一下预编译，这对我们深入理解变量提升会有帮助。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;JavaScript-运行三部曲&quot;&gt;&lt;a href=&quot;#JavaScript-运行三部曲&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 运行三部曲&quot;&gt;&lt;/a&gt;JavaScript 运行三部曲&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;语法分析&lt;/li&gt;
+&lt;li&gt;预编译&lt;/li&gt;
+&lt;li&gt;解释执行&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript作用域与变量提升</title>
+    <link href="https://www.tongjiebin.cn/posts/d11c.html"/>
+    <id>https://www.tongjiebin.cn/posts/d11c.html</id>
+    <published>2021-06-16T12:25:52.000Z</published>
+    <updated>2021-06-16T14:28:42.555Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;作用域（Scope）的概念&quot;&gt;&lt;a href=&quot;#作用域（Scope）的概念&quot; class=&quot;headerlink&quot; title=&quot;作用域（Scope）的概念&quot;&gt;&lt;/a&gt;作用域（Scope）的概念&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;概念&lt;/strong&gt;：通俗来讲，作用域是一个变量或函数的作用范围。作用域在&lt;strong&gt;函数定义&lt;/strong&gt;时，就已经确定了。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目的&lt;/strong&gt;：为了提高程序的可靠性，同时减少命名冲突。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>科学上网工具的搭建</title>
@@ -309,100 +420,6 @@
     
     
     <category term="GitHub" scheme="https://www.tongjiebin.cn/tags/GitHub/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NexT主题优化</title>
-    <link href="https://www.tongjiebin.cn/posts/eed2.html"/>
-    <id>https://www.tongjiebin.cn/posts/eed2.html</id>
-    <published>2021-04-10T03:09:31.000Z</published>
-    <updated>2021-05-30T02:29:39.710Z</updated>
-    
-    
-    <summary type="html">&lt;h4 id=&quot;添加动态线条背景&quot;&gt;&lt;a href=&quot;#添加动态线条背景&quot; class=&quot;headerlink&quot; title=&quot;添加动态线条背景&quot;&gt;&lt;/a&gt;添加动态线条背景&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;在&lt;strong&gt;博客根目录&lt;/strong&gt;下的 &lt;code&gt;source\_data&lt;/code&gt; 文件夹（如果没有，则创建一个 &lt;code&gt;_data&lt;/code&gt; 文件夹）中创建一个新的文件命名为 &lt;code&gt;footer.njk&lt;/code&gt; 。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="NexT" scheme="https://www.tongjiebin.cn/tags/NexT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实现两栏布局的几种方式</title>
-    <link href="https://www.tongjiebin.cn/posts/f7ce.html"/>
-    <id>https://www.tongjiebin.cn/posts/f7ce.html</id>
-    <published>2021-04-02T13:15:06.000Z</published>
-    <updated>2021-04-03T01:09:58.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;两栏布局的特点：一栏固定宽度，一栏自适应宽度。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue Devtools安装教程</title>
-    <link href="https://www.tongjiebin.cn/posts/63c.html"/>
-    <id>https://www.tongjiebin.cn/posts/63c.html</id>
-    <published>2021-04-01T15:19:58.000Z</published>
-    <updated>2021-04-01T15:43:58.000Z</updated>
-    
-    
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;前往&lt;a href=&quot;https://github.com/vuejs/vue-devtools#vue-devtools&quot;&gt;vue-devtools&lt;/a&gt;下载压缩包，解压，打开命令窗口。</summary>
-    
-    
-    
-    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Node.js安装教程</title>
-    <link href="https://www.tongjiebin.cn/posts/6749.html"/>
-    <id>https://www.tongjiebin.cn/posts/6749.html</id>
-    <published>2021-04-01T14:51:08.000Z</published>
-    <updated>2021-04-17T03:02:08.057Z</updated>
-    
-    
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;前往&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js官网&lt;/a&gt;下载&lt;code&gt;.msi&lt;/code&gt;文件，一路点击next即可顺利安装。</summary>
-    
-    
-    
-    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>textContent和innerText的区别</title>
-    <link href="https://www.tongjiebin.cn/posts/1675.html"/>
-    <id>https://www.tongjiebin.cn/posts/1675.html</id>
-    <published>2021-03-31T12:05:33.000Z</published>
-    <updated>2021-04-01T15:13:12.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;code&gt;Node&lt;/code&gt;接口的&lt;code&gt;textContent&lt;/code&gt;属性表示一个节点以及它的子节点的文本内容。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
