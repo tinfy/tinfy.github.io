@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-06-16T14:41:55.123Z</updated>
+  <updated>2021-06-23T14:36:18.658Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>offset相关属性和匀速动画</title>
+    <link href="https://www.tongjiebin.cn/posts/7025.html"/>
+    <id>https://www.tongjiebin.cn/posts/7025.html</id>
+    <published>2021-06-22T14:01:51.000Z</published>
+    <updated>2021-06-23T14:36:18.658Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;offset家族的组成&quot;&gt;&lt;a href=&quot;#offset家族的组成&quot; class=&quot;headerlink&quot; title=&quot;offset家族的组成&quot;&gt;&lt;/a&gt;offset家族的组成&lt;/h3&gt;&lt;p&gt;offset 的中文是偏移，补偿，位移。&lt;/p&gt;
+&lt;p&gt;offset相关的属性包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;offsetWidth&lt;/li&gt;
+&lt;li&gt;offsetHeight&lt;/li&gt;
+&lt;li&gt;offsetLeft&lt;/li&gt;
+&lt;li&gt;offsetTop&lt;/li&gt;
+&lt;li&gt;offsetParent&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>理解JavaScript中的闭包</title>
@@ -195,7 +222,7 @@
     <link href="https://www.tongjiebin.cn/posts/66c9.html"/>
     <id>https://www.tongjiebin.cn/posts/66c9.html</id>
     <published>2021-05-25T13:21:50.000Z</published>
-    <updated>2021-06-19T03:18:24.338Z</updated>
+    <updated>2021-06-22T13:30:06.921Z</updated>
     
     
     <summary type="html">&lt;p&gt;在日常的工作和学习中，记住一些常用的快捷键能提高我们的效率，下面列出的是一些我常用的的快捷键。&lt;/p&gt;</summary>
@@ -399,27 +426,6 @@
     
     
     <category term="Vue" scheme="https://www.tongjiebin.cn/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub配置SSH</title>
-    <link href="https://www.tongjiebin.cn/posts/4687.html"/>
-    <id>https://www.tongjiebin.cn/posts/4687.html</id>
-    <published>2021-04-17T12:41:41.000Z</published>
-    <updated>2021-05-09T05:37:10.384Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;打开命令行，在命令行中输入：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.name &lt;span class=&quot;token string&quot;&gt;&quot;你的名字&quot;&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global user.email &lt;span class=&quot;token string&quot;&gt;&quot;你的邮箱&quot;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="GitHub" scheme="https://www.tongjiebin.cn/tags/GitHub/"/>
     
   </entry>
   
