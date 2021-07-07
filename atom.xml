@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-06-26T09:25:42.200Z</updated>
+  <updated>2021-07-07T14:46:21.658Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>无法加载文件 D:\nodejs\node_global\babel.ps1</title>
+    <link href="https://www.tongjiebin.cn/posts/e2e6.html"/>
+    <id>https://www.tongjiebin.cn/posts/e2e6.html</id>
+    <published>2021-07-07T14:14:42.000Z</published>
+    <updated>2021-07-07T14:46:21.658Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;使用 &lt;code&gt;npm install -g babel-cli&lt;/code&gt; 全局安装Babel后，使用Babel时出现错误：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-tex&quot; data-language=&quot;tex&quot;&gt;&lt;code class=&quot;language-tex&quot;&gt;babel : 无法加载文件 D:\nodejs\node_global\babel.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:&amp;#x2F;go.micros
+oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_Policies。
+所在位置 行:1 字符: 1
++ babel --version
++ ~~~~~
+    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>offset相关属性和匀速动画</title>
@@ -407,25 +431,6 @@
     
     
     <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue过滤器</title>
-    <link href="https://www.tongjiebin.cn/posts/67d9.html"/>
-    <id>https://www.tongjiebin.cn/posts/67d9.html</id>
-    <published>2021-04-18T09:13:26.000Z</published>
-    <updated>2021-04-18T09:17:29.461Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Vue.js 允许你自定义过滤器，可用于一些常见的文本格式化。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="Vue" scheme="https://www.tongjiebin.cn/tags/Vue/"/>
     
   </entry>
   

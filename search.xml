@@ -232,6 +232,31 @@
       </tags>
   </entry>
   <entry>
+    <title>无法加载文件 D:\nodejs\node_global\babel.ps1</title>
+    <url>/posts/e2e6.html</url>
+    <content><![CDATA[<p>使用 <code>npm install -g babel-cli</code> 全局安装Babel后，使用Babel时出现错误：</p>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">babel : 无法加载文件 D:\nodejs\node_global\babel.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:&#x2F;go.micros
+oft.com&#x2F;fwlink&#x2F;?LinkID&#x3D;135170 中的 about_Execution_Policies。
+所在位置 行:1 字符: 1
++ babel --version
++ ~~~~~
+    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<a id="more"></a>
+
+<p>解决办法：</p>
+<ol>
+<li>以管理员账号打开PowerShell</li>
+<li>执行 <code>get-ExecutionPolicy</code> 命令，打印出：<code>Restricted</code>，表示受限制。</li>
+<li>执行 <code>set-ExecutionPolicy RemoteSigned</code> 命令</li>
+<li>再次执行 <code>get-ExecutionPolicy</code> 命令，打印出：<code>RemoteSigned</code>。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+  </entry>
+  <entry>
     <title>offset相关属性和匀速动画</title>
     <url>/posts/7025.html</url>
     <content><![CDATA[<h3 id="offset家族的组成"><a href="#offset家族的组成" class="headerlink" title="offset家族的组成"></a>offset家族的组成</h3><p>offset 的中文是偏移，补偿，位移。</p>
