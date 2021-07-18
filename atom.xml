@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-07-07T14:46:21.658Z</updated>
+  <updated>2021-07-18T00:37:53.510Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Next主题添加雪花飘落效果</title>
+    <link href="https://www.tongjiebin.cn/posts/5e70.html"/>
+    <id>https://www.tongjiebin.cn/posts/5e70.html</id>
+    <published>2021-07-18T00:08:39.000Z</published>
+    <updated>2021-07-18T00:37:53.510Z</updated>
+    
+    
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;在&lt;code&gt;themes/next/source/js/src&lt;/code&gt;目录下新建一个&lt;code&gt;snow.js&lt;/code&gt;文件，雪花飘落有两种效果，复制你喜欢的效果对应的代码段到&lt;code&gt;snow.js&lt;/code&gt;文件中。&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="NexT" scheme="https://www.tongjiebin.cn/tags/NexT/"/>
+    
+  </entry>
   
   <entry>
     <title>无法加载文件 D:\nodejs\node_global\babel.ps1</title>
@@ -197,9 +218,9 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="科学上网" scheme="https://www.tongjiebin.cn/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
     <category term="V2Ray" scheme="https://www.tongjiebin.cn/tags/V2Ray/"/>
+    
+    <category term="科学上网" scheme="https://www.tongjiebin.cn/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
   </entry>
   
@@ -412,25 +433,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>background-image为渐变色，transition无效</title>
-    <link href="https://www.tongjiebin.cn/posts/1a89.html"/>
-    <id>https://www.tongjiebin.cn/posts/1a89.html</id>
-    <published>2021-04-22T12:05:57.000Z</published>
-    <updated>2021-04-22T12:11:52.061Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;问题：在下面的代码中，实现渐变色背景的切换时，使用&lt;code&gt;transition&lt;/code&gt;属性没有效果：&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
     
   </entry>
   
