@@ -1,1 +1,1 @@
-{"title":"Next主题添加雪花飘落效果","id":"posts/5e70.html","date_published":"07/18/2021","summary":"\n在themes/next/source/js/src目录下新建一个snow.js文件，雪花飘落有两种效果，复制你喜欢的效果对应的代码段到snow.js文件中。\n","url":"https://www.tongjiebin.cn/posts/5e70.html","tags":["NexT"],"categories":["博客搭建"]}
+{"title":"JSONP实现跨域","id":"posts/ef19.html","date_published":"07/18/2021","summary":"前言默认情况下，通过XHR实现ajax通信时会有一个限制，就是只能访问同一个域中的资源。同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。","url":"https://www.tongjiebin.cn/posts/ef19.html","tags":["跨域","JSONP","jQuery"],"categories":["Web前端"]}
