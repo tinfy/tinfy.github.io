@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-07-31T10:06:28.958Z</updated>
+  <updated>2021-08-01T10:39:07.094Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>跨域资源共享（CORS）的原理与实现</title>
+    <link href="https://www.tongjiebin.cn/posts/651a.html"/>
+    <id>https://www.tongjiebin.cn/posts/651a.html</id>
+    <published>2021-08-01T03:06:08.000Z</published>
+    <updated>2021-08-01T10:39:07.094Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;p&gt;跨域资源共享（Cross-Origin Resource Sharing）是W3C的一个标准，定义了在必须访问跨源资源时，浏览器和服务器应该如何沟通。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="CORS" scheme="https://www.tongjiebin.cn/tags/CORS/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue2.x生命周期钩子</title>
@@ -423,23 +442,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     
     
     <category term="MySQL" scheme="https://www.tongjiebin.cn/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub commit 后 contributions图没有变化</title>
-    <link href="https://www.tongjiebin.cn/posts/8b22.html"/>
-    <id>https://www.tongjiebin.cn/posts/8b22.html</id>
-    <published>2021-05-06T11:44:26.000Z</published>
-    <updated>2021-05-09T05:37:21.005Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近换了个新电脑，新电脑如果想要使用 SSH 协议克隆和提交代码的话，需要重新配置 SSH 密钥，但用新的 SSH 密钥提交的代码在贡献图上面没有显示。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="GitHub" scheme="https://www.tongjiebin.cn/tags/GitHub/"/>
     
   </entry>
   

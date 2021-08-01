@@ -1,1 +1,1 @@
-{"title":"Vue2.x生命周期钩子","id":"posts/4415.html","date_published":"07/31/2021","summary":"Vue实例的生命周期：Vue实例从创建、运行到销毁的各个阶段，就统称为生命周期。\n生命周期钩子：在生命周期各个阶段中会执行的函数，叫做生命周期钩子。","url":"https://www.tongjiebin.cn/posts/4415.html","tags":["Vue"],"categories":["Web前端"]}
+{"title":"跨域资源共享（CORS）的原理与实现","id":"posts/651a.html","date_published":"08/01/2021","summary":"简介跨域资源共享（Cross-Origin Resource Sharing）是W3C的一个标准，定义了在必须访问跨源资源时，浏览器和服务器应该如何沟通。","url":"https://www.tongjiebin.cn/posts/651a.html","tags":["CORS"],"categories":["Web前端"]}
