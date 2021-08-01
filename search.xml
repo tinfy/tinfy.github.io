@@ -370,7 +370,7 @@ Access-Control-Allow-Origin: http:&#x2F;&#x2F;foo.example<span aria-hidden="true
 <p><strong>Access-Control-Allow-Headers</strong>字段用于预检请求的响应。其指明了实际请求中允许携带的首部字段。</p>
 <pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">Access-Control-Allow-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="CORS的具体实现"><a href="#CORS的具体实现" class="headerlink" title="CORS的具体实现"></a>CORS的具体实现</h4><p>前端使用了vue和vue-source，服务器端通过Node.js和Express来提供HTTP服务。</p>
-<p>前端：</p>
+<p>浏览器端：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">></span>
 <span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
 <span class="token operator">&lt;</span>head<span class="token operator">></span>
@@ -382,26 +382,8 @@ Access-Control-Allow-Origin: http:&#x2F;&#x2F;foo.example<span aria-hidden="true
     <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"./lib/vue-resource.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
 <span class="token operator">&lt;</span>body<span class="token operator">></span>
-    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>table<span class="token operator">></span>
-            <span class="token operator">&lt;</span>tr<span class="token operator">></span>
-                <span class="token operator">&lt;</span>th<span class="token operator">></span>序号<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
-                <span class="token operator">&lt;</span>th<span class="token operator">></span>姓名<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
-                <span class="token operator">&lt;</span>th<span class="token operator">></span>生日<span class="token operator">&lt;</span><span class="token operator">/</span>th<span class="token operator">></span>
-            <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
-            <span class="token operator">&lt;</span>tr v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"item in list"</span> <span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">"item.id"</span><span class="token operator">></span>
-                <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span>item<span class="token punctuation">.</span>id<span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
-                <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span>item<span class="token punctuation">.</span>name<span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
-                <span class="token operator">&lt;</span>td<span class="token operator">></span><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span>item<span class="token punctuation">.</span>birthday<span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">></span>
-            <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>table<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
     <span class="token operator">&lt;</span>script<span class="token operator">></span>
         <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-            el<span class="token operator">:</span> <span class="token string">"#app"</span><span class="token punctuation">,</span>
-            data<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-                list<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-            <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
             <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
                 <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
@@ -420,8 +402,10 @@ Access-Control-Allow-Origin: http:&#x2F;&#x2F;foo.example<span aria-hidden="true
         <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>服务端：</p>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>浏览器上的打印结果：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210801221643.png" alt="image-20210801221636135"></p>
+<p>服务器端：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"express"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8888</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
@@ -453,6 +437,7 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
         <category>Web前端</category>
       </categories>
       <tags>
+        <tag>跨域</tag>
         <tag>CORS</tag>
       </tags>
   </entry>
