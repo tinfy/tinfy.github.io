@@ -232,6 +232,96 @@
       </tags>
   </entry>
   <entry>
+    <title>Win10下安装mysql</title>
+    <url>/posts/816a.html</url>
+    <content><![CDATA[<h4 id="下载压缩包并解压"><a href="#下载压缩包并解压" class="headerlink" title="下载压缩包并解压"></a>下载压缩包并解压</h4><p>前往<a href="https://dev.mysql.com/downloads/mysql/">mysql官网</a>下载压缩包</p>
+<a id="more"></a>
+
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210808120420.png" alt="image-20210808120413329"></p>
+<p>在D盘创建文件夹，命名为<code>mysql</code>，把下载的my-8.0.26-winx64.zip文件解压到<code>D:/mysql</code>目录中。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210808120716.png" alt="image-20210808120716873"></p>
+<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><p>打开环境变量界面，找到<strong>系统变量</strong>里的<code>path</code>变量，点击“编辑”。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210808151656.png" alt="image-20210808151656427"></p>
+<p>在最后加上<code>D:\mysql\mysql-8.0.26-winx64\bin</code>，也就是你的mysql解压后<code>bin</code>文件夹所在的路径。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210808151844.png" alt="image-20210808151844781"></p>
+<h4 id="添加配置文件-这个步骤貌似不需要"><a href="#添加配置文件-这个步骤貌似不需要" class="headerlink" title="添加配置文件(这个步骤貌似不需要)"></a>添加配置文件(这个步骤貌似不需要)</h4><p>在D:\mysql\mysql-8.0.26-winx64目录中，新建一个文件为<code>my.ini</code>，<strong>注意：是文件名称为<code>my</code>，类型为<code>ini</code>。</strong></p>
+<p>打开<code>my.ini</code>，复制粘贴下面的内容：</p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">[mysqld]
+#设置3306端口
+port&#x3D;3306
+#设置mysql的安装目录
+basedir&#x3D;D:\mysql\mysql-8.0.26-winx64
+#设置mysql数据库的数据的存放目录
+datadir&#x3D;D:\mysql\mysql-8.0.26-winx64\data
+#允许最大连接数
+max_connections&#x3D;200
+#允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统
+max_connect_errors&#x3D;10
+#服务端使用的字符集默认为UTF8
+character-set-server&#x3D;utf8
+#创建新表时将使用的默认存储引擎
+default-storage-engine&#x3D;INNODB
+#默认使用“mysql_native_password”插件认证
+default_authentication_plugin&#x3D;mysql_native_password
+
+[mysql]
+#设置mysql客户端默认字符集
+default-character-set&#x3D;utf8
+[client]
+#设置mysql客户端连接服务端时默认使用的端口
+port&#x3D;3306
+default-character-set&#x3D;utf8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>注意：第5行<code>basedir=</code>后面的值为  mysql-8.0.26-winx64文件所在的路径，第7行<code>datadir=</code>后面的值为  mysql-8.0.26-winx64文件所在的路径 + <code>\data</code>。</strong></p>
+<h4 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h4><p>以管理员身份运行power shell或者命令提示符，依次执行下面的命令：</p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">#第一步
+mysqld --initialize-insecure --user&#x3D;mysql
+#第二步
+mysqld -install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>看到<code>Service successfully installed.</code>则表示安装成功。</p>
+<h4 id="启动，登录mysql"><a href="#启动，登录mysql" class="headerlink" title="启动，登录mysql"></a>启动，登录mysql</h4><ol>
+<li>执行<code>net start mysql</code>命令启动mysql服务：</li>
+</ol>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">PS C:\Windows\system32&gt; net start mysql
+MySQL 服务正在启动 .
+MySQL 服务已经启动成功。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol start="2">
+<li>执行<code>mysql -u root -p</code>命令登录mysql:</li>
+</ol>
+<p><strong>注意：<code>Enter password:</code>输入密码时直接回车即可</strong></p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">PS C:\Windows\system32&gt; mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.26 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and&#x2F;or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and&#x2F;or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
+
+mysql&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="3">
+<li>执行<code>alter user user() identified by &quot;你的密码&quot;;</code>命令修改mysql的密码：</li>
+</ol>
+<p><strong>注意：mysql的所有命令都要以分号结尾。</strong></p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">mysql&gt; alter user user() identified by &quot;123456&quot;;
+Query OK, 0 rows affected (0.01 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h4><pre class="line-numbers language-tex" data-language="tex"><code class="language-tex"># 启动mysql服务
+net start mysql
+# 关闭mysql服务
+net stop mysql<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>安装教程</category>
+      </categories>
+      <tags>
+        <tag>Mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>跨域资源共享（CORS）的原理与实现</title>
     <url>/posts/651a.html</url>
     <content><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>跨域资源共享（Cross-Origin Resource Sharing）是W3C的一个标准，定义了在必须访问跨源资源时，浏览器和服务器应该如何沟通。</p>

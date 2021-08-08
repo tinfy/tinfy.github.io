@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-08-01T14:18:36.911Z</updated>
+  <updated>2021-08-08T07:28:17.324Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Win10下安装mysql</title>
+    <link href="https://www.tongjiebin.cn/posts/816a.html"/>
+    <id>https://www.tongjiebin.cn/posts/816a.html</id>
+    <published>2021-08-08T03:59:32.000Z</published>
+    <updated>2021-08-08T07:28:17.324Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;下载压缩包并解压&quot;&gt;&lt;a href=&quot;#下载压缩包并解压&quot; class=&quot;headerlink&quot; title=&quot;下载压缩包并解压&quot;&gt;&lt;/a&gt;下载压缩包并解压&lt;/h4&gt;&lt;p&gt;前往&lt;a href=&quot;https://dev.mysql.com/downloads/mysql/&quot;&gt;mysql官网&lt;/a&gt;下载压缩包&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Mysql" scheme="https://www.tongjiebin.cn/tags/Mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>跨域资源共享（CORS）的原理与实现</title>
@@ -422,28 +441,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     
     
     <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL8.x 修改字符集为 utf8mb4</title>
-    <link href="https://www.tongjiebin.cn/posts/1a4b.html"/>
-    <id>https://www.tongjiebin.cn/posts/1a4b.html</id>
-    <published>2021-05-09T05:11:30.000Z</published>
-    <updated>2021-05-09T05:18:19.784Z</updated>
-    
-    
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;查看 mysql 服务是否启动：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt; mysql status&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    <category term="数据库" scheme="https://www.tongjiebin.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="MySQL" scheme="https://www.tongjiebin.cn/tags/MySQL/"/>
     
   </entry>
   
