@@ -891,13 +891,20 @@ snow<span class="token punctuation">.</span><span class="token function">start</
 <li>在<code>themes/next/layout/_layout.njk</code>文件中<code>&lt;/body&gt;</code>上方加入如下代码段：</li>
 </ol>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 雪花特效 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token punctuation">&#123;</span><span class="token operator">%</span> <span class="token keyword">if</span> theme<span class="token punctuation">.</span>snow <span class="token operator">%</span><span class="token punctuation">&#125;</span>
 <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.bootcdn.net/ajax/libs/jquery/3.1.0/jquery.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
     <span class="token keyword">var</span> windowWidth <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">if</span> <span class="token punctuation">(</span>windowWidth <span class="token operator">></span> <span class="token number">480</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;script type="text/javascript" src="/js/src/snow1.js">&lt;\/script>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token punctuation">&#123;</span><span class="token operator">%</span> endif <span class="token operator">%</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="3">
+<li>在<strong>主题配置文件</strong><code>_config.yml</code>中添加：</li>
+</ol>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">snow: true<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+]]></content>
       <categories>
         <category>博客搭建</category>
       </categories>
