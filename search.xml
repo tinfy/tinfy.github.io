@@ -238,7 +238,7 @@
 <a id="more"></a>
 
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210808120420.png" alt="image-20210808120413329"></p>
-<p>在D盘创建文件夹，命名为<code>mysql</code>，把下载的my-8.0.26-winx64.zip文件解压到<code>D:/mysql</code>目录中。</p>
+<p>在D盘创建文件夹，命名为<code>mysql</code>，把下载的mysql-8.0.26-winx64.zip文件解压到<code>D:/mysql</code>目录中。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210808120716.png" alt="image-20210808120716873"></p>
 <h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><p>打开环境变量界面，找到<strong>系统变量</strong>里的<code>path</code>变量，点击“编辑”。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210808151656.png" alt="image-20210808151656427"></p>
@@ -2363,12 +2363,13 @@ top: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
     <content><![CDATA[<p>在讨论“回流和重绘”之前，我们需要先了解一下浏览器的渲染流程：</p>
 <a id="more"></a>
 
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210809231222.png"></p>
 <ol>
 <li>解析HTML，生成DOM树</li>
 <li>解析CSS，生成CSSOM树</li>
 <li>合并DOM树和CSSDOM树，去掉不可见元素，生成渲染树（Render Tree）</li>
-<li>回流：根据生成的渲染树，进行布局，计算得到节点的几何信息（位置，大小）</li>
-<li>重绘：根据渲染树以及节点的几何信息，将渲染树的每个像素渲染到屏幕上</li>
+<li>Layout（布局）：根据生成的渲染树，进行布局，计算得到节点的几何信息（位置，大小）</li>
+<li>Painting（绘制）：根据渲染树以及节点的几何信息，将渲染树的每个像素渲染到屏幕上</li>
 </ol>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210522151452.png" alt="img"></p>
 <p>为了构建渲染树，浏览器主要完成了以下工作：</p>
@@ -2393,7 +2394,7 @@ top: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 </li>
 <li><p>节点内部文字结构发生变化：<code>text-align</code>、<code>overflow</code>、<code>font-size</code>、<code>line-height</code>、<code>vertical-align</code>等</p>
 </li>
-<li><p>页面首次渲染</p>
+<li><p><strong>页面首次渲染</strong></p>
 </li>
 <li><p>添加或删除可见的DOM元素，进行DOM操作</p>
 </li>
