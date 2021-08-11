@@ -2135,7 +2135,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210603232107.png" alt="image-20210603232106885"></p>
 <h5 id="调整左栏的位置"><a href="#调整左栏的位置" class="headerlink" title="调整左栏的位置"></a>调整左栏的位置</h5><p>设置 margin 负值，把左栏往上移</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.left</span> <span class="token punctuation">&#123;</span>
-	<span class="token property">margin</span><span class="token punctuation">:</span> -100%<span class="token punctuation">;</span>
+	<span class="token property">margin-left</span><span class="token punctuation">:</span> -100%<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210603232231.png" alt="image-20210603232231810"></p>
 <p>设置 <code>left: -200px</code> 把左栏往左移200px</p>
@@ -2270,6 +2270,12 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h5 id="给body设置min-width-1"><a href="#给body设置min-width-1" class="headerlink" title="给body设置min-width"></a>给body设置min-width</h5><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span>
 	<span class="token property">min-width</span><span class="token punctuation">:</span> 550px<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="圣杯布局和双飞翼布局的区别"><a href="#圣杯布局和双飞翼布局的区别" class="headerlink" title="圣杯布局和双飞翼布局的区别"></a>圣杯布局和双飞翼布局的区别</h4><ol>
+<li>双飞翼布局在<strong>主内容div</strong>外面加了一层<code>div</code></li>
+<li>圣杯布局设置的是<strong>主内容div</strong>的宽度为100%，双飞翼设置的是<strong>主内容div外面的div</strong>的宽度为100%</li>
+<li>圣杯布局是给<strong>包裹三栏的div</strong>添加左右padding，双飞翼是给<strong>主内容div</strong>添加左右padding</li>
+<li>双飞翼布局不需要使用偏移属性</li>
+</ol>
 <h4 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h4><p>flex布局所有的代码如下：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
