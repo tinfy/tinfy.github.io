@@ -1,1 +1,1 @@
-{"title":"Win10下安装mysql","id":"posts/816a.html","date_published":"08/08/2021","summary":"下载压缩包并解压前往mysql官网下载压缩包","url":"https://www.tongjiebin.cn/posts/816a.html","tags":["Mysql"],"categories":["安装教程"]}
+{"title":"Sass用法指南","id":"posts/1ee4.html","date_published":"08/13/2021","summary":"关于css并不算真正意义上的编程语言，它不能像其他编程语言一样使用变量、嵌套等来工作。为此，开发人员编写了一种对css进行预处理的“中间语言”，可以实现一些编程语言才有的功能，然后自动编译成css。于是，Sass就应运而生了。Sass是一种css预处理语言，采用Ruby语言编写的。\nSass在线转换css：https://www.sassmeister.com","url":"https://www.tongjiebin.cn/posts/1ee4.html","tags":["Sass"],"categories":["Web前端"]}

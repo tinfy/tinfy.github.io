@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-08-08T07:59:35.911Z</updated>
+  <updated>2021-08-14T05:24:08.072Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sass用法指南</title>
+    <link href="https://www.tongjiebin.cn/posts/1ee4.html"/>
+    <id>https://www.tongjiebin.cn/posts/1ee4.html</id>
+    <published>2021-08-13T13:35:36.000Z</published>
+    <updated>2021-08-14T05:24:08.072Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;关于&quot;&gt;&lt;a href=&quot;#关于&quot; class=&quot;headerlink&quot; title=&quot;关于&quot;&gt;&lt;/a&gt;关于&lt;/h4&gt;&lt;p&gt;css并不算真正意义上的编程语言，它不能像其他编程语言一样使用变量、嵌套等来工作。为此，开发人员编写了一种对css进行预处理的“中间语言”，可以实现一些编程语言才有的功能，然后自动编译成css。于是，Sass就应运而生了。Sass是一种css预处理语言，采用Ruby语言编写的。&lt;/p&gt;
+&lt;p&gt;Sass在线转换css：&lt;a href=&quot;https://www.sassmeister.com/&quot;&gt;https://www.sassmeister.com&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Sass" scheme="https://www.tongjiebin.cn/tags/Sass/"/>
+    
+  </entry>
   
   <entry>
     <title>Win10下安装mysql</title>
@@ -420,27 +440,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     
     
     <category term="浮动" scheme="https://www.tongjiebin.cn/tags/%E6%B5%AE%E5%8A%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS 深拷贝与浅拷贝</title>
-    <link href="https://www.tongjiebin.cn/posts/b888.html"/>
-    <id>https://www.tongjiebin.cn/posts/b888.html</id>
-    <published>2021-05-10T14:10:03.000Z</published>
-    <updated>2021-06-10T14:08:49.119Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;要理解 JS 的深浅拷贝，先熟悉一下 JS 的数据类型：&lt;/p&gt;
-&lt;p&gt;6种基本数据类型：Undefined、Null、Boolean、Number、String、Symbol（ES6引入）&lt;/p&gt;
-&lt;p&gt;复杂数据类型（引用类型）：Object（Array、Date、RegExp、Function、Math都属于Object类型）&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
