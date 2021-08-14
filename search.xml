@@ -234,11 +234,11 @@
   <entry>
     <title>Sass用法指南</title>
     <url>/posts/1ee4.html</url>
-    <content><![CDATA[<h4 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h4><p>css并不算真正意义上的编程语言，它不能像其他编程语言一样使用变量、嵌套等来工作。为此，开发人员编写了一种对css进行预处理的“中间语言”，可以实现一些编程语言才有的功能，然后自动编译成css。于是，Sass就应运而生了。Sass是一种css预处理语言，采用Ruby语言编写的。</p>
+    <content><![CDATA[<h3 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h3><p>css并不算真正意义上的编程语言，它不能像其他编程语言一样使用变量、嵌套等来工作。为此，开发人员编写了一种对css进行预处理的“中间语言”，可以实现一些编程语言才有的功能，然后自动编译成css。于是，Sass就应运而生了。Sass是一种css预处理语言，采用Ruby语言编写的。</p>
 <p>Sass在线转换css：<a href="https://www.sassmeister.com/">https://www.sassmeister.com</a></p>
 <a id="more"></a>
 
-<h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><h5 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h5><p>SASS允许使用变量，所有变量以<code>$</code>开头。</p>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>SASS允许使用变量，所有变量以<code>$</code>开头。</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token property"><span class="token variable">$blue</span></span><span class="token punctuation">:</span> #e8757e<span class="token punctuation">;</span>
 <span class="token selector">div </span><span class="token punctuation">&#123;</span>
     <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$blue</span><span class="token punctuation">;</span>
@@ -248,12 +248,12 @@
 <span class="token selector">.box </span><span class="token punctuation">&#123;</span>
     <span class="token property">border-<span class="token variable">#&#123;$side&#125;</span>-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="计算功能"><a href="#计算功能" class="headerlink" title="计算功能"></a>计算功能</h5><p>SASS允许在代码中使用算式：</p>
+<h4 id="计算功能"><a href="#计算功能" class="headerlink" title="计算功能"></a>计算功能</h4><p>SASS允许在代码中使用算式：</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token property"><span class="token variable">$num</span></span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span>
 <span class="token selector">div </span><span class="token punctuation">&#123;</span>
     <span class="token property">width</span><span class="token punctuation">:</span> 5px <span class="token operator">*</span> <span class="token variable">$num</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h5><p>SASS允许选择器嵌套。比如，下面的CSS代码：</p>
+<h4 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h4><p>SASS允许选择器嵌套。比如，下面的CSS代码：</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token selector">div h1 </span><span class="token punctuation">&#123;</span>
   <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -276,7 +276,7 @@
         <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h5><p>SASS共有两种注释风格。</p>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>SASS共有两种注释风格。</p>
 <ol>
 <li><p>标准的CSS注释 <code>/* comment */</code> ，会保留到编译后的文件。</p>
 </li>
@@ -287,7 +287,7 @@
 <pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">&#x2F;*!
     重要注释！
 *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h4 id="代码的重用"><a href="#代码的重用" class="headerlink" title="代码的重用"></a>代码的重用</h4><h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><p>SASS允许一个选择器，继承另一个选择器。比如，现有info：</p>
+<h3 id="代码的重用"><a href="#代码的重用" class="headerlink" title="代码的重用"></a>代码的重用</h3><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>SASS允许一个选择器，继承另一个选择器。比如，现有info：</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token selector">.info</span><span class="token punctuation">&#123;</span>
     <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
     <span class="token property">border</span><span class="token punctuation">:</span> 1px solid black<span class="token punctuation">;</span>
@@ -298,7 +298,7 @@
     <span class="token keyword">@extend</span> .info<span class="token punctuation">;</span>
     <span class="token property">background-color</span><span class="token punctuation">:</span> magenta<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="Mixin"><a href="#Mixin" class="headerlink" title="Mixin"></a>Mixin</h5><p>Mixin是一组CSS声明，可以在样式表中重复使用。</p>
+<h4 id="Mixin"><a href="#Mixin" class="headerlink" title="Mixin"></a>Mixin</h4><p>Mixin是一组CSS声明，可以在样式表中重复使用。</p>
 <p>使用<code>@mixin</code>命令，定义一个代码块。</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token selector">left </span><span class="token punctuation">&#123;</span>
     <span class="token property">left</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
@@ -326,17 +326,17 @@
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token selector">div </span><span class="token punctuation">&#123;</span>
     <span class="token keyword">@include</span> <span class="token function">border-radius</span><span class="token punctuation">(</span>15px<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h5 id="颜色函数"><a href="#颜色函数" class="headerlink" title="颜色函数"></a>颜色函数</h5><p>SASS提供了一些内置的颜色函数，以便生成系列颜色。</p>
+<h4 id="颜色函数"><a href="#颜色函数" class="headerlink" title="颜色函数"></a>颜色函数</h4><p>SASS提供了一些内置的颜色函数，以便生成系列颜色。</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token function">lighten</span><span class="token punctuation">(</span>#cc3<span class="token punctuation">,</span> 10%<span class="token punctuation">)</span> <span class="token comment">// #d6d65c</span>
 <span class="token function">darken</span><span class="token punctuation">(</span>#cc3<span class="token punctuation">,</span> 10%<span class="token punctuation">)</span> <span class="token comment">// #a3a329</span>
 <span class="token function">grayscale</span><span class="token punctuation">(</span>#cc3<span class="token punctuation">)</span> <span class="token comment">// #808080</span>
 <span class="token function">complement</span><span class="token punctuation">(</span>#cc3<span class="token punctuation">)</span> <span class="token comment">// #33c</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="导入局部文件"><a href="#导入局部文件" class="headerlink" title="导入局部文件"></a>导入局部文件</h5><p><code>@import</code>命令，用来导入其他源文件，被导入的文件就是partials（局部文件），可以将相似代码放入一个模块中，也就是局部文件，局部文件命名以<code>_</code>开头</p>
+<h4 id="导入局部文件"><a href="#导入局部文件" class="headerlink" title="导入局部文件"></a>导入局部文件</h4><p><code>@import</code>命令，用来导入其他源文件，被导入的文件就是partials（局部文件），可以将相似代码放入一个模块中，也就是局部文件，局部文件命名以<code>_</code>开头</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token comment">// 导入_variables.scss局部文件</span>
 <span class="token keyword">@import</span> <span class="token string">'variables'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>如果插入的是.css文件，则等同于css的import命令。</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token keyword">@import</span> <span class="token string">"foo.css"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h4><h5 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h5><p><code>@if</code>、<code>@else if</code>、<code>@else</code>命令用来判断，对于测试某些特殊情况很有用</p>
+<h3 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h3><h4 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h4><p><code>@if</code>、<code>@else if</code>、<code>@else</code>命令用来判断，对于测试某些特殊情况很有用</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token keyword">@mixin</span> <span class="token function">border-stroke</span><span class="token punctuation">(</span><span class="token variable">$value</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">@if</span> <span class="token selector"><span class="token variable">$value</span> == light </span><span class="token punctuation">&#123;</span>
         <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #000<span class="token punctuation">;</span>
@@ -354,7 +354,7 @@
 <span class="token selector">.box </span><span class="token punctuation">&#123;</span>
     <span class="token keyword">@include</span> <span class="token function">border-stroke</span><span class="token punctuation">(</span>medium<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h5><h6 id="for"><a href="#for" class="headerlink" title="@for"></a>@for</h6><p><code>@for</code>命令可以在循环中添加样式</p>
+<h4 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h4><h5 id="for"><a href="#for" class="headerlink" title="@for"></a>@for</h5><p><code>@for</code>命令可以在循环中添加样式</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token comment">// 1 to 4=>循环1到3，不包括4</span>
 <span class="token comment">// 1 through 4=>循环1到4，包括4</span>
 <span class="token keyword">@for</span> <span class="token variable">$i</span> <span class="token keyword">from</span> <span class="token selector">1 to 4 </span><span class="token punctuation">&#123;</span>
@@ -372,7 +372,7 @@
 <span class="token selector">.text-3</span> <span class="token punctuation">&#123;</span>
   <span class="token property">font-size</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h6 id="while"><a href="#while" class="headerlink" title="@while"></a>@while</h6><p><code>@while</code>命令实现同样的效果</p>
+<h5 id="while"><a href="#while" class="headerlink" title="@while"></a>@while</h5><p><code>@while</code>命令实现同样的效果</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token property"><span class="token variable">$i</span></span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
 <span class="token keyword">@while</span> <span class="token selector"><span class="token variable">$i</span> &lt; 4 </span><span class="token punctuation">&#123;</span>
     <span class="token selector">.text-<span class="token variable">#&#123;$i&#125;</span> </span><span class="token punctuation">&#123;</span>
@@ -380,7 +380,7 @@
     <span class="token punctuation">&#125;</span>
     <span class="token property"><span class="token variable">$i</span></span><span class="token punctuation">:</span> <span class="token variable">$i</span> <span class="token operator">+</span> 1<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h6 id="each"><a href="#each" class="headerlink" title="@each"></a>@each</h6><p><code>@each</code>命令可以用来遍历列表或映射中的每个项目</p>
+<h5 id="each"><a href="#each" class="headerlink" title="@each"></a>@each</h5><p><code>@each</code>命令可以用来遍历列表或映射中的每个项目，类似于js的for…in循环</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token comment">// 写法一</span>
 <span class="token keyword">@each</span> <span class="token selector"><span class="token variable">$color</span> in red, green, blue </span><span class="token punctuation">&#123;</span>
     <span class="token selector">.bg-<span class="token variable">#&#123;$color&#125;</span> </span><span class="token punctuation">&#123;</span>
@@ -404,7 +404,7 @@
 <span class="token selector">.bg-blue </span><span class="token punctuation">&#123;</span>
   <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h5><p>SASS允许用户编写自己的函数。</p>
+<h4 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h4><p>SASS允许用户编写自己的函数。</p>
 <pre class="line-numbers language-scss" data-language="scss"><code class="language-scss"><span class="token keyword">@function</span> <span class="token function">double</span><span class="token punctuation">(</span><span class="token variable">$value</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">@return</span> <span class="token variable">$value</span> <span class="token operator">*</span> 2<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
