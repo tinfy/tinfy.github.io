@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-08-21T15:51:52.277Z</updated>
+  <updated>2021-08-22T15:50:45.966Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.tongjiebin.cn/posts/21a6.html"/>
     <id>https://www.tongjiebin.cn/posts/21a6.html</id>
     <published>2021-08-20T13:47:19.000Z</published>
-    <updated>2021-08-21T15:51:52.277Z</updated>
+    <updated>2021-08-22T15:50:45.966Z</updated>
     
     
     <summary type="html">&lt;p&gt;在css2.1中，background属性有以下几种：&lt;/p&gt;
@@ -35,7 +35,7 @@
 &lt;/ul&gt;
 &lt;p&gt;在css3中，新增了三个属性：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;background-origin: padding-box;&lt;/code&gt;设置背景图片计算background-position时的参考原点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;background-origin: padding-box;&lt;/code&gt;设置背景图片计算background-position时的&lt;strong&gt;参考原点&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;background-clip: border-box;&lt;/code&gt;设置元素的背景图片向外裁剪的区域&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;background-size: cover;&lt;/code&gt;设置背景图片的尺寸大小&lt;/li&gt;
 &lt;/ul&gt;</summary>
