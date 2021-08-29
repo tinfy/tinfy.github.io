@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-08-22T15:50:45.966Z</updated>
+  <updated>2021-08-29T15:01:06.363Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>变量的解构赋值</title>
+    <link href="https://www.tongjiebin.cn/posts/d1db.html"/>
+    <id>https://www.tongjiebin.cn/posts/d1db.html</id>
+    <published>2021-08-29T12:47:24.000Z</published>
+    <updated>2021-08-29T15:01:06.363Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。&lt;/p&gt;
+&lt;p&gt;解构：分解数据结构；赋值：给变量赋值。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+    <category term="ES6" scheme="https://www.tongjiebin.cn/tags/ES6/"/>
+    
+    <category term="解构赋值" scheme="https://www.tongjiebin.cn/tags/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS中background属性总结</title>
@@ -70,11 +94,11 @@
   </entry>
   
   <entry>
-    <title>Win10下安装mysql</title>
+    <title>Win10下安装MySQL</title>
     <link href="https://www.tongjiebin.cn/posts/816a.html"/>
     <id>https://www.tongjiebin.cn/posts/816a.html</id>
     <published>2021-08-08T03:59:32.000Z</published>
-    <updated>2021-08-08T07:59:35.911Z</updated>
+    <updated>2021-08-29T13:01:53.640Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;下载压缩包并解压&quot;&gt;&lt;a href=&quot;#下载压缩包并解压&quot; class=&quot;headerlink&quot; title=&quot;下载压缩包并解压&quot;&gt;&lt;/a&gt;下载压缩包并解压&lt;/h4&gt;&lt;p&gt;前往&lt;a href=&quot;https://dev.mysql.com/downloads/mysql/&quot;&gt;mysql官网&lt;/a&gt;下载压缩包&lt;/p&gt;</summary>
@@ -84,7 +108,7 @@
     <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Mysql" scheme="https://www.tongjiebin.cn/tags/Mysql/"/>
+    <category term="MySQL" scheme="https://www.tongjiebin.cn/tags/MySQL/"/>
     
   </entry>
   
@@ -380,11 +404,11 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
   </entry>
   
   <entry>
-    <title>Hexo博客Next主题添加文章置顶功能</title>
+    <title>Hexo博客NexT主题添加文章置顶功能</title>
     <link href="https://www.tongjiebin.cn/posts/999d.html"/>
     <id>https://www.tongjiebin.cn/posts/999d.html</id>
     <published>2021-05-26T13:16:49.000Z</published>
-    <updated>2021-05-26T13:48:25.290Z</updated>
+    <updated>2021-08-29T12:59:58.379Z</updated>
     
     
     <summary type="html">&lt;p&gt;Hexo博客的默认排序方法是按照时间顺序排的，如果有一篇文章经常需要用到，可以添加“置顶”功能，把它放在博客的最上面，这样就能快速地查看这篇文章的内容了。&lt;/p&gt;</summary>
@@ -394,7 +418,7 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="Next" scheme="https://www.tongjiebin.cn/tags/Next/"/>
+    <category term="NexT" scheme="https://www.tongjiebin.cn/tags/NexT/"/>
     
   </entry>
   
@@ -433,27 +457,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
     
     <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>理解BFC以及BFC常见的应用</title>
-    <link href="https://www.tongjiebin.cn/posts/9ac0.html"/>
-    <id>https://www.tongjiebin.cn/posts/9ac0.html</id>
-    <published>2021-05-19T11:51:17.000Z</published>
-    <updated>2021-05-19T13:46:39.390Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;BFC-的概念&quot;&gt;&lt;a href=&quot;#BFC-的概念&quot; class=&quot;headerlink&quot; title=&quot;BFC 的概念&quot;&gt;&lt;/a&gt;BFC 的概念&lt;/h3&gt;&lt;p&gt;BFC（Block Formatting Context，块级格式化上下文）：是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="浮动" scheme="https://www.tongjiebin.cn/tags/%E6%B5%AE%E5%8A%A8/"/>
-    
-    <category term="BFC" scheme="https://www.tongjiebin.cn/tags/BFC/"/>
     
   </entry>
   
