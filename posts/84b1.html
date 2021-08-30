@@ -31,7 +31,7 @@
 <meta property="og:description" content="执行期上下文当函数执行时（准确来说，是在函数发生预编译的前一刻），会创建一个执行期上下文的内部对象。一个执行期上下文定义了一个函数执行时的环境。 每调用一次函数，就会创建一个新的上下文对象，他们之间是相互独立且独一无二的。当函数执行完毕，它所产生的执行期上下文会被销毁。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-16T14:31:15.000Z">
-<meta property="article:modified_time" content="2021-06-16T14:35:02.781Z">
+<meta property="article:modified_time" content="2021-08-30T14:44:58.796Z">
 <meta property="article:author" content="Tong jiebin">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
@@ -303,10 +303,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-06-16 22:31:15 / 修改时间：22:35:02" itemprop="dateCreated datePublished" datetime="2021-06-16T22:31:15+08:00">2021-06-16</time>
+      <time title="创建时间：2021-06-16 22:31:15" itemprop="dateCreated datePublished" datetime="2021-06-16T22:31:15+08:00">2021-06-16</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-30 22:44:58" itemprop="dateModified" datetime="2021-08-30T22:44:58+08:00">2021-08-30</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -331,14 +337,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>2.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -355,19 +361,13 @@
 
 <p>参考链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenyingjie1207/p/9966036.html">https://www.cnblogs.com/chenyingjie1207/p/9966036.html</a></p>
 <h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>解析器在调用函数每次都会向函数内部传递进一个隐含的参数，这个隐含的参数就是 this，this 指向的是一个对象，这个对象我们称为函数执行的 上下文对象。</p>
-<h3 id="函数内-this-的指向【非常重要】"><a href="#函数内-this-的指向【非常重要】" class="headerlink" title="函数内 this 的指向【非常重要】"></a>函数内 this 的指向【非常重要】</h3><p>我们在《JavaScript 基础/函数.md》这篇文章讲过，函数的调用有<strong>六种</strong>形式。</p>
-<p>根据函数的调用方式的不同，this 会指向不同的对象：</p>
+<h3 id="函数内-this-的指向【非常重要】"><a href="#函数内-this-的指向【非常重要】" class="headerlink" title="函数内 this 的指向【非常重要】"></a>函数内 this 的指向【非常重要】</h3><p>根据函数的调用方式的不同，this 会指向不同的对象：</p>
 <ul>
-<li><p>1.以函数的形式（包括普通函数、定时器函数、立即执行函数）调用时，this 的指向永远都是 window。比如<code>fun();</code>相当于<code>window.fun();</code></p>
-</li>
-<li><p>2.以方法的形式调用时，this 指向调用方法的那个对象</p>
-</li>
-<li><p>3.以构造函数的形式调用时，this 指向实例对象</p>
-</li>
-<li><p>4.以事件绑定函数的形式调用时，this 指向<strong>绑定事件的对象</strong></p>
-</li>
-<li><p>5.使用 call 和 apply 调用时，this 指向指定的那个对象</p>
-</li>
+<li>1.以函数的形式（包括普通函数、定时器函数、立即执行函数）调用时，this 的指向永远都是 window。比如<code>fun();</code>相当于<code>window.fun();</code></li>
+<li>2.以方法的形式调用时，this 指向调用方法的那个对象</li>
+<li>3.以构造函数的形式调用时，this 指向实例对象</li>
+<li>4.以事件绑定函数的形式调用时，this 指向<strong>绑定事件的对象</strong></li>
+<li>5.使用 call 和 apply 调用时，this 指向指定的那个对象</li>
 </ul>
 <p><strong>针对第 1 条的举例</strong>：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -411,13 +411,71 @@
 
 <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'全局的name属性'</span><span class="token punctuation">;</span>
 
-<span class="token comment">//以方法的形式调用，this是调用方法的对象</span>
+<span class="token comment">//以方法的形式调用，this指向调用方法的对象</span>
 obj2<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>打印结果：</p>
-<pre class="line-numbers language-none"><code class="language-none">Object
+<pre class="line-numbers language-none"><code class="language-none">&#123;name: &quot;vae&quot;, sayName: ƒ&#125;
 vae<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>上面的举例可以看出，this 指向的是 对象 obj2 ，所以 this.name 指的是 obj2.name。</p>
-<h3 id="箭头函数中-this-的指向"><a href="#箭头函数中-this-的指向" class="headerlink" title="箭头函数中 this 的指向"></a>箭头函数中 this 的指向</h3><p>ES6 中的箭头函数并不会使用上面的准则，而是会继承外层函数调用的 this 绑定（无论 this 绑定到什么）。</p>
+<h3 id="箭头函数中-this-的指向"><a href="#箭头函数中-this-的指向" class="headerlink" title="箭头函数中 this 的指向"></a>箭头函数中 this 的指向</h3><p>对于普通函数，遵循第2条规则，sayName中的this指向的调用该方法的对象，即obj</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"Tom"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    name<span class="token operator">:</span> <span class="token string">"Jerry"</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">sayName</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//Jerry</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果我们把普通函数改为箭头函数呢？</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"Tom"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    name<span class="token operator">:</span> <span class="token string">"Jerry"</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">sayName</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//Tom</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>需要注意的是，箭头函数中的 this 指向不遵循上面所有的规则，而是指向<strong>定义该函数所在的作用域指向的对象</strong>，作用域是指函数内部，obj是不产生作用域的，所以这里sayName中的this指向的是最外层的对象，也就是window对象。</p>
+<p><strong>注意：箭头函数使用call或apply调用时，不能改变this的指向</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"Tom"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    name<span class="token operator">:</span> <span class="token string">"Jerry"</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">sayName</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    name<span class="token operator">:</span> <span class="token string">"Spike"</span>
+<span class="token punctuation">&#125;</span>
+obj<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//这里的this还是指向的window，所以打印的是Tom</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>例2：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">//这里的this指向的是window对象，和Person构造函数中的this并不相同</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果想让setTimeout里的this指向Person构造函数中的this，可以这么写：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    that<span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        that<span class="token punctuation">.</span>num<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果使用用箭头函数，就可以很简单地改写为：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h3 id="改变函数内部的-this-指向"><a href="#改变函数内部的-this-指向" class="headerlink" title="改变函数内部的 this 指向"></a>改变函数内部的 this 指向</h3><p>JS 专门为我们提供了一些方法来改变函数内部的 this 指向。详见下一篇文章中的 call()、apply()、bind() 方法。</p>
 <p>转载于：<a target="_blank" rel="noopener" href="https://github.com/qianguyihao/Web">https://github.com/qianguyihao/Web</a></p>
 
@@ -517,14 +575,14 @@ vae<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">131k</span>
+    <span title="站点总字数">132k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:59</span>
+    <span title="站点阅读时长">2:01</span>
   </span>
 </div>
 <div class="busuanzi-count">

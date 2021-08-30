@@ -1878,7 +1878,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>上方代码中，foo 代表的就是整个 fn2 函数。当执行了 <code>foo()</code> 语句之后（相当于执行了 ），fn1 函数内就产生了闭包。</p>
 <p>一般来说，在 fn1 函数执行完毕后，它里面的变量 a 会立即销毁。但此时由于产生了闭包，所以 <strong>fn1 函数中的变量 a 不会立即销毁，因为 fn2 函数还要继续调用变量 a</strong>。只有等所有函数把变量 a 调用完了，变量 a 才会销毁。</p>
-<p>而且，可以看出， 在执行 <code>foo()</code>语句之后，竟然能够打印出 <code>20</code>，这就完美通过闭包实现了：全局作用局成功访问到了局部作用域中的变量 a。</p>
+<p>而且，可以看出， 在执行 <code>foo()</code>语句之后，竟然能够打印出 <code>20</code>，这就完美通过闭包实现了：全局作用域成功访问到了局部作用域中的变量 a。</p>
 <p>因此，我们可以看出，闭包的主要作用就是：延伸了变量的作用范围。</p>
 <p>上面的代码也可以简写成：</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -2031,19 +2031,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <p>参考链接：<a href="https://www.cnblogs.com/chenyingjie1207/p/9966036.html">https://www.cnblogs.com/chenyingjie1207/p/9966036.html</a></p>
 <h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>解析器在调用函数每次都会向函数内部传递进一个隐含的参数，这个隐含的参数就是 this，this 指向的是一个对象，这个对象我们称为函数执行的 上下文对象。</p>
-<h3 id="函数内-this-的指向【非常重要】"><a href="#函数内-this-的指向【非常重要】" class="headerlink" title="函数内 this 的指向【非常重要】"></a>函数内 this 的指向【非常重要】</h3><p>我们在《JavaScript 基础/函数.md》这篇文章讲过，函数的调用有<strong>六种</strong>形式。</p>
-<p>根据函数的调用方式的不同，this 会指向不同的对象：</p>
+<h3 id="函数内-this-的指向【非常重要】"><a href="#函数内-this-的指向【非常重要】" class="headerlink" title="函数内 this 的指向【非常重要】"></a>函数内 this 的指向【非常重要】</h3><p>根据函数的调用方式的不同，this 会指向不同的对象：</p>
 <ul>
-<li><p>1.以函数的形式（包括普通函数、定时器函数、立即执行函数）调用时，this 的指向永远都是 window。比如<code>fun();</code>相当于<code>window.fun();</code></p>
-</li>
-<li><p>2.以方法的形式调用时，this 指向调用方法的那个对象</p>
-</li>
-<li><p>3.以构造函数的形式调用时，this 指向实例对象</p>
-</li>
-<li><p>4.以事件绑定函数的形式调用时，this 指向<strong>绑定事件的对象</strong></p>
-</li>
-<li><p>5.使用 call 和 apply 调用时，this 指向指定的那个对象</p>
-</li>
+<li>1.以函数的形式（包括普通函数、定时器函数、立即执行函数）调用时，this 的指向永远都是 window。比如<code>fun();</code>相当于<code>window.fun();</code></li>
+<li>2.以方法的形式调用时，this 指向调用方法的那个对象</li>
+<li>3.以构造函数的形式调用时，this 指向实例对象</li>
+<li>4.以事件绑定函数的形式调用时，this 指向<strong>绑定事件的对象</strong></li>
+<li>5.使用 call 和 apply 调用时，this 指向指定的那个对象</li>
 </ul>
 <p><strong>针对第 1 条的举例</strong>：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -2087,13 +2081,71 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'全局的name属性'</span><span class="token punctuation">;</span>
 
-<span class="token comment">//以方法的形式调用，this是调用方法的对象</span>
+<span class="token comment">//以方法的形式调用，this指向调用方法的对象</span>
 obj2<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>打印结果：</p>
-<pre class="line-numbers language-none"><code class="language-none">Object
+<pre class="line-numbers language-none"><code class="language-none">&#123;name: &quot;vae&quot;, sayName: ƒ&#125;
 vae<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>上面的举例可以看出，this 指向的是 对象 obj2 ，所以 this.name 指的是 obj2.name。</p>
-<h3 id="箭头函数中-this-的指向"><a href="#箭头函数中-this-的指向" class="headerlink" title="箭头函数中 this 的指向"></a>箭头函数中 this 的指向</h3><p>ES6 中的箭头函数并不会使用上面的准则，而是会继承外层函数调用的 this 绑定（无论 this 绑定到什么）。</p>
+<h3 id="箭头函数中-this-的指向"><a href="#箭头函数中-this-的指向" class="headerlink" title="箭头函数中 this 的指向"></a>箭头函数中 this 的指向</h3><p>对于普通函数，遵循第2条规则，sayName中的this指向的调用该方法的对象，即obj</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"Tom"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    name<span class="token operator">:</span> <span class="token string">"Jerry"</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">sayName</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//Jerry</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果我们把普通函数改为箭头函数呢？</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"Tom"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    name<span class="token operator">:</span> <span class="token string">"Jerry"</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">sayName</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//Tom</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>需要注意的是，箭头函数中的 this 指向不遵循上面所有的规则，而是指向<strong>定义该函数所在的作用域指向的对象</strong>，作用域是指函数内部，obj是不产生作用域的，所以这里sayName中的this指向的是最外层的对象，也就是window对象。</p>
+<p><strong>注意：箭头函数使用call或apply调用时，不能改变this的指向</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"Tom"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    name<span class="token operator">:</span> <span class="token string">"Jerry"</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">sayName</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    name<span class="token operator">:</span> <span class="token string">"Spike"</span>
+<span class="token punctuation">&#125;</span>
+obj<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//这里的this还是指向的window，所以打印的是Tom</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>例2：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">//这里的this指向的是window对象，和Person构造函数中的this并不相同</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果想让setTimeout里的this指向Person构造函数中的this，可以这么写：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    that<span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        that<span class="token punctuation">.</span>num<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果使用用箭头函数，就可以很简单地改写为：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h3 id="改变函数内部的-this-指向"><a href="#改变函数内部的-this-指向" class="headerlink" title="改变函数内部的 this 指向"></a>改变函数内部的 this 指向</h3><p>JS 专门为我们提供了一些方法来改变函数内部的 this 指向。详见下一篇文章中的 call()、apply()、bind() 方法。</p>
 <p>转载于：<a href="https://github.com/qianguyihao/Web">https://github.com/qianguyihao/Web</a></p>
 ]]></content>
@@ -2467,9 +2519,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>V2RayN 是一个可视化的配置工具，下载地址：<a href="https://github.com/2dust/v2rayN/tags">https://github.com/2dust/v2rayN/tags</a></p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210514232607.png" alt="image-20210514232604253"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210514232637.png" alt="image-20210514232634254"></p>
-<p>下载完成后，解压 v2ray-windows-64.zip 和 v2RayN.zip，复制 V2RayN 文件夹下的 v2rayN.exe、Newtonsoft.Json.dll、zh-Hans到v2ray-windows-64.zip 解压目录中</p>
+<p>下载完成后，分别解压 v2ray-windows-64.zip 和 v2RayN.zip 到 v2ray 和v2rayN 这两个文件夹中，复制 V2RayN 文件夹下的 v2rayN.exe、Newtonsoft.Json.dll、zh-Hans到 v2ray 文件夹中</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210609223559.png" alt="image-20210514233924261"></p>
-<p>打开 v2rayN.exe，选择”服务器“ =&gt; “添加VMess服务器”。</p>
+<p>打开 v2ray 文件夹中的 v2rayN.exe，选择”服务器“ =&gt; “添加VMess服务器”。</p>
+<p><strong>注意：</strong>如果双击 v2rayN.exe，在电脑任务栏右下角没有出现v2rayN的logo，但是打开任务管理器，在进程中却可以看到 v2rayN 的进程。这时需要查看 guiLogs 文件夹中的日志文件，看缺少哪个 .dll 文件，就把 v2rayN 文件夹中对应的 .dll 文件复制到 v2ray 文件夹中，或者直接把所有的 .dll 文件都复制到 v2ray 文件夹中。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210514234601.png" alt="image-20210514234556538"></p>
 <p>填写“VMess服务器”信息：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210609230647.png" alt="image-20210609230647311"></p>
