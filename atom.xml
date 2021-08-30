@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-08-29T15:01:06.363Z</updated>
+  <updated>2021-08-30T15:59:16.258Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vuex的使用方法</title>
+    <link href="https://www.tongjiebin.cn/posts/5c4e.html"/>
+    <id>https://www.tongjiebin.cn/posts/5c4e.html</id>
+    <published>2021-08-30T15:43:56.000Z</published>
+    <updated>2021-08-30T15:59:16.258Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;核心概念：&lt;/p&gt;
+&lt;p&gt;State：包含了store中的各个状态&lt;/p&gt;
+&lt;p&gt;Getters：对State中的数据进行包装然后返回，可以认为是store的计算属性&lt;/p&gt;
+&lt;p&gt;Mutations：对State中的数据进行操作的一系列方法，只能是同步的方法&lt;/p&gt;
+&lt;p&gt;Actions：对State中的数据进行操作的一系列方法，可以是异步的方法，通过调用Mutation中的方法实现对数据的操作&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vuex" scheme="https://www.tongjiebin.cn/tags/Vuex/"/>
+    
+  </entry>
   
   <entry>
     <title>变量的解构赋值</title>
@@ -436,27 +459,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     
     
     <category term="快捷键" scheme="https://www.tongjiebin.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回流与重绘</title>
-    <link href="https://www.tongjiebin.cn/posts/2226.html"/>
-    <id>https://www.tongjiebin.cn/posts/2226.html</id>
-    <published>2021-05-22T06:45:25.000Z</published>
-    <updated>2021-08-09T15:19:39.344Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在讨论“回流和重绘”之前，我们需要先了解一下浏览器的渲染流程：&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   

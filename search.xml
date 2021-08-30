@@ -242,6 +242,174 @@
       </tags>
   </entry>
   <entry>
+    <title>Vuex的使用方法</title>
+    <url>/posts/5c4e.html</url>
+    <content><![CDATA[<p>核心概念：</p>
+<p>State：包含了store中的各个状态</p>
+<p>Getters：对State中的数据进行包装然后返回，可以认为是store的计算属性</p>
+<p>Mutations：对State中的数据进行操作的一系列方法，只能是同步的方法</p>
+<p>Actions：对State中的数据进行操作的一系列方法，可以是异步的方法，通过调用Mutation中的方法实现对数据的操作</p>
+<a id="more"></a>
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  state<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    count<span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 不能直接对state里面的数据进行操作，需要通过mutation</span>
+  mutations<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">add</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      state<span class="token punctuation">.</span>count<span class="token operator">++</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token function">sub</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      state<span class="token punctuation">.</span>count<span class="token operator">--</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token function">addN</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> step</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      state<span class="token punctuation">.</span>count <span class="token operator">+=</span> step
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token function">subN</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> step</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      state<span class="token punctuation">.</span>count <span class="token operator">-=</span> step
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 异步方法写在这里，操作state数据，需要调用mutation</span>
+  actions<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">addAsync</span> <span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        context<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'add'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 使用ES6的解构赋值可以简写为：</span>
+    <span class="token comment">// addAsync (&#123; commit &#125;) &#123;</span>
+    <span class="token comment">//   setTimeout(() => &#123;</span>
+    <span class="token comment">//     commit('addN')</span>
+    <span class="token comment">//   &#125;, 1000)</span>
+    <span class="token comment">// &#125;,</span>
+    <span class="token function">addNAsync</span> <span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> step</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        context<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'addN'</span><span class="token punctuation">,</span> step<span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 使用ES6的解构赋值可以简写为：</span>
+    <span class="token comment">// addNAsync (&#123; commit &#125;, step) &#123;</span>
+    <span class="token comment">//   setTimeout(() => &#123;</span>
+    <span class="token comment">//     commit('addN', step)</span>
+    <span class="token comment">//   &#125;, 1000)</span>
+    <span class="token comment">// &#125;,</span>
+    <span class="token function">subAsync</span> <span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        context<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'sub'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token function">subNAsync</span> <span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> step</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        context<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'subN'</span><span class="token punctuation">,</span> step<span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token comment">// getters不会修改数据只是对数据进行包装然后返回，相当于计算属性</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">showNum</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token string">'当前最新count值为：'</span> <span class="token operator">+</span> state<span class="token punctuation">.</span>count
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  modules<span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用Vuex的第一种方式：</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;button @click&#x3D;&quot;sub&quot;&gt;-1&lt;&#x2F;button&gt;
+    &lt;button @click&#x3D;&quot;subN(3)&quot;&gt;-N&lt;&#x2F;button&gt;
+    &lt;button @click&#x3D;&quot;subAsync&quot;&gt;-1 async&lt;&#x2F;button&gt;
+    &lt;button @click&#x3D;&quot;subNAsync(3)&quot;&gt;-N async&lt;&#x2F;button&gt;
+    &lt;p&gt;&#123;&#123;showNum&#125;&#125;&lt;&#x2F;p&gt;
+    &lt;form action&#x3D;&quot;#&quot;&gt;
+      &lt;label for&#x3D;&quot;count&quot;&gt;最新的count值：&lt;&#x2F;label&gt;
+      &lt;input id&#x3D;&quot;count&quot; type&#x3D;&quot;text&quot; :value&#x3D;&quot;count&quot; &#x2F;&gt;
+    &lt;&#x2F;form&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+export default &#123;
+  data () &#123;
+    return &#123;&#125;
+  &#125;,
+  computed: &#123;
+    &#x2F;&#x2F; 使用this.$store.state调用Vuex定义的state
+    count () &#123;
+      return this.$store.state.count
+    &#125;,
+    &#x2F;&#x2F; 使用this.$store.getters调用Vuex定义的getters
+    showNum () &#123;
+      return this.$store.getters.showNum
+    &#125;
+  &#125;,
+  methods: &#123;
+    &#x2F;&#x2F; 使用this.$store.commit调用Vuex定义的mutation
+    sub () &#123;
+      this.$store.commit(&#39;sub&#39;)
+    &#125;,
+    subN (step) &#123;
+      this.$store.commit(&#39;subN&#39;, step)
+    &#125;,
+    &#x2F;&#x2F; 使用this.$store.dispatch调用Vuex定义的action
+    subAsync () &#123;
+      this.$store.dispatch(&#39;subAsync&#39;)
+    &#125;,
+    subNAsync (step) &#123;
+      this.$store.dispatch(&#39;subNAsync&#39;, step)
+    &#125;
+  &#125;
+&#125;
+&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用Vuex的第二种方式：</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;button @click&#x3D;&quot;add&quot;&gt;+1&lt;&#x2F;button&gt;
+    &lt;button @click&#x3D;&quot;addN(3)&quot;&gt;+N&lt;&#x2F;button&gt;
+    &lt;button @click&#x3D;&quot;addAsync&quot;&gt;+1 async&lt;&#x2F;button&gt;
+    &lt;button @click&#x3D;&quot;addNAsync(3)&quot;&gt;+N async&lt;&#x2F;button&gt;
+    &lt;p&gt;&#123;&#123;showNum&#125;&#125;&lt;&#x2F;p&gt;
+    &lt;form action&#x3D;&quot;#&quot;&gt;
+      &lt;label for&#x3D;&quot;count&quot;&gt;最新的count值：&lt;&#x2F;label&gt;
+      &lt;input id&#x3D;&quot;count&quot; type&#x3D;&quot;text&quot; :value&#x3D;&quot;count&quot; &#x2F;&gt;
+    &lt;&#x2F;form&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+&#x2F;&#x2F; 1.导入mapState,mapMutations,mapActions,mapGetters
+import &#123; mapState, mapMutations, mapActions, mapGetters &#125; from &#39;vuex&#39;
+
+export default &#123;
+  data () &#123;
+    return &#123;&#125;
+  &#125;,
+  computed: &#123;
+    &#x2F;&#x2F; 2.把mapState,mapGetters里的全局变量映射为计算属性
+    ...mapState([&#39;count&#39;]),
+    ...mapGetters([&#39;showNum&#39;])
+  &#125;,
+  methods: &#123;
+    &#x2F;&#x2F; 2.把mapMutations,mapActions里的方法映射到methods里面
+    ...mapMutations([&#39;add&#39;, &#39;addN&#39;]),
+    ...mapActions([&#39;addAsync&#39;, &#39;addNAsync&#39;])
+  &#125;
+&#125;
+&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+      <tags>
+        <tag>Vuex</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>变量的解构赋值</title>
     <url>/posts/d1db.html</url>
     <content><![CDATA[<p>ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</p>
