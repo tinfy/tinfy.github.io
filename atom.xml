@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-08-30T15:59:16.258Z</updated>
+  <updated>2021-09-22T16:25:24.046Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm常用命令</title>
+    <link href="https://www.tongjiebin.cn/posts/854b.html"/>
+    <id>https://www.tongjiebin.cn/posts/854b.html</id>
+    <published>2021-09-22T15:40:30.000Z</published>
+    <updated>2021-09-22T16:25:24.046Z</updated>
+    
+    
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;初始化一个项目，会在文件夹中生成一个 &lt;code&gt;package.json&lt;/code&gt; 文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; init &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;-y&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+跳过提问阶段，全部采用默认的设置。
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; init -y&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="npm" scheme="https://www.tongjiebin.cn/tags/npm/"/>
+    
+    <category term="nodejs" scheme="https://www.tongjiebin.cn/tags/nodejs/"/>
+    
+  </entry>
   
   <entry>
     <title>Vuex的使用方法</title>
@@ -442,23 +469,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     
     
     <category term="NexT" scheme="https://www.tongjiebin.cn/tags/NexT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快捷键汇总</title>
-    <link href="https://www.tongjiebin.cn/posts/66c9.html"/>
-    <id>https://www.tongjiebin.cn/posts/66c9.html</id>
-    <published>2021-05-25T13:21:50.000Z</published>
-    <updated>2021-08-25T03:12:43.592Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在日常的工作和学习中，记住一些常用的快捷键能提高我们的效率，下面列出的是一些我常用的的快捷键。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="快捷键" scheme="https://www.tongjiebin.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
