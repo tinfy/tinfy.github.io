@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-09-22T16:25:24.046Z</updated>
+  <updated>2021-09-28T13:38:31.577Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微软输入法相关</title>
+    <link href="https://www.tongjiebin.cn/posts/db8b.html"/>
+    <id>https://www.tongjiebin.cn/posts/db8b.html</id>
+    <published>2021-09-28T13:35:55.000Z</published>
+    <updated>2021-09-28T13:38:31.577Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;自学习功能失效&quot;&gt;&lt;a href=&quot;#自学习功能失效&quot; class=&quot;headerlink&quot; title=&quot;自学习功能失效&quot;&gt;&lt;/a&gt;自学习功能失效&lt;/h4&gt;&lt;p&gt;在使用微软输入法打字的时候突然发现学习记忆的功能失效了，也就是当我第一次用拼音打出来了一个词语之后，第二次打出相同的拼音，在选择的界面却没有出现第一次已经打过的词语，而是每次都是推荐相同的单词供选择。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="微软输入法" scheme="https://www.tongjiebin.cn/tags/%E5%BE%AE%E8%BD%AF%E8%BE%93%E5%85%A5%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>npm常用命令</title>
@@ -450,25 +467,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     
     
     <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客NexT主题添加文章置顶功能</title>
-    <link href="https://www.tongjiebin.cn/posts/999d.html"/>
-    <id>https://www.tongjiebin.cn/posts/999d.html</id>
-    <published>2021-05-26T13:16:49.000Z</published>
-    <updated>2021-08-29T12:59:58.379Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Hexo博客的默认排序方法是按照时间顺序排的，如果有一篇文章经常需要用到，可以添加“置顶”功能，把它放在博客的最上面，这样就能快速地查看这篇文章的内容了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="NexT" scheme="https://www.tongjiebin.cn/tags/NexT/"/>
     
   </entry>
   
