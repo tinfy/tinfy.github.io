@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-09-28T13:38:31.577Z</updated>
+  <updated>2021-10-01T08:44:00.339Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Oracle存储过程语法</title>
+    <link href="https://www.tongjiebin.cn/posts/4ddd.html"/>
+    <id>https://www.tongjiebin.cn/posts/4ddd.html</id>
+    <published>2021-10-01T05:43:07.000Z</published>
+    <updated>2021-10-01T08:44:00.339Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;模板&quot;&gt;&lt;a href=&quot;#模板&quot; class=&quot;headerlink&quot; title=&quot;模板&quot;&gt;&lt;/a&gt;模板&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;-- declare后面定义变量或游标；如果不需要定义变量或游标，可以省略declare&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;declare&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;-- 变量名前面建议加上 v_&lt;/span&gt;
+  v_name &lt;span class=&quot;token keyword&quot;&gt;integer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;begin&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;-- 执行语句/异常处理;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    
+    <category term="Oracle" scheme="https://www.tongjiebin.cn/tags/Oracle/"/>
+    
+    <category term="存储过程" scheme="https://www.tongjiebin.cn/tags/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>微软输入法相关</title>
@@ -448,25 +473,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     <category term="V2Ray" scheme="https://www.tongjiebin.cn/tags/V2Ray/"/>
     
     <category term="科学上网" scheme="https://www.tongjiebin.cn/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实现三栏布局的三种方式：圣杯布局、双飞翼布局、flex布局</title>
-    <link href="https://www.tongjiebin.cn/posts/7df.html"/>
-    <id>https://www.tongjiebin.cn/posts/7df.html</id>
-    <published>2021-06-03T13:34:21.000Z</published>
-    <updated>2021-08-11T14:00:30.703Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;三栏布局的特点：两侧宽度固定、中间宽度自适应。同时，还要能够满足这两个条件：1.中间部分优先渲染 2.允许任意一列成为最高列&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
     
   </entry>
   

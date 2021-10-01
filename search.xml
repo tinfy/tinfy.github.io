@@ -247,6 +247,193 @@
       </tags>
   </entry>
   <entry>
+    <title>Oracle存储过程语法</title>
+    <url>/posts/4ddd.html</url>
+    <content><![CDATA[<h4 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h4><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- declare后面定义变量或游标；如果不需要定义变量或游标，可以省略declare</span>
+<span class="token keyword">declare</span>
+  <span class="token comment">-- 变量名前面建议加上 v_</span>
+  v_name <span class="token keyword">integer</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token comment">-- 执行语句/异常处理;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<a id="more"></a>
+
+<h4 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h4><p>变量名 变量类型(变量长度)</p>
+<h5 id="赋值的两种方式"><a href="#赋值的两种方式" class="headerlink" title="赋值的两种方式"></a>赋值的两种方式</h5><ol>
+<li>v_name := ‘Tom’</li>
+<li>select 值 into 变量 from 表名;</li>
+</ol>
+<h5 id="普通变量"><a href="#普通变量" class="headerlink" title="普通变量"></a>普通变量</h5><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">declare</span>
+  v_name nvarchar2<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span> :<span class="token operator">=</span> <span class="token string">'Tom'</span><span class="token punctuation">;</span>
+  v_age number<span class="token punctuation">;</span>
+  v_loving nvarchar2<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">begin</span>
+  v_age :<span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+  <span class="token keyword">select</span> <span class="token string">'coding'</span> <span class="token keyword">into</span> v_loving <span class="token keyword">from</span> dual<span class="token punctuation">;</span>
+  <span class="token comment">-- 输出语句</span>
+  <span class="token comment">-- 字符串之间的连接使用符号：||</span>
+  dbms_output<span class="token punctuation">.</span>put_line<span class="token punctuation">(</span>v_name <span class="token operator">||</span> <span class="token string">','</span> <span class="token operator">||</span> v_age <span class="token operator">||</span> <span class="token string">','</span> <span class="token operator">||</span> v_loving<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="引用型变量"><a href="#引用型变量" class="headerlink" title="引用型变量"></a>引用型变量</h5><p>如果一个变量未来可能被赋的值的类型或长度不确定时，可以使用 <code>表名.字段名%TYPE</code> 来指定变量的类型</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 查询emp表中120560这个员工的姓名和年龄，并打印出来</span>
+<span class="token keyword">declare</span>
+  v_name emp<span class="token punctuation">.</span>emname<span class="token operator">%</span><span class="token keyword">TYPE</span><span class="token punctuation">;</span>
+  v_age emp<span class="token punctuation">.</span>emage<span class="token operator">%</span><span class="token keyword">TYPE</span><span class="token punctuation">;</span>
+
+<span class="token keyword">begin</span>
+  <span class="token keyword">select</span> emname<span class="token punctuation">,</span>emage <span class="token keyword">into</span> v_name<span class="token punctuation">,</span>v_age <span class="token keyword">from</span> emp <span class="token keyword">where</span> id <span class="token operator">=</span> <span class="token string">'120560'</span><span class="token punctuation">;</span>
+
+  dbms_output<span class="token punctuation">.</span>put_line<span class="token punctuation">(</span>v_name <span class="token operator">||</span> <span class="token string">','</span> <span class="token operator">||</span> v_age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="记录型变量-慎用，会有效率问题"><a href="#记录型变量-慎用，会有效率问题" class="headerlink" title="记录型变量(慎用，会有效率问题)"></a>记录型变量(慎用，会有效率问题)</h5><p>如果定义一个变量的类型为 <code>emp%ROWTYPE</code> ，可以把查询出来的这一整条记录赋值给这个变量，使用的时候使用 <code>变量名.字段名</code> 就可以访问到每个字段了。<strong>如果查询结果有多条记录，要使用游标来存储。</strong></p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">declare</span>
+  v_emp emp<span class="token operator">%</span>ROWTYPE
+<span class="token keyword">begin</span>
+  <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">into</span> v_emp <span class="token keyword">from</span> emp <span class="token keyword">where</span> id <span class="token operator">=</span> <span class="token string">'120560'</span><span class="token punctuation">;</span>
+
+  dbms_output<span class="token punctuation">.</span>put_line<span class="token punctuation">(</span>v_name <span class="token operator">||</span> <span class="token string">','</span> <span class="token operator">||</span> v_age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="条件分支"><a href="#条件分支" class="headerlink" title="条件分支"></a>条件分支</h4><p>语法：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">begin</span>
+  <span class="token keyword">if</span> 条件<span class="token number">1</span> <span class="token keyword">then</span> 执行<span class="token number">1</span>
+  elsif 条件<span class="token number">2</span> <span class="token keyword">then</span> 执<span class="token number">2</span>		<span class="token comment">--注意：是elsif，els没有e</span>
+  <span class="token keyword">else</span> 执行<span class="token number">3</span>
+  <span class="token keyword">end</span> <span class="token keyword">if</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>实例：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">declare</span>
+  v_number number<span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">into</span> v_number <span class="token keyword">from</span> emp<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> v_number <span class="token operator">&lt;</span> <span class="token number">20</span> <span class="token keyword">then</span>
+    dbms_output<span class="token punctuation">.</span>putline<span class="token punctuation">(</span><span class="token string">'记录数在20以下，记录数为：'</span> <span class="token operator">||</span> v_count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">else</span>
+    dbms_output<span class="token punctuation">.</span>putline<span class="token punctuation">(</span><span class="token string">'记录数在20以上，记录数为：'</span> <span class="token operator">||</span> v_count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h4><p>语法：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">begin</span>
+  <span class="token keyword">loop</span>
+    <span class="token keyword">exit</span> <span class="token keyword">when</span> 退出循环条件
+  <span class="token keyword">end</span> <span class="token keyword">loop</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>实例：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 输出1-10</span>
+<span class="token keyword">declare</span>
+  v_num number :<span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">loop</span>
+    <span class="token keyword">exit</span> <span class="token keyword">when</span> v_num <span class="token operator">></span> <span class="token number">10</span><span class="token punctuation">;</span>
+    dbms_output<span class="token punctuation">.</span>putline<span class="token punctuation">(</span>v_num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    v_num :<span class="token operator">=</span> v_num <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">end</span> <span class="token keyword">loop</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h4><p>用于临时存储一个查询返回的多行数据。</p>
+<p>游标的使用方式：声明=&gt;打开=&gt;读取=&gt;关闭</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">-- 游标声明</span>
+<span class="token keyword">cursor</span> 游标名<span class="token punctuation">(</span>参数列表<span class="token punctuation">)</span> <span class="token operator">is</span> 查询语句
+<span class="token comment">-- 游标打开</span>
+<span class="token keyword">open</span> 游标名<span class="token punctuation">;</span>
+<span class="token comment">-- 游标取值</span>
+<span class="token keyword">fetch</span> 游标名 <span class="token keyword">into</span> 变量列表<span class="token punctuation">;</span>
+<span class="token comment">-- 游标关闭</span>
+<span class="token keyword">close</span> 游标名<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">返回值类型</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%found</td>
+<td align="center">boolean</td>
+<td align="center">最近的 <code>fetch</code> 语句返回一行数据则为真，否则为假</td>
+</tr>
+<tr>
+<td align="center">%notfound</td>
+<td align="center">boolean</td>
+<td align="center">与 <code>%found</code> 相反</td>
+</tr>
+</tbody></table>
+<p>实例：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">declare</span>
+  <span class="token comment">-- 声明游标</span>
+  <span class="token keyword">cursor</span> c_emp <span class="token operator">is</span> <span class="token keyword">select</span> emname<span class="token punctuation">,</span> emage <span class="token keyword">from</span> emp<span class="token punctuation">;</span>
+  v_emname emp<span class="token punctuation">.</span>emname<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">;</span>
+  v_emage emp<span class="token punctuation">.</span>emage<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token comment">-- 打开游标</span>
+  <span class="token keyword">open</span> c_emp<span class="token punctuation">;</span>
+    <span class="token keyword">loop</span>
+      <span class="token comment">-- 遍历游标</span>
+      <span class="token keyword">fetch</span> c_emp <span class="token keyword">into</span> v_emname<span class="token punctuation">,</span>v_emage<span class="token punctuation">;</span>
+      <span class="token comment">-- 满足条件推出循环</span>
+      <span class="token keyword">exit</span> <span class="token keyword">when</span> c_emp<span class="token operator">%</span>notfound<span class="token punctuation">;</span>
+      dbms_output<span class="token punctuation">.</span>putline<span class="token punctuation">(</span>v_emname <span class="token operator">||</span> <span class="token string">'-'</span> <span class="token operator">||</span> v_emage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span> <span class="token keyword">loop</span><span class="token punctuation">;</span>
+  <span class="token comment">-- 关闭游标</span>
+  <span class="token keyword">close</span> c_emp<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>注意：<code>fetch</code> 和 <code>exit when</code> 的顺序一定不能改变</strong></p>
+<h4 id="带参数的游标"><a href="#带参数的游标" class="headerlink" title="带参数的游标"></a>带参数的游标</h4><p>实例：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">declare</span>
+  <span class="token comment">-- 给游标添加参数，并给sql语句添加where条件</span>
+  <span class="token keyword">cursor</span> c_emp<span class="token punctuation">(</span>v_deptno emp<span class="token punctuation">.</span>deptno<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">)</span> <span class="token operator">is</span> <span class="token keyword">select</span> emname<span class="token punctuation">,</span> emage <span class="token keyword">from</span> emp <span class="token keyword">where</span> deptno <span class="token operator">=</span> v_deptno<span class="token punctuation">;</span>
+  v_emname emp<span class="token punctuation">.</span>emname<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">;</span>
+  v_emage emp<span class="token punctuation">.</span>emage<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">;</span>
+<span class="token keyword">begin</span>
+  <span class="token comment">-- 传入参数</span>
+  <span class="token keyword">open</span> c_emp<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">loop</span>
+      <span class="token keyword">fetch</span> c_emp <span class="token keyword">into</span> v_emname<span class="token punctuation">,</span>v_emage<span class="token punctuation">;</span>
+      <span class="token keyword">exit</span> <span class="token keyword">when</span> c_emp<span class="token operator">%</span>notfound<span class="token punctuation">;</span>
+      dbms_output<span class="token punctuation">.</span>putline<span class="token punctuation">(</span>v_emname <span class="token operator">||</span> <span class="token string">'-'</span> <span class="token operator">||</span> v_emage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">end</span> <span class="token keyword">loop</span><span class="token punctuation">;</span>
+  <span class="token keyword">close</span> c_emp<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h4><p>语法：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token operator">or</span> <span class="token keyword">replace</span> <span class="token keyword">procedure</span> 存储过程名<span class="token punctuation">(</span>参数列表<span class="token punctuation">)</span> <span class="token operator">is</span><span class="token operator">/</span><span class="token keyword">as</span>
+<span class="token comment">-- 注意：没有declare</span>
+<span class="token keyword">begin</span>
+<span class="token keyword">end</span> 存储过程名<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>定义存储过程：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token operator">or</span> <span class="token keyword">replace</span> <span class="token keyword">procedure</span> p_sayhello <span class="token operator">is</span>
+<span class="token keyword">begin</span>
+  dbms_output<span class="token punctuation">.</span>putline<span class="token punctuation">(</span><span class="token string">'hello world!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> p_sayhello<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在 PL/SQL 中调用存储过程：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">begin</span>
+  p_sayhello<span class="token punctuation">;</span>
+<span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>在命令行中调用存储过程：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">exec</span> p_sayhello<span class="token punctuation">;</span>
+
+<span class="token comment">-- 开启输出语句的开关</span>
+<span class="token keyword">set</span> serveroutput <span class="token keyword">on</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="带输入参数的存储过程"><a href="#带输入参数的存储过程" class="headerlink" title="带输入参数的存储过程"></a>带输入参数的存储过程</h4><p>定义存储过程：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token operator">or</span> <span class="token keyword">replace</span> <span class="token keyword">procedure</span> p_getinfo<span class="token punctuation">(</span>i_emcode <span class="token operator">in</span> emp<span class="token punctuation">.</span>emcode<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">)</span> <span class="token operator">is</span>
+v_name emp<span class="token punctuation">.</span>emname<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">;</span>
+v_age emp<span class="token punctuation">.</span>emage<span class="token operator">%</span><span class="token keyword">type</span>
+<span class="token keyword">begin</span>
+  <span class="token keyword">select</span> emname<span class="token punctuation">,</span>emage <span class="token keyword">into</span> v_name<span class="token punctuation">,</span>v_age <span class="token keyword">from</span> emp <span class="token keyword">where</span> emcode <span class="token operator">=</span> i_emcode<span class="token punctuation">;</span>
+  dbms_output<span class="token punctuation">.</span>putline<span class="token punctuation">(</span>v_name <span class="token operator">||</span> <span class="token string">'-'</span> <span class="token operator">||</span> v_age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span> p_getinfo<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>调用存储过程：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">begin</span>  p_getinfo<span class="token punctuation">(</span><span class="token number">120560</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="带输出参数的存储过程"><a href="#带输出参数的存储过程" class="headerlink" title="带输出参数的存储过程"></a>带输出参数的存储过程</h4><p>定义存储过程：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token operator">or</span> <span class="token keyword">replace</span> <span class="token keyword">procedure</span> p_getinfo_out<span class="token punctuation">(</span>i_emcode <span class="token operator">in</span> emp<span class="token punctuation">.</span>emcode<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">,</span> o_emname <span class="token keyword">out</span> emp<span class="token punctuation">.</span>emname<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">)</span> isbegin  <span class="token keyword">select</span> emname <span class="token keyword">into</span> o_emname <span class="token keyword">from</span> emp <span class="token keyword">where</span> emcode <span class="token operator">=</span> i_emcode<span class="token punctuation">;</span><span class="token keyword">end</span> p_getinfo_out<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>调用存储过程：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">declare</span>  v_name emp<span class="token punctuation">.</span>emname<span class="token operator">%</span><span class="token keyword">type</span><span class="token punctuation">;</span><span class="token keyword">begin</span>  p_getinfo_out<span class="token punctuation">(</span><span class="token number">120560</span><span class="token punctuation">,</span> v_name<span class="token punctuation">)</span><span class="token punctuation">;</span>  dbms_output<span class="token punctuation">.</span>putline<span class="token punctuation">(</span>v_name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">end</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      <tags>
+        <tag>Oracle</tag>
+        <tag>存储过程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微软输入法相关</title>
     <url>/posts/db8b.html</url>
     <content><![CDATA[<h4 id="自学习功能失效"><a href="#自学习功能失效" class="headerlink" title="自学习功能失效"></a>自学习功能失效</h4><p>在使用微软输入法打字的时候突然发现学习记忆的功能失效了，也就是当我第一次用拼音打出来了一个词语之后，第二次打出相同的拼音，在选择的界面却没有出现第一次已经打过的词语，而是每次都是推荐相同的单词供选择。</p>
