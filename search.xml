@@ -436,9 +436,10 @@ v_age emp<span class="token punctuation">.</span>emage<span class="token operato
   <entry>
     <title>微软输入法相关</title>
     <url>/posts/db8b.html</url>
-    <content><![CDATA[<h4 id="自学习功能失效"><a href="#自学习功能失效" class="headerlink" title="自学习功能失效"></a>自学习功能失效</h4><p>在使用微软输入法打字的时候突然发现学习记忆的功能失效了，也就是当我第一次用拼音打出来了一个词语之后，第二次打出相同的拼音，在选择的界面却没有出现第一次已经打过的词语，而是每次都是推荐相同的单词供选择。</p>
+    <content><![CDATA[<p>这篇博客记录一下我在使用微软输入法时遇到的一些问题。之前一直用的搜狗输入法，换了个笔记本后没有安装搜狗，发现微软自带的输入法太好用了，功能很简洁，没有一些搜狗那些花里胡哨的东西，很实用。在使用的过程中也遇到了一些问题，顺便记录一下。</p>
 <a id="more"></a>
 
+<h4 id="自学习功能失效"><a href="#自学习功能失效" class="headerlink" title="自学习功能失效"></a>自学习功能失效</h4><p>在使用微软输入法打字的时候突然发现学习记忆的功能失效了，也就是当我第一次用拼音打出来了一个词语之后，第二次打出相同的拼音，在选择的界面却没有出现第一次已经打过的词语，而是每次都是推荐相同的单词供选择。</p>
 <p>在网上查找后，说是要开启自学习功能，按照教程一步步操作打开了词库和自学习的界面，发现自学习功能已经处于开启状态，重新开启和关闭后还是没有效果。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20210928205948.png" alt="image-20210928205941556"></p>
 <p>然后自己到处摸索，点进了微软拼音下的“常规”，滑到最下面发现有个“兼容性”没打开，开启之后成功解决了我的问题。应该是哪次系统安装的更新中有微软输入法相关的升级，而我的电脑不支持这个新版本导致的。</p>
@@ -4199,6 +4200,60 @@ C:<span class="token punctuation">\</span>Users<span class="token punctuation">\
 <h4 id="在标签-分类页添加引用"><a href="#在标签-分类页添加引用" class="headerlink" title="在标签/分类页添加引用"></a>在标签/分类页添加引用</h4><p>在 <code>themes\next\layout\_partials\page</code> 目录下的 <code>categories.njk</code> 和 <code>tags.njk</code> 里加上：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blockquote-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>请你一定不要停下来，成为你想成为的人。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><code>&lt;blockquote&gt;</code> 标签在所有的 markdown 文档中都可以添加。<br>效果图如下：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/image-20210427210333655.png" alt="image-20210427210333655"></p>
+<h4 id="浮层样式集合"><a href="#浮层样式集合" class="headerlink" title="浮层样式集合"></a>浮层样式集合</h4><p>在 <code>source\_data\footer.njk</code> 文件中，添加下面的代码即可实现对应的样式。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 浮层上出现🌸飘落 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/sakura.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 鼠标痕迹星星坠落 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.1.2/js/cursor.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 鼠标点击出现爱心 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 背景中出现飘动的彩带 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/piao.js"</span> type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="样式的修改"><a href="#样式的修改" class="headerlink" title="样式的修改"></a>样式的修改</h4><ol>
+<li>去掉博客顶部的黑线</li>
+</ol>
+<p>根据<strong>主题配置文件</strong> <code>_config.yml</code> 里设置的主题，在 <code>themes\next\source\css\_schemes</code> 目录下，找到对应主题的 <code>index.styl</code> 样式文件。例如我设置的主题是 Gemini，那么我的主题样式文件的路径就是 <code>themes\next\source\css\_schemes\Gemini\index.styl</code>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20211003193134.png" alt="image-20211003193127903"></p>
+<p>找到这个文件后，在最后面添加上如下的样式：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">// 黑线的类名就是 headband，可以通过在浏览器中按 F12 找到
+.headband</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="2">
+<li>添加圆角</li>
+</ol>
+<p>同样是修改 <code>themes\next\source\css\_schemes\Gemini\index.styl</code> 文件，把 <code>border-radius: $border-radius-inner;</code> 和 <code>border-radius: $border-radius;</code> 改为 <code>border-radius: 5px;</code></p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.main-inner ></span> <span class="token punctuation">&#123;</span>
+  <span class="token selector">.sub-menu, .post-block, .tabs-comment, .comments, .pagination</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--content-bg-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    // 第一处修改
+    // <span class="token property">border-radius</span><span class="token punctuation">:</span> $border-radius-inner<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> $box-shadow-inner<span class="token selector">;
+
+    &amp;:not(:first-child):not(.sub-menu)</span> <span class="token punctuation">&#123;</span>
+      // 第二处修改
+      // <span class="token property">border-radius</span><span class="token punctuation">:</span> $border-radius<span class="token punctuation">;</span>
+      <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+      <span class="token property">box-shadow</span><span class="token punctuation">:</span> $box-shadow<span class="token punctuation">;</span>
+      <span class="token property">margin-top</span><span class="token punctuation">:</span> $sidebar-offset<span class="token selector">;
+
+      +tablet()</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> $content-tablet-padding<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+
+      <span class="token selector">+mobile()</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> $content-mobile-padding<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在最后面添加如下代码，这是给侧边栏也添加上圆角。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.sidebar-inner, .header-inner, .site-brand-container</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
 ]]></content>
       <categories>
         <category>博客搭建</category>
