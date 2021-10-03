@@ -1835,7 +1835,7 @@ pre code {
   z-index: 1500;
 }
 .reading-progress-bar {
-  background: #448aff;
+  background: #5192FE;
   height: 3px;
   left: 0;
   position: fixed;
@@ -2993,4 +2993,31 @@ mark.search-keyword {
 .site-brand-container,
 .line-numbers {
   border-radius: 5px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-button:start:increment,
+::-webkit-scrollbar-button:end:decrement {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  display: block;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #5192fe;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.1);
 }
