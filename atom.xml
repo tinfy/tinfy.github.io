@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-10-06T14:37:06.865Z</updated>
+  <updated>2021-10-11T15:25:39.617Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Prop基础用法</title>
+    <link href="https://www.tongjiebin.cn/posts/f9d.html"/>
+    <id>https://www.tongjiebin.cn/posts/f9d.html</id>
+    <published>2021-10-07T14:57:15.000Z</published>
+    <updated>2021-10-11T15:25:39.617Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;Prop-的大小写&quot;&gt;&lt;a href=&quot;#Prop-的大小写&quot; class=&quot;headerlink&quot; title=&quot;Prop 的大小写&quot;&gt;&lt;/a&gt;Prop 的大小写&lt;/h4&gt;&lt;p&gt;在 HTML 标签中的属性名是大小写不敏感的，浏览器会自动把大写字符解释为小写字符。所以如果你在组件的prop中使用的是&lt;em&gt;驼峰命名规则&lt;/em&gt;：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-js&quot; data-language=&quot;js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;Vue&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;blog-post&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// 在 JavaScript 中是 camelCase 的&lt;/span&gt;
+  props&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;postTitle&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  template&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;&amp;lt;h3&gt;&amp;#123;&amp;#123; postTitle &amp;#125;&amp;#125;&amp;lt;/h3&gt;&#39;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue" scheme="https://www.tongjiebin.cn/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue组件注册</title>
@@ -492,32 +516,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     
     <summary type="html">&lt;h2 id=&quot;执行期上下文&quot;&gt;&lt;a href=&quot;#执行期上下文&quot; class=&quot;headerlink&quot; title=&quot;执行期上下文&quot;&gt;&lt;/a&gt;执行期上下文&lt;/h2&gt;&lt;p&gt;当&lt;strong&gt;函数执行&lt;/strong&gt;时（准确来说，是在函数发生预编译的前一刻），会创建一个执行期上下文的内部对象。一个执行期上下文定义了一个函数执行时的环境。&lt;/p&gt;
 &lt;p&gt;每调用一次函数，就会创建一个新的上下文对象，他们之间是相互独立且独一无二的。当函数执行完毕，它所产生的执行期上下文会被销毁。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript预编译</title>
-    <link href="https://www.tongjiebin.cn/posts/68e8.html"/>
-    <id>https://www.tongjiebin.cn/posts/68e8.html</id>
-    <published>2021-06-16T14:28:01.000Z</published>
-    <updated>2021-06-16T14:35:02.786Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;我们在上一篇文章《作用域》中简单讲过“变量提升”，今天来讲一下预编译，这对我们深入理解变量提升会有帮助。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;JavaScript-运行三部曲&quot;&gt;&lt;a href=&quot;#JavaScript-运行三部曲&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 运行三部曲&quot;&gt;&lt;/a&gt;JavaScript 运行三部曲&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;语法分析&lt;/li&gt;
-&lt;li&gt;预编译&lt;/li&gt;
-&lt;li&gt;解释执行&lt;/li&gt;
-&lt;/ul&gt;</summary>
     
     
     
