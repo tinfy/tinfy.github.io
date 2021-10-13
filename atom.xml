@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-10-11T15:25:39.617Z</updated>
+  <updated>2021-10-12T13:54:22.497Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.tongjiebin.cn/posts/f9d.html"/>
     <id>https://www.tongjiebin.cn/posts/f9d.html</id>
     <published>2021-10-07T14:57:15.000Z</published>
-    <updated>2021-10-11T15:25:39.617Z</updated>
+    <updated>2021-10-12T13:54:22.497Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;Prop-的大小写&quot;&gt;&lt;a href=&quot;#Prop-的大小写&quot; class=&quot;headerlink&quot; title=&quot;Prop 的大小写&quot;&gt;&lt;/a&gt;Prop 的大小写&lt;/h4&gt;&lt;p&gt;在 HTML 标签中的属性名是大小写不敏感的，浏览器会自动把大写字符解释为小写字符。所以如果你在组件的prop中使用的是&lt;em&gt;驼峰命名规则&lt;/em&gt;：&lt;/p&gt;
@@ -92,7 +92,7 @@
     <link href="https://www.tongjiebin.cn/posts/fe64.html"/>
     <id>https://www.tongjiebin.cn/posts/fe64.html</id>
     <published>2021-10-04T14:48:42.000Z</published>
-    <updated>2021-10-04T14:55:03.353Z</updated>
+    <updated>2021-10-13T15:01:02.590Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;基本示例&quot;&gt;&lt;a href=&quot;#基本示例&quot; class=&quot;headerlink&quot; title=&quot;基本示例&quot;&gt;&lt;/a&gt;基本示例&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-javascript&quot; data-language=&quot;javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;DOCTYPE&lt;/span&gt; html&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
