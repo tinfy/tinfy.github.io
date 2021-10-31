@@ -661,5 +661,16 @@ NexT.utils.loadComments('.utterances-container', () => {
 
   <!-- 雪花特效 -->
   
+
+  <script type="text/javascript">
+      var OriginTitile = document.title,
+          st;
+      document.addEventListener("visibilitychange", function () {
+          document.hidden ? (document.title = "╭(°A°`)╮ 页面崩溃啦 ~", clearTimeout(st)) : (document.title =
+              "(ฅ>ω<*ฅ) 噫又好了~", st = setTimeout(function () {
+                  document.title = OriginTitile
+              }, 2000))
+      })
+  </script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":0.85,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false,"scale":0.5},"dialog":{"enable":false,"hitokoto":false},"log":false});</script><script>window.addEventListener('scroll', function() {if (window.pageYOffset>100 &&window.pageYOffset<300){(function(w,d, s, id) {w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.src = 'https://cdn.webpushr.com/app.min.js';fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('init','BKJaicj1PliLxvS9yYjFQa6NcMUtzQm2EmulpN8SnZ87WqvNSUZJ1TsU57PcDJQLS7zJXV_xDHGoKTjQA9nOs04');}});</script></body>
 </html>
