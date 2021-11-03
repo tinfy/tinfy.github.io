@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-10-12T13:54:22.497Z</updated>
+  <updated>2021-11-03T12:39:36.253Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jsDelivr+GitHub+PicGo实现免费CDN加速博客静态资源</title>
+    <link href="https://www.tongjiebin.cn/posts/db9b.html"/>
+    <id>https://www.tongjiebin.cn/posts/db9b.html</id>
+    <published>2021-11-02T13:57:52.000Z</published>
+    <updated>2021-11-03T12:39:36.253Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;新建-GitHub-仓库&quot;&gt;&lt;a href=&quot;#新建-GitHub-仓库&quot; class=&quot;headerlink&quot; title=&quot;新建 GitHub 仓库&quot;&gt;&lt;/a&gt;新建 GitHub 仓库&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Repository name&lt;/code&gt; 为仓库名，&lt;code&gt;Description&lt;/code&gt; 为仓库描述，可以不填，选择为 &lt;code&gt;Public&lt;/code&gt; 仓库，勾选上 &lt;code&gt;Add a README file&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/tinfy/blog-images/img/20211102220233.png&quot; alt=&quot;image-20211102220233727&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="GitHub" scheme="https://www.tongjiebin.cn/tags/GitHub/"/>
+    
+    <category term="jsDelivr" scheme="https://www.tongjiebin.cn/tags/jsDelivr/"/>
+    
+    <category term="CDN" scheme="https://www.tongjiebin.cn/tags/CDN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jsDelivr+GitHub+PicGo实现免费CDN加速博客静态资源</title>
+    <link href="https://www.tongjiebin.cn/posts/db9b.html"/>
+    <id>https://www.tongjiebin.cn/posts/db9b.html</id>
+    <published>2021-11-02T13:57:52.000Z</published>
+    <updated>2021-11-03T12:02:09.293Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;新建-GitHub-仓库&quot;&gt;&lt;a href=&quot;#新建-GitHub-仓库&quot; class=&quot;headerlink&quot; title=&quot;新建 GitHub 仓库&quot;&gt;&lt;/a&gt;新建 GitHub 仓库&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Repository name&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="GitHub" scheme="https://www.tongjiebin.cn/tags/GitHub/"/>
+    
+    <category term="jsDelivr" scheme="https://www.tongjiebin.cn/tags/jsDelivr/"/>
+    
+    <category term="CDN" scheme="https://www.tongjiebin.cn/tags/CDN/"/>
+    
+  </entry>
   
   <entry>
     <title>Prop基础用法</title>
@@ -169,7 +222,7 @@
     <link href="https://www.tongjiebin.cn/posts/db8b.html"/>
     <id>https://www.tongjiebin.cn/posts/db8b.html</id>
     <published>2021-09-28T13:35:55.000Z</published>
-    <updated>2021-10-03T09:02:34.848Z</updated>
+    <updated>2021-11-03T12:02:09.327Z</updated>
     
     
     <summary type="html">&lt;p&gt;这篇博客记录一下我在使用微软输入法时遇到的一些问题。之前一直用的搜狗输入法，换了个笔记本后没有安装搜狗，发现微软自带的输入法太好用了，功能很简洁，没有一些搜狗那些花里胡哨的东西，很实用。在使用的过程中也遇到了一些问题，顺便记录一下。&lt;/p&gt;</summary>
@@ -260,7 +313,7 @@
     <link href="https://www.tongjiebin.cn/posts/21a6.html"/>
     <id>https://www.tongjiebin.cn/posts/21a6.html</id>
     <published>2021-08-20T13:47:19.000Z</published>
-    <updated>2021-08-22T15:50:45.966Z</updated>
+    <updated>2021-11-03T12:02:09.144Z</updated>
     
     
     <summary type="html">&lt;p&gt;在css2.1中，background属性有以下几种：&lt;/p&gt;
@@ -313,7 +366,7 @@
     <link href="https://www.tongjiebin.cn/posts/816a.html"/>
     <id>https://www.tongjiebin.cn/posts/816a.html</id>
     <published>2021-08-08T03:59:32.000Z</published>
-    <updated>2021-08-29T13:01:53.640Z</updated>
+    <updated>2021-11-03T12:02:09.281Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;下载压缩包并解压&quot;&gt;&lt;a href=&quot;#下载压缩包并解压&quot; class=&quot;headerlink&quot; title=&quot;下载压缩包并解压&quot;&gt;&lt;/a&gt;下载压缩包并解压&lt;/h4&gt;&lt;p&gt;前往&lt;a href=&quot;https://dev.mysql.com/downloads/mysql/&quot;&gt;mysql官网&lt;/a&gt;下载压缩包&lt;/p&gt;</summary>
@@ -332,7 +385,7 @@
     <link href="https://www.tongjiebin.cn/posts/651a.html"/>
     <id>https://www.tongjiebin.cn/posts/651a.html</id>
     <published>2021-08-01T03:06:08.000Z</published>
-    <updated>2021-08-01T14:18:36.911Z</updated>
+    <updated>2021-11-03T12:02:09.368Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;p&gt;跨域资源共享（Cross-Origin Resource Sharing）是W3C的一个标准，定义了在必须访问跨源资源时，浏览器和服务器应该如何沟通。&lt;/p&gt;</summary>
@@ -353,7 +406,7 @@
     <link href="https://www.tongjiebin.cn/posts/4415.html"/>
     <id>https://www.tongjiebin.cn/posts/4415.html</id>
     <published>2021-07-31T09:13:45.000Z</published>
-    <updated>2021-07-31T10:06:28.958Z</updated>
+    <updated>2021-11-03T12:02:09.274Z</updated>
     
     
     <summary type="html">&lt;p&gt;Vue实例的生命周期：Vue实例从创建、运行到销毁的各个阶段，就统称为生命周期。&lt;/p&gt;
@@ -373,7 +426,7 @@
     <link href="https://www.tongjiebin.cn/posts/ef19.html"/>
     <id>https://www.tongjiebin.cn/posts/ef19.html</id>
     <published>2021-07-18T07:47:09.000Z</published>
-    <updated>2021-07-18T09:19:10.095Z</updated>
+    <updated>2021-11-03T12:02:09.229Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;默认情况下，通过XHR实现ajax通信时会有一个限制，就是只能访问同一个域中的资源。同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。&lt;/p&gt;</summary>
@@ -396,7 +449,7 @@
     <link href="https://www.tongjiebin.cn/posts/5e70.html"/>
     <id>https://www.tongjiebin.cn/posts/5e70.html</id>
     <published>2021-07-18T00:08:39.000Z</published>
-    <updated>2021-08-09T16:05:44.853Z</updated>
+    <updated>2021-11-03T12:02:09.255Z</updated>
     
     
     <summary type="html">&lt;ol&gt;
@@ -441,7 +494,7 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     <link href="https://www.tongjiebin.cn/posts/7025.html"/>
     <id>https://www.tongjiebin.cn/posts/7025.html</id>
     <published>2021-06-22T14:01:51.000Z</published>
-    <updated>2021-06-26T09:25:42.200Z</updated>
+    <updated>2021-11-03T12:02:09.301Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;offset家族的组成&quot;&gt;&lt;a href=&quot;#offset家族的组成&quot; class=&quot;headerlink&quot; title=&quot;offset家族的组成&quot;&gt;&lt;/a&gt;offset家族的组成&lt;/h3&gt;&lt;p&gt;offset 的中文是偏移，补偿，位移。&lt;/p&gt;
@@ -468,7 +521,7 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     <link href="https://www.tongjiebin.cn/posts/5e54.html"/>
     <id>https://www.tongjiebin.cn/posts/5e54.html</id>
     <published>2021-06-16T14:39:27.000Z</published>
-    <updated>2021-08-30T13:14:43.453Z</updated>
+    <updated>2021-11-03T12:02:09.340Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;闭包的引入&quot;&gt;&lt;a href=&quot;#闭包的引入&quot; class=&quot;headerlink&quot; title=&quot;闭包的引入&quot;&gt;&lt;/a&gt;闭包的引入&lt;/h2&gt;&lt;p&gt;我们知道，变量根据作用域的不同分为两种：全局变量和局部变量。&lt;/p&gt;
@@ -477,45 +530,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
 &lt;li&gt;函数外部只能访问全局变量，不能访问局部变量。&lt;/li&gt;
 &lt;li&gt;当函数执行完毕，本作用域内的局部变量会销毁。&lt;/li&gt;
 &lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript中call、apply和bind方法</title>
-    <link href="https://www.tongjiebin.cn/posts/fea3.html"/>
-    <id>https://www.tongjiebin.cn/posts/fea3.html</id>
-    <published>2021-06-16T14:37:10.000Z</published>
-    <updated>2021-06-16T14:41:23.536Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;JS 专门为我们提供了一些方法来改变函数内部的 this 指向。常见的方法有 call()、apply()、bind() 方法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript中this指向</title>
-    <link href="https://www.tongjiebin.cn/posts/84b1.html"/>
-    <id>https://www.tongjiebin.cn/posts/84b1.html</id>
-    <published>2021-06-16T14:31:15.000Z</published>
-    <updated>2021-08-30T14:44:58.796Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;执行期上下文&quot;&gt;&lt;a href=&quot;#执行期上下文&quot; class=&quot;headerlink&quot; title=&quot;执行期上下文&quot;&gt;&lt;/a&gt;执行期上下文&lt;/h2&gt;&lt;p&gt;当&lt;strong&gt;函数执行&lt;/strong&gt;时（准确来说，是在函数发生预编译的前一刻），会创建一个执行期上下文的内部对象。一个执行期上下文定义了一个函数执行时的环境。&lt;/p&gt;
-&lt;p&gt;每调用一次函数，就会创建一个新的上下文对象，他们之间是相互独立且独一无二的。当函数执行完毕，它所产生的执行期上下文会被销毁。&lt;/p&gt;</summary>
     
     
     
