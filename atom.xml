@@ -41,35 +41,6 @@
   </entry>
   
   <entry>
-    <title>jsDelivr+GitHub+PicGo实现免费CDN加速博客静态资源</title>
-    <link href="https://www.tongjiebin.cn/posts/db9b.html"/>
-    <id>https://www.tongjiebin.cn/posts/db9b.html</id>
-    <published>2021-11-02T13:57:52.000Z</published>
-    <updated>2021-11-03T12:02:09.293Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;新建-GitHub-仓库&quot;&gt;&lt;a href=&quot;#新建-GitHub-仓库&quot; class=&quot;headerlink&quot; title=&quot;新建 GitHub 仓库&quot;&gt;&lt;/a&gt;新建 GitHub 仓库&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Repository name&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="GitHub" scheme="https://www.tongjiebin.cn/tags/GitHub/"/>
-    
-    <category term="jsDelivr" scheme="https://www.tongjiebin.cn/tags/jsDelivr/"/>
-    
-    <category term="CDN" scheme="https://www.tongjiebin.cn/tags/CDN/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Prop基础用法</title>
     <link href="https://www.tongjiebin.cn/posts/f9d.html"/>
     <id>https://www.tongjiebin.cn/posts/f9d.html</id>
@@ -530,6 +501,25 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
 &lt;li&gt;函数外部只能访问全局变量，不能访问局部变量。&lt;/li&gt;
 &lt;li&gt;当函数执行完毕，本作用域内的局部变量会销毁。&lt;/li&gt;
 &lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript中call、apply和bind方法</title>
+    <link href="https://www.tongjiebin.cn/posts/fea3.html"/>
+    <id>https://www.tongjiebin.cn/posts/fea3.html</id>
+    <published>2021-06-16T14:37:10.000Z</published>
+    <updated>2021-06-16T14:41:23.536Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;JS 专门为我们提供了一些方法来改变函数内部的 this 指向。常见的方法有 call()、apply()、bind() 方法。&lt;/p&gt;</summary>
     
     
     
