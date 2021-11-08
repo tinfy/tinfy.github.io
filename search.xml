@@ -2768,20 +2768,12 @@ snow<span class="token punctuation">.</span><span class="token function">start</
 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> cache <span class="token string">"D:<span class="token entity" title="\n">\n</span>odejs<span class="token entity" title="\n">\n</span>ode_cache"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 <li>进入电脑的环境变量属性，把<strong>用户变量</strong>里的 Path 变量中的 nodejs 默认的路径改为：<code>D:\nodejs\node_global</code>，如果 Path 变量里没有对应的值则点击“新建”，把 <code>D:\nodejs\node_global</code> 添加进去。<br> <img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232451.png" alt="image-20210915232444030"></li>
 <li>新增一个<strong>系统变量</strong>，变量名为：<code>NODE_PATH</code>，变量值为：<code>D:\nodejs\node_global\node_modules</code>，设置如图所示：<br> <img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232557.png" alt="image-20210915232557645"></li>
-<li>测试：在命令窗口中，输入如下命令，尝试安装 express 模块：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> express -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p><strong>出现的问题：</strong>在执行 <code>npm install express -g</code> 命令时如果出现错误，可以先通过下面的命令设置镜像服务器，再尝试安装express模块：</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry http://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>npm 的配置文件路径：<code>C:\Users\&lt;UserName&gt;\.npmrc</code>，打开这个文件，可以看到里面的配置如下：</li>
+<li>安装 cnpm，设置淘宝镜像源：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npmmirror.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>使用 cnpm 命令尝试安装 express 模块：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> express -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>npm 的配置文件路径：<code>C:\Users\&lt;UserName&gt;\.npmrc</code>，打开这个文件，可以看到里面的配置如下：<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">prefix&#x3D;D:\nodejs\node_global
+cache&#x3D;D:\nodejs\node_cache<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 </ol>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">prefix&#x3D;D:\nodejs\node_global
-cache&#x3D;D:\nodejs\node_cache
-registry&#x3D;http:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-<hr>
-<p>参考文档：<a href="https://www.cnblogs.com/liuqiyun/p/8133904.html">https://www.cnblogs.com/liuqiyun/p/8133904.html</a></p>
 ]]></content>
       <categories>
         <category>安装教程</category>
@@ -4704,7 +4696,7 @@ storage<span class="token punctuation">.</span><span class="token function">getA
 <ol start="7">
 <li>安装 <code>cnpm</code>，使用淘宝镜像源</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npmmirror.com
 cnpm <span class="token function">install</span> 模块名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ol start="8">
 <li>查看当前项目的所有 <code>npm</code> 脚本命令</li>
