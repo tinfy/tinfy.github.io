@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-11-05T12:49:03.960Z</updated>
+  <updated>2021-11-14T14:56:58.140Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.tongjiebin.cn/posts/db9b.html"/>
     <id>https://www.tongjiebin.cn/posts/db9b.html</id>
     <published>2021-11-02T13:57:52.000Z</published>
-    <updated>2021-11-05T12:49:03.960Z</updated>
+    <updated>2021-11-14T14:56:58.140Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;新建-GitHub-仓库&quot;&gt;&lt;a href=&quot;#新建-GitHub-仓库&quot; class=&quot;headerlink&quot; title=&quot;新建 GitHub 仓库&quot;&gt;&lt;/a&gt;新建 GitHub 仓库&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Repository name&lt;/code&gt; 为仓库名，&lt;code&gt;Description&lt;/code&gt; 为仓库描述，可以不填，选择为 &lt;code&gt;Public&lt;/code&gt; 仓库，勾选上 &lt;code&gt;Add a README file&lt;/code&gt;。&lt;/p&gt;</summary>
@@ -44,10 +44,10 @@
     <link href="https://www.tongjiebin.cn/posts/f9d.html"/>
     <id>https://www.tongjiebin.cn/posts/f9d.html</id>
     <published>2021-10-07T14:57:15.000Z</published>
-    <updated>2021-10-12T13:54:22.497Z</updated>
+    <updated>2021-11-10T15:33:25.302Z</updated>
     
     
-    <summary type="html">&lt;h4 id=&quot;Prop-的大小写&quot;&gt;&lt;a href=&quot;#Prop-的大小写&quot; class=&quot;headerlink&quot; title=&quot;Prop 的大小写&quot;&gt;&lt;/a&gt;Prop 的大小写&lt;/h4&gt;&lt;p&gt;在 HTML 标签中的属性名是大小写不敏感的，浏览器会自动把大写字符解释为小写字符。所以如果你在组件的prop中使用的是&lt;em&gt;驼峰命名规则&lt;/em&gt;：&lt;/p&gt;
+    <summary type="html">&lt;h4 id=&quot;Prop-的大小写&quot;&gt;&lt;a href=&quot;#Prop-的大小写&quot; class=&quot;headerlink&quot; title=&quot;Prop 的大小写&quot;&gt;&lt;/a&gt;Prop 的大小写&lt;/h4&gt;&lt;p&gt;在 HTML 标签中的属性名是大小写不敏感的，浏览器会自动把大写字符解释为小写字符。所以如果你在组件的 prop 中使用的是&lt;em&gt;驼峰命名规则&lt;/em&gt;：&lt;/p&gt;
 &lt;pre class=&quot;line-numbers language-js&quot; data-language=&quot;js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;Vue&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;blog-post&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
   &lt;span class=&quot;token comment&quot;&gt;// 在 JavaScript 中是 camelCase 的&lt;/span&gt;
   props&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;postTitle&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
