@@ -23,26 +23,18 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"www.tongjiebin.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="下载压缩包并解压前往mysql官网下载压缩包">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Win10下安装MySQL">
-<meta property="og:url" content="https://www.tongjiebin.cn/posts/816a.html">
+<meta name="description" content="不忘初心，方得始终">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tong jiebin&#39;s Blog">
+<meta property="og:url" content="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/page/5/index.html">
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
-<meta property="og:description" content="下载压缩包并解压前往mysql官网下载压缩包">
+<meta property="og:description" content="不忘初心，方得始终">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210808120420.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210808120716.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210808151656.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210808151844.png">
-<meta property="article:published_time" content="2021-08-08T03:59:32.000Z">
-<meta property="article:modified_time" content="2021-11-03T12:02:09.281Z">
 <meta property="article:author" content="Tong jiebin">
-<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210808120420.png">
 
 
-<link rel="canonical" href="https://www.tongjiebin.cn/posts/816a.html">
+<link rel="canonical" href="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/page/5/">
 
 
 <script class="page-configurations">
@@ -50,11 +42,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'zh-CN'
   };
 </script>
-<title>Win10下安装MySQL | Tong jiebin's Blog</title>
+<title>分类: Web前端 | Tong jiebin's Blog</title>
   
 
   <script>
@@ -188,7 +180,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -201,7 +193,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%B9%B6%E8%A7%A3%E5%8E%8B"><span class="nav-number">1.</span> <span class="nav-text">下载压缩包并解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-%E8%BF%99%E4%B8%AA%E6%AD%A5%E9%AA%A4%E8%B2%8C%E4%BC%BC%E4%B8%8D%E9%9C%80%E8%A6%81"><span class="nav-number">3.</span> <span class="nav-text">添加配置文件(这个步骤貌似不需要)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85mysql"><span class="nav-number">4.</span> <span class="nav-text">安装mysql</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%EF%BC%8C%E7%99%BB%E5%BD%95mysql"><span class="nav-number">5.</span> <span class="nav-text">启动，登录mysql</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">6.</span> <span class="nav-text">相关命令</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -271,224 +262,53 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner category posts-collapse">
 
 
   
-
-
-<div class="post-block">
   
   
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h2 class="collection-header">Web前端
+          <small>分类</small>
+        </h2>
+      </div>
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/816a.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
-      <meta itemprop="name" content="Tong jiebin">
-      <meta itemprop="description" content="不忘初心，方得始终">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tong jiebin's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Win10下安装MySQL
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-  
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-08-08 11:59:32" itemprop="dateCreated datePublished" datetime="2021-08-08T11:59:32+08:00">2021-08-08</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-11-03 20:02:09" itemprop="dateModified" datetime="2021-11-03T20:02:09+08:00">2021-11-03</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">安装教程</span></a>
-        </span>
-    </span>
-
-  
-    <!--span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;"-->
-    <span class="post-meta-item" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h4 id="下载压缩包并解压"><a href="#下载压缩包并解压" class="headerlink" title="下载压缩包并解压"></a>下载压缩包并解压</h4><p>前往<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">mysql官网</a>下载压缩包</p>
-<a id="more"></a>
-
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210808120420.png" alt="image-20210808120413329"></p>
-<p>在D盘创建文件夹，命名为<code>mysql</code>，把下载的mysql-8.0.26-winx64.zip文件解压到<code>D:/mysql</code>目录中。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210808120716.png" alt="image-20210808120716873"></p>
-<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><p>打开环境变量界面，找到<strong>系统变量</strong>里的<code>path</code>变量，点击“编辑”。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210808151656.png" alt="image-20210808151656427"></p>
-<p>在最后加上<code>D:\mysql\mysql-8.0.26-winx64\bin</code>，也就是你的mysql解压后<code>bin</code>文件夹所在的路径。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210808151844.png" alt="image-20210808151844781"></p>
-<h4 id="添加配置文件-这个步骤貌似不需要"><a href="#添加配置文件-这个步骤貌似不需要" class="headerlink" title="添加配置文件(这个步骤貌似不需要)"></a>添加配置文件(这个步骤貌似不需要)</h4><p>在D:\mysql\mysql-8.0.26-winx64目录中，新建一个文件为<code>my.ini</code>，<strong>注意：是文件名称为<code>my</code>，类型为<code>ini</code>。</strong></p>
-<p>打开<code>my.ini</code>，复制粘贴下面的内容：</p>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">[mysqld]
-#设置3306端口
-port&#x3D;3306
-#设置mysql的安装目录
-basedir&#x3D;D:\mysql\mysql-8.0.26-winx64
-#设置mysql数据库的数据的存放目录
-datadir&#x3D;D:\mysql\mysql-8.0.26-winx64\data
-#允许最大连接数
-max_connections&#x3D;200
-#允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统
-max_connect_errors&#x3D;10
-#服务端使用的字符集默认为UTF8
-character-set-server&#x3D;utf8
-#创建新表时将使用的默认存储引擎
-default-storage-engine&#x3D;INNODB
-#默认使用“mysql_native_password”插件认证
-default_authentication_plugin&#x3D;mysql_native_password
-
-[mysql]
-#设置mysql客户端默认字符集
-default-character-set&#x3D;utf8
-[client]
-#设置mysql客户端连接服务端时默认使用的端口
-port&#x3D;3306
-default-character-set&#x3D;utf8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>注意：第5行<code>basedir=</code>后面的值为  mysql-8.0.26-winx64文件所在的路径，第7行<code>datadir=</code>后面的值为  mysql-8.0.26-winx64文件所在的路径 + <code>\data</code>。</strong></p>
-<h4 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h4><p>以管理员身份运行power shell或者命令提示符，依次执行下面的命令：</p>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">#第一步
-mysqld --initialize-insecure --user&#x3D;mysql
-#第二步
-mysqld -install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>看到<code>Service successfully installed.</code>则表示安装成功。</p>
-<h4 id="启动，登录mysql"><a href="#启动，登录mysql" class="headerlink" title="启动，登录mysql"></a>启动，登录mysql</h4><ol>
-<li>执行<code>net start mysql</code>命令启动mysql服务：</li>
-</ol>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">PS C:\Windows\system32&gt; net start mysql
-MySQL 服务正在启动 .
-MySQL 服务已经启动成功。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<ol start="2">
-<li>执行<code>mysql -u root -p</code>命令登录mysql:</li>
-</ol>
-<p><strong>注意：<code>Enter password:</code>输入密码时直接回车即可</strong></p>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">PS C:\Windows\system32&gt; mysql -u root -p
-Enter password:
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 8
-Server version: 8.0.26 MySQL Community Server - GPL
-
-Copyright (c) 2000, 2021, Oracle and&#x2F;or its affiliates.
-
-Oracle is a registered trademark of Oracle Corporation and&#x2F;or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
-
-mysql&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ol start="3">
-<li>执行<code>alter user user() identified by &quot;你的密码&quot;;</code>命令修改mysql的密码：</li>
-</ol>
-<p><strong>注意：mysql的所有命令都要以分号结尾。</strong></p>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">mysql&gt; alter user user() identified by &quot;123456&quot;;
-Query OK, 0 rows affected (0.01 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h4><pre class="line-numbers language-tex" data-language="tex"><code class="language-tex"># 启动mysql服务
-net start mysql
-# 关闭mysql服务
-net stop mysql<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
+      
+    <div class="collection-year">
+      <span class="collection-header">2021</span>
     </div>
 
-    
-    
-    
-	
-    <footer class="post-footer">
-          
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-02-06T21:48:52+08:00"
+              content="2021-02-06">
+          02-06
+        </time>
+      </div>
 
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文作者： </strong>Tong jiebin
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://www.tongjiebin.cn/posts/816a.html" title="Win10下安装MySQL">https://www.tongjiebin.cn/posts/816a.html</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/f96b.html" itemprop="url">
+            <span itemprop="name">去除inline-block元素间距的方法</span>
+          </a>
+      </div>
 
-          <div class="post-tags">
-              <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/posts/1ee4.html" rel="prev" title="Sass用法指南">
-                  <i class="fa fa-chevron-left"></i> Sass用法指南
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/posts/651a.html" rel="next" title="跨域资源共享（CORS）的原理与实现">
-                  跨域资源共享（CORS）的原理与实现 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-	  
-    </footer>
+      
+    </header>
   </article>
-</div>
 
-
-
-
-
+    </div>
+  </div>
+  
+  
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/categories/Web%E5%89%8D%E7%AB%AF/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/categories/Web%E5%89%8D%E7%AB%AF/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/Web%E5%89%8D%E7%AB%AF/page/4/">4</a><span class="page-number current">5</span>
+  </nav>
 
 
 <script>

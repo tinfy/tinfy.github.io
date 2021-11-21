@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-11-15T11:25:13.981Z</updated>
+  <updated>2021-11-21T14:38:39.054Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端模块化：CommonJS、AMD、CMD、ES6 Module</title>
+    <link href="https://www.tongjiebin.cn/posts/9b69.html"/>
+    <id>https://www.tongjiebin.cn/posts/9b69.html</id>
+    <published>2021-11-19T14:06:01.000Z</published>
+    <updated>2021-11-21T14:38:39.054Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;模块化的理解&quot;&gt;&lt;a href=&quot;#模块化的理解&quot; class=&quot;headerlink&quot; title=&quot;模块化的理解&quot;&gt;&lt;/a&gt;模块化的理解&lt;/h4&gt;&lt;h5 id=&quot;引入&quot;&gt;&lt;a href=&quot;#引入&quot; class=&quot;headerlink&quot; title=&quot;引入&quot;&gt;&lt;/a&gt;引入&lt;/h5&gt;&lt;p&gt;在早期的 JavaScript 开发中存在&lt;strong&gt;全局变量污染&lt;/strong&gt;和&lt;strong&gt;依赖管理&lt;/strong&gt;等问题，在多人开发前端应用时这是一个棘手的问题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+    <category term="CommonJS" scheme="https://www.tongjiebin.cn/tags/CommonJS/"/>
+    
+    <category term="模块化" scheme="https://www.tongjiebin.cn/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>jsDelivr+GitHub+PicGo实现免费CDN加速博客静态资源</title>
@@ -355,7 +378,7 @@
     <link href="https://www.tongjiebin.cn/posts/651a.html"/>
     <id>https://www.tongjiebin.cn/posts/651a.html</id>
     <published>2021-08-01T03:06:08.000Z</published>
-    <updated>2021-11-03T12:02:09.368Z</updated>
+    <updated>2021-11-21T01:27:22.179Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;p&gt;跨域资源共享（Cross-Origin Resource Sharing）是W3C的一个标准，定义了在必须访问跨源资源时，浏览器和服务器应该如何沟通。&lt;/p&gt;</summary>
@@ -500,25 +523,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
 &lt;li&gt;函数外部只能访问全局变量，不能访问局部变量。&lt;/li&gt;
 &lt;li&gt;当函数执行完毕，本作用域内的局部变量会销毁。&lt;/li&gt;
 &lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript中call、apply和bind方法</title>
-    <link href="https://www.tongjiebin.cn/posts/fea3.html"/>
-    <id>https://www.tongjiebin.cn/posts/fea3.html</id>
-    <published>2021-06-16T14:37:10.000Z</published>
-    <updated>2021-06-16T14:41:23.536Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;JS 专门为我们提供了一些方法来改变函数内部的 this 指向。常见的方法有 call()、apply()、bind() 方法。&lt;/p&gt;</summary>
     
     
     
