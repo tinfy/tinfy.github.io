@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-11-21T14:38:39.054Z</updated>
+  <updated>2021-11-22T23:39:30.720Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>前端模块化：CommonJS、AMD、CMD、ES6 Module</title>
+    <title>前端模块化</title>
     <link href="https://www.tongjiebin.cn/posts/9b69.html"/>
     <id>https://www.tongjiebin.cn/posts/9b69.html</id>
     <published>2021-11-19T14:06:01.000Z</published>
-    <updated>2021-11-21T14:38:39.054Z</updated>
+    <updated>2021-11-22T23:39:30.720Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;模块化的理解&quot;&gt;&lt;a href=&quot;#模块化的理解&quot; class=&quot;headerlink&quot; title=&quot;模块化的理解&quot;&gt;&lt;/a&gt;模块化的理解&lt;/h4&gt;&lt;h5 id=&quot;引入&quot;&gt;&lt;a href=&quot;#引入&quot; class=&quot;headerlink&quot; title=&quot;引入&quot;&gt;&lt;/a&gt;引入&lt;/h5&gt;&lt;p&gt;在早期的 JavaScript 开发中存在&lt;strong&gt;全局变量污染&lt;/strong&gt;和&lt;strong&gt;依赖管理&lt;/strong&gt;等问题，在多人开发前端应用时这是一个棘手的问题。&lt;/p&gt;</summary>
