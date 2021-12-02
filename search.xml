@@ -272,6 +272,55 @@
       </tags>
   </entry>
   <entry>
+    <title>VS Code 中文乱码问题</title>
+    <url>/posts/1f17.html</url>
+    <content><![CDATA[<p>点击右下角的齿轮图标，然后点击”设置“，进入到设置界面。(打开设置的快捷键为 <code>Ctrl + ,</code>)</p>
+<a id="more"></a>
+
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211203001556.png" alt="image-20211203001556126"></p>
+<p>在搜索框中输入 <code>Files.autoGuessEncoding</code>， 打上这个钩后，重新打开文件即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211203001804.png" alt="image-20211203001804619"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>使用 HTML img 标签还是 CSS background-image 属性</title>
+    <url>/posts/8fa0.html</url>
+    <content><![CDATA[<h4 id="HTML-img-标签"><a href="#HTML-img-标签" class="headerlink" title="HTML img 标签"></a>HTML img 标签</h4><ol>
+<li>当它不仅是一个设计元素，还是内容的一部分，例如图表、图标或人物。</li>
+<li>当你希望用户打印您的页面时默认包含图片。<a id="more"></a></li>
+<li>当您想被搜索引擎索引时。Google 不会自动将背景图片编入索引。浏览器不会向辅助技术提供有关背景图像的任何信息。但是使用带有 <code>alt</code> 和 <code>title</code> 属性的 <code>&lt;img&gt;</code> 标签将有助于屏幕阅读器识别。</li>
+<li>当图片具有基本语义（例如，警告图标）时。<code>&lt;img&gt;</code> 标签的使用将确保可以在所有用户代理中传达含义。</li>
+<li>当你依赖浏览器缩放以与文本大小成比例地呈现图片时。</li>
+<li>当您想提高背景动画性能时。</li>
+</ol>
+<h4 id="CSS-background-image"><a href="#CSS-background-image" class="headerlink" title="CSS background-image"></a>CSS background-image</h4><ol>
+<li>如果图片仅用于设计。</li>
+<li>如果图片不是内容的一部分。</li>
+<li>如果您希望用户在打印你的页面时，并且不希望默认包含图片。</li>
+<li>如果您想缩短下载时间（与 CSS 雪碧图一样）。</li>
+<li>如果您只需要使图片的一部分可见。</li>
+<li>如果要对文本进行图片替换。</li>
+<li>如果您需要拉伸背景图片以填充其整个窗口。把 <code>background-size</code> 设置为 <code>cover</code>。</li>
+<li>如果需要重复图片。</li>
+</ol>
+<h4 id="img-标签的-width-height-属性和-CSS-width-height-属性之间的区别："><a href="#img-标签的-width-height-属性和-CSS-width-height-属性之间的区别：" class="headerlink" title="img 标签的 width height 属性和 CSS width height 属性之间的区别："></a>img 标签的 width height 属性和 CSS width height 属性之间的区别：</h4><p>在 CSS 中设置的width height 优先级高于 img 标签的 width height 属性</p>
+<ul>
+<li>如果两个都不设置，图片的宽高为图片本身的宽高</li>
+<li>如果只设置 img 标签的 width height 属性，图片的宽高为 img 标签中设置的宽高</li>
+<li>如果两个都设置了，图片的宽高为 CSS 中设置的宽高</li>
+</ul>
+<p>参考资料：</p>
+<p><a href="https://www.w3docs.com/snippets/html/when-to-use-html-img-tag-and-css-background-image-property.html">When to Use HTML img Tag and CSS background-image Property</a></p>
+]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端模块化</title>
     <url>/posts/9b69.html</url>
     <content><![CDATA[<h4 id="模块化的理解"><a href="#模块化的理解" class="headerlink" title="模块化的理解"></a>模块化的理解</h4><h5 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h5><p>在早期的 JavaScript 开发中存在<strong>全局变量污染</strong>和<strong>依赖管理</strong>等问题，在多人开发前端应用时这是一个棘手的问题。</p>

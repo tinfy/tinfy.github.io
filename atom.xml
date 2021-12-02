@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-11-23T13:08:11.717Z</updated>
+  <updated>2021-12-02T16:19:11.233Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS Code 中文乱码问题</title>
+    <link href="https://www.tongjiebin.cn/posts/1f17.html"/>
+    <id>https://www.tongjiebin.cn/posts/1f17.html</id>
+    <published>2021-12-02T16:05:59.000Z</published>
+    <updated>2021-12-02T16:19:11.233Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;点击右下角的齿轮图标，然后点击”设置“，进入到设置界面。(打开设置的快捷键为 &lt;code&gt;Ctrl + ,&lt;/code&gt;)&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用 HTML img 标签还是 CSS background-image 属性</title>
+    <link href="https://www.tongjiebin.cn/posts/8fa0.html"/>
+    <id>https://www.tongjiebin.cn/posts/8fa0.html</id>
+    <published>2021-12-02T15:57:46.000Z</published>
+    <updated>2021-12-02T16:04:14.594Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;HTML-img-标签&quot;&gt;&lt;a href=&quot;#HTML-img-标签&quot; class=&quot;headerlink&quot; title=&quot;HTML img 标签&quot;&gt;&lt;/a&gt;HTML img 标签&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;当它不仅是一个设计元素，还是内容的一部分，例如图表、图标或人物。&lt;/li&gt;
+&lt;li&gt;当你希望用户打印您的页面时默认包含图片。</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
+    
+    <category term="HTML" scheme="https://www.tongjiebin.cn/tags/HTML/"/>
+    
+  </entry>
   
   <entry>
     <title>前端模块化</title>
@@ -479,57 +517,6 @@ oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_
     
     <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>offset相关属性和匀速动画</title>
-    <link href="https://www.tongjiebin.cn/posts/7025.html"/>
-    <id>https://www.tongjiebin.cn/posts/7025.html</id>
-    <published>2021-06-22T14:01:51.000Z</published>
-    <updated>2021-11-03T12:02:09.301Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;offset家族的组成&quot;&gt;&lt;a href=&quot;#offset家族的组成&quot; class=&quot;headerlink&quot; title=&quot;offset家族的组成&quot;&gt;&lt;/a&gt;offset家族的组成&lt;/h3&gt;&lt;p&gt;offset 的中文是偏移，补偿，位移。&lt;/p&gt;
-&lt;p&gt;offset相关的属性包括：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;offsetWidth&lt;/li&gt;
-&lt;li&gt;offsetHeight&lt;/li&gt;
-&lt;li&gt;offsetLeft&lt;/li&gt;
-&lt;li&gt;offsetTop&lt;/li&gt;
-&lt;li&gt;offsetParent&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>理解JavaScript中的闭包</title>
-    <link href="https://www.tongjiebin.cn/posts/5e54.html"/>
-    <id>https://www.tongjiebin.cn/posts/5e54.html</id>
-    <published>2021-06-16T14:39:27.000Z</published>
-    <updated>2021-11-03T12:02:09.340Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;闭包的引入&quot;&gt;&lt;a href=&quot;#闭包的引入&quot; class=&quot;headerlink&quot; title=&quot;闭包的引入&quot;&gt;&lt;/a&gt;闭包的引入&lt;/h2&gt;&lt;p&gt;我们知道，变量根据作用域的不同分为两种：全局变量和局部变量。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;函数内部可以访问全局变量和局部变量。&lt;/li&gt;
-&lt;li&gt;函数外部只能访问全局变量，不能访问局部变量。&lt;/li&gt;
-&lt;li&gt;当函数执行完毕，本作用域内的局部变量会销毁。&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
     
   </entry>
   
