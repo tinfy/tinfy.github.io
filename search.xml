@@ -275,6 +275,8 @@
     <title>ES6的Set和Map数据结构</title>
     <url>/posts/9af6.html</url>
     <content><![CDATA[<h4 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h4><h5 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h5><p>ES6 提供了新的数据结构 Set。它类似于数组，但是<strong>成员的值都是唯一的</strong>，没有重复的值。</p>
+<a id="more"></a>
+
 <p><code>Set</code> 本身是一个构造函数，用来生成 Set 数据结构。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><code>Set</code> 函数可以接受一个数组（或者具有 iterable 接口的其他数据结构）作为参数，用来初始化。</p>
