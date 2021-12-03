@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-12-02T16:19:11.233Z</updated>
+  <updated>2021-12-03T15:12:46.875Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6的Set和Map数据结构</title>
+    <link href="https://www.tongjiebin.cn/posts/9af6.html"/>
+    <id>https://www.tongjiebin.cn/posts/9af6.html</id>
+    <published>2021-12-03T14:43:19.000Z</published>
+    <updated>2021-12-03T15:12:46.875Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;Set&quot;&gt;&lt;a href=&quot;#Set&quot; class=&quot;headerlink&quot; title=&quot;Set&quot;&gt;&lt;/a&gt;Set&lt;/h4&gt;&lt;h5 id=&quot;基本用法&quot;&gt;&lt;a href=&quot;#基本用法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+    <category term="ES6" scheme="https://www.tongjiebin.cn/tags/ES6/"/>
+    
+  </entry>
   
   <entry>
     <title>VS Code 中文乱码问题</title>
@@ -493,30 +520,6 @@
     
     
     <category term="NexT" scheme="https://www.tongjiebin.cn/tags/NexT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无法加载文件 D:\nodejs\node_global\babel.ps1</title>
-    <link href="https://www.tongjiebin.cn/posts/e2e6.html"/>
-    <id>https://www.tongjiebin.cn/posts/e2e6.html</id>
-    <published>2021-07-07T14:14:42.000Z</published>
-    <updated>2021-07-07T14:46:21.658Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;使用 &lt;code&gt;npm install -g babel-cli&lt;/code&gt; 全局安装Babel后，使用Babel时出现错误：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-tex&quot; data-language=&quot;tex&quot;&gt;&lt;code class=&quot;language-tex&quot;&gt;babel : 无法加载文件 D:\nodejs\node_global\babel.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:&amp;#x2F;go.micros
-oft.com&amp;#x2F;fwlink&amp;#x2F;?LinkID&amp;#x3D;135170 中的 about_Execution_Policies。
-所在位置 行:1 字符: 1
-+ babel --version
-+ ~~~~~
-    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
-    + FullyQualifiedErrorId : UnauthorizedAccess&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
     
   </entry>
   
