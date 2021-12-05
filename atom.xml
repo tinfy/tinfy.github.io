@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-12-03T15:13:42.963Z</updated>
+  <updated>2021-12-05T12:41:27.415Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>for in和for of的区别</title>
+    <link href="https://www.tongjiebin.cn/posts/6a38.html"/>
+    <id>https://www.tongjiebin.cn/posts/6a38.html</id>
+    <published>2021-12-05T12:31:27.000Z</published>
+    <updated>2021-12-05T12:41:27.415Z</updated>
+    
+    
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;在循环对象属性的时候使用&lt;code&gt;for...in&lt;/code&gt;，在遍历数组的时候使用&lt;code&gt;for...of&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;for...of&lt;/code&gt;是 ES6 新引入的特性，可用于在&lt;strong&gt;可迭代对象&lt;/strong&gt;（包括 Array、Map、Set、String、TypedArray、arguments对象）上创建一个迭代循环&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;for...in&lt;/code&gt;遍历的是对象的可枚举属性和原型对象上的属性&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="ES6" scheme="https://www.tongjiebin.cn/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ES6的Set和Map数据结构</title>
     <link href="https://www.tongjiebin.cn/posts/9af6.html"/>
     <id>https://www.tongjiebin.cn/posts/9af6.html</id>
     <published>2021-12-03T14:43:19.000Z</published>
-    <updated>2021-12-03T15:13:42.963Z</updated>
+    <updated>2021-12-05T14:35:23.746Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;Set&quot;&gt;&lt;a href=&quot;#Set&quot; class=&quot;headerlink&quot; title=&quot;Set&quot;&gt;&lt;/a&gt;Set&lt;/h4&gt;&lt;h5 id=&quot;基本用法&quot;&gt;&lt;a href=&quot;#基本用法&quot; class=&quot;headerlink&quot; title=&quot;基本用法&quot;&gt;&lt;/a&gt;基本用法&lt;/h5&gt;&lt;p&gt;ES6 提供了新的数据结构 Set。它类似于数组，但是&lt;strong&gt;成员的值都是唯一的&lt;/strong&gt;，没有重复的值。&lt;/p&gt;</summary>
@@ -493,27 +519,6 @@
     <category term="JSONP" scheme="https://www.tongjiebin.cn/tags/JSONP/"/>
     
     <category term="jQuery" scheme="https://www.tongjiebin.cn/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Next主题添加雪花飘落效果</title>
-    <link href="https://www.tongjiebin.cn/posts/5e70.html"/>
-    <id>https://www.tongjiebin.cn/posts/5e70.html</id>
-    <published>2021-07-18T00:08:39.000Z</published>
-    <updated>2021-11-03T12:02:09.255Z</updated>
-    
-    
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;在&lt;code&gt;themes/next/source/js/src&lt;/code&gt;目录下新建一个&lt;code&gt;snow.js&lt;/code&gt;文件，雪花飘落有两种效果，复制你喜欢的效果对应的代码段到&lt;code&gt;snow.js&lt;/code&gt;文件中。&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    <category term="博客搭建" scheme="https://www.tongjiebin.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="NexT" scheme="https://www.tongjiebin.cn/tags/NexT/"/>
     
   </entry>
   

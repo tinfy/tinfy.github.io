@@ -23,21 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"www.tongjiebin.cn","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Vue项目中引入less，报错Syntax Error: TypeError: this.getOptions is not a function解决办法：https:&#x2F;&#x2F;blog.csdn.net&#x2F;gdutRex&#x2F;article&#x2F;details&#x2F;113547371">
+<meta name="description" content="在循环对象属性的时候使用for...in，在遍历数组的时候使用for...of  for...of是 ES6 新引入的特性，可用于在可迭代对象（包括 Array、Map、Set、String、TypedArray、arguments对象）上创建一个迭代循环  for...in遍历的是对象的可枚举属性和原型对象上的属性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue项目中报错的解决办法">
-<meta property="og:url" content="https://www.tongjiebin.cn/posts/1195.html">
+<meta property="og:title" content="for in和for of的区别">
+<meta property="og:url" content="https://www.tongjiebin.cn/posts/6a38.html">
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
-<meta property="og:description" content="Vue项目中引入less，报错Syntax Error: TypeError: this.getOptions is not a function解决办法：https:&#x2F;&#x2F;blog.csdn.net&#x2F;gdutRex&#x2F;article&#x2F;details&#x2F;113547371">
+<meta property="og:description" content="在循环对象属性的时候使用for...in，在遍历数组的时候使用for...of  for...of是 ES6 新引入的特性，可用于在可迭代对象（包括 Array、Map、Set、String、TypedArray、arguments对象）上创建一个迭代循环  for...in遍历的是对象的可枚举属性和原型对象上的属性">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-13T08:51:54.000Z">
-<meta property="article:modified_time" content="2021-08-25T14:13:34.864Z">
+<meta property="article:published_time" content="2021-12-05T12:31:27.000Z">
+<meta property="article:modified_time" content="2021-12-05T12:41:27.415Z">
 <meta property="article:author" content="Tong jiebin">
-<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="ES6">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.tongjiebin.cn/posts/1195.html">
+<link rel="canonical" href="https://www.tongjiebin.cn/posts/6a38.html">
 
 
 <script class="page-configurations">
@@ -49,7 +49,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Vue项目中报错的解决办法 | Tong jiebin's Blog</title>
+<title>for in和for of的区别 | Tong jiebin's Blog</title>
   
 
   <script>
@@ -276,7 +276,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/1195.html">
+    <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/6a38.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
@@ -289,7 +289,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Vue项目中报错的解决办法
+          for in和for of的区别
         </h1>
 
         <div class="post-meta-container">
@@ -300,16 +300,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-13 16:51:54" itemprop="dateCreated datePublished" datetime="2021-03-13T16:51:54+08:00">2021-03-13</time>
+      <time title="创建时间：2021-12-05 20:31:27 / 修改时间：20:41:27" itemprop="dateCreated datePublished" datetime="2021-12-05T20:31:27+08:00">2021-12-05</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-25 22:13:34" itemprop="dateModified" datetime="2021-08-25T22:13:34+08:00">2021-08-25</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -353,73 +347,73 @@
     
     <div class="post-body" itemprop="articleBody">
         <ol>
-<li><p>Vue项目中引入less，报错<strong>Syntax Error: TypeError: this.getOptions is not a function</strong>解决办法：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/gdutRex/article/details/113547371">https://blog.csdn.net/gdutRex/article/details/113547371</a></p>
-<a id="more"></a></li>
-<li><p>Vue项目中引入element-ui，报错<strong>element-ui.common.js’ imported multiple times</strong>解决办法：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/cyy15729981514/article/details/114028329">https://blog.csdn.net/cyy15729981514/article/details/114028329</a></p>
+<li><p><strong>在循环对象属性的时候使用<code>for...in</code>，在遍历数组的时候使用<code>for...of</code></strong></p>
 </li>
-<li><p>Element UI组件库 Cascader 级联选择器高度过高的问题:<br>在全局样式表中设置 <code>.el-cascader-panel</code> 的高度:</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.el-cascader-panel</span> <span class="token punctuation">&#123;</span>
-	<span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
-<li><p>Vue项目添加ElementUI库后，按需加载时启动项目babel-preset-es2015报错：</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wukaiBK/p/12757945.html">https://www.cnblogs.com/wukaiBK/p/12757945.html</a></p>
+<li><p><code>for...of</code>是 ES6 新引入的特性，可用于在<strong>可迭代对象</strong>（包括 Array、Map、Set、String、TypedArray、arguments对象）上创建一个迭代循环</p>
 </li>
-<li><p>Vue Cannot read property ‘xxx’ of undefined解决办法：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/jiangshanwe/article/details/86499898">https://blog.csdn.net/jiangshanwe/article/details/86499898</a></p>
-</li>
-<li><p>elementUI组件库中的Message组件的使用方法：</p>
+<li><p><code>for...in</code>遍历的是对象的可枚举属性和原型对象上的属性</p>
 </li>
 </ol>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 引入Message</span>
-<span class="token keyword">import</span> <span class="token punctuation">&#123;</span>Message<span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'element-ui'</span>
-<span class="token comment">// Vue.prototype添加了全局方法 $message</span>
-<span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$message <span class="token operator">=</span> Message
+<a id="more"></a>
 
-<span class="token comment">// 调用Message的两种方法</span>
-<span class="token comment">// 方法一</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span>$message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">'登录成功'</span><span class="token punctuation">)</span>
-<span class="token comment">// 方法二</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$message</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-    message<span class="token operator">:</span> <span class="token string">'登录成功'</span><span class="token punctuation">,</span>
-    type<span class="token operator">:</span> <span class="token string">'success'</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ol start="7">
-<li>elementUI组件库的Form组件添加自定义校验：</li>
-</ol>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">var</span> <span class="token function-variable function">checkMobile</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">rule<span class="token punctuation">,</span> value<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
-      <span class="token keyword">const</span> regMobile <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^1[3|4|5|8][0-9]\d&#123;4,8&#125;$</span><span class="token regex-delimiter">/</span></span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>regMobile<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token punctuation">&#125;</span>
-      <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'请输入合法的手机号'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
-      registerFormRules<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-        mobile<span class="token operator">:</span> <span class="token punctuation">[</span>
-          <span class="token punctuation">&#123;</span> required<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token string">'请输入手机号'</span><span class="token punctuation">,</span> trigger<span class="token operator">:</span> <span class="token string">'blur'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-          <span class="token punctuation">&#123;</span> validator<span class="token operator">:</span> checkMobile<span class="token punctuation">,</span> trigger<span class="token operator">:</span> <span class="token string">'blur'</span> <span class="token punctuation">&#125;</span>
-        <span class="token punctuation">]</span>
-      <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ol start="8">
-<li>VueRouter中使用嵌套路由：</li>
-</ol>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
-  <span class="token punctuation">&#123;</span>
-    path<span class="token operator">:</span> <span class="token string">'/home'</span><span class="token punctuation">,</span>
-    component<span class="token operator">:</span> Home<span class="token punctuation">,</span>
-    children<span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token comment">// 当 /home/login 匹配成功，Login会被渲染在Home的&lt;router-view>中</span>
-      <span class="token punctuation">&#123;</span> path<span class="token operator">:</span> <span class="token string">'login'</span><span class="token punctuation">,</span> component<span class="token operator">:</span> Login <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-      <span class="token comment">// 当 /home/register 匹配成功，Register会被渲染在Home的&lt;router-view>中</span>
-      <span class="token punctuation">&#123;</span> path<span class="token operator">:</span> <span class="token string">'register'</span><span class="token punctuation">,</span> component<span class="token operator">:</span> Register <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">]</span>
+<blockquote>
+<p>如果只想遍历对象本身的属性，可以使用<code>Object.getOwnPropertyNames()</code>或者使用<code>for...in</code>结合<code>hasOwnProperty()</code>一起使用</p>
+<p><code>Object.keys()</code>和<code>Object.getOwnPropertyNames()</code>的异同：</p>
+<p>相同点：都只返回对象本身的属性，不会返回原型对象上的属性</p>
+<p>不同点：<code>Object.keys()</code>只返回对象上可枚举的属性，<code>Object.getOwnPropertyNames()</code>返回对象上所有的属性（包括不可枚举属性但不包括 Symbol 值作为名称的属性）</p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// for...in 和 for...of 的区别</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">objCustom</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">arrCustom</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> iterable <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+iterable<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'hello'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">in</span> iterable<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// logs 0, 1, 2, "foo", "arrCustom", "objCustom"</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">in</span> iterable<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>iterable<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// logs 0, 1, 2, "foo"</span>
   <span class="token punctuation">&#125;</span>
-<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span>
 
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">of</span> iterable<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// logs 3, 5, 7</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// for...in 结合 hasOwnProperty() 一起使用</span>
+<span class="token keyword">var</span> triangle <span class="token operator">=</span> <span class="token punctuation">&#123;</span>a<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> c<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">ColoredTriangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token string">'red'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token class-name">ColoredTriangle</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> triangle<span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ColoredTriangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> prop <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>prop<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">obj.</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>prop<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string"> = </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>obj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 
+<span class="token comment">// Output:</span>
+<span class="token comment">// "obj.color = red"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 测试 Object.keys() 和 Object.getOwnPropertyNames() 的异同：</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'tom'</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+	enumerable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+	value<span class="token operator">:</span> <span class="token string">'man'</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+obj<span class="token punctuation">[</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Output:</span>
+<span class="token comment">// ['name']</span>
+<span class="token comment">// ['name', 'sex']</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>参考资料：</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">for…of语句</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in">for…in语句</a></p>
 
     </div>
 
@@ -437,7 +431,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.tongjiebin.cn/posts/1195.html" title="Vue项目中报错的解决办法">https://www.tongjiebin.cn/posts/1195.html</a>
+      <a href="https://www.tongjiebin.cn/posts/6a38.html" title="for in和for of的区别">https://www.tongjiebin.cn/posts/6a38.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -446,20 +440,17 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+              <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/a846.html" rel="prev" title="Vue项目中使用icon图标">
-                  <i class="fa fa-chevron-left"></i> Vue项目中使用icon图标
-                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/f8ba.html" rel="next" title="NexT主题添加不蒜子统计">
-                  NexT主题添加不蒜子统计 <i class="fa fa-chevron-right"></i>
+                <a href="/posts/9af6.html" rel="next" title="ES6的Set和Map数据结构">
+                  ES6的Set和Map数据结构 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
