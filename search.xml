@@ -4056,7 +4056,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514224137.png" alt="image-20210514224134502"></p>
 <p>如果出现下面的界面，表示连接成功。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514224404.png" alt="image-20210514224404050"></p>
-<h4 id="安装-V2Ray"><a href="#安装-V2Ray" class="headerlink" title="安装 V2Ray"></a>安装 V2Ray</h4><ol>
+<h4 id="服务器安装-V2Ray"><a href="#服务器安装-V2Ray" class="headerlink" title="服务器安装 V2Ray"></a>服务器安装 V2Ray</h4><ol>
 <li>复制下面的命令，右键粘贴到命令行中，回车。</li>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -s -L https://git.io/v2ray.sh<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -4092,27 +4092,18 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>以后查看或修改 V2Ray 的配置，可以输入 <code>v2ray</code> 进行查看或修改。</li>
 </ol>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514231026.png" alt="image-20210514231025953"></p>
-<h4 id="V2Ray-客户端安装"><a href="#V2Ray-客户端安装" class="headerlink" title="V2Ray 客户端安装"></a>V2Ray 客户端安装</h4><p>V2Ray下载地址：<a href="https://github.com/v2ray/v2ray-core/tags">https://github.com/v2ray/v2ray-core/tags</a></p>
-<p>点击 Downloads ，找到你的操作系统对应的版本下载，以 Win10 64位为例。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514231833.png" alt="image-20210514231548073"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514231810.png" alt="image-20210514231803918"></p>
-<p>V2RayN 是一个可视化的配置工具，下载地址：<a href="https://github.com/2dust/v2rayN/tags">https://github.com/2dust/v2rayN/tags</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514232607.png" alt="image-20210514232604253"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514232637.png" alt="image-20210514232634254"></p>
-<p>下载完成后，分别解压 v2ray-windows-64.zip 和 v2RayN.zip 到 v2ray 和v2rayN 这两个文件夹中，复制 V2RayN 文件夹下的 v2rayN.exe、Newtonsoft.Json.dll、zh-Hans到 v2ray 文件夹中</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210609223559.png" alt="image-20210514233924261"></p>
-<p>打开 v2ray 文件夹中的 v2rayN.exe，选择”服务器“ =&gt; “添加VMess服务器”。</p>
-<p><strong>注意：</strong>如果双击 v2rayN.exe，在电脑任务栏右下角没有出现v2rayN的logo，但是打开任务管理器，在进程中却可以看到 v2rayN 的进程。这时需要查看 guiLogs 文件夹中的日志文件，看缺少哪个 .dll 文件，就把 v2rayN 文件夹中对应的 .dll 文件复制到 v2ray 文件夹中，或者直接把所有的 .dll 文件都复制到 v2ray 文件夹中。</p>
+<h4 id="客户端安装-V2Ray"><a href="#客户端安装-V2Ray" class="headerlink" title="客户端安装 V2Ray"></a>客户端安装 V2Ray</h4><p>V2Ray下载地址：<a href="https://github.com/v2fly/v2ray-core/releases">https://github.com/v2fly/v2ray-core/releases</a></p>
+<p>V2RayN 是一个可视化的配置工具，下载地址：<a href="https://github.com/2dust/v2rayN/releases%EF%BC%8C%E4%B8%8B%E8%BD%BD">https://github.com/2dust/v2rayN/releases，下载</a> v2rayN-Core.zip</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211216203735.png" alt="image-20211216203735375"></p>
+<p>解压 v2rayN-Core.zip 后，双击运行文件夹中的 v2rayN.exe，选择”服务器“ =&gt; “添加VMess服务器”。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514234601.png" alt="image-20210514234556538"></p>
 <p>填写“VMess服务器”信息：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210609230647.png" alt="image-20210609230647311"></p>
 <p>最后，把系统代理改为“自动配置系统代理”就OK了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210609222417.png" alt="image-20210609222416984"></p>
-<h4 id="手机端安装"><a href="#手机端安装" class="headerlink" title="手机端安装"></a>手机端安装</h4><p>如果在手机上也有科学上网的需求，可以安装v2rayNG。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211216204216.png" alt="image-20211216204209502"></p>
+<h4 id="手机端安装-v2rayNG"><a href="#手机端安装-v2rayNG" class="headerlink" title="手机端安装 v2rayNG"></a>手机端安装 v2rayNG</h4><p>如果在手机上也有科学上网的需求，可以安装v2rayNG。</p>
 <p>安装包下载地址：<a href="https://github.com/2dust/v2rayNG/releases%EF%BC%8C%E4%B8%8B%E8%BD%BD">https://github.com/2dust/v2rayNG/releases，下载</a> v2rayNG_1.6.27.apk，在手机上面安装。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211216203153.png" alt="image-20211216203146120"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210609224323.png" alt="image-20210609224323533"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210609224420.png" alt="image-20210609224420358"></p>
 <p>打开v2rayNG，点击右上角的加号，选择“手动输入[Vmess]”，填写相关配置信息，再点击右下角灰色的V图标即可连接成功。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210609224835.png" alt="image-20210609224835784"></p>
 ]]></content>
