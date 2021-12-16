@@ -4109,7 +4109,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>最后，把系统代理改为“自动配置系统代理”就OK了。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210609222417.png" alt="image-20210609222416984"></p>
 <h4 id="手机端安装"><a href="#手机端安装" class="headerlink" title="手机端安装"></a>手机端安装</h4><p>如果在手机上也有科学上网的需求，可以安装v2rayNG。</p>
-<p>安装包下载地址：<a href="https://github.com/2dust/v2rayNG/tags">https://github.com/2dust/v2rayNG/tags</a> ，选择1.4.4版本，下载 v2rayNG_1.4.4.apk，在手机上面安装。</p>
+<p>安装包下载地址：<a href="https://github.com/2dust/v2rayNG/releases%EF%BC%8C%E4%B8%8B%E8%BD%BD">https://github.com/2dust/v2rayNG/releases，下载</a> v2rayNG_1.6.27.apk，在手机上面安装。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211216203153.png" alt="image-20211216203146120"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210609224323.png" alt="image-20210609224323533"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210609224420.png" alt="image-20210609224420358"></p>
 <p>打开v2rayNG，点击右上角的加号，选择“手动输入[Vmess]”，填写相关配置信息，再点击右下角灰色的V图标即可连接成功。</p>
@@ -6221,7 +6222,7 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 </thead>
 <tbody><tr>
 <td align="center">git init</td>
-<td align="center">把文件夹初始化为Git仓库</td>
+<td align="center">把文件夹初始化为 Git 仓库</td>
 </tr>
 <tr>
 <td align="center">git add [filename]</td>
@@ -6245,7 +6246,7 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 </tr>
 <tr>
 <td align="center">git reset –hard [commit id]</td>
-<td align="center">回到commit id对应的版本</td>
+<td align="center">回到 commit id 对应的版本</td>
 </tr>
 <tr>
 <td align="center">git reflog</td>
@@ -6277,27 +6278,27 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 </tr>
 <tr>
 <td align="center">git remote add origin …</td>
-<td align="center">和github仓库关联</td>
+<td align="center">和 github 仓库关联</td>
 </tr>
 <tr>
 <td align="center">git push -u origin master</td>
-<td align="center">把本地的master分支推送到远程库的master分支上(只有第一次推送才需要加上<code>-u</code>)</td>
+<td align="center">把本地的 master 分支推送到远程库的 master 分支上(只有第一次推送才需要加上<code>-u</code>)</td>
 </tr>
 <tr>
 <td align="center">git clone …</td>
-<td align="center">克隆github仓库到本地</td>
+<td align="center">克隆 github 仓库到本地</td>
 </tr>
 <tr>
 <td align="center">git checkout -b dev</td>
-<td align="center">创建并切换到dev分支</td>
+<td align="center">创建并切换到 dev 分支</td>
 </tr>
 <tr>
 <td align="center">git branch dev</td>
-<td align="center">创建dev分支</td>
+<td align="center">创建 dev 分支</td>
 </tr>
 <tr>
 <td align="center">git checkout dev</td>
-<td align="center">切换到dev分支</td>
+<td align="center">切换到 dev 分支</td>
 </tr>
 <tr>
 <td align="center">git branch</td>
@@ -6305,19 +6306,19 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 </tr>
 <tr>
 <td align="center">git merge dev</td>
-<td align="center">把dev分支合并到当前分支</td>
+<td align="center">把 dev 分支合并到当前分支</td>
 </tr>
 <tr>
 <td align="center">git branch -d dev</td>
-<td align="center">删除dev分支</td>
+<td align="center">删除 dev 分支</td>
 </tr>
 <tr>
 <td align="center">git switch -c dev</td>
-<td align="center">创建并切换到dev分支</td>
+<td align="center">创建并切换到 dev 分支</td>
 </tr>
 <tr>
 <td align="center">git switch dev</td>
-<td align="center">切换到dev分支</td>
+<td align="center">切换到 dev 分支</td>
 </tr>
 <tr>
 <td align="center">git log –graph</td>
@@ -6325,7 +6326,7 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 </tr>
 <tr>
 <td align="center">git merge –no-ff</td>
-<td align="center">禁用fast forward模式合并分支</td>
+<td align="center">禁用 fast forward 模式合并分支</td>
 </tr>
 <tr>
 <td align="center">git stash</td>
@@ -6345,15 +6346,15 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 </tr>
 <tr>
 <td align="center">git stash pop</td>
-<td align="center">恢复现场的同时把stash内容删掉</td>
+<td align="center">恢复现场的同时把 stash 内容删掉</td>
 </tr>
 <tr>
 <td align="center">git cherry-pick [commit id]</td>
-<td align="center">在当前分支上复制commit id对应的提交</td>
+<td align="center">在当前分支上复制 commit id 对应的提交</td>
 </tr>
 <tr>
 <td align="center">git branch -D dev</td>
-<td align="center">强行删除没有被合并的分支dev</td>
+<td align="center">强行删除没有被合并的分支 dev</td>
 </tr>
 <tr>
 <td align="center">git remote</td>
@@ -6362,6 +6363,10 @@ If you wish to <span class="token builtin class-name">set</span> tracking inform
 <tr>
 <td align="center">git remote -v</td>
 <td align="center">查看详细的远程库信息</td>
+</tr>
+<tr>
+<td align="center">git update-git-for-windows</td>
+<td align="center">更新 Git 版本</td>
 </tr>
 </tbody></table>
 ]]></content>
