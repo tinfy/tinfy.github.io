@@ -118,9 +118,9 @@
     
     <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
     
-    <category term="CommonJS" scheme="https://www.tongjiebin.cn/tags/CommonJS/"/>
-    
     <category term="模块化" scheme="https://www.tongjiebin.cn/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+    <category term="CommonJS" scheme="https://www.tongjiebin.cn/tags/CommonJS/"/>
     
   </entry>
   
