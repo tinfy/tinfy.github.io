@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2021-12-05T12:41:27.415Z</updated>
+  <updated>2022-01-13T12:59:52.239Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Object.create 和 Object.assign</title>
+    <link href="https://www.tongjiebin.cn/posts/1522.html"/>
+    <id>https://www.tongjiebin.cn/posts/1522.html</id>
+    <published>2022-01-13T12:55:35.000Z</published>
+    <updated>2022-01-13T12:59:52.239Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;code&gt;Object.create(proto, [propertiesObject])&lt;/code&gt; 方法创建一个新对象，并且把 &lt;code&gt;proto&lt;/code&gt; 设置为新对象的原型对象，&lt;code&gt;propertiesObject&lt;/code&gt; 为可选参数，这个参数和&lt;a href=&quot;https://www.tongjiebin.cn/posts/93cb.html&quot;&gt;JavaScript数据属性和访问器属性&lt;/a&gt;博客中 &lt;code&gt;Object.defineProperty()&lt;/code&gt; 方法的第三个参数格式相同，如果提供了这个参数，那么将会给新对象添加指定的属性和对应的属性描述符。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Object.assign(target, ...sources)&lt;/code&gt; 方法用于将所有可枚举属性的值从一个或多个源对象分配到目标对象。它将返回分配属性后的目标对象。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>for in和for of的区别</title>
@@ -496,29 +516,6 @@
     
     
     <category term="Vue" scheme="https://www.tongjiebin.cn/tags/Vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JSONP实现跨域</title>
-    <link href="https://www.tongjiebin.cn/posts/ef19.html"/>
-    <id>https://www.tongjiebin.cn/posts/ef19.html</id>
-    <published>2021-07-18T07:47:09.000Z</published>
-    <updated>2021-11-03T12:02:09.229Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;默认情况下，通过XHR实现ajax通信时会有一个限制，就是只能访问同一个域中的资源。同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="跨域" scheme="https://www.tongjiebin.cn/tags/%E8%B7%A8%E5%9F%9F/"/>
-    
-    <category term="JSONP" scheme="https://www.tongjiebin.cn/tags/JSONP/"/>
-    
-    <category term="jQuery" scheme="https://www.tongjiebin.cn/tags/jQuery/"/>
     
   </entry>
   
