@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2022-01-13T12:59:52.239Z</updated>
+  <updated>2022-01-17T13:35:52.337Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DOM事件</title>
+    <link href="https://www.tongjiebin.cn/posts/dd8c.html"/>
+    <id>https://www.tongjiebin.cn/posts/dd8c.html</id>
+    <published>2022-01-17T13:28:58.000Z</published>
+    <updated>2022-01-17T13:35:52.337Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;DOM事件模型&quot;&gt;&lt;a href=&quot;#DOM事件模型&quot; class=&quot;headerlink&quot; title=&quot;DOM事件模型&quot;&gt;&lt;/a&gt;DOM事件模型&lt;/h4&gt;&lt;h5 id=&quot;DOM0级模型&quot;&gt;&lt;a href=&quot;#DOM0级模型&quot; class=&quot;headerlink&quot; title=&quot;DOM0级模型&quot;&gt;&lt;/a&gt;DOM0级模型&lt;/h5&gt;&lt;p&gt;又称为原始事件模型，在该模型中，事件不会传播，即没有事件流的概念。这种方式所有浏览器都兼容，但是逻辑与显示并没有分离。事件绑定监听函数比较简单，有两种方式:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+    <category term="DOM" scheme="https://www.tongjiebin.cn/tags/DOM/"/>
+    
+    <category term="事件" scheme="https://www.tongjiebin.cn/tags/%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Object.create 和 Object.assign</title>
@@ -496,26 +519,6 @@
     <category term="跨域" scheme="https://www.tongjiebin.cn/tags/%E8%B7%A8%E5%9F%9F/"/>
     
     <category term="CORS" scheme="https://www.tongjiebin.cn/tags/CORS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue2.x生命周期钩子</title>
-    <link href="https://www.tongjiebin.cn/posts/4415.html"/>
-    <id>https://www.tongjiebin.cn/posts/4415.html</id>
-    <published>2021-07-31T09:13:45.000Z</published>
-    <updated>2021-11-03T12:02:09.274Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Vue实例的生命周期：Vue实例从创建、运行到销毁的各个阶段，就统称为生命周期。&lt;/p&gt;
-&lt;p&gt;生命周期钩子：在生命周期各个阶段中会执行的函数，叫做生命周期钩子。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="Vue" scheme="https://www.tongjiebin.cn/tags/Vue/"/>
     
   </entry>
   
