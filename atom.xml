@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2022-01-17T13:35:52.337Z</updated>
+  <updated>2022-01-20T14:39:26.009Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.tongjiebin.cn/posts/dd8c.html"/>
     <id>https://www.tongjiebin.cn/posts/dd8c.html</id>
     <published>2022-01-17T13:28:58.000Z</published>
-    <updated>2022-01-17T13:35:52.337Z</updated>
+    <updated>2022-01-20T14:39:26.009Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;DOM事件模型&quot;&gt;&lt;a href=&quot;#DOM事件模型&quot; class=&quot;headerlink&quot; title=&quot;DOM事件模型&quot;&gt;&lt;/a&gt;DOM事件模型&lt;/h4&gt;&lt;h5 id=&quot;DOM0级模型&quot;&gt;&lt;a href=&quot;#DOM0级模型&quot; class=&quot;headerlink&quot; title=&quot;DOM0级模型&quot;&gt;&lt;/a&gt;DOM0级模型&lt;/h5&gt;&lt;p&gt;又称为原始事件模型，在该模型中，事件不会传播，即没有事件流的概念。这种方式所有浏览器都兼容，但是逻辑与显示并没有分离。事件绑定监听函数比较简单，有两种方式:&lt;/p&gt;</summary>
