@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2022-01-20T14:39:26.009Z</updated>
+  <updated>2022-03-06T13:33:41.883Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue项目中使用animate.css没有效果</title>
+    <link href="https://www.tongjiebin.cn/posts/ad6a.html"/>
+    <id>https://www.tongjiebin.cn/posts/ad6a.html</id>
+    <published>2022-03-06T13:17:08.000Z</published>
+    <updated>2022-03-06T13:33:41.883Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h4&gt;&lt;p&gt;在控制台输入命令安装 animate.css：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;cnpm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; animate.css&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue" scheme="https://www.tongjiebin.cn/tags/Vue/"/>
+    
+    <category term="animate" scheme="https://www.tongjiebin.cn/tags/animate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode Ctrl+Shift+P 快捷键失效</title>
+    <link href="https://www.tongjiebin.cn/posts/4010.html"/>
+    <id>https://www.tongjiebin.cn/posts/4010.html</id>
+    <published>2022-03-06T12:37:39.000Z</published>
+    <updated>2022-03-06T12:50:35.136Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;原因：和 PicGo 的快捷键冲突&lt;/p&gt;
+&lt;p&gt;解决办法：在PicGo设置中把“快捷上传”的快捷键禁用掉，或者切换为另一个快捷键。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="VSCode" scheme="https://www.tongjiebin.cn/tags/VSCode/"/>
+    
+  </entry>
   
   <entry>
     <title>DOM事件</title>
@@ -107,17 +147,19 @@
   </entry>
   
   <entry>
-    <title>VS Code 中文乱码问题</title>
+    <title>VSCode 中文乱码问题</title>
     <link href="https://www.tongjiebin.cn/posts/1f17.html"/>
     <id>https://www.tongjiebin.cn/posts/1f17.html</id>
     <published>2021-12-02T16:05:59.000Z</published>
-    <updated>2021-12-02T16:19:11.233Z</updated>
+    <updated>2022-03-06T13:17:36.293Z</updated>
     
     
     <summary type="html">&lt;p&gt;点击右下角的齿轮图标，然后点击”设置“，进入到设置界面。(打开设置的快捷键为 &lt;code&gt;Ctrl + ,&lt;/code&gt;)&lt;/p&gt;</summary>
     
     
     
+    
+    <category term="VSCode" scheme="https://www.tongjiebin.cn/tags/VSCode/"/>
     
   </entry>
   
@@ -360,7 +402,7 @@
     <link href="https://www.tongjiebin.cn/posts/854b.html"/>
     <id>https://www.tongjiebin.cn/posts/854b.html</id>
     <published>2021-09-22T15:40:30.000Z</published>
-    <updated>2021-11-23T14:31:13.240Z</updated>
+    <updated>2022-03-06T00:13:21.351Z</updated>
     
     
     <summary type="html">&lt;ol&gt;
@@ -479,46 +521,6 @@
     
     
     <category term="Sass" scheme="https://www.tongjiebin.cn/tags/Sass/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Win10下安装MySQL</title>
-    <link href="https://www.tongjiebin.cn/posts/816a.html"/>
-    <id>https://www.tongjiebin.cn/posts/816a.html</id>
-    <published>2021-08-08T03:59:32.000Z</published>
-    <updated>2021-11-03T12:02:09.281Z</updated>
-    
-    
-    <summary type="html">&lt;h4 id=&quot;下载压缩包并解压&quot;&gt;&lt;a href=&quot;#下载压缩包并解压&quot; class=&quot;headerlink&quot; title=&quot;下载压缩包并解压&quot;&gt;&lt;/a&gt;下载压缩包并解压&lt;/h4&gt;&lt;p&gt;前往&lt;a href=&quot;https://dev.mysql.com/downloads/mysql/&quot;&gt;mysql官网&lt;/a&gt;下载压缩包&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="安装教程" scheme="https://www.tongjiebin.cn/categories/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="MySQL" scheme="https://www.tongjiebin.cn/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>跨域资源共享（CORS）的原理与实现</title>
-    <link href="https://www.tongjiebin.cn/posts/651a.html"/>
-    <id>https://www.tongjiebin.cn/posts/651a.html</id>
-    <published>2021-08-01T03:06:08.000Z</published>
-    <updated>2021-11-21T01:27:22.179Z</updated>
-    
-    
-    <summary type="html">&lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;p&gt;跨域资源共享（Cross-Origin Resource Sharing）是W3C的一个标准，定义了在必须访问跨源资源时，浏览器和服务器应该如何沟通。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="跨域" scheme="https://www.tongjiebin.cn/tags/%E8%B7%A8%E5%9F%9F/"/>
-    
-    <category term="CORS" scheme="https://www.tongjiebin.cn/tags/CORS/"/>
     
   </entry>
   
