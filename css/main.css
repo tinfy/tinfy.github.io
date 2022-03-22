@@ -2990,3 +2990,7 @@ mark.search-keyword {
 .line-numbers {
   border-radius: 5px;
 }
+.site-brand-container,
+.back-to-top {
+  background-color: #5192fe;
+}

@@ -5622,8 +5622,10 @@ C:<span class="token punctuation">\</span>Users<span class="token punctuation">\
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li>在<strong>主题配置文件</strong> <code>_config.yml</code> 中取消 <code>postBodyEnd</code> 前面的注释。<pre class="line-numbers language-none"><code class="language-none">custom_file_path:
   postBodyEnd: source&#x2F;_data&#x2F;post-body-end.njk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="添加订阅文章通知功能"><a href="#添加订阅文章通知功能" class="headerlink" title="添加订阅文章通知功能"></a>添加订阅文章通知功能</h4>参考链接：<a href="https://cloud.tencent.com/developer/article/1622392">https://cloud.tencent.com/developer/article/1622392</a></li>
+
+</li>
 </ol>
+<h4 id="添加订阅文章通知功能"><a href="#添加订阅文章通知功能" class="headerlink" title="添加订阅文章通知功能"></a>添加订阅文章通知功能</h4><p>参考链接：<a href="https://cloud.tencent.com/developer/article/1622392">https://cloud.tencent.com/developer/article/1622392</a></p>
 <h4 id="添加-utterances-评论系统"><a href="#添加-utterances-评论系统" class="headerlink" title="添加 utterances 评论系统"></a>添加 utterances 评论系统</h4><p>参考链接：<a href="https://blog.csdn.net/weixin_43641850/article/details/105284634">https://blog.csdn.net/weixin_43641850/article/details/105284634</a></p>
 <h4 id="防止每次-hexo-clean-后-CNAME-文件被删除"><a href="#防止每次-hexo-clean-后-CNAME-文件被删除" class="headerlink" title="防止每次 hexo clean 后 CNAME 文件被删除"></a>防止每次 hexo clean 后 CNAME 文件被删除</h4><ol>
 <li>安装 <code>hexo-generator-cname</code> 模块：<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-cname --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
@@ -5682,9 +5684,16 @@ C:<span class="token punctuation">\</span>Users<span class="token punctuation">\
     <span class="token punctuation">&#125;</span>
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>在最后面添加如下代码，这是给侧边栏也添加上圆角。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.sidebar-inner, .header-inner, .site-brand-container</span> <span class="token punctuation">&#123;</span>
+<p>在最后面添加如下代码，这是给侧边栏和代码块也添加上圆角。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.sidebar-inner, .header-inner, .line-numbers</span> <span class="token punctuation">&#123;</span>
   <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol start="3">
+<li>修改背景色</li>
+</ol>
+<p>修改博客标题处和向上跳转按钮的背景色，在 <code>index.styl</code> 文件中添加：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.site-brand-container, .back-to-top</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #27ae60<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h4 id="动态站点标签页标题"><a href="#动态站点标签页标题" class="headerlink" title="动态站点标签页标题"></a>动态站点标签页标题</h4><p>在 <code>themes/next/layout/_layout.njk</code> 文件中添加如下内容：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
