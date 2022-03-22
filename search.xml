@@ -5691,10 +5691,13 @@ C:<span class="token punctuation">\</span>Users<span class="token punctuation">\
 <ol start="3">
 <li>修改背景色</li>
 </ol>
-<p>修改博客标题处和向上跳转按钮的背景色，在 <code>index.styl</code> 文件中添加：</p>
+<p>修改博客标题处和向上跳转按钮以及 GitHub Logo 的背景色，在 <code>index.styl</code> 文件中添加：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.site-brand-container, .back-to-top</span> <span class="token punctuation">&#123;</span>
-  <span class="token property">background-color</span><span class="token punctuation">:</span> #27ae60<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #5192FE<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.github-corner svg</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">fill</span><span class="token punctuation">:</span> #5192FE<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="动态站点标签页标题"><a href="#动态站点标签页标题" class="headerlink" title="动态站点标签页标题"></a>动态站点标签页标题</h4><p>在 <code>themes/next/layout/_layout.njk</code> 文件中添加如下内容：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
     <span class="token keyword">var</span> OriginTitile <span class="token operator">=</span> document<span class="token punctuation">.</span>title<span class="token punctuation">,</span>
