@@ -4368,15 +4368,17 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514224137.png" alt="image-20210514224134502"></p>
 <p>如果出现下面的界面，表示连接成功。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210514224404.png" alt="image-20210514224404050"></p>
-<h4 id="服务器安装-V2Ray"><a href="#服务器安装-V2Ray" class="headerlink" title="服务器安装 V2Ray"></a>服务器安装 V2Ray</h4><ol>
+<h4 id="服务器安装-V2Ray"><a href="#服务器安装-V2Ray" class="headerlink" title="服务器安装 V2Ray"></a>服务器安装 V2Ray</h4><p>查看当前时区：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">timedatectl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>修改当前时区：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> timedatectl set-timezone Asia/Shanghai<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="脚本一"><a href="#脚本一" class="headerlink" title="脚本一"></a>脚本一</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">安装命令： <span class="token builtin class-name">source</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -sL https://multi.netlify.app/v2ray.sh<span class="token punctuation">)</span> --zh
+升级命令： <span class="token builtin class-name">source</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -sL https://multi.netlify.app/v2ray.sh<span class="token punctuation">)</span> -k
+卸载命令： <span class="token builtin class-name">source</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -sL https://multi.netlify.app/v2ray.sh<span class="token punctuation">)</span> --remove<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h5 id="脚本二"><a href="#脚本二" class="headerlink" title="脚本二"></a>脚本二</h5><ol>
 <li>复制下面的命令，右键粘贴到命令行中，回车。</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -s -L https://git.io/v2ray.sh<span class="token punctuation">)</span>
-
-上面这个脚本如果经常出问题可以用下面的第一个脚本
-安装命令： <span class="token builtin class-name">source</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -sL https://multi.netlify.app/v2ray.sh<span class="token punctuation">)</span> --zh
-升级命令： <span class="token builtin class-name">source</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -sL https://multi.netlify.app/v2ray.sh<span class="token punctuation">)</span> -k
-卸载命令： <span class="token builtin class-name">source</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -sL https://multi.netlify.app/v2ray.sh<span class="token punctuation">)</span> --remove<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -s -L https://git.io/v2ray.sh<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ol start="2">
 <li>安装脚本，输入1，回车。</li>
 </ol>
@@ -5297,7 +5299,62 @@ mysqld.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210505172617.png" alt="image-20210505172615940"></p>
 <h4 id="WinSCP"><a href="#WinSCP" class="headerlink" title="WinSCP"></a>WinSCP</h4><p>安装 WinSCP 后打开，进入到登录界面。文件协议选择 SFTP，主机名，用户名，密码同上，点击“登录”即可连接成功。WinSCP是用来传输本地文件到云服务器上，有可视化的界面，直接拖拽就行，操作很方便。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210505173351.png" alt="image-20210505173349509"></p>
-<h3 id="在-CentOS上安装-MySQL"><a href="#在-CentOS上安装-MySQL" class="headerlink" title="在 CentOS上安装 MySQL"></a>在 CentOS上安装 MySQL</h3><ol>
+<h3 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL"></a>安装 MySQL</h3><h4 id="Yum安装（推荐）"><a href="#Yum安装（推荐）" class="headerlink" title="Yum安装（推荐）"></a>Yum安装（推荐）</h4><p>CentOS 8上安装 MySQL 8.0：</p>
+<ol>
+<li>使用最新的包管理器安装MySQL</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> dnf <span class="token function">install</span> @mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="2">
+<li>安装完成后，运行以下命令来启动MySQL服务并使它在启动时自动启动：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> --now mysqld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="3">
+<li>要检查MySQL服务器是否正在运行，请输入：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> systemctl status mysqld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="4">
+<li>运行mysql_secure_installation脚本，该脚本执行一些与安全性相关的操作并设置MySQL根密码：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> mysql_secure_installation<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>步骤如下：</p>
+<p>要求你配置VALIDATE PASSWORD component（验证密码组件）： </p>
+<ul>
+<li>输入y ，回车进入该配置</li>
+<li>选择密码验证策略等级， 我这里选择0 （low），回车</li>
+<li>输入新密码两次</li>
+<li>确认是否继续使用提供的密码？输入y ，回车</li>
+<li>移除匿名用户？ 输入y ，回车</li>
+<li>不允许root远程登陆？ <strong>如果需要远程登陆，所以输入n ，回车</strong></li>
+<li>移除test数据库？ 输入y ，回车</li>
+<li>重新载入权限表？ 输入y ，回车</li>
+</ul>
+<ol start="5">
+<li>本机登录MySQL:</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">mysql -uroot -p<span class="token operator">&lt;</span>上面步骤中设置的密码<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="6">
+<li>接着继续执行mysql语句，将将root用户的host字段设为’%’：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">use mysql<span class="token punctuation">;</span>
+update user <span class="token builtin class-name">set</span> <span class="token assign-left variable">host</span><span class="token operator">=</span><span class="token string">'%'</span> where <span class="token assign-left variable">user</span><span class="token operator">=</span><span class="token string">'root'</span><span class="token punctuation">;</span>
+flush privileges<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol start="7">
+<li>设置完成后输入exit退出mysql，回到终端shell界面，接着开启系统防火墙的3306端口：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> firewall-cmd --add-port<span class="token operator">=</span><span class="token number">3306</span>/tcp --permanent
+<span class="token function">sudo</span> firewall-cmd --reload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ol start="8">
+<li>关闭MySQL主机查询dns，打开/etc/my.cnf文件，添加以下配置：</li>
+</ol>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">[mysqld]
+skip-name-resolve<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ol start="9">
+<li>重启服务</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> systemctl restart mysqld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>参考资料：<a href="https://www.cnblogs.com/kasnti/p/11929030.html">https://www.cnblogs.com/kasnti/p/11929030.html</a></p>
+<h4 id="APT-安装"><a href="#APT-安装" class="headerlink" title="APT 安装"></a>APT 安装</h4><p>Debian 8上安装 MySQL 8.0：</p>
+<ol>
 <li>将 MySQL APT 存储库添加到系统</li>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> http://repo.mysql.com/mysql-apt-config_0.8.13-1_all.deb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -5306,8 +5363,10 @@ mysqld.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> ./mysql-apt-config_0.8.13-1_all.deb<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>执行上面的命令后，会出现下面的界面。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210505211426.png" alt="image-20210505211424118"></p>
 <p>按“Tab”选择到 &lt;OK&gt;，进入到如下的界面。默认安装的是 mysql - 8.0，选择“OK”，按下“Enter”就能成功安装 MySQL Server。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20220327090411.png" alt="image-20220326154117258"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20220327090439.png" alt="image-20220326154250016"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210505211426.png" alt="image-20210505211424118"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210505211707.png" alt="image-20210505211705879"></p>
 <p>通过运行以下命令更新包列表并安装MySQL服务器包：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -5346,14 +5405,24 @@ Query OK, 1 row affected (0.01 sec)<span aria-hidden="true" class="line-numbers-
 <pre class="line-numbers language-none"><code class="language-none">mysql&gt; use mydb;
 Database changed<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ol start="4">
-<li><p>使用 WinSCP 把 .sql 文件传输到云服务器中的 /home/database 目录下。</p>
-</li>
-<li><p>输入 <code>source /home/database/mydb.sql</code> 把mydb.sql 导入到 mysql 数据库中。</p>
-</li>
-<li><p>输入 <code>create user admin identified by &#39;123456&#39;;</code> 添加一个新用户 admin ，密码为 123456。</p>
-</li>
-<li><p>输入 <code>grant all privileges on mydb.* to &#39;admin&#39;@&#39;%&#39;;</code> 给用户 admin 添加 mydb 数据库所有的权限。</p>
-</li>
+<li>使用 WinSCP 把 .sql 文件传输到云服务器中的 /home/database 目录下。</li>
+<li>输入 <code>source /home/database/mydb.sql;</code> 把mydb.sql 导入到 mysql 数据库中。</li>
+<li>输入 <code>create user admin identified by &#39;123456&#39;;</code> 添加一个新用户 admin ，密码为 123456。</li>
+</ol>
+<blockquote>
+<p>查看密码策略：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">SHOW VARIABLES LIKE <span class="token string">'validate_password%'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>修改validate_password.policy参数的值</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span> global validate_password.policy<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>修改validate_password.length参数的值来设置密码的最小长度（这个值是由mix_case_count、number_count、special_char_count需大于等于这三个值和的最小值）</p>
+<pre class="line-numbers language-none"><code class="language-none">set global validate_password.length&#x3D;6;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="7">
+<li>输入 <code>grant all privileges on mydb.* to &#39;admin&#39;@&#39;%&#39;;</code> 给用户 admin 添加 mydb 数据库所有的权限。</li>
+</ol>
+</blockquote>
+<ol start="8">
 <li><p>输入 <code>flush privileges;</code> 刷新权限。</p>
 </li>
 <li><p>修改 root 的密码。</p>
@@ -5370,8 +5439,11 @@ Database changed<span aria-hidden="true" class="line-numbers-rows"><span></span>
 <p>修改密码：<a href="https://blog.csdn.net/u011365831/article/details/80256687">https://blog.csdn.net/u011365831/article/details/80256687</a></p>
 <p>启动 MySQL 服务：<a href="https://www.cnblogs.com/linjiqin/p/3544472.html">https://www.cnblogs.com/linjiqin/p/3544472.html</a></p>
 <h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><p>输入如下命令安装 Node.js：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
-<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> nodejs <span class="token function">npm</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">// CentOS操作系统
+<span class="token function">sudo</span> yum module <span class="token function">install</span> nodejs
+// Debian操作系统
+<span class="token function">sudo</span> <span class="token function">apt</span> update
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> nodejs <span class="token function">npm</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>查看 nodejs 的版本：</p>
 <pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">root@vultr:&#x2F;# node -v
 v10.24.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -5413,7 +5485,16 @@ v10.24.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <ol start="4">
 <li>现在你就可以通过你设置的二级域名来访问 Vue 项目了。</li>
 </ol>
-<h3 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h3><p>现在访问 vueshop.tongjiebin.cn 这个域名可以打开 Vue 项目，但是不能点击登录有报错。</p>
+<h3 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h3><p>访问接口地址出现503错误，解决办法：关闭防火墙</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">查看防火墙状态
+systemctl status firewalld.service
+开启防火墙
+systemctl start firewalld.service
+关闭防火墙
+systemctl stop firewalld.service
+禁用防火墙
+systemctl disable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>现在访问 vueshop.tongjiebin.cn 这个域名可以打开 Vue 项目，但是不能点击登录有报错。</p>
 <p>F12 进行调试，发现 login 这个接口请求的 URL 是 127.0.0.1。</p>
 <p>这个地址是本地环回地址，访问 127.0.0.1 其实就是访问的本机的接口，在电脑的hosts文件中都会有这样的设置：</p>
 <pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">#	127.0.0.1       localhost
