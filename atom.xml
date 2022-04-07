@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2022-03-06T13:33:41.883Z</updated>
+  <updated>2022-04-07T12:34:58.612Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端实现 AES/CBC/PKCS5Padding 加解密</title>
+    <link href="https://www.tongjiebin.cn/posts/a871.html"/>
+    <id>https://www.tongjiebin.cn/posts/a871.html</id>
+    <published>2022-04-07T12:27:56.000Z</published>
+    <updated>2022-04-07T12:34:58.612Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;安装-crypto-js-模块&quot;&gt;&lt;a href=&quot;#安装-crypto-js-模块&quot; class=&quot;headerlink&quot; title=&quot;安装 crypto-js 模块&quot;&gt;&lt;/a&gt;安装 crypto-js 模块&lt;/h3&gt;&lt;p&gt;crypto-js 是一个 JavaScript 库，提供了各种加密算法，例如：md5、sha1、aes。&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; crypto-js&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="AES" scheme="https://www.tongjiebin.cn/tags/AES/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue项目中使用animate.css没有效果</title>
@@ -191,7 +211,7 @@
     <link href="https://www.tongjiebin.cn/posts/9b69.html"/>
     <id>https://www.tongjiebin.cn/posts/9b69.html</id>
     <published>2021-11-19T14:06:01.000Z</published>
-    <updated>2022-03-15T15:26:28.305Z</updated>
+    <updated>2022-04-07T12:41:25.957Z</updated>
     
     
     <summary type="html">&lt;h4 id=&quot;模块化的理解&quot;&gt;&lt;a href=&quot;#模块化的理解&quot; class=&quot;headerlink&quot; title=&quot;模块化的理解&quot;&gt;&lt;/a&gt;模块化的理解&lt;/h4&gt;&lt;h5 id=&quot;引入&quot;&gt;&lt;a href=&quot;#引入&quot; class=&quot;headerlink&quot; title=&quot;引入&quot;&gt;&lt;/a&gt;引入&lt;/h5&gt;&lt;p&gt;在早期的 JavaScript 开发中存在&lt;strong&gt;全局变量污染&lt;/strong&gt;和&lt;strong&gt;依赖管理&lt;/strong&gt;等问题，在多人开发前端应用时这是一个棘手的问题。&lt;/p&gt;</summary>
@@ -499,26 +519,6 @@
     
     
     <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sass用法指南</title>
-    <link href="https://www.tongjiebin.cn/posts/1ee4.html"/>
-    <id>https://www.tongjiebin.cn/posts/1ee4.html</id>
-    <published>2021-08-13T13:35:36.000Z</published>
-    <updated>2021-08-14T05:28:00.308Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;关于&quot;&gt;&lt;a href=&quot;#关于&quot; class=&quot;headerlink&quot; title=&quot;关于&quot;&gt;&lt;/a&gt;关于&lt;/h3&gt;&lt;p&gt;css并不算真正意义上的编程语言，它不能像其他编程语言一样使用变量、嵌套等来工作。为此，开发人员编写了一种对css进行预处理的“中间语言”，可以实现一些编程语言才有的功能，然后自动编译成css。于是，Sass就应运而生了。Sass是一种css预处理语言，采用Ruby语言编写的。&lt;/p&gt;
-&lt;p&gt;Sass在线转换css：&lt;a href=&quot;https://www.sassmeister.com/&quot;&gt;https://www.sassmeister.com&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="Sass" scheme="https://www.tongjiebin.cn/tags/Sass/"/>
     
   </entry>
   
