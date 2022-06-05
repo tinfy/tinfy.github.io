@@ -96,6 +96,8 @@
   </style>
 </noscript>
 
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
 <link rel="alternate" href="/atom.xml" title="Tong jiebin's Blog" type="application/atom+xml">
 </head>
 
@@ -136,7 +138,7 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">69</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">70</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -199,7 +201,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tong jiebin"
-      src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
   <p class="site-author-name" itemprop="name">Tong jiebin</p>
   <div class="site-description" itemprop="description">不忘初心，方得始终</div>
 </div>
@@ -208,7 +210,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -274,10 +276,113 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/f8ba.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="name" content="Tong jiebin">
+      <meta itemprop="description" content="不忘初心，方得始终">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tong jiebin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/f8ba.html" class="post-title-link" itemprop="url">NexT主题添加不蒜子统计</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+  
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-10 12:39:29" itemprop="dateCreated datePublished" datetime="2021-03-10T12:39:29+08:00">2021-03-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-28 21:27:16" itemprop="dateModified" datetime="2021-05-28T21:27:16+08:00">2021-05-28</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>之前博客部署在GitHub Page上，但在国内访问GitHub经常出现速度慢，甚至访问不了等问题。<br>于是我决定在Coding Page和GitHub Page上进行双线部署，在Coding Page上部署成功后，打开博客发现文章的阅读量显示为空（使用LeanCloud统计的阅读量）。<br>查看NexT文档后发现了另一种方法，在5.0.1以后的版本可以使用<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/third-party-services.html#analytics-busuanzi">不蒜子统计</a>阅读量。具体方法如下：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/f8ba.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+	
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+	  
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/fc2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -306,7 +411,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-11-03 20:02:09" itemprop="dateModified" datetime="2021-11-03T20:02:09+08:00">2021-11-03</time>
+        <time title="修改时间：2022-06-05 20:36:43" itemprop="dateModified" datetime="2022-06-05T20:36:43+08:00">2022-06-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -342,7 +447,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>效果图如下：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/baiduBear.jpg"></p>
+          <p>效果图如下：<br><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/baiduBear.jpg"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/fc2.html#more" rel="contents">
@@ -380,7 +485,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/8d4d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -483,7 +588,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/5ca0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -586,7 +691,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/e654.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -615,7 +720,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-01-31 17:12:06" itemprop="dateModified" datetime="2022-01-31T17:12:06+08:00">2022-01-31</time>
+        <time title="修改时间：2022-06-05 20:36:16" itemprop="dateModified" datetime="2022-06-05T20:36:16+08:00">2022-06-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -689,7 +794,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/cf7f.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -792,7 +897,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/b234.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -821,7 +926,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-01-10 22:14:22" itemprop="dateModified" datetime="2022-01-10T22:14:22+08:00">2022-01-10</time>
+        <time title="修改时间：2022-06-05 20:35:41" itemprop="dateModified" datetime="2022-06-05T20:35:41+08:00">2022-06-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -895,7 +1000,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/93cb.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -998,7 +1103,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/21ff.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -1027,7 +1132,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-11-03 20:02:09" itemprop="dateModified" datetime="2021-11-03T20:02:09+08:00">2021-11-03</time>
+        <time title="修改时间：2022-06-05 20:36:36" itemprop="dateModified" datetime="2022-06-05T20:36:36+08:00">2022-06-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1104,7 +1209,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/f96b.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -1222,12 +1327,11 @@
     });
   }
 </script>
-<script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
-      <div id="waline"></div>
+<div id="waline"></div>
       <script>
-        Waline({
+        Waline.init({
           el: '#waline',
-          serverURL: 'https://blog-comment-2dt5ewpcf-2295336484-qqcom.vercel.app/',
+          serverURL: 'https://blog-comment-swart.vercel.app',
         });
       </script>
     </div>
@@ -1251,14 +1355,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">177k</span>
+    <span title="站点总字数">178k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:41</span>
+    <span title="站点阅读时长">2:42</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -1282,13 +1386,13 @@
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div><!-- 背景中出现动态线条背景 -->
-<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
+<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://fastly.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
 <!-- 🌸飘落 -->
-<script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
 <!-- 鼠标痕迹星星坠落 -->
-<!-- script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
+<!-- script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
 <!-- 鼠标点击出现爱心 -->
-<!-- <script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
+<!-- <script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
 
     </div>
   </footer>
@@ -1337,6 +1441,6 @@
   </script>
 
   <!-- 自定义鼠标指针 2021/11/3 add  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":0.85,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false,"scale":0.5},"dialog":{"enable":false,"hitokoto":false},"log":false});</script></body>
 </html>

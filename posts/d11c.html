@@ -30,13 +30,13 @@
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
 <meta property="og:description" content="作用域（Scope）的概念 概念：通俗来讲，作用域是一个变量或函数的作用范围。作用域在函数定义时，就已经确定了。 目的：为了提高程序的可靠性，同时减少命名冲突。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210616221306.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210616221306.png">
 <meta property="article:published_time" content="2021-06-16T12:25:52.000Z">
-<meta property="article:modified_time" content="2021-11-03T12:02:09.235Z">
+<meta property="article:modified_time" content="2022-06-05T12:35:34.153Z">
 <meta property="article:author" content="Tong jiebin">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210616221306.png">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210616221306.png">
 
 
 <link rel="canonical" href="https://www.tongjiebin.cn/posts/d11c.html">
@@ -101,6 +101,8 @@
   </style>
 </noscript>
 
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
 <link rel="alternate" href="/atom.xml" title="Tong jiebin's Blog" type="application/atom+xml">
 </head>
 
@@ -141,7 +143,7 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">69</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">70</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -205,7 +207,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tong jiebin"
-      src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
   <p class="site-author-name" itemprop="name">Tong jiebin</p>
   <div class="site-description" itemprop="description">不忘初心，方得始终</div>
 </div>
@@ -214,7 +216,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -284,7 +286,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/d11c.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -313,7 +315,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-11-03 20:02:09" itemprop="dateModified" datetime="2021-11-03T20:02:09+08:00">2021-11-03</time>
+        <time title="修改时间：2022-06-05 20:35:34" itemprop="dateModified" datetime="2022-06-05T20:35:34+08:00">2022-06-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -462,7 +464,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>使用<code>函数表达式</code>创建的函数<code>var foo = function()&#123;&#125;</code>，<strong>不会被声明提前</strong>，所以不能在声明前调用。</p>
 <p>很好理解，因为此时foo被声明了（这里只是变量声明），且为undefined，并没有把 <code>function()&#123;&#125;</code> 赋值给 foo。</p>
 <p>所以说，下面的例子，会报错：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210616221306.png"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210616221306.png"></p>
 <h2 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h2><p><strong>提醒1</strong>：在函数作用域中，也有声明提前的特性：</p>
 <ul>
 <li><p>函数中，使用var关键字声明的变量，会在函数中所有的代码执行之前被声明。</p>
@@ -606,12 +608,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
     });
   }
 </script>
-<script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
-      <div id="waline"></div>
+<div id="waline"></div>
       <script>
-        Waline({
+        Waline.init({
           el: '#waline',
-          serverURL: 'https://blog-comment-2dt5ewpcf-2295336484-qqcom.vercel.app/',
+          serverURL: 'https://blog-comment-swart.vercel.app',
         });
       </script>
     </div>
@@ -635,14 +636,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">177k</span>
+    <span title="站点总字数">178k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:41</span>
+    <span title="站点阅读时长">2:42</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -666,13 +667,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div><!-- 背景中出现动态线条背景 -->
-<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
+<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://fastly.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
 <!-- 🌸飘落 -->
-<script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
 <!-- 鼠标痕迹星星坠落 -->
-<!-- script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
+<!-- script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
 <!-- 鼠标点击出现爱心 -->
-<!-- <script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
+<!-- <script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
 
     </div>
   </footer>
@@ -721,6 +722,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   </script>
 
   <!-- 自定义鼠标指针 2021/11/3 add  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":0.85,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false,"scale":0.5},"dialog":{"enable":false,"hitokoto":false},"log":false});</script></body>
 </html>

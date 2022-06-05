@@ -30,13 +30,13 @@
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
 <meta property="og:description" content="前往 Node.js官网 下载 .msi 文件，一路点击 next 即可顺利安装。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232451.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232557.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232451.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232557.png">
 <meta property="article:published_time" content="2021-04-01T14:51:08.000Z">
-<meta property="article:modified_time" content="2022-03-06T00:13:16.395Z">
+<meta property="article:modified_time" content="2022-06-05T12:34:19.678Z">
 <meta property="article:author" content="Tong jiebin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232451.png">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232451.png">
 
 
 <link rel="canonical" href="https://www.tongjiebin.cn/posts/6749.html">
@@ -101,6 +101,8 @@
   </style>
 </noscript>
 
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
 <link rel="alternate" href="/atom.xml" title="Tong jiebin's Blog" type="application/atom+xml">
 </head>
 
@@ -141,7 +143,7 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">69</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">70</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -204,7 +206,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tong jiebin"
-      src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
   <p class="site-author-name" itemprop="name">Tong jiebin</p>
   <div class="site-description" itemprop="description">不忘初心，方得始终</div>
 </div>
@@ -213,7 +215,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -283,7 +285,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/6749.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -312,7 +314,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-03-06 08:13:16" itemprop="dateModified" datetime="2022-03-06T08:13:16+08:00">2022-03-06</time>
+        <time title="修改时间：2022-06-05 20:34:19" itemprop="dateModified" datetime="2022-06-05T20:34:19+08:00">2022-06-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -364,9 +366,9 @@
 <li><p>在 nodejs 安装目录下（默认为 C 盘，我把路径修改为了 <code>D:\nodejs</code>），新建两个文件夹：<code>node_cache</code>，<code>node_global</code>，创建完后，在命令窗口中输入如下命令：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token builtin class-name">set</span> prefix <span class="token string">"D:<span class="token entity" title="\n">\n</span>odejs<span class="token entity" title="\n">\n</span>ode_global"</span>
 <span class="token function">npm</span> config <span class="token builtin class-name">set</span> cache <span class="token string">"D:<span class="token entity" title="\n">\n</span>odejs<span class="token entity" title="\n">\n</span>ode_cache"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li><p>进入电脑的环境变量属性，把<strong>用户变量</strong>里的 Path 变量中的 nodejs 默认的路径改为：<code>D:\nodejs\node_global</code>，如果 Path 变量里没有对应的值则点击“新建”，把 <code>D:\nodejs\node_global</code> 添加进去。<br> <img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232451.png" alt="image-20210915232444030"></p>
+<li><p>进入电脑的环境变量属性，把<strong>用户变量</strong>里的 Path 变量中的 nodejs 默认的路径改为：<code>D:\nodejs\node_global</code>，如果 Path 变量里没有对应的值则点击“新建”，把 <code>D:\nodejs\node_global</code> 添加进去。<br> <img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232451.png" alt="image-20210915232444030"></p>
 </li>
-<li><p>新增一个<strong>系统变量</strong>，变量名为：<code>NODE_PATH</code>，变量值为：<code>D:\nodejs\node_global\node_modules</code>，设置如图所示：<br> <img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232557.png" alt="image-20210915232557645"></p>
+<li><p>新增一个<strong>系统变量</strong>，变量名为：<code>NODE_PATH</code>，变量值为：<code>D:\nodejs\node_global\node_modules</code>，设置如图所示：<br> <img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210915232557.png" alt="image-20210915232557645"></p>
 </li>
 <li><p>安装 cnpm，设置为国内的镜像，以后安装模块使用 cnpm 命令可以加快下载速度：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npmmirror.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
@@ -455,12 +457,11 @@ cache&#x3D;D:\nodejs\node_cache<span aria-hidden="true" class="line-numbers-rows
     });
   }
 </script>
-<script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
-      <div id="waline"></div>
+<div id="waline"></div>
       <script>
-        Waline({
+        Waline.init({
           el: '#waline',
-          serverURL: 'https://blog-comment-2dt5ewpcf-2295336484-qqcom.vercel.app/',
+          serverURL: 'https://blog-comment-swart.vercel.app',
         });
       </script>
     </div>
@@ -484,14 +485,14 @@ cache&#x3D;D:\nodejs\node_cache<span aria-hidden="true" class="line-numbers-rows
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">177k</span>
+    <span title="站点总字数">178k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:41</span>
+    <span title="站点阅读时长">2:42</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -515,13 +516,13 @@ cache&#x3D;D:\nodejs\node_cache<span aria-hidden="true" class="line-numbers-rows
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div><!-- 背景中出现动态线条背景 -->
-<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
+<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://fastly.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
 <!-- 🌸飘落 -->
-<script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
 <!-- 鼠标痕迹星星坠落 -->
-<!-- script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
+<!-- script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
 <!-- 鼠标点击出现爱心 -->
-<!-- <script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
+<!-- <script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
 
     </div>
   </footer>
@@ -570,6 +571,6 @@ cache&#x3D;D:\nodejs\node_cache<span aria-hidden="true" class="line-numbers-rows
   </script>
 
   <!-- 自定义鼠标指针 2021/11/3 add  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":0.85,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false,"scale":0.5},"dialog":{"enable":false,"hitokoto":false},"log":false});</script></body>
 </html>

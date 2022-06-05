@@ -30,13 +30,13 @@
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
 <meta property="og:description" content="Node接口的textContent属性表示一个节点以及它的子节点的文本内容。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210619110552.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210619110552.png">
 <meta property="article:published_time" content="2021-03-31T12:05:33.000Z">
-<meta property="article:modified_time" content="2021-11-03T12:02:09.307Z">
+<meta property="article:modified_time" content="2022-06-05T12:34:03.646Z">
 <meta property="article:author" content="Tong jiebin">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210619110552.png">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210619110552.png">
 
 
 <link rel="canonical" href="https://www.tongjiebin.cn/posts/1675.html">
@@ -101,6 +101,8 @@
   </style>
 </noscript>
 
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
 <link rel="alternate" href="/atom.xml" title="Tong jiebin's Blog" type="application/atom+xml">
 </head>
 
@@ -141,7 +143,7 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">69</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">70</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -205,7 +207,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tong jiebin"
-      src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
   <p class="site-author-name" itemprop="name">Tong jiebin</p>
   <div class="site-description" itemprop="description">不忘初心，方得始终</div>
 </div>
@@ -214,7 +216,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -284,7 +286,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/1675.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -313,7 +315,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-11-03 20:02:09" itemprop="dateModified" datetime="2021-11-03T20:02:09+08:00">2021-11-03</time>
+        <time title="修改时间：2022-06-05 20:34:03" itemprop="dateModified" datetime="2022-06-05T20:34:03+08:00">2022-06-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -390,7 +392,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>与<code>textContent</code>不同，在<code>IE11</code>及以下版本中修改<code>innerText</code>不仅会移除当前元素的子节点，而且还会永久性地破坏所有后代文本节点。在之后不可能再次将节点再次插入到任何其他元素或同一元素中。</li>
 </ol>
 <h4 id="和innerHTML的区别"><a href="#和innerHTML的区别" class="headerlink" title="和innerHTML的区别"></a>和innerHTML的区别</h4><p>正如其名称，<code>Element.innerHTML</code>返回HTML。通常，为了在元素中检索或写入文本，人们使用<code>innerHTML</code>，但是<code>textContent</code>通常具有更好的性能，因为文本不会被解析为HTML。<br>而且，使用<code>textContent</code>可以防止<code>XSS</code>攻击。</p>
-<h4 id="实例演示"><a href="#实例演示" class="headerlink" title="实例演示"></a>实例演示</h4><p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20210619110552.png" alt="image-20210619110552197"></p>
+<h4 id="实例演示"><a href="#实例演示" class="headerlink" title="实例演示"></a>实例演示</h4><p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20210619110552.png" alt="image-20210619110552197"></p>
 <p>从上面的例子可以看到，<code>textContent</code>和<code>innerText</code>一样只会获取到<strong>标签内的文本</strong>，同时<code>textContent</code>还会返回所有的换行和空格。</p>
 <p><code>innerHtml</code>能获取到<strong>标签内的所有内容（标签以及文本）</strong>，也会返回所有的换行和空格。</p>
 <hr>
@@ -470,12 +472,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
     });
   }
 </script>
-<script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
-      <div id="waline"></div>
+<div id="waline"></div>
       <script>
-        Waline({
+        Waline.init({
           el: '#waline',
-          serverURL: 'https://blog-comment-2dt5ewpcf-2295336484-qqcom.vercel.app/',
+          serverURL: 'https://blog-comment-swart.vercel.app',
         });
       </script>
     </div>
@@ -499,14 +500,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">177k</span>
+    <span title="站点总字数">178k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:41</span>
+    <span title="站点阅读时长">2:42</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -530,13 +531,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div><!-- 背景中出现动态线条背景 -->
-<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
+<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://fastly.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
 <!-- 🌸飘落 -->
-<script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
 <!-- 鼠标痕迹星星坠落 -->
-<!-- script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
+<!-- script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
 <!-- 鼠标点击出现爱心 -->
-<!-- <script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
+<!-- <script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
 
     </div>
   </footer>
@@ -585,6 +586,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
   </script>
 
   <!-- 自定义鼠标指针 2021/11/3 add  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":0.85,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false,"scale":0.5},"dialog":{"enable":false,"hitokoto":false},"log":false});</script></body>
 </html>

@@ -30,13 +30,13 @@
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
 <meta property="og:description" content="工厂模式用函数来封装以特定接口创建对象的细节，解决了创建大量相似对象的问题。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211128201511.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20211128201511.png">
 <meta property="article:published_time" content="2021-02-20T13:25:37.000Z">
-<meta property="article:modified_time" content="2022-01-10T14:14:22.279Z">
+<meta property="article:modified_time" content="2022-06-05T12:35:41.477Z">
 <meta property="article:author" content="Tong jiebin">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211128201511.png">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20211128201511.png">
 
 
 <link rel="canonical" href="https://www.tongjiebin.cn/posts/b234.html">
@@ -101,6 +101,8 @@
   </style>
 </noscript>
 
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
 <link rel="alternate" href="/atom.xml" title="Tong jiebin's Blog" type="application/atom+xml">
 </head>
 
@@ -141,7 +143,7 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">69</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">70</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -205,7 +207,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tong jiebin"
-      src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
   <p class="site-author-name" itemprop="name">Tong jiebin</p>
   <div class="site-description" itemprop="description">不忘初心，方得始终</div>
 </div>
@@ -214,7 +216,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -284,7 +286,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/b234.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -313,7 +315,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-01-10 22:14:22" itemprop="dateModified" datetime="2022-01-10T22:14:22+08:00">2022-01-10</time>
+        <time title="修改时间：2022-06-05 20:35:41" itemprop="dateModified" datetime="2022-06-05T20:35:41+08:00">2022-06-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -395,7 +397,7 @@
 <span class="token keyword">var</span> person1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> person2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>上面代码中对象之间的关系如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211128201511.png" alt="image-20211128201511527"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20211128201511.png" alt="image-20211128201511527"></p>
 <p>原型模式可以让每个实例对象都共享原型对象的属性和方法。<br><code>isPrototypeOf()</code> 方法可以用来确定实例对象和构造函数之间的关系。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">alert</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">isPrototypeOf</span><span class="token punctuation">(</span>person1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">//true</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><code>Object.getPrototypeOf()</code> 方法可以返回实例对象 <code>[[Prototype]]</code> 的值。</p>
@@ -579,12 +581,11 @@ person<span class="token punctuation">.</span><span class="token function">sayNa
     });
   }
 </script>
-<script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
-      <div id="waline"></div>
+<div id="waline"></div>
       <script>
-        Waline({
+        Waline.init({
           el: '#waline',
-          serverURL: 'https://blog-comment-2dt5ewpcf-2295336484-qqcom.vercel.app/',
+          serverURL: 'https://blog-comment-swart.vercel.app',
         });
       </script>
     </div>
@@ -608,14 +609,14 @@ person<span class="token punctuation">.</span><span class="token function">sayNa
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">177k</span>
+    <span title="站点总字数">178k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:41</span>
+    <span title="站点阅读时长">2:42</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -639,13 +640,13 @@ person<span class="token punctuation">.</span><span class="token function">sayNa
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div><!-- 背景中出现动态线条背景 -->
-<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
+<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://fastly.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
 <!-- 🌸飘落 -->
-<script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
 <!-- 鼠标痕迹星星坠落 -->
-<!-- script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
+<!-- script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
 <!-- 鼠标点击出现爱心 -->
-<!-- <script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
+<!-- <script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
 
     </div>
   </footer>
@@ -694,6 +695,6 @@ person<span class="token punctuation">.</span><span class="token function">sayNa
   </script>
 
   <!-- 自定义鼠标指针 2021/11/3 add  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":0.85,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false,"scale":0.5},"dialog":{"enable":false,"hitokoto":false},"log":false});</script></body>
 </html>

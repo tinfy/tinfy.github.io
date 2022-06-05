@@ -30,14 +30,14 @@
 <meta property="og:site_name" content="Tong jiebin&#39;s Blog">
 <meta property="og:description" content="添加动态线条背景 在博客根目录下的 source\_data 文件夹（如果没有，则创建一个 _data 文件夹）中创建一个新的文件命名为 footer.njk 。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/image-20210427210333655.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211003193134.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/image-20210427210333655.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20211003193134.png">
 <meta property="article:published_time" content="2021-04-10T03:09:31.000Z">
-<meta property="article:modified_time" content="2022-03-22T15:42:03.047Z">
+<meta property="article:modified_time" content="2022-06-05T12:41:11.948Z">
 <meta property="article:author" content="Tong jiebin">
 <meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/image-20210427210333655.png">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/image-20210427210333655.png">
 
 
 <link rel="canonical" href="https://www.tongjiebin.cn/posts/eed2.html">
@@ -102,6 +102,8 @@
   </style>
 </noscript>
 
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
 <link rel="alternate" href="/atom.xml" title="Tong jiebin's Blog" type="application/atom+xml">
 </head>
 
@@ -142,7 +144,7 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">35</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">69</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">70</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -206,7 +208,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Tong jiebin"
-      src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
   <p class="site-author-name" itemprop="name">Tong jiebin</p>
   <div class="site-description" itemprop="description">不忘初心，方得始终</div>
 </div>
@@ -215,7 +217,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -285,7 +287,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.tongjiebin.cn/posts/eed2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
+      <meta itemprop="image" content="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/my-images/head.jpg">
       <meta itemprop="name" content="Tong jiebin">
       <meta itemprop="description" content="不忘初心，方得始终">
     </span>
@@ -314,7 +316,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-03-22 23:42:03" itemprop="dateModified" datetime="2022-03-22T23:42:03+08:00">2022-03-22</time>
+        <time title="修改时间：2022-06-05 20:41:11" itemprop="dateModified" datetime="2022-06-05T20:41:11+08:00">2022-06-05</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -340,7 +342,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4k</span>
+      <span>4.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -362,7 +364,7 @@
 <li><p>在<strong>博客根目录</strong>下的 <code>source\_data</code> 文件夹（如果没有，则创建一个 <code>_data</code> 文件夹）中创建一个新的文件命名为 <code>footer.njk</code> 。</p>
 <a id="more"></a></li>
 <li><p>在 <code>footer.njk</code> 文件中添加如下内容：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0,0,255<span class="token punctuation">"</span></span> <span class="token attr-name">opacity</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token attr-name">zIndex</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1<span class="token punctuation">"</span></span> <span class="token attr-name">count</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>99<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0,0,255<span class="token punctuation">"</span></span> <span class="token attr-name">opacity</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token attr-name">zIndex</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>-1<span class="token punctuation">"</span></span> <span class="token attr-name">count</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>99<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://fastly.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
 <p>你还可以自定义这些属性：</p>
 <ol>
@@ -403,19 +405,19 @@
 </ol>
 <h4 id="在标签-分类页添加引用"><a href="#在标签-分类页添加引用" class="headerlink" title="在标签/分类页添加引用"></a>在标签/分类页添加引用</h4><p>在 <code>themes\next\layout\_partials\page</code> 目录下的 <code>categories.njk</code> 和 <code>tags.njk</code> 里加上：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blockquote-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>请你一定不要停下来，成为你想成为的人。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><code>&lt;blockquote&gt;</code> 标签在所有的 markdown 文档中都可以添加。<br>效果图如下：<br><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/image-20210427210333655.png" alt="image-20210427210333655"></p>
+<p><code>&lt;blockquote&gt;</code> 标签在所有的 markdown 文档中都可以添加。<br>效果图如下：<br><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/image-20210427210333655.png" alt="image-20210427210333655"></p>
 <h4 id="浮层样式集合"><a href="#浮层样式集合" class="headerlink" title="浮层样式集合"></a>浮层样式集合</h4><p>在 <code>source\_data\footer.njk</code> 文件中，添加下面的代码即可实现对应的样式。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 浮层上出现🌸飘落 <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 鼠标痕迹星星坠落 <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 鼠标点击出现爱心 <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="样式的修改"><a href="#样式的修改" class="headerlink" title="样式的修改"></a>样式的修改</h4><ol>
 <li>去掉博客顶部的黑线</li>
 </ol>
 <p>根据<strong>主题配置文件</strong> <code>_config.yml</code> 里设置的主题，在 <code>themes\next\source\css\_schemes</code> 目录下，找到对应主题的 <code>index.styl</code> 样式文件。例如我设置的主题是 Gemini，那么我的主题样式文件的路径就是 <code>themes\next\source\css\_schemes\Gemini\index.styl</code>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/img/20211003193134.png" alt="image-20211003193127903"></p>
+<p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20211003193134.png" alt="image-20211003193127903"></p>
 <p>找到这个文件后，在最后面添加上如下的样式：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">// 黑线的类名就是 headband，可以通过在浏览器中按 F12 找到
 .headband</span> <span class="token punctuation">&#123;</span>
@@ -491,8 +493,23 @@ document<span class="token punctuation">.</span><span class="token function">add
         <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2022/6/4 更新：</p>
+<p>删掉 <code>&lt;script src=&quot;//cdn.jsdelivr.net/npm/@waline/client&quot;&gt;&lt;/script&gt;</code>， 在 <code>themes/next/layout/_layout.njk</code> 文件的 <code>&lt;head&gt;</code> 标签中添加如下代码。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://unpkg.com/@waline/client@v2/dist/waline.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://unpkg.com/@waline/client@v2/dist/waline.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>把 <code>&lt;script&gt;</code> 下面的 <code>&lt;div&gt;</code> 和 <code>&lt;script&gt;</code> 标签都删掉，替换为如下代码。（这里其实不替换也行）</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>waline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    Waline<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+        el<span class="token operator">:</span> <span class="token string">'#waline'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 这里填自己的地址，DEPLOYMENT和DOMAINS这两个地址好像都行</span>
+        serverURL<span class="token operator">:</span> <span class="token string">'https://your-domain.vercel.app'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h4 id="添加自定义鼠标指针和自定义滚动条"><a href="#添加自定义鼠标指针和自定义滚动条" class="headerlink" title="添加自定义鼠标指针和自定义滚动条"></a>添加自定义鼠标指针和自定义滚动条</h4><p>在 <code>themes/next/layout/_layout.njk</code> 文件中添加如下内容：</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
     </div>
 
@@ -568,12 +585,11 @@ document<span class="token punctuation">.</span><span class="token function">add
     });
   }
 </script>
-<script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
-      <div id="waline"></div>
+<div id="waline"></div>
       <script>
-        Waline({
+        Waline.init({
           el: '#waline',
-          serverURL: 'https://blog-comment-2dt5ewpcf-2295336484-qqcom.vercel.app/',
+          serverURL: 'https://blog-comment-swart.vercel.app',
         });
       </script>
     </div>
@@ -597,14 +613,14 @@ document<span class="token punctuation">.</span><span class="token function">add
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">177k</span>
+    <span title="站点总字数">178k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:41</span>
+    <span title="站点阅读时长">2:42</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -628,13 +644,13 @@ document<span class="token punctuation">.</span><span class="token function">add
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div><!-- 背景中出现动态线条背景 -->
-<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
+<!-- <script color="0,0,0" opacity="0.5" zIndex="-1" count="90" src="https://fastly.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script> -->
 <!-- 🌸飘落 -->
-<script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/sakura.js"></script>
 <!-- 鼠标痕迹星星坠落 -->
-<!-- script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
+<!-- script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-star.js"></script> -->
 <!-- 鼠标点击出现爱心 -->
-<!-- <script src="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
+<!-- <script src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/js/cursor-love.js"></script> -->
 
     </div>
   </footer>
@@ -683,6 +699,6 @@ document<span class="token punctuation">.</span><span class="token function">add
   </script>
 
   <!-- 自定义鼠标指针 2021/11/3 add  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/css/my_cursor.css">
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":0.85,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false,"scale":0.5},"dialog":{"enable":false,"hitokoto":false},"log":false});</script></body>
 </html>
