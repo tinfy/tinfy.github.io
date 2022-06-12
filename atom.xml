@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2022-06-05T13:09:47.640Z</updated>
+  <updated>2022-06-12T11:31:30.411Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue组件通信</title>
+    <link href="https://www.tongjiebin.cn/posts/88c3.html"/>
+    <id>https://www.tongjiebin.cn/posts/88c3.html</id>
+    <published>2022-06-11T09:03:58.000Z</published>
+    <updated>2022-06-12T11:31:30.411Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;props-emit&quot;&gt;&lt;a href=&quot;#props-emit&quot; class=&quot;headerlink&quot; title=&quot;props/$emit&quot;&gt;&lt;/a&gt;props/$emit&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;父组件向子组件传值&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在子组件中定义 props 选项，在父组件中通过 &lt;code&gt;v-bind:props属性值&lt;/code&gt; 的方式传值给子组件。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue" scheme="https://www.tongjiebin.cn/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>cdn.jsdelivr.net被墙</title>
@@ -469,7 +491,7 @@
     <link href="https://www.tongjiebin.cn/posts/5c4e.html"/>
     <id>https://www.tongjiebin.cn/posts/5c4e.html</id>
     <published>2021-08-30T15:43:56.000Z</published>
-    <updated>2021-08-30T15:59:16.258Z</updated>
+    <updated>2022-06-12T10:44:35.561Z</updated>
     
     
     <summary type="html">&lt;p&gt;核心概念：&lt;/p&gt;
@@ -484,30 +506,6 @@
     
     
     <category term="Vuex" scheme="https://www.tongjiebin.cn/tags/Vuex/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>变量的解构赋值</title>
-    <link href="https://www.tongjiebin.cn/posts/d1db.html"/>
-    <id>https://www.tongjiebin.cn/posts/d1db.html</id>
-    <published>2021-08-29T12:47:24.000Z</published>
-    <updated>2022-03-14T14:27:13.654Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。&lt;/p&gt;
-&lt;p&gt;解构：分解数据结构；赋值：给变量赋值。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
-    
-    <category term="ES6" scheme="https://www.tongjiebin.cn/tags/ES6/"/>
-    
-    <category term="解构赋值" scheme="https://www.tongjiebin.cn/tags/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
     
   </entry>
   
