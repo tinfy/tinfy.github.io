@@ -8916,4 +8916,241 @@ instance2<span class="token punctuation">.</span><span class="token function">sa
         <tag>Vue</tag>
       </tags>
   </entry>
+  <entry>
+    <title>CSS样式穿透</title>
+    <url>/posts/3eb7.html</url>
+    <content><![CDATA[<h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><p>在 Vue 项目中引入 ElementUI 等组件库时，经常需要修改某个组件的原有样式。但我们在编写 css 样式时，都会在 <code>&lt;style&gt;</code> 标签中加上 <code>scope</code> 属性，这样编写的样式就只会在当前的组件上生效，不会影响到其他组件。这也带来一个问题：在带有 <code>scope</code> 属性的 <code>&lt;style&gt;</code> 标签中编写的修改某个组件的原有样式不会生效。</p>
+<a id="more"></a>
+
+<h4 id="样式穿透"><a href="#样式穿透" class="headerlink" title="样式穿透"></a>样式穿透</h4><p>为了解决这个问题，需要使用到样式穿透。样式穿透的三种方式：</p>
+<ul>
+<li><code>&gt;&gt;&gt;</code></li>
+<li><code>::v-deep</code></li>
+<li><code>/deep/</code></li>
+</ul>
+<p>注意：<code>&gt;&gt;&gt;</code> 只作用于CSS，<code>::v-deep</code> 和 <code>/deep/</code> 可以用于 Sass 和 Less</p>
+<h4 id="语法示例"><a href="#语法示例" class="headerlink" title="语法示例"></a>语法示例</h4><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">外层 >>> 第三方组件</span> <span class="token punctuation">&#123;</span>
+	样式
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.conBox >>> .ivu-input</span> <span class="token punctuation">&#123;</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">外层 ::v-deep 第三方组件</span> <span class="token punctuation">&#123;</span>
+	样式
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.conBox ::v-deep .el-input__inner</span><span class="token punctuation">&#123;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span>0 10px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">外层 /deep/ 第三方组件</span> <span class="token punctuation">&#123;</span>
+	样式
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.conBox /deep/ .el-input__inner</span><span class="token punctuation">&#123;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span>0 10px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>防抖和节流</title>
+    <url>/posts/8a2f.html</url>
+    <content><![CDATA[<h3 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h3><p>本质上是优化高频率执行代码的一种手段</p>
+<p>如：浏览器的 <code>resize</code>、<code>scroll</code>、<code>keypress</code>、<code>mousemove</code> 等事件在触发时，会不断地调用绑定在事件上的回调函数，极大地浪费资源，降低前端性能</p>
+<p>为了优化体验，需要对这类事件进行调用次数的限制，对此我们就可以采用 <strong>防抖（debounce）</strong> 和 <strong>节流（throttle）</strong> 的方式来减少调用频率</p>
+<a id="more"></a>
+
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
+<li>节流: n 秒内只运行一次，若在 n 秒内重复触发，只有一次生效</li>
+<li>防抖: n 秒后在执行该事件，若在 n 秒内被重复触发，则重新计时</li>
+</ul>
+<p>一个经典的比喻:</p>
+<p>想象每天上班大厦底下的电梯。把电梯完成一次运送，类比为一次函数的执行和响应</p>
+<p>假设电梯有两种运行策略 <code>debounce</code> 和 <code>throttle</code>，超时设定为15秒，不考虑容量限制</p>
+<p>电梯第一个人进来后，15秒后准时运送一次，这是节流</p>
+<p>电梯第一个人进来后，等待15秒。如果过程中又有人进来，15秒等待重新计时，直到15秒后开始运送，这是防抖</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h4><p>完成节流可以使用时间戳与定时器的写法</p>
+<p>使用时间戳写法，事件会立即执行，停止触发后没有办法再次执行</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">throttled1</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay <span class="token operator">=</span> <span class="token number">500</span></span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> oldtime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">let</span> newtime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>newtime <span class="token operator">-</span> oldtime <span class="token operator">>=</span> delay<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+            oldtime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用定时器写法，<code>delay</code>毫秒后第一次执行，第二次事件停止触发后依然会再一次执行</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">throttled2</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay <span class="token operator">=</span> <span class="token number">500</span></span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>timer<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+                <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+                timer <span class="token operator">=</span> <span class="token keyword">null</span>
+            <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以将时间戳写法的特性与定时器写法的特性相结合，实现一个更加精确的节流。实现如下</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">throttled</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token keyword">let</span> starttime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">let</span> curTime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 当前时间</span>
+        <span class="token keyword">let</span> remaining <span class="token operator">=</span> delay <span class="token operator">-</span> <span class="token punctuation">(</span>curTime <span class="token operator">-</span> starttime<span class="token punctuation">)</span>  <span class="token comment">// 从上一次到现在，还剩下多少多余时间</span>
+        <span class="token keyword">let</span> context <span class="token operator">=</span> <span class="token keyword">this</span>
+        <span class="token keyword">let</span> args <span class="token operator">=</span> arguments
+        <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>remaining <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+            starttime <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> remaining<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h4><p>简单版本的实现</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">func<span class="token punctuation">,</span> wait</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> timeout<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">let</span> context <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> <span class="token comment">// 保存this指向</span>
+        <span class="token keyword">let</span> args <span class="token operator">=</span> arguments<span class="token punctuation">;</span> <span class="token comment">// 拿到event对象</span>
+
+        <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timeout<span class="token punctuation">)</span>
+        timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token function">func</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>防抖如果需要立即执行，可加入第三个参数用于判断，实现如下：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">func<span class="token punctuation">,</span> wait<span class="token punctuation">,</span> immediate</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token keyword">let</span> timeout<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">let</span> context <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> args <span class="token operator">=</span> arguments<span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>timeout<span class="token punctuation">)</span> <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timeout<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// timeout 不为null</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>immediate<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">let</span> callNow <span class="token operator">=</span> <span class="token operator">!</span>timeout<span class="token punctuation">;</span> <span class="token comment">// 第一次会立即执行，以后只有事件执行后才会再次触发</span>
+            timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                timeout <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>callNow<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token function">func</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            timeout <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token function">func</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> args<span class="token punctuation">)</span>
+            <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> wait<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>相同点：</p>
+<ul>
+<li>都可以通过使用 <code>setTimeout</code> 实现</li>
+<li>目的都是，降低回调执行频率。节省计算资源</li>
+</ul>
+<p>不同点：</p>
+<ul>
+<li>函数防抖，在一段连续操作结束后，处理回调，利用<code>clearTimeout</code>和 <code>setTimeout</code>实现。函数节流，在一段连续操作中，每一段时间只执行一次，频率较高的事件中使用来提高性能</li>
+<li>函数防抖关注一定时间连续触发的事件，只在最后执行一次，而函数节流一段时间内只执行一次</li>
+</ul>
+<p>例如，都设置时间频率为500ms，在2秒时间内，频繁触发函数，节流，每隔 500ms 就执行一次。防抖，则不管调动多少次方法，在2s后，只会执行一次</p>
+<p>如下图所示：</p>
+<p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20220616220304.png" alt="img"></p>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>防抖在连续的事件，只需触发一次回调的场景有：</p>
+<ul>
+<li>搜索框搜索输入。只需用户最后一次输入完，再发送请求</li>
+<li>手机号、邮箱验证输入检测</li>
+<li>窗口大小<code>resize</code>。只需窗口调整完成后，计算窗口大小。防止重复渲染。</li>
+</ul>
+<p>节流在间隔一段时间执行一次回调的场景有：</p>
+<ul>
+<li>滚动加载，加载更多或滚到底部监听</li>
+<li>搜索框，搜索联想功能</li>
+</ul>
+<p>转载于：<a href="https://vue3js.cn/interview/JavaScript/debounce_throttle.html">https://vue3js.cn/interview/JavaScript/debounce_throttle.html</a></p>
+]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTTP缓存策略</title>
+    <url>/posts/3fb3.html</url>
+    <content><![CDATA[<p>HTTP缓存策略包括两种：强制缓存、协商缓存。</p>
+<a id="more"></a>
+
+<h4 id="强制缓存"><a href="#强制缓存" class="headerlink" title="强制缓存"></a>强制缓存</h4><p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20220616231917.webp" alt="图片 1.png"></p>
+<h5 id="Expires"><a href="#Expires" class="headerlink" title="Expires"></a>Expires</h5><p>服务器<code>response</code>的<code>header</code>带上这个字段，然后在这个时间前，客户端浏览器都不会再发起请求，而是直接用缓存资源。</p>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">Expires: Wed, 21 Oct 2000 07:28:00 GMT<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a>Cache-Control</h5><p>常用属性包括：</p>
+<ul>
+<li>max-age：缓存最大过期时间</li>
+<li>no-cache：可以在客户端存储资源，每次都必须去服务端做新鲜度校验，来决定从服务端获取新的资源（200）还是使用客户端缓存（304）</li>
+<li>no-store：永远都不要在客户端存储资源，永远都去原始服务器去获取资源</li>
+</ul>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">Cache-Control: max-age&#x3D;20000<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这表示当前资源在<code>20000秒</code>内都不用再请求了，直接使用缓存。</p>
+<h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20220616231948.webp"></p>
+<h5 id="Last-Modified-和-If-Modified-Since"><a href="#Last-Modified-和-If-Modified-Since" class="headerlink" title="Last-Modified 和 If-Modified-Since"></a>Last-Modified 和 If-Modified-Since</h5><p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20220616232019.webp"></p>
+<p><code>Last-Modified</code>和<code>If-Modified-Since</code>是配套使用的，**<code>Last-Modified</code>是放到<code>response</code>的<code>header</code>里面的**，可能长这样：</p>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">Last-Modified: Wed, 21 Oct 2000 07:28:00 GMT <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>而客户端浏览器在使用时，应该将配套的<code>If-Modified-Since</code>放到**<code>request</code>的<code>header</code>里面**，长这样：</p>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">If-Modified-Since: Wed, 21 Oct 2000 07:28:00 GMT <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>服务端拿到这个头后，会跟当前版本的修改时间进行比较：</p>
+<ol>
+<li>当前版本的修改时间比这个晚，也就是这个时间后又改过了，返回<code>200</code>和新的内容</li>
+<li>当前版本的修改时间和这个一样，也就是没有更新，返回<code>304</code>，不返回内容，只返回头，客户端直接使用缓存</li>
+</ol>
+<h5 id="Etag-和-Last-Modified"><a href="#Etag-和-Last-Modified" class="headerlink" title="Etag 和 Last-Modified"></a>Etag 和 Last-Modified</h5><p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20220616222110.webp"></p>
+<p><code>Etag</code>和<code>Last-Modified</code>是配套使用的，**<code>Etag</code>是放到<code>response</code>的<code>header</code>里面的**，可能长这样：</p>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">ETag: &quot;33a64df551425fcc55e4d42a148795d9f25f89d4&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>客户端拿到后会将这个<code>ETag</code>和返回值一起存下来，等下次请求时，使用配套的<code>If-None-Match</code>，将这个<strong>放到<code>request</code>的<code>header</code>里面</strong>，可能长这样：</p>
+<pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">If-None-Match: &quot;33a64df551425fcc55e4d42a148795d9f25f89d4&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后服务端拿到请求里面的<code>If-None-Match</code>跟当前版本的<code>ETag</code>比较下：</p>
+<ol>
+<li>如果是一样的话，直接返回<code>304</code>，语义为<code>Not Modified</code>，不返回内容(<code>body</code>)，只返回<code>header</code>，告诉浏览器直接用缓存。</li>
+<li>如果不一样的话，返回<code>200</code>和最新的内容</li>
+</ol>
+<h4 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h4><p><img src="https://fastly.jsdelivr.net/gh/tinfy/blog-cdn/img/20220616222114.webp" alt="图片 5.png"></p>
+<h4 id="缓存优先级"><a href="#缓存优先级" class="headerlink" title="缓存优先级"></a>缓存优先级</h4><ul>
+<li><p><code>Cache-Control</code>的优先级比<code>Expire</code>高</p>
+</li>
+<li><p><code>ETag</code>的优先级比<code>Last-Modified</code>高</p>
+</li>
+<li><p>强制缓存和协商缓存优先级：先判断强制缓存，如果强制缓存生效，直接使用缓存；如果强制缓存失效，再发请求跟服务器协商，看要不要使用缓存</p>
+</li>
+</ul>
+<h4 id="三种刷新操作对-http-缓存的影响"><a href="#三种刷新操作对-http-缓存的影响" class="headerlink" title="三种刷新操作对 http 缓存的影响"></a>三种刷新操作对 http 缓存的影响</h4><ul>
+<li>正常操作：地址栏输入 url，跳转链接，前进后退等。</li>
+<li>手动刷新：f5，点击刷新按钮，右键菜单刷新。</li>
+<li>强制刷新：ctrl + f5，shift+command+r。</li>
+</ul>
+<p><strong>正常操作：强制缓存有效，协商缓存有效。</strong> <strong>手动刷新：强制缓存失效，协商缓存有效。</strong> <strong>强制刷新：强制缓存失效，协商缓存失效。</strong></p>
+<p>参考资料：</p>
+<p><a href="https://segmentfault.com/a/1190000038562294">https://segmentfault.com/a/1190000038562294</a></p>
+<p><a href="https://juejin.cn/post/7061588533214969892#heading-52">https://juejin.cn/post/7061588533214969892#heading-52</a></p>
+]]></content>
+      <categories>
+        <category>Web前端</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
 </search>

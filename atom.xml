@@ -6,7 +6,7 @@
   <link href="https://www.tongjiebin.cn/atom.xml" rel="self"/>
   
   <link href="https://www.tongjiebin.cn/"/>
-  <updated>2022-06-12T11:31:30.411Z</updated>
+  <updated>2022-06-16T15:21:40.974Z</updated>
   <id>https://www.tongjiebin.cn/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP缓存策略</title>
+    <link href="https://www.tongjiebin.cn/posts/3fb3.html"/>
+    <id>https://www.tongjiebin.cn/posts/3fb3.html</id>
+    <published>2022-06-16T14:18:13.000Z</published>
+    <updated>2022-06-16T15:21:40.974Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;HTTP缓存策略包括两种：强制缓存、协商缓存。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="HTTP" scheme="https://www.tongjiebin.cn/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>防抖和节流</title>
+    <link href="https://www.tongjiebin.cn/posts/8a2f.html"/>
+    <id>https://www.tongjiebin.cn/posts/8a2f.html</id>
+    <published>2022-06-16T13:55:16.000Z</published>
+    <updated>2022-06-16T14:15:02.943Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;是什么&quot;&gt;&lt;a href=&quot;#是什么&quot; class=&quot;headerlink&quot; title=&quot;是什么&quot;&gt;&lt;/a&gt;是什么&lt;/h3&gt;&lt;p&gt;本质上是优化高频率执行代码的一种手段&lt;/p&gt;
+&lt;p&gt;如：浏览器的 &lt;code&gt;resize&lt;/code&gt;、&lt;code&gt;scroll&lt;/code&gt;、&lt;code&gt;keypress&lt;/code&gt;、&lt;code&gt;mousemove&lt;/code&gt; 等事件在触发时，会不断地调用绑定在事件上的回调函数，极大地浪费资源，降低前端性能&lt;/p&gt;
+&lt;p&gt;为了优化体验，需要对这类事件进行调用次数的限制，对此我们就可以采用 &lt;strong&gt;防抖（debounce）&lt;/strong&gt; 和 &lt;strong&gt;节流（throttle）&lt;/strong&gt; 的方式来减少调用频率&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.tongjiebin.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS样式穿透</title>
+    <link href="https://www.tongjiebin.cn/posts/3eb7.html"/>
+    <id>https://www.tongjiebin.cn/posts/3eb7.html</id>
+    <published>2022-06-16T12:37:28.000Z</published>
+    <updated>2022-06-16T12:39:41.996Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;引入&quot;&gt;&lt;a href=&quot;#引入&quot; class=&quot;headerlink&quot; title=&quot;引入&quot;&gt;&lt;/a&gt;引入&lt;/h4&gt;&lt;p&gt;在 Vue 项目中引入 ElementUI 等组件库时，经常需要修改某个组件的原有样式。但我们在编写 css 样式时，都会在 &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签中加上 &lt;code&gt;scope&lt;/code&gt; 属性，这样编写的样式就只会在当前的组件上生效，不会影响到其他组件。这也带来一个问题：在带有 &lt;code&gt;scope&lt;/code&gt; 属性的 &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签中编写的修改某个组件的原有样式不会生效。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="CSS" scheme="https://www.tongjiebin.cn/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue组件通信</title>
@@ -439,73 +498,6 @@
     <category term="Oracle" scheme="https://www.tongjiebin.cn/tags/Oracle/"/>
     
     <category term="存储过程" scheme="https://www.tongjiebin.cn/tags/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微软输入法相关</title>
-    <link href="https://www.tongjiebin.cn/posts/db8b.html"/>
-    <id>https://www.tongjiebin.cn/posts/db8b.html</id>
-    <published>2021-09-28T13:35:55.000Z</published>
-    <updated>2022-06-05T12:32:30.738Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;这篇博客记录一下我在使用微软输入法时遇到的一些问题。之前一直用的搜狗输入法，换了个笔记本后没有安装搜狗，发现微软自带的输入法太好用了，功能很简洁，没有一些搜狗那些花里胡哨的东西，很实用。在使用的过程中也遇到了一些问题，顺便记录一下。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="微软输入法" scheme="https://www.tongjiebin.cn/tags/%E5%BE%AE%E8%BD%AF%E8%BE%93%E5%85%A5%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm常用命令</title>
-    <link href="https://www.tongjiebin.cn/posts/854b.html"/>
-    <id>https://www.tongjiebin.cn/posts/854b.html</id>
-    <published>2021-09-22T15:40:30.000Z</published>
-    <updated>2022-04-12T12:27:03.051Z</updated>
-    
-    
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;初始化一个项目，会在文件夹中生成一个 &lt;code&gt;package.json&lt;/code&gt; 文件。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; init &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;-y&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-
-跳过提问阶段，全部采用默认的设置。
-&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; init -y&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="npm" scheme="https://www.tongjiebin.cn/tags/npm/"/>
-    
-    <category term="nodejs" scheme="https://www.tongjiebin.cn/tags/nodejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vuex的使用方法</title>
-    <link href="https://www.tongjiebin.cn/posts/5c4e.html"/>
-    <id>https://www.tongjiebin.cn/posts/5c4e.html</id>
-    <published>2021-08-30T15:43:56.000Z</published>
-    <updated>2022-06-12T10:44:35.561Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;核心概念：&lt;/p&gt;
-&lt;p&gt;State：包含了store中的各个状态&lt;/p&gt;
-&lt;p&gt;Getters：对State中的数据进行包装然后返回，可以认为是store的计算属性&lt;/p&gt;
-&lt;p&gt;Mutations：对State中的数据进行操作的一系列方法，只能是同步的方法&lt;/p&gt;
-&lt;p&gt;Actions：对State中的数据进行操作的一系列方法，可以是异步的方法，通过调用Mutation中的方法实现对数据的操作&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Web前端" scheme="https://www.tongjiebin.cn/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="Vuex" scheme="https://www.tongjiebin.cn/tags/Vuex/"/>
     
   </entry>
   
